@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">VocabularyApp</string>
+    <string name="action_settings">VocabularyApp</string>
+
+    <string name="tryButton.try">Zkusit</string>
+    <string name="tryButton.nextTry">Znovu</string>
+
+    <string name="descriptionButton.show">Popis</string>
+    <string name="descriptionButton.hide">Popis</string>
+
+    <string name="nextButton.giveUp">Nevím</string>
+    <string name="nextButton.next">Další</string>
+
+    <integer name="action.try">101</integer>
+</resources>
