@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.VocabularyItem;
 import com.neptuo.vocabularyapp.services.VocabularyService;
 
@@ -21,7 +22,7 @@ public class BrowseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
 
-        service = new VocabularyService();
+        service = ServiceProvider.getVocabulary();
 
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(new VocabularyListAdapter(this, service.GetItems()));

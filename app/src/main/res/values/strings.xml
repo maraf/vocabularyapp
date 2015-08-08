@@ -15,4 +15,7 @@
     <string name="nextButton.next">Další</string>
 
     <integer name="action.try">101</integer>
+    <string name="title_activity_download">Stažení slovníčků</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

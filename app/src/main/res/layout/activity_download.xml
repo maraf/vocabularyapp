@@ -3,33 +3,31 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.neptuo.vocabularyapp.DownloadActivity">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/translateButton"
-        android:id="@+id/translateButton"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Url"
+        android:id="@+id/urlLabel"
         android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/urlText"
+        android:layout_below="@+id/urlLabel"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/browseButton"
-        android:id="@+id/browseButton"
-        android:layout_below="@+id/translateButton"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/translateButton"
-        android:enabled="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Stáhnout"
         android:id="@+id/downloadButton"
-        android:layout_below="@+id/browseButton"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/browseButton" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/urlText" />
 </RelativeLayout>

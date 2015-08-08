@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.VocabularyItem;
 import com.neptuo.vocabularyapp.services.VocabularyService;
 
@@ -36,7 +37,7 @@ public class TranslateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_translate);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        service = new VocabularyService();
+        service = ServiceProvider.getVocabulary();
 
         originalLabel = (TextView) findViewById(R.id.originalLabel);
         originalText = (TextView) findViewById(R.id.originalText);

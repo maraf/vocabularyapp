@@ -12,17 +12,21 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".TranslateActivity"
             android:label="Překlad slovíček" />
-
         <activity
             android:name=".BrowseActivity"
             android:label="Celý slovníček" />
+        <activity
+            android:name=".DownloadActivity"
+            android:label="@string/title_activity_download" >
+        </activity>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button translateButton;
     private Button browseButton;
+    private Button downloadButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         translateButton =  (Button) findViewById(R.id.translateButton);
         browseButton = (Button) findViewById(R.id.browseButton);
+        downloadButton = (Button) findViewById(R.id.downloadButton);
 
         translateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(self, BrowseActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        downloadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(self, DownloadActivity.class);
                 startActivity(intent);
             }
         });
