@@ -19,6 +19,10 @@
         <activity
             android:name=".TranslateActivity"
             android:label="Překlad slovíček" />
+
+        <activity
+            android:name=".BrowseActivity"
+            android:label="Celý slovníček" />
     </application>
 
 </manifest>

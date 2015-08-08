@@ -33,8 +33,16 @@ public class MainActivity extends AppCompatActivity {
         translateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent translateIntent = new Intent(self, TranslateActivity.class);
-                startActivity(translateIntent);
+                Intent intent = new Intent(self, TranslateActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        browseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(self, BrowseActivity.class);
+                startActivity(intent);
             }
         });
     }

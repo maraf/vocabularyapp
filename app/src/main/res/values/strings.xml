@@ -3,7 +3,7 @@
     <string name="action_settings">Slovíčka</string>
 
     <string name="translateButton">Překládat slovíčka</string>
-    <string name="browseButton">Procházet všechny slovíčka</string>
+    <string name="browseButton">Procházet všechna slovíčka</string>
 
     <string name="tryButton.try">Zkusit</string>
     <string name="tryButton.nextTry">Znovu</string>

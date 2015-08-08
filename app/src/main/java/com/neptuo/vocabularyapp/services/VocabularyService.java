@@ -26,4 +26,8 @@ public class VocabularyService {
         int index = random.nextInt(items.size());
         return items.get(index);
     }
+
+    public List<VocabularyItem> GetItems() {
+        return items;
+    }
 }
