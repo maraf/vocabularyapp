@@ -1,4 +1,4 @@
-package com.neptuo.vocabularyapp.services;
+package com.neptuo.vocabularyapp.services.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,18 +6,18 @@ import java.util.List;
 /**
  * Created by Windows10 on 8/9/2015.
  */
-public class Vocabulary {
+public class DetailModel {
     private String originalLanguageCode;
     private String translatedLanguageCode;
-    private List<VocabularyItem> items;
+    private List<DetailItemModel> items;
 
-    public Vocabulary(String originalLanguageCode, String translatedLanguageCode) {
+    public DetailModel(String originalLanguageCode, String translatedLanguageCode) {
         this.originalLanguageCode = originalLanguageCode;
         this.translatedLanguageCode = translatedLanguageCode;
-        this.items = new ArrayList<VocabularyItem>();
+        this.items = new ArrayList<DetailItemModel>();
     }
 
-    public List<VocabularyItem> getItems() {
+    public List<DetailItemModel> getItems() {
         return items;
     }
 

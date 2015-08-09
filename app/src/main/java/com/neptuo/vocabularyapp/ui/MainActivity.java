@@ -1,20 +1,13 @@
-package com.neptuo.vocabularyapp;
+package com.neptuo.vocabularyapp.ui;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
+import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
-import com.neptuo.vocabularyapp.services.VocabularyItem;
-import com.neptuo.vocabularyapp.services.VocabularyService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,7 +53,15 @@ public class MainActivity extends AppCompatActivity {
         checkTranslateActivityAvailability();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        checkTranslateActivityAvailability();
+    }
+
     private void checkTranslateActivityAvailability() {
-        translateButton.setEnabled(ServiceProvider.getVocabulary().getItems().size() > 0);
+        boolean hasVocabularyItems = ServiceProvider.getVocabulary().getItems().size() > 0;
+        translateButton.setEnabled(hasVocabularyItems);
+        browseButton.setEnabled(hasVocabularyItems);
     }
 }

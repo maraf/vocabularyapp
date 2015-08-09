@@ -1,19 +1,26 @@
-package com.neptuo.vocabularyapp;
+package com.neptuo.vocabularyapp.ui.tasks;
 
-import com.neptuo.vocabularyapp.services.Vocabulary;
+import com.neptuo.vocabularyapp.services.models.DefinitionModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by Windows10 on 8/8/2015.
+ * Created by Windows10 on 8/9/2015.
  */
-public class DownloadAsyncTaskResult {
+public class DownloadDefinitionListAsyncTaskResult {
     private boolean isSuccessfull;
-    private Vocabulary content;
+    private List<DefinitionModel> content;
     private String errorMessage;
 
-    public DownloadAsyncTaskResult(boolean isSuccessfull, Vocabulary content, String errorMessage) {
+    public DownloadDefinitionListAsyncTaskResult(boolean isSuccessfull, List<DefinitionModel> content, String errorMessage) {
         this.isSuccessfull = isSuccessfull;
         this.content = content;
         this.errorMessage = errorMessage;
+    }
+
+    public List<DefinitionModel> getContent() {
+        return content;
     }
 
     public boolean isSuccessfull() {
@@ -22,14 +29,6 @@ public class DownloadAsyncTaskResult {
 
     public void setIsSuccessfull(boolean isSuccessfull) {
         this.isSuccessfull = isSuccessfull;
-    }
-
-    public Vocabulary getContent() {
-        return content;
-    }
-
-    public void setContent(Vocabulary content) {
-        this.content = content;
     }
 
     public String getErrorMessage() {

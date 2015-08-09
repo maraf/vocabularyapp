@@ -1,14 +1,14 @@
-package com.neptuo.vocabularyapp.services;
+package com.neptuo.vocabularyapp.services.models;
 
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class VocabularyItem {
+public class DetailItemModel {
     private String originalText;
     private String translatedText;
     private String translatedDescription;
 
-    public VocabularyItem(String originalText, String translatedText, String translatedDescription) {
+    public DetailItemModel(String originalText, String translatedText, String translatedDescription) {
         this.originalText = originalText;
         this.translatedText = translatedText;
         this.translatedDescription = translatedDescription;

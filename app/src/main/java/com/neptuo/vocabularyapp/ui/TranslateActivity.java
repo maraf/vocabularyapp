@@ -1,4 +1,4 @@
-package com.neptuo.vocabularyapp;
+package com.neptuo.vocabularyapp.ui;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
-import com.neptuo.vocabularyapp.services.VocabularyItem;
+import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.VocabularyService;
 
 public class TranslateActivity extends AppCompatActivity {
@@ -29,7 +29,7 @@ public class TranslateActivity extends AppCompatActivity {
     private Button nextButton;
 
     private VocabularyService service;
-    private VocabularyItem item;
+    private DetailItemModel item;
     private boolean isGivenUp;
 
     @Override

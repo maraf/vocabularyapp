@@ -1,4 +1,4 @@
-package com.neptuo.vocabularyapp;
+package com.neptuo.vocabularyapp.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,18 +7,19 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.neptuo.vocabularyapp.services.VocabularyItem;
+import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 
 import java.util.List;
 
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class VocabularyListAdapter extends ArrayAdapter<VocabularyItem> {
+public class DetailItemModelListAdapter extends ArrayAdapter<DetailItemModel> {
     private final Context context;
-    private final List<VocabularyItem> items;
+    private final List<DetailItemModel> items;
 
-    public VocabularyListAdapter(Context context, List<VocabularyItem> items) {
+    public DetailItemModelListAdapter(Context context, List<DetailItemModel> items) {
         super(context, -1, items);
         this.context = context;
         this.items = items;
@@ -31,7 +32,7 @@ public class VocabularyListAdapter extends ArrayAdapter<VocabularyItem> {
         TextView originalText = (TextView) rowView.findViewById(R.id.originalText);
         TextView translatedText = (TextView) rowView.findViewById(R.id.translatedText);
 
-        VocabularyItem item = items.get(position);
+        DetailItemModel item = items.get(position);
 
         originalText.setText(item.getOriginalText());
         translatedText.setText(item.getTranslatedText());

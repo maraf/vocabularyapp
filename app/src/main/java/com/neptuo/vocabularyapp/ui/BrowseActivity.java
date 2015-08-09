@@ -1,15 +1,12 @@
-package com.neptuo.vocabularyapp;
+package com.neptuo.vocabularyapp.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
+import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.ui.adapters.DetailItemModelListAdapter;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
-import com.neptuo.vocabularyapp.services.VocabularyItem;
 import com.neptuo.vocabularyapp.services.VocabularyService;
 
 public class BrowseActivity extends AppCompatActivity {
@@ -25,6 +22,6 @@ public class BrowseActivity extends AppCompatActivity {
         service = ServiceProvider.getVocabulary();
 
         listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(new VocabularyListAdapter(this, service.getItems()));
+        listView.setAdapter(new DetailItemModelListAdapter(this, service.getItems()));
     }
 }

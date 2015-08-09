@@ -1,5 +1,7 @@
 package com.neptuo.vocabularyapp.services;
 
+import com.neptuo.vocabularyapp.services.models.DetailItemModel;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -10,19 +12,19 @@ import java.util.Random;
 public class VocabularyService {
 
     private Random random;
-    private List<VocabularyItem> items;
+    private List<DetailItemModel> items;
 
     public VocabularyService() {
         random = new Random();
-        items = new ArrayList<VocabularyItem>();
+        items = new ArrayList<DetailItemModel>();
     }
 
-    public VocabularyItem nextRandom() {
+    public DetailItemModel nextRandom() {
         int index = random.nextInt(items.size());
         return items.get(index);
     }
 
-    public List<VocabularyItem> getItems() {
+    public List<DetailItemModel> getItems() {
         return items;
     }
 }
