@@ -27,6 +27,7 @@ public class DownloadActivity extends AppCompatActivity {
 
     private EditText urlText;
     private Button downloadButton;
+    private ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +40,29 @@ public class DownloadActivity extends AppCompatActivity {
 
         urlText = (EditText) findViewById(R.id.urlText);
         downloadButton = (Button) findViewById(R.id.downloadButton);
+        progress = new ProgressDialog(self);
 
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                DownloadAsyncTask task = new DownloadAsyncTask();
+                progress.show();
+                DownloadAsyncTask task = new DownloadAsyncTask(self);
                 task.execute(urlText.getText().toString());
             }
         });
+    }
+
+    public void downloadingCompleted(DownloadAsyncTaskResult result) {
+        progress.hide();
+
+        if(result ==null) {
+            Toast.makeText(this, "Chyba při pokusu o stažení dat a jejich zpracování.", Toast.LENGTH_SHORT).show();
+        } else {
+            if(result.isSuccessfull()) {
+                Toast.makeText(this, "Staženo celkem položek: " + result.getContent().getItems().size(), Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

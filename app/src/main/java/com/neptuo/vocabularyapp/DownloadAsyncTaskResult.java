@@ -1,14 +1,16 @@
 package com.neptuo.vocabularyapp;
 
+import com.neptuo.vocabularyapp.services.Vocabulary;
+
 /**
  * Created by Windows10 on 8/8/2015.
  */
 public class DownloadAsyncTaskResult {
     private boolean isSuccessfull;
-    private String content;
+    private Vocabulary content;
     private String errorMessage;
 
-    public DownloadAsyncTaskResult(boolean isSuccessfull, String content, String errorMessage) {
+    public DownloadAsyncTaskResult(boolean isSuccessfull, Vocabulary content, String errorMessage) {
         this.isSuccessfull = isSuccessfull;
         this.content = content;
         this.errorMessage = errorMessage;
@@ -22,11 +24,11 @@ public class DownloadAsyncTaskResult {
         this.isSuccessfull = isSuccessfull;
     }
 
-    public String getContent() {
+    public Vocabulary getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(Vocabulary content) {
         this.content = content;
     }
 
