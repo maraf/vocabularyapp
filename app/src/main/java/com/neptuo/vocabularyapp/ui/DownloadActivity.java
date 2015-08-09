@@ -64,18 +64,6 @@ public class DownloadActivity extends AppCompatActivity {
             }
         });
 
-        listView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                downloadItemButton.setEnabled(true);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                downloadItemButton.setEnabled(false);
-            }
-        });
-
         downloadItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +96,20 @@ public class DownloadActivity extends AppCompatActivity {
                     definitions.clear();
                     definitions.addAll(result.getContent());
 
-                    listView.setAdapter(new DefinitionModelListAdapter(this, result.getContent()));
+                    DefinitionModelListAdapter adapter = new DefinitionModelListAdapter(this, result.getContent());
+                    adapter.setItemSelectedListener(new DefinitionModelListAdapter.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(DefinitionModel model, boolean isChecked) {
+                            downloadItemButton.setEnabled(true);
+                        }
+
+                        @Override
+                        public void onNothingSelected() {
+                            downloadItemButton.setEnabled(false);
+                        }
+                    });
+
+                    listView.setAdapter(adapter);
                     downloadItemButton.setEnabled(false);
                 }
                 else {
