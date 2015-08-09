@@ -25,6 +25,6 @@ public class BrowseActivity extends AppCompatActivity {
         service = ServiceProvider.getVocabulary();
 
         listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(new VocabularyListAdapter(this, service.GetItems()));
+        listView.setAdapter(new VocabularyListAdapter(this, service.getItems()));
     }
 }

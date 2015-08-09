@@ -71,6 +71,8 @@ public class DownloadAsyncTask extends AsyncTask<String, Void, DownloadAsyncTask
                     String translatedDescription = parser.getAttributeValue(null, "translatedDescription");
 
                     result.getItems().add(new VocabularyItem(originalText, translatedText, translatedDescription));
+
+                    parser.next();
                 }
             }
         }

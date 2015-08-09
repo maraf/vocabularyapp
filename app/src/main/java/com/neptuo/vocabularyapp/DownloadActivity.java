@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.services.VocabularyItem;
 import com.neptuo.vocabularyapp.services.VocabularyService;
 
 import java.io.IOException;
@@ -59,6 +60,11 @@ public class DownloadActivity extends AppCompatActivity {
             Toast.makeText(this, "Chyba při pokusu o stažení dat a jejich zpracování.", Toast.LENGTH_SHORT).show();
         } else {
             if(result.isSuccessfull()) {
+                service.getItems().clear();
+                for (VocabularyItem item : result.getContent().getItems()) {
+                    service.getItems().add(item);
+                }
+
                 Toast.makeText(this, "Staženo celkem položek: " + result.getContent().getItems().size(), Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
@@ -103,8 +104,10 @@ public class TranslateActivity extends AppCompatActivity {
         String typedTranslation = translatedText.getText().toString().toLowerCase();
         if(item.getTranslatedText().toLowerCase().equals(typedTranslation)) {
             prepareNextItem();
+            Toast.makeText(this, R.string.translate_success, Toast.LENGTH_SHORT).show();
         } else {
             tryButton.setText(getString(R.string.tryButton_nextTry));
+            Toast.makeText(this, R.string.translate_fail, Toast.LENGTH_SHORT).show();
         }
     }
 

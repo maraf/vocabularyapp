@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.VocabularyItem;
 import com.neptuo.vocabularyapp.services.VocabularyService;
 
@@ -55,5 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        checkTranslateActivityAvailability();
+    }
+
+    private void checkTranslateActivityAvailability() {
+        translateButton.setEnabled(ServiceProvider.getVocabulary().getItems().size() > 0);
     }
 }
