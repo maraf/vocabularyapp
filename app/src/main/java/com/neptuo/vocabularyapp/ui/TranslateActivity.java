@@ -59,7 +59,7 @@ public class TranslateActivity extends AppCompatActivity {
         nextButton = (Button) findViewById(R.id.nextButton);
 
         originalLabel.setText(detail.getDownload().getSourceLanguage());
-        originalLabel.setText(detail.getDownload().getTargetLanguage());
+        translatedLabel.setText(detail.getDownload().getTargetLanguage());
 
         translatedText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

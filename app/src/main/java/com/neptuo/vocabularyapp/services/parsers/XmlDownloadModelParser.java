@@ -22,12 +22,26 @@ public class XmlDownloadModelParser {
             if(parser.getEventType() == XmlPullParser.START_TAG) {
                 String name = parser.getName();
                 if (name.equals("vocabulary")) {
-                    String sourceLanguage = parser.getAttributeValue(null, "sourceLanguage");
-                    String targetLanguage = parser.getAttributeValue(null, "targetLanguage");
-                    String url = parser.getAttributeValue(null, "url");
+                    String sourceLanguage = null;
+                    String targetLanguage = null;
+                    List<String> urls = new ArrayList<String>();
+
+                    while (parser.next() != XmlPullParser.END_TAG) {
+                        if (parser.getEventType() == XmlPullParser.START_TAG) {
+                            String subName = parser.getName();
+                            if(subName.equals("source")) {
+                                sourceLanguage = parser.getAttributeValue(null, "name");
+                            } else if(subName.equals("target")) {
+                                targetLanguage = parser.getAttributeValue(null, "name");
+                            } else if(subName.equals("content")) {
+                                urls.add(parser.getAttributeValue(null, "url"));
+                            }
+                            parser.next();
+                        }
+                    }
 
                     DownloadModel model = new DownloadModel(sourceLanguage, targetLanguage);
-                    model.getUrls().add(url);
+                    model.getUrls().addAll(urls);
                     result.add(model);
 
                     parser.next();

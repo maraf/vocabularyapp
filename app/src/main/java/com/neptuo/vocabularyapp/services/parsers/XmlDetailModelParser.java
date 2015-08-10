@@ -33,23 +33,15 @@ public class XmlDetailModelParser {
                             if (subName.equals("source")) {
                                 sourceText = parser.getAttributeValue(null, "text");
                                 sourceDescription = parser.getAttributeValue(null, "description");
+                                parser.next();
                             } else if (subName.equals("target")) {
                                 targetText = parser.getAttributeValue(null, "text");
                                 targetDescription = parser.getAttributeValue(null, "description");
+                                parser.next();
                             }
-                        }
-                    }
 
-                    while (parser.next() != XmlPullParser.END_TAG) {
-                        if (parser.getEventType() == XmlPullParser.START_TAG) {
-                            String subName = parser.getName();
-                            if (subName.equals("source")) {
-                                sourceText = parser.getAttributeValue(null, "text");
-                                sourceDescription = parser.getAttributeValue(null, "description");
-                            } else if (subName.equals("target")) {
-                                targetText = parser.getAttributeValue(null, "text");
-                                targetDescription = parser.getAttributeValue(null, "description");
-                            }
+                            if(sourceText != null && targetText != null)
+                                break;
                         }
                     }
 
