@@ -6,11 +6,13 @@ package com.neptuo.vocabularyapp.services.models;
 public class DetailItemModel {
     private String originalText;
     private String translatedText;
+    private String originalDescription;
     private String translatedDescription;
 
-    public DetailItemModel(String originalText, String translatedText, String translatedDescription) {
+    public DetailItemModel(String originalText, String translatedText, String originalDescription, String translatedDescription) {
         this.originalText = originalText;
         this.translatedText = translatedText;
+        this.originalDescription = originalDescription;
         this.translatedDescription = translatedDescription;
     }
 
@@ -28,6 +30,14 @@ public class DetailItemModel {
 
     public void setTranslatedText(String translatedText) {
         this.translatedText = translatedText;
+    }
+
+    public String getOriginalDescription() {
+        return originalDescription;
+    }
+
+    public void setOriginalDescription(String originalDescription) {
+        this.originalDescription = originalDescription;
     }
 
     public String getTranslatedDescription() {

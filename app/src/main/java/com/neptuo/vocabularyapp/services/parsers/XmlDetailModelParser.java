@@ -20,14 +20,41 @@ public class XmlDetailModelParser {
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if(parser.getEventType() == XmlPullParser.START_TAG) {
-                String name = parser.getName();
-                if (name.equals("item")) {
-                    String originalText = parser.getAttributeValue(null, "originalText");
-                    String translatedText = parser.getAttributeValue(null, "translatedText");
-                    String translatedDescription = parser.getAttributeValue(null, "translatedDescription");
+                String itemName = parser.getName();
+                if (itemName.equals("item")) {
+                    String sourceText = null;
+                    String sourceDescription = null;
+                    String targetText = null;
+                    String targetDescription = null;
 
-                    result.getItems().add(new DetailItemModel(originalText, translatedText, translatedDescription));
+                    while (parser.next() != XmlPullParser.END_TAG) {
+                        if (parser.getEventType() == XmlPullParser.START_TAG) {
+                            String subName = parser.getName();
+                            if (subName.equals("source")) {
+                                sourceText = parser.getAttributeValue(null, "text");
+                                sourceDescription = parser.getAttributeValue(null, "description");
+                            } else if (subName.equals("target")) {
+                                targetText = parser.getAttributeValue(null, "text");
+                                targetDescription = parser.getAttributeValue(null, "description");
+                            }
+                        }
+                    }
 
+                    while (parser.next() != XmlPullParser.END_TAG) {
+                        if (parser.getEventType() == XmlPullParser.START_TAG) {
+                            String subName = parser.getName();
+                            if (subName.equals("source")) {
+                                sourceText = parser.getAttributeValue(null, "text");
+                                sourceDescription = parser.getAttributeValue(null, "description");
+                            } else if (subName.equals("target")) {
+                                targetText = parser.getAttributeValue(null, "text");
+                                targetDescription = parser.getAttributeValue(null, "description");
+                            }
+                        }
+                    }
+
+                    result.getItems().add(new DetailItemModel(sourceText, targetText, sourceDescription, targetDescription));
+                    parser.next();
                     parser.next();
                 }
             }
