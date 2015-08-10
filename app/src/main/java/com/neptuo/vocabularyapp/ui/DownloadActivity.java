@@ -11,15 +11,13 @@ import android.widget.Toast;
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
-import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.VocabularyService;
-import com.neptuo.vocabularyapp.ui.adapters.DefinitionModelListAdapter;
+import com.neptuo.vocabularyapp.ui.adapters.DownloadItemListAdapter;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTaskResult;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTaskResult;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DownloadActivity extends AppCompatActivity {
@@ -90,8 +88,8 @@ public class DownloadActivity extends AppCompatActivity {
                     definitions.clear();
                     definitions.addAll(result.getContent());
 
-                    DefinitionModelListAdapter adapter = new DefinitionModelListAdapter(this, result.getContent());
-                    adapter.setItemSelectedListener(new DefinitionModelListAdapter.OnItemSelectedListener() {
+                    DownloadItemListAdapter adapter = new DownloadItemListAdapter(this, result.getContent());
+                    adapter.setItemSelectedListener(new DownloadItemListAdapter.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(DownloadModel model, boolean isChecked) {
                             downloadItemButton.setEnabled(true);

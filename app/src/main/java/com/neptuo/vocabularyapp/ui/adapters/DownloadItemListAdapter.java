@@ -17,12 +17,12 @@ import java.util.List;
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class DefinitionModelListAdapter extends ArrayAdapter<DownloadModel> {
+public class DownloadItemListAdapter extends ArrayAdapter<DownloadModel> {
     private final Context context;
     private final List<DownloadModel> items;
     private OnItemSelectedListener itemSelectedListener;
 
-    public DefinitionModelListAdapter(Context context, List<DownloadModel> items) {
+    public DownloadItemListAdapter(Context context, List<DownloadModel> items) {
         super(context, -1, items);
         this.context = context;
         this.items = items;

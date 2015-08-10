@@ -3,6 +3,7 @@ package com.neptuo.vocabularyapp.services;
 import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
+import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailConverter;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -23,18 +24,9 @@ public class Session {
     public Session(DetailModel model, UserStorage userStorage) {
         this.model = model;
         this.userStorage = userStorage;
-        this.allItems = prepareUserItems(model.getItems());
+        this.allItems = UserDetailConverter.map(userStorage, model.getItems());
         this.random = new Random();
         this.usedItems = new HashSet<Integer>();
-    }
-
-    private List<UserDetailItemModel> prepareUserItems(List<DetailItemModel> items) {
-        List<UserDetailItemModel> userItems = new ArrayList<UserDetailItemModel>();
-        for (DetailItemModel item : items) {
-            userItems.add(new UserDetailItemModel(item, userStorage.find(item)));
-        }
-
-        return userItems;
     }
 
     public UserDetailItemModel nextRandom() {

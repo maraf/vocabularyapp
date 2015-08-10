@@ -177,17 +177,7 @@ public class TranslateActivity extends AppCompatActivity {
             int percentage = (int) (ratio * 100);
 
             percentageText.setText(percentage + "%");
-            if (percentage < 20) {
-                placeholder.setBackgroundColor(Color.parseColor("#E39090"));
-            } else if (percentage < 40) {
-                placeholder.setBackgroundColor(Color.parseColor("#E8B493"));
-            } else if (percentage < 60) {
-                placeholder.setBackgroundColor(Color.alpha(0));
-            } else if (percentage < 80) {
-                placeholder.setBackgroundColor(Color.parseColor("#83A57C"));
-            } else {
-                placeholder.setBackgroundColor(Color.parseColor("#93AAE3"));
-            }
+            placeholder.setBackgroundColor(PercentageConverter.mapToColor(percentage));
         }
     }
 }

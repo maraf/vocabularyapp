@@ -6,11 +6,30 @@
     android:padding="10dp">
 
 
+    <FrameLayout
+        android:id="@+id/percentageLayout"
+        android:layout_width="45dp"
+        android:layout_height="fill_parent"
+        android:layout_alignEnd="@+id/originalText"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="#93AAE3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="85%"
+            android:id="@+id/percentageText"
+            android:layout_gravity="center"
+            android:padding="5dp" />
+    </FrameLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="Katze"
         android:id="@+id/originalText"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
@@ -19,7 +38,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Kočka"
         android:id="@+id/translatedText"
         android:layout_below="@+id/originalText"
         android:layout_alignParentStart="true"
