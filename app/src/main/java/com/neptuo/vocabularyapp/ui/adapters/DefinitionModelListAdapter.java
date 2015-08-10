@@ -4,26 +4,25 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
-import com.neptuo.vocabularyapp.services.models.DefinitionModel;
+import com.neptuo.vocabularyapp.services.models.DownloadModel;
 
 import java.util.List;
 
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class DefinitionModelListAdapter extends ArrayAdapter<DefinitionModel> {
+public class DefinitionModelListAdapter extends ArrayAdapter<DownloadModel> {
     private final Context context;
-    private final List<DefinitionModel> items;
+    private final List<DownloadModel> items;
     private OnItemSelectedListener itemSelectedListener;
 
-    public DefinitionModelListAdapter(Context context, List<DefinitionModel> items) {
+    public DefinitionModelListAdapter(Context context, List<DownloadModel> items) {
         super(context, -1, items);
         this.context = context;
         this.items = items;
@@ -41,14 +40,14 @@ public class DefinitionModelListAdapter extends ArrayAdapter<DefinitionModel> {
         CheckBox checkBox = (CheckBox) rowView.findViewById(R.id.checkBox);
         TextView urlText = (TextView) rowView.findViewById(R.id.urlText);
 
-        DefinitionModel item = items.get(position);
+        DownloadModel item = items.get(position);
 
         checkBox.setText(item.getSourceLanguage() + " -> " + item.getTargetLanguage());
         checkBox.setTag(item);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                DefinitionModel model = (DefinitionModel) ((CheckBox) buttonView).getTag();
+                DownloadModel model = (DownloadModel) ((CheckBox) buttonView).getTag();
                 model.setIsSelected(isChecked);
 
                 if (itemSelectedListener != null) {
@@ -56,7 +55,7 @@ public class DefinitionModelListAdapter extends ArrayAdapter<DefinitionModel> {
                         itemSelectedListener.onItemSelected(model, isChecked);
                     } else {
                         boolean isAnythingSelected = false;
-                        for (DefinitionModel item : items) {
+                        for (DownloadModel item : items) {
                             if(item.isSelected()) {
                                 isAnythingSelected = true;
                                 break;
@@ -75,7 +74,7 @@ public class DefinitionModelListAdapter extends ArrayAdapter<DefinitionModel> {
     }
 
     public interface OnItemSelectedListener {
-        void onItemSelected(DefinitionModel model, boolean isChecked);
+        void onItemSelected(DownloadModel model, boolean isChecked);
         void onNothingSelected();
     }
 }

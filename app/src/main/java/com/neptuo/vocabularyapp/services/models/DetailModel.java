@@ -7,33 +7,19 @@ import java.util.List;
  * Created by Windows10 on 8/9/2015.
  */
 public class DetailModel {
-    private String originalLanguageCode;
-    private String translatedLanguageCode;
+    private DownloadModel download;
     private List<DetailItemModel> items;
 
-    public DetailModel(String originalLanguageCode, String translatedLanguageCode) {
-        this.originalLanguageCode = originalLanguageCode;
-        this.translatedLanguageCode = translatedLanguageCode;
+    public DetailModel(DownloadModel download) {
+        this.download = download;
         this.items = new ArrayList<DetailItemModel>();
+    }
+
+    public DownloadModel getDownload() {
+        return download;
     }
 
     public List<DetailItemModel> getItems() {
         return items;
-    }
-
-    public String getOriginalLanguageCode() {
-        return originalLanguageCode;
-    }
-
-    public void setOriginalLanguageCode(String originalLanguageCode) {
-        this.originalLanguageCode = originalLanguageCode;
-    }
-
-    public String getTranslatedLanguageCode() {
-        return translatedLanguageCode;
-    }
-
-    public void setTranslatedLanguageCode(String translatedLanguageCode) {
-        this.translatedLanguageCode = translatedLanguageCode;
     }
 }

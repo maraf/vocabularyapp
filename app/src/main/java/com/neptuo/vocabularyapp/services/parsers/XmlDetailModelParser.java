@@ -2,6 +2,7 @@ package com.neptuo.vocabularyapp.services.parsers;
 
 import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.services.models.DownloadModel;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -13,12 +14,9 @@ import java.io.IOException;
  */
 public class XmlDetailModelParser {
 
-    public static DetailModel parse(XmlPullParser parser) throws XmlPullParserException, IOException {
+    public static DetailModel parse(XmlPullParser parser, DownloadModel download) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, null, "vocabulary");
-
-        String sourceLanguageCode = parser.getAttributeValue(null, "sourceLanguage");
-        String targetLanguageCode = parser.getAttributeValue(null, "targetLanguage");
-        DetailModel result = new DetailModel(sourceLanguageCode, targetLanguageCode);
+        DetailModel result = new DetailModel(download);
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if(parser.getEventType() == XmlPullParser.START_TAG) {

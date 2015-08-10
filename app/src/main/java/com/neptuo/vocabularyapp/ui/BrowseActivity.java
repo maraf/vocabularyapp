@@ -12,16 +12,13 @@ import com.neptuo.vocabularyapp.services.VocabularyService;
 public class BrowseActivity extends AppCompatActivity {
 
     private ListView listView;
-    private VocabularyService service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
 
-        service = ServiceProvider.getVocabulary();
-
         listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(new DetailItemModelListAdapter(this, service.getItems()));
+        listView.setAdapter(new DetailItemModelListAdapter(this, ServiceProvider.getDetails().get(0).getItems()));
     }
 }

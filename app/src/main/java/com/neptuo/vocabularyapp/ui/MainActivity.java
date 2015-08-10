@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkTranslateActivityAvailability() {
-        boolean hasVocabularyItems = ServiceProvider.getVocabulary().getItems().size() > 0;
+        boolean hasVocabularyItems = ServiceProvider.getDetails().size() > 0;
         translateButton.setEnabled(hasVocabularyItems);
         browseButton.setEnabled(hasVocabularyItems);
     }

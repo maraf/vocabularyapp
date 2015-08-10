@@ -3,6 +3,7 @@ package com.neptuo.vocabularyapp.ui.tasks;
 import android.os.AsyncTask;
 import android.util.Xml;
 
+import com.neptuo.vocabularyapp.services.models.DownloadModel;
 import com.neptuo.vocabularyapp.services.parsers.XmlDetailModelParser;
 import com.neptuo.vocabularyapp.ui.DownloadActivity;
 
@@ -16,11 +17,13 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class DownloadDetailAsyncTask extends AsyncTask<String, Void, DownloadDetailAsyncTaskResult> {
+public class DownloadDetailAsyncTask extends AsyncTask<DownloadModel, Void, List<DownloadDetailAsyncTaskResult>> {
     private DownloadActivity activity;
 
     public DownloadDetailAsyncTask(DownloadActivity activity) {
@@ -28,30 +31,41 @@ public class DownloadDetailAsyncTask extends AsyncTask<String, Void, DownloadDet
     }
 
     @Override
-    protected DownloadDetailAsyncTaskResult doInBackground(String... urls) {
+    protected List<DownloadDetailAsyncTaskResult> doInBackground(DownloadModel... downloads) {
         HttpClient client = new DefaultHttpClient();
-        HttpUriRequest request = new HttpGet(urls[0]);
-        HttpResponse response = null;
 
-        try {
-            response = client.execute(request);
+        List<DownloadDetailAsyncTaskResult> result = new ArrayList<DownloadDetailAsyncTaskResult>();
+        for (DownloadModel download : downloads) {
+            for (String url : download.getUrls()) {
 
-            XmlPullParser parser = Xml.newPullParser();
-            parser.setInput(response.getEntity().getContent(), "utf-8");
-            parser.nextTag();
+                HttpUriRequest request = new HttpGet(url);
+                HttpResponse response = null;
 
-            return new DownloadDetailAsyncTaskResult(true, XmlDetailModelParser.parse(parser), null);
-        } catch (ClientProtocolException e) {
-            return new DownloadDetailAsyncTaskResult(false, null, "Chyba komunikace.");
-        } catch (IOException e) {
-            return new DownloadDetailAsyncTaskResult(false, null, "Nelze navázat spojení. Pravděpodobně adresa neexistuje.");
-        } catch (XmlPullParserException e) {
-            return new DownloadDetailAsyncTaskResult(false, null, "Chyba formátování souboru staženého ze serveru.");
+                try {
+                    response = client.execute(request);
+
+                    XmlPullParser parser = Xml.newPullParser();
+                    parser.setInput(response.getEntity().getContent(), "utf-8");
+                    parser.nextTag();
+
+                    result.add(new DownloadDetailAsyncTaskResult(true, XmlDetailModelParser.parse(parser, download), null));
+                } catch (ClientProtocolException e) {
+                    result.add(new DownloadDetailAsyncTaskResult(false, null, "Chyba komunikace."));
+                } catch (IOException e) {
+                    result.add(new DownloadDetailAsyncTaskResult(false, null, "Nelze navázat spojení. Pravděpodobně adresa neexistuje."));
+                } catch (XmlPullParserException e) {
+                    result.add(new DownloadDetailAsyncTaskResult(false, null, "Chyba formátování souboru staženého ze serveru."));
+                }
+            }
         }
+
+        return result;
     }
 
     @Override
-    protected void onPostExecute(DownloadDetailAsyncTaskResult result) {
-        activity.downloadingCompleted(result);
+    protected void onPostExecute(List<DownloadDetailAsyncTaskResult> result) {
+        for (DownloadDetailAsyncTaskResult item : result) {
+            activity.downloadingCompleted(item);
+        }
     }
 }

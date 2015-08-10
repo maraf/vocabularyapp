@@ -3,21 +3,19 @@ package com.neptuo.vocabularyapp.ui;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.SparseBooleanArray;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
-import com.neptuo.vocabularyapp.services.models.DefinitionModel;
+import com.neptuo.vocabularyapp.services.models.DownloadModel;
 import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.VocabularyService;
 import com.neptuo.vocabularyapp.ui.adapters.DefinitionModelListAdapter;
-import com.neptuo.vocabularyapp.ui.tasks.DownloadDefinitionListAsyncTask;
-import com.neptuo.vocabularyapp.ui.tasks.DownloadDefinitionListAsyncTaskResult;
+import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTask;
+import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTaskResult;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTaskResult;
 
@@ -27,7 +25,7 @@ import java.util.List;
 public class DownloadActivity extends AppCompatActivity {
 
     private VocabularyService service;
-    private List<DefinitionModel> definitions;
+    private List<DownloadModel> definitions;
 
     private Button downloadButton;
     private Button downloadItemButton;
@@ -56,10 +54,8 @@ public class DownloadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progress.show();
-                //DownloadDetailAsyncTask task = new DownloadDetailAsyncTask(self);
-                //task.execute("http://home.neptuo.com/vocabulary/api/cs-de.xml");
 
-                DownloadDefinitionListAsyncTask task = new DownloadDefinitionListAsyncTask(self);
+                DownloadListAsyncTask task = new DownloadListAsyncTask(self);
                 task.execute("http://home.neptuo.com/vocabulary/api/index.xml");
             }
         });
@@ -68,14 +64,12 @@ public class DownloadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progress.show();
+                ServiceProvider.getDetails().clear();
 
-                List<DefinitionModel> selectedModels = new ArrayList<DefinitionModel>();
-                for (DefinitionModel model : definitions) {
+                for (DownloadModel model : definitions) {
                     if(model.isSelected()) {
-                        for (String url : model.getUrls()) {
-                            new DownloadDetailAsyncTask(self).execute(url);
-                            downloadCount++;
-                        }
+                        new DownloadDetailAsyncTask(self).execute(model);
+                        downloadCount++;
                     }
                 }
 
@@ -85,7 +79,7 @@ public class DownloadActivity extends AppCompatActivity {
         });
     }
 
-    public void downloadingCompleted(DownloadDefinitionListAsyncTaskResult result) {
+    public void downloadingCompleted(DownloadListAsyncTaskResult result) {
         progress.hide();
 
         if(result == null) {
@@ -99,7 +93,7 @@ public class DownloadActivity extends AppCompatActivity {
                     DefinitionModelListAdapter adapter = new DefinitionModelListAdapter(this, result.getContent());
                     adapter.setItemSelectedListener(new DefinitionModelListAdapter.OnItemSelectedListener() {
                         @Override
-                        public void onItemSelected(DefinitionModel model, boolean isChecked) {
+                        public void onItemSelected(DownloadModel model, boolean isChecked) {
                             downloadItemButton.setEnabled(true);
                         }
 
@@ -131,10 +125,12 @@ public class DownloadActivity extends AppCompatActivity {
             Toast.makeText(this, "Chyba při pokusu o stažení dat a jejich zpracování.", Toast.LENGTH_SHORT).show();
         } else {
             if(result.isSuccessfull()) {
-                service.getItems().clear();
-                for (DetailItemModel item : result.getContent().getItems()) {
-                    service.getItems().add(item);
-                }
+
+                int index = ServiceProvider.getDetails().indexOf(result.getContent());
+                if(index >= 0)
+                    ServiceProvider.getDetails().get(index).getItems().addAll(result.getContent().getItems());
+                else
+                    ServiceProvider.getDetails().add(result.getContent());
 
                 Toast.makeText(this, "Staženo celkem položek: " + result.getContent().getItems().size(), Toast.LENGTH_SHORT).show();
             } else {

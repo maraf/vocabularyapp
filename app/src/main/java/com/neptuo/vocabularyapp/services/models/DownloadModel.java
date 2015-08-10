@@ -6,13 +6,13 @@ import java.util.List;
 /**
  * Created by Windows10 on 8/9/2015.
  */
-public class DefinitionModel {
+public class DownloadModel {
     private boolean isSelected;
     private String sourceLanguage;
     private String targetLanguage;
     private List<String> urls;
 
-    public DefinitionModel(String sourceLanguage, String targetLanguage) {
+    public DownloadModel(String sourceLanguage, String targetLanguage) {
         this.sourceLanguage = sourceLanguage;
         this.targetLanguage = targetLanguage;
         this.urls = new ArrayList<String>();

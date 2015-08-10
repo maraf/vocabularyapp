@@ -3,7 +3,7 @@ package com.neptuo.vocabularyapp.ui.tasks;
 import android.os.AsyncTask;
 import android.util.Xml;
 
-import com.neptuo.vocabularyapp.services.parsers.XmlDefinitionModelParser;
+import com.neptuo.vocabularyapp.services.parsers.XmlDownloadModelParser;
 import com.neptuo.vocabularyapp.ui.DownloadActivity;
 
 import org.apache.http.HttpResponse;
@@ -20,16 +20,16 @@ import java.io.IOException;
 /**
  * Created by Windows10 on 8/9/2015.
  */
-public class DownloadDefinitionListAsyncTask extends AsyncTask<String, Void, DownloadDefinitionListAsyncTaskResult> {
+public class DownloadListAsyncTask extends AsyncTask<String, Void, DownloadListAsyncTaskResult> {
     private DownloadActivity activity;
 
-    public DownloadDefinitionListAsyncTask(DownloadActivity activity) {
+    public DownloadListAsyncTask(DownloadActivity activity) {
         this.activity = activity;
     }
 
 
     @Override
-    protected DownloadDefinitionListAsyncTaskResult doInBackground(String... urls) {
+    protected DownloadListAsyncTaskResult doInBackground(String... urls) {
         HttpClient client = new DefaultHttpClient();
         HttpUriRequest request = new HttpGet(urls[0]);
         HttpResponse response = null;
@@ -41,18 +41,18 @@ public class DownloadDefinitionListAsyncTask extends AsyncTask<String, Void, Dow
             parser.setInput(response.getEntity().getContent(), "utf-8");
             parser.nextTag();
 
-            return new DownloadDefinitionListAsyncTaskResult(true, XmlDefinitionModelParser.parseList(parser), null);
+            return new DownloadListAsyncTaskResult(true, XmlDownloadModelParser.parseList(parser), null);
         } catch (ClientProtocolException e) {
-            return new DownloadDefinitionListAsyncTaskResult(false, null, "Chyba komunikace.");
+            return new DownloadListAsyncTaskResult(false, null, "Chyba komunikace.");
         } catch (IOException e) {
-            return new DownloadDefinitionListAsyncTaskResult(false, null, "Nelze navázat spojení. Pravděpodobně adresa neexistuje.");
+            return new DownloadListAsyncTaskResult(false, null, "Nelze navázat spojení. Pravděpodobně adresa neexistuje.");
         } catch (XmlPullParserException e) {
-            return new DownloadDefinitionListAsyncTaskResult(false, null, "Chyba formátování souboru staženého ze serveru.");
+            return new DownloadListAsyncTaskResult(false, null, "Chyba formátování souboru staženého ze serveru.");
         }
     }
 
     @Override
-    protected void onPostExecute(DownloadDefinitionListAsyncTaskResult result) {
+    protected void onPostExecute(DownloadListAsyncTaskResult result) {
         activity.downloadingCompleted(result);
     }
 }

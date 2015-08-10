@@ -1,19 +1,24 @@
 package com.neptuo.vocabularyapp.ui;
 
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.services.Session;
 import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.VocabularyService;
+import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
+import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
 public class TranslateActivity extends AppCompatActivity {
 
@@ -28,8 +33,8 @@ public class TranslateActivity extends AppCompatActivity {
     private Button descriptionButton;
     private Button nextButton;
 
-    private VocabularyService service;
-    private DetailItemModel item;
+    private Session session;
+    private UserDetailItemViewModel itemViewModel;
     private boolean isGivenUp;
 
     @Override
@@ -38,7 +43,7 @@ public class TranslateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_translate);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        service = ServiceProvider.getVocabulary();
+        session = new Session(ServiceProvider.getDetails().get(0), ServiceProvider.getUserStorage());
 
         originalLabel = (TextView) findViewById(R.id.originalLabel);
         originalText = (TextView) findViewById(R.id.originalText);
@@ -82,11 +87,11 @@ public class TranslateActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isGivenUp) {
-                    prepareNextItem();
+                    prepareNextItem(false);
                 } else {
                     isGivenUp = true;
 
-                    translatedText.setText(item.getTranslatedText());
+                    translatedText.setText(itemViewModel.getModel().getTranslatedText());
                     translatedText.setEnabled(false);
                     setDescriptionVisibility(true);
 
@@ -97,15 +102,16 @@ public class TranslateActivity extends AppCompatActivity {
             }
         });
 
-        prepareNextItem();
+        prepareNextItem(true);
     }
 
     private void tryTranslation() {
         String typedTranslation = translatedText.getText().toString().toLowerCase();
-        if(item.getTranslatedText().toLowerCase().equals(typedTranslation)) {
-            prepareNextItem();
+        if(itemViewModel.tryTranslation(typedTranslation)) {
+            prepareNextItem(true);
             Toast.makeText(this, R.string.translate_success, Toast.LENGTH_SHORT).show();
         } else {
+            itemViewModel.getUserModel().incrementWrongCount();
             tryButton.setText(getString(R.string.tryButton_nextTry));
             Toast.makeText(this, R.string.translate_fail, Toast.LENGTH_SHORT).show();
         }
@@ -128,16 +134,34 @@ public class TranslateActivity extends AppCompatActivity {
         translatedText.setImeActionLabel(text, KeyEvent.KEYCODE_ENTER);
     }
 
-    private void prepareNextItem() {
+    private void prepareNextItem(boolean isSuccess) {
+        if(itemViewModel != null) {
+            if(isSuccess) {
+                itemViewModel.getUserModel().incrementCorrectCount();
+            } else {
+                itemViewModel.getUserModel().incrementWrongCount();
+            }
+        }
+
         isGivenUp = false;
+        itemViewModel = new UserDetailItemViewModel(session.nextRandom());
 
-        item = service.nextRandom();
+        RelativeLayout layout = (RelativeLayout) findViewById(R.id.backgroundLayout);
+        if(itemViewModel.getUserModel().getCorrectCount() > itemViewModel.getUserModel().getWrongCount()) {
+            layout.setBackgroundColor(Color.parseColor("#83A57C"));
+        } else if(itemViewModel.getUserModel().getCorrectCount() < itemViewModel.getUserModel().getWrongCount()) {
+            layout.setBackgroundColor(Color.parseColor("#E39090"));
+        } else {
+            layout.setBackgroundColor(Color.alpha(0));
+        }
 
-        originalText.setText(item.getOriginalText());
+
+
+        originalText.setText(itemViewModel.getModel().getOriginalText());
         translatedText.setText("");
         translatedText.setEnabled(true);
 
-        descriptionText.setText(item.getTranslatedDescription());
+        descriptionText.setText(itemViewModel.getModel().getTranslatedDescription());
         setDescriptionVisibility(false);
 
         setTryButtonText(getString(R.string.tryButton_try));

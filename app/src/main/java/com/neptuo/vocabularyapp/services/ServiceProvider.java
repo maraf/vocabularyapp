@@ -1,6 +1,7 @@
 package com.neptuo.vocabularyapp.services;
 
-import com.neptuo.vocabularyapp.services.models.DefinitionModel;
+import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.services.models.DownloadModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +11,9 @@ import java.util.List;
  */
 public class ServiceProvider {
 
+    private static List<DownloadModel> definitions = new ArrayList<DownloadModel>();
 
-    private static List<DefinitionModel> definitions = new ArrayList<DefinitionModel>();
-
-    public static List<DefinitionModel> getDefinitions() {
+    public static List<DownloadModel> getDefinitions() {
         return definitions;
     }
 
@@ -26,5 +26,18 @@ public class ServiceProvider {
         }
 
         return service;
+    }
+
+
+
+    private static UserStorage userStorage = new UserStorage();
+    private static List<DetailModel> details = new ArrayList<DetailModel>();
+
+    public  static UserStorage getUserStorage() {
+        return userStorage;
+    }
+
+    public static List<DetailModel> getDetails() {
+        return details;
     }
 }
