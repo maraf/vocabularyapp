@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
-import com.neptuo.vocabularyapp.ui.PercentageConverter;
+import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
 import java.util.List;

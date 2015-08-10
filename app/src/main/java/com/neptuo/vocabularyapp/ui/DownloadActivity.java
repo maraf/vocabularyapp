@@ -54,7 +54,7 @@ public class DownloadActivity extends AppCompatActivity {
                 progress.show();
 
                 DownloadListAsyncTask task = new DownloadListAsyncTask(self);
-                task.execute("http://vocabulary.neptuo.com/api/index.xml");
+                task.execute("http://vocabulary.neptuo.com/api/v1/list.xml");
             }
         });
 

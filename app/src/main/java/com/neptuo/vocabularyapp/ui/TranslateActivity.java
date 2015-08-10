@@ -16,6 +16,7 @@ import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.Session;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
 public class TranslateActivity extends AppCompatActivity {

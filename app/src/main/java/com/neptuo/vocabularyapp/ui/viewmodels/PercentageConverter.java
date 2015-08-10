@@ -1,4 +1,4 @@
-package com.neptuo.vocabularyapp.ui;
+package com.neptuo.vocabularyapp.ui.viewmodels;
 
 import android.graphics.Color;
 import android.view.ViewGroup;
