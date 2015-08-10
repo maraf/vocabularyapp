@@ -8,16 +8,14 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.Session;
-import com.neptuo.vocabularyapp.services.models.DetailItemModel;
-import com.neptuo.vocabularyapp.services.VocabularyService;
-import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
+import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
 public class TranslateActivity extends AppCompatActivity {
@@ -28,6 +26,7 @@ public class TranslateActivity extends AppCompatActivity {
     private EditText translatedText;
     private TextView descriptionLabel;
     private TextView descriptionText;
+    private TextView percentageText;
 
     private Button tryButton;
     private Button descriptionButton;
@@ -43,7 +42,8 @@ public class TranslateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_translate);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        session = new Session(ServiceProvider.getDetails().get(0), ServiceProvider.getUserStorage());
+        DetailModel detail = ServiceProvider.getDetails().get(0);
+        session = new Session(detail, ServiceProvider.getUserStorage());
 
         originalLabel = (TextView) findViewById(R.id.originalLabel);
         originalText = (TextView) findViewById(R.id.originalText);
@@ -51,10 +51,14 @@ public class TranslateActivity extends AppCompatActivity {
         translatedText = (EditText) findViewById(R.id.translatedText);
         descriptionLabel = (TextView) findViewById(R.id.descriptionLabel);
         descriptionText = (TextView) findViewById(R.id.descriptionText);
+        percentageText = (TextView) findViewById(R.id.percentageText);
 
         tryButton = (Button) findViewById(R.id.tryButton);
         descriptionButton = (Button) findViewById(R.id.descriptionButton);
         nextButton = (Button) findViewById(R.id.nextButton);
+
+        originalLabel.setText(detail.getDownload().getSourceLanguage());
+        originalLabel.setText(detail.getDownload().getTargetLanguage());
 
         translatedText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -113,6 +117,8 @@ public class TranslateActivity extends AppCompatActivity {
         } else {
             itemViewModel.getUserModel().incrementWrongCount();
             tryButton.setText(getString(R.string.tryButton_nextTry));
+            updateSuccessBar();
+
             Toast.makeText(this, R.string.translate_fail, Toast.LENGTH_SHORT).show();
         }
     }
@@ -145,17 +151,7 @@ public class TranslateActivity extends AppCompatActivity {
 
         isGivenUp = false;
         itemViewModel = new UserDetailItemViewModel(session.nextRandom());
-
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.backgroundLayout);
-        if(itemViewModel.getUserModel().getCorrectCount() > itemViewModel.getUserModel().getWrongCount()) {
-            layout.setBackgroundColor(Color.parseColor("#83A57C"));
-        } else if(itemViewModel.getUserModel().getCorrectCount() < itemViewModel.getUserModel().getWrongCount()) {
-            layout.setBackgroundColor(Color.parseColor("#E39090"));
-        } else {
-            layout.setBackgroundColor(Color.alpha(0));
-        }
-
-
+        updateSuccessBar();
 
         originalText.setText(itemViewModel.getModel().getOriginalText());
         translatedText.setText("");
@@ -168,5 +164,30 @@ public class TranslateActivity extends AppCompatActivity {
         tryButton.setEnabled(true);
         descriptionButton.setEnabled(true);
         nextButton.setText(getString(R.string.nextButton_giveUp));
+    }
+
+    private void updateSuccessBar() {
+        FrameLayout placeholder = (FrameLayout) findViewById(R.id.backgroundLayout);
+
+        if(itemViewModel.getUserModel().getTotalCount() == 0) {
+            percentageText.setText(R.string.not_yet_tested);
+            placeholder.setBackgroundColor(Color.alpha(0));
+        } else {
+            double ratio = itemViewModel.getCorrentGuessRatio();
+            int percentage = (int) (ratio * 100);
+
+            percentageText.setText(percentage + "%");
+            if (percentage < 20) {
+                placeholder.setBackgroundColor(Color.parseColor("#E39090"));
+            } else if (percentage < 40) {
+                placeholder.setBackgroundColor(Color.parseColor("#E8B493"));
+            } else if (percentage < 60) {
+                placeholder.setBackgroundColor(Color.alpha(0));
+            } else if (percentage < 80) {
+                placeholder.setBackgroundColor(Color.parseColor("#83A57C"));
+            } else {
+                placeholder.setBackgroundColor(Color.parseColor("#93AAE3"));
+            }
+        }
     }
 }

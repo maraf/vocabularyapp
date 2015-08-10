@@ -31,4 +31,8 @@ public class UserDetailItemModel {
     public  void incrementWrongCount() {
         guess.incrementWrong();
     }
+
+    public int getTotalCount() {
+        return getCorrectCount() + getWrongCount();
+    }
 }

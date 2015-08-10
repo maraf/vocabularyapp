@@ -25,4 +25,12 @@ public class UserDetailItemViewModel {
         String typedTranslation = text.toLowerCase();
         return userModel.getModel().getTranslatedText().toLowerCase().equals(typedTranslation);
     }
+
+    public double getCorrentGuessRatio() {
+        int totalCount = userModel.getTotalCount();
+        if(totalCount == 0)
+            return 0;
+
+        return ((double)userModel.getCorrectCount()) / totalCount;
+    }
 }
