@@ -8,11 +8,11 @@ import java.util.List;
  */
 public class DownloadModel {
     private boolean isSelected;
-    private String sourceLanguage;
-    private String targetLanguage;
+    private LanguageModel sourceLanguage;
+    private LanguageModel targetLanguage;
     private List<String> urls;
 
-    public DownloadModel(String sourceLanguage, String targetLanguage) {
+    public DownloadModel(LanguageModel sourceLanguage, LanguageModel targetLanguage) {
         this.sourceLanguage = sourceLanguage;
         this.targetLanguage = targetLanguage;
         this.urls = new ArrayList<String>();
@@ -30,19 +30,19 @@ public class DownloadModel {
         return urls;
     }
 
-    public String getSourceLanguage() {
+    public LanguageModel getSourceLanguage() {
         return sourceLanguage;
     }
 
-    public void setSourceLanguage(String sourceLanguage) {
+    public void setSourceLanguage(LanguageModel sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
     }
 
-    public String getTargetLanguage() {
+    public LanguageModel getTargetLanguage() {
         return targetLanguage;
     }
 
-    public void setTargetLanguage(String targetLanguage) {
+    public void setTargetLanguage(LanguageModel targetLanguage) {
         this.targetLanguage = targetLanguage;
     }
 }

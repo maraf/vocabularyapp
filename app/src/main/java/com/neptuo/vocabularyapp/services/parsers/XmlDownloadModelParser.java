@@ -1,6 +1,7 @@
 package com.neptuo.vocabularyapp.services.parsers;
 
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
+import com.neptuo.vocabularyapp.services.models.LanguageModel;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -40,7 +41,7 @@ public class XmlDownloadModelParser {
                         }
                     }
 
-                    DownloadModel model = new DownloadModel(sourceLanguage, targetLanguage);
+                    DownloadModel model = new DownloadModel(new LanguageModel(sourceLanguage, null), new LanguageModel(targetLanguage, null));
                     model.getUrls().addAll(urls);
                     result.add(model);
 

@@ -1,12 +1,16 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.data.DbContext;
+import com.neptuo.vocabularyapp.data.Sql;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +23,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        try {
+            DbContext dbContext = new DbContext(getApplicationContext());
+            SQLiteDatabase db = dbContext.getWritableDatabase();
+            ContentValues values = new ContentValues();
+            values.put(Sql.Language._NAME, "Česky");
+            values.put(Sql.Language._CODE, "cs-CZ");
+            long rowId = db.insert(Sql.Language.TABLE, null, values);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         final MainActivity self = this;
 
