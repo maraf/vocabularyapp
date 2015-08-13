@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<vocabularies>
+    <vocabulary>
+        <source name="Česky" code="cs-CZ" />
+        <target name="Německy" code="de-DE" />
+        <content url="http://vocabulary.neptuo.com/api/v1/cs-de.xml" />
+    </vocabulary>
+</vocabularies>

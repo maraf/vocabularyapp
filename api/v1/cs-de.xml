@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<vocabulary>
+    <item>
+       <source text="Televize" description="Kouzelná bednička." />
+       <target text="Fernseher" description="" />
+    </item>
+    <item>
+       <source text="Přechod pro chodce" description="Přechod pro chodce je místo, kde mohou chodci bezpečně přecházet." />
+       <target text="Fußgängerübergang" description="" />
+    </item>
+    <item>
+       <source text="Kočka" description="Milý malý chlupatý tvor." />
+       <target text="Katze" description="" />
+    </item>
+    <item>
+       <source text="Slepé střevo" description="Nepotřebný kus lidského těla." />
+       <target text="Anhang" description="" />
+    </item>
+    <item>
+       <source text="Kachna" description="Chutný vodní pták." />
+       <target text="Ente" description="" />
+    </item>
+    <item>
+       <source text="Čepice" description="Pokrývka hlavy." />
+       <target text="Mütze" description="" />
+    </item>
+    <item>
+       <source text="Klobouk" description="Pokrývka hlavy." />
+       <target text="Hut" description="" />
+    </item>
+</vocabulary>
