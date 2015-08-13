@@ -85,7 +85,7 @@ public class DownloadRepository {
         return result;
     }
 
-    public void save(DownloadModel model) {
+    public int save(DownloadModel model) {
         LanguageRepository languages = new LanguageRepository(db);
         int sourceLanguageId = languages.save(model.getSourceLanguage());
         int targetLanguageId = languages.save(model.getTargetLanguage());
@@ -103,5 +103,13 @@ public class DownloadRepository {
 
             db.insert(Sql.Url.TABLE, null, values);
         }
+
+        return downloadId;
+    }
+
+    public void truncate() {
+        LanguageRepository languages = new LanguageRepository(db);
+        languages.truncate();
+        db.delete(Sql.Download.TABLE, null, null);
     }
 }

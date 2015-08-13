@@ -68,4 +68,8 @@ public class DetailItemRepository {
 
         return (int) db.insert(Sql.DetailItem.TABLE, null, values);
     }
+
+    public void truncate() {
+        db.delete(Sql.DetailItem.TABLE, null, null);
+    }
 }

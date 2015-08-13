@@ -52,4 +52,8 @@ public class LanguageRepository {
 
         return (int) db.insert(Sql.Download.TABLE, null, values);
     }
+
+    public void truncate() {
+        db.delete(Sql.Language.TABLE, null, null);
+    }
 }

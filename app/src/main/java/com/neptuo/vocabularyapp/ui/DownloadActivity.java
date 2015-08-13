@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.data.DbContext;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
 import com.neptuo.vocabularyapp.services.VocabularyService;
@@ -17,6 +18,7 @@ import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTaskResult;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTaskResult;
+import com.neptuo.vocabularyapp.ui.tasks.StoreToDbAsyncTask;
 
 import java.util.List;
 
@@ -113,11 +115,11 @@ public class DownloadActivity extends AppCompatActivity {
 
     public void downloadingCompleted(DownloadDetailAsyncTaskResult result) {
         downloadCount--;
-        if(downloadCount == 0)
-            progress.hide();
 
+        boolean isSuccess = false;
         if(result == null) {
             Toast.makeText(this, "Chyba při pokusu o stažení dat a jejich zpracování.", Toast.LENGTH_SHORT).show();
+            isSuccess = false;
         } else {
             if(result.isSuccessfull()) {
 
@@ -128,9 +130,21 @@ public class DownloadActivity extends AppCompatActivity {
                     ServiceProvider.getDetails().add(result.getContent());
 
                 Toast.makeText(this, "Staženo celkem položek: " + result.getContent().getItems().size(), Toast.LENGTH_SHORT).show();
+                isSuccess = true;
+
+                if(downloadCount == 0)
+                    new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute();
+
             } else {
                 Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();
             }
         }
+
+        if(downloadCount == 0 && isSuccess)
+            progress.hide();
+    }
+
+    public void storeCompleted() {
+        progress.hide();
     }
 }
