@@ -19,7 +19,7 @@ public class DownloadRepository {
         this.db = db;
     }
 
-    public List<DownloadModel> getAll() {
+    public List<DownloadModel> getList() {
         String[] projection = {
             Sql.Download._ID,
             Sql.Download._SOURCE_LANGUAGE_ID,

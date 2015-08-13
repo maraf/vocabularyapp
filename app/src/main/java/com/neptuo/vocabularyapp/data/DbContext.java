@@ -21,6 +21,7 @@ public class DbContext extends SQLiteOpenHelper {
         db.execSQL(Sql.Language.TABLE_CREATE);
         db.execSQL(Sql.Download.TABLE_CREATE);
         db.execSQL(Sql.Url.TABLE_CREATE);
+        db.execSQL(Sql.DetailItem.TABLE_CREATE);
     }
 
     @Override
@@ -28,6 +29,7 @@ public class DbContext extends SQLiteOpenHelper {
         db.execSQL(Sql.Language.TABLE_DROP);
         db.execSQL(Sql.Download.TABLE_DROP);
         db.execSQL(Sql.Url.TABLE_DROP);
+        db.execSQL(Sql.DetailItem.TABLE_DROP);
         onCreate(db);
     }
 
