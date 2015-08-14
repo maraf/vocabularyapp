@@ -53,7 +53,7 @@ public class DownloadActivity extends AppCompatActivity {
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progress.setTitle(getString(R.string.download_list));
+                progress.setMessage(getString(R.string.download_list));
                 progress.show();
 
                 DownloadListAsyncTask task = new DownloadListAsyncTask(self);
@@ -64,7 +64,7 @@ public class DownloadActivity extends AppCompatActivity {
         downloadItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progress.setTitle(getString(R.string.download_details));
+                progress.setMessage(getString(R.string.download_details));
                 progress.show();
                 ServiceProvider.getDetails().clear();
 
@@ -82,7 +82,6 @@ public class DownloadActivity extends AppCompatActivity {
     }
 
     public void downloadingCompleted(DownloadListAsyncTaskResult result) {
-        progress.hide();
 
         if (result == null) {
             Toast.makeText(this, R.string.neterror_general, Toast.LENGTH_SHORT).show();
@@ -113,6 +112,8 @@ public class DownloadActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();
         }
+
+        progress.hide();
     }
 
     public void downloadingCompleted(DownloadDetailAsyncTaskResult result) {

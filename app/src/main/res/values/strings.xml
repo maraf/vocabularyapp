@@ -28,8 +28,10 @@
     <string name="download_itemcount">"Staženo celkem položek: "</string>
     <string name="db_saved">Ukládání do interního uložiště dokončeno.</string>
     <string name="db_loaded">Načítání z interního uložiště dokončeno.</string>
-    <string name="title_activity_configuration">ConfigurationActivity</string>
+    <string name="title_activity_configuration">Nastavení</string>
     <string name="title_activity_browse">Celý slovníček</string>
     <string name="title_activity_translate">Překlad slovíček</string>
     <string name="configuration_saved">Nastavení uloženo</string>
+    <string name="title_activity_browse_item">Detail slovíčka</string>
+    <string name="action_settings">Settings</string>
 </resources>

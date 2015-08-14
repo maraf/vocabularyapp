@@ -35,7 +35,7 @@ public class DownloadItemListAdapter extends ArrayAdapter<DownloadModel> {
     @Override
     public View getView(int position, final View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View rowView = inflater.inflate(R.layout.download_item, parent, false);
+        final View rowView = inflater.inflate(R.layout.item_download, parent, false);
 
         CheckBox checkBox = (CheckBox) rowView.findViewById(R.id.checkBox);
         TextView urlText = (TextView) rowView.findViewById(R.id.urlText);

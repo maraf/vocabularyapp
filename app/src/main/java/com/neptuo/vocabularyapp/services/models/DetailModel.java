@@ -22,4 +22,15 @@ public class DetailModel {
     public List<DetailItemModel> getItems() {
         return items;
     }
+
+
+    public DetailModel reverse() {
+        DetailModel reverse = new DetailModel(new DownloadModel(download.getTargetLanguage(), download.getSourceLanguage()));
+        List<DetailItemModel> reverseItems = reverse.getItems();
+        for (DetailItemModel item : items) {
+            reverseItems.add(new DetailItemModel(item.getTranslatedText(), item.getOriginalText(), item.getTranslatedDescription(), item.getOriginalDescription()));
+        }
+
+        return reverse;
+    }
 }

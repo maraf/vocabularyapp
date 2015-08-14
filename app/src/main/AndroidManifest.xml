@@ -50,6 +50,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.neptuo.vocabularyapp.ui.MainActivity" />
         </activity>
+        <activity
+            android:name=".ui.BrowseItemActivity"
+            android:label="@string/title_activity_browse_item"
+            android:parentActivityName=".ui.BrowseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.neptuo.vocabularyapp.ui.BrowseActivity" />
+        </activity>
     </application>
 
 </manifest>

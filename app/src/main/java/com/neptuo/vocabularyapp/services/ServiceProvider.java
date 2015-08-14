@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class ServiceProvider {
 
+    private static boolean isInitialized;
     private static List<DownloadModel> definitions = new ArrayList<DownloadModel>();
 
     public static List<DownloadModel> getDefinitions() {
@@ -37,8 +38,12 @@ public class ServiceProvider {
         return details;
     }
 
-    public static void initialize(Context context) {
+    public static boolean tryInitialize(Context context) {
+        if(isInitialized)
+            return false;
+
         userStorage = new UserStorage(new UserGuessRepository(new DbContext(context).getWritableDatabase()));
         configurationStorage = new ConfigurationStorage(context);
+        return isInitialized = true;
     }
 }

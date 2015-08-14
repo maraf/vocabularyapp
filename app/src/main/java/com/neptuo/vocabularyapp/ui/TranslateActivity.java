@@ -19,7 +19,7 @@ import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
-public class TranslateActivity extends AppCompatActivity {
+public class TranslateActivity extends DetailActivityBase {
 
     private TextView originalLabel;
     private TextView originalText;
@@ -27,7 +27,6 @@ public class TranslateActivity extends AppCompatActivity {
     private EditText translatedText;
     private TextView descriptionLabel;
     private TextView descriptionText;
-    private TextView percentageText;
 
     private Button tryButton;
     private Button descriptionButton;
@@ -42,8 +41,9 @@ public class TranslateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translate);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        DetailModel detail = ServiceProvider.getDetails().get(0);
+        DetailModel detail = prepareDetailModel();
         session = new Session(detail, ServiceProvider.getUserStorage());
 
         originalLabel = (TextView) findViewById(R.id.originalLabel);
@@ -52,7 +52,6 @@ public class TranslateActivity extends AppCompatActivity {
         translatedText = (EditText) findViewById(R.id.translatedText);
         descriptionLabel = (TextView) findViewById(R.id.descriptionLabel);
         descriptionText = (TextView) findViewById(R.id.descriptionText);
-        percentageText = (TextView) findViewById(R.id.percentageText);
 
         tryButton = (Button) findViewById(R.id.tryButton);
         descriptionButton = (Button) findViewById(R.id.descriptionButton);
@@ -168,6 +167,7 @@ public class TranslateActivity extends AppCompatActivity {
     }
 
     private void updateSuccessBar() {
+        TextView percentageText = (TextView) findViewById(R.id.percentageText);
         FrameLayout placeholder = (FrameLayout) findViewById(R.id.backgroundLayout);
 
         if(itemViewModel.getUserModel().getTotalCount() == 0) {

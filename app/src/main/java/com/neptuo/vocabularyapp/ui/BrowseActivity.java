@@ -1,17 +1,23 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.UserStorage;
+import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
 import com.neptuo.vocabularyapp.ui.adapters.BrowseItemListAdapter;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.comparators.AlphabetUserDetailItemModelComparator;
 import com.neptuo.vocabularyapp.ui.viewmodels.comparators.PercentageUserDetailItemModelComparator;
@@ -19,7 +25,7 @@ import com.neptuo.vocabularyapp.ui.viewmodels.comparators.PercentageUserDetailIt
 import java.util.Collections;
 import java.util.List;
 
-public class BrowseActivity extends AppCompatActivity {
+public class BrowseActivity extends DetailActivityBase {
 
     private ListView listView;
     private Button alphabetOriginalSortButton;
@@ -37,7 +43,7 @@ public class BrowseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_browse);
 
         userStorage = ServiceProvider.getUserStorage();
-        detail = ServiceProvider.getDetails().get(0);
+        detail = prepareDetailModel();
         userItems = UserDetailConverter.map(userStorage, detail.getItems());
 
         listView = (ListView) findViewById(R.id.listView);
@@ -81,6 +87,8 @@ public class BrowseActivity extends AppCompatActivity {
                 updateListViewAdapter();
             }
         });
+
+        updateSuccessBar();
     }
 
     private String getEllapsedText(String text) {
@@ -94,5 +102,30 @@ public class BrowseActivity extends AppCompatActivity {
         BrowseItemListAdapter adapter = new BrowseItemListAdapter(this, userItems);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+    }
+
+    private void updateSuccessBar() {
+        TextView percentageText = (TextView) findViewById(R.id.percentageText);
+        FrameLayout placeholder = (FrameLayout) findViewById(R.id.backgroundLayout);
+
+        int totalCount = 0;
+        int correctCount = 0;
+        int wrongCount = 0;
+        for (UserDetailItemModel userItem : userItems) {
+            totalCount += userItem.getTotalCount();
+            correctCount += userItem.getCorrectCount();
+            wrongCount += userItem.getWrongCount();
+        }
+
+        if(totalCount == 0) {
+            percentageText.setText(R.string.not_yet_tested);
+            placeholder.setBackgroundColor(Color.alpha(0));
+        } else {
+            double ratio = ((double)correctCount) / totalCount;
+            int percentage = (int) (ratio * 100);
+
+            percentageText.setText(percentage + "%");
+            placeholder.setBackgroundColor(PercentageConverter.mapToColor(percentage));
+        }
     }
 }

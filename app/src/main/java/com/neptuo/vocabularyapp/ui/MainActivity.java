@@ -1,24 +1,28 @@
 package com.neptuo.vocabularyapp.ui;
 
-import android.content.ContentValues;
+import android.app.AlertDialog;
+import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
-import com.neptuo.vocabularyapp.data.Sql;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.ui.fragments.SelectDetailDialogFragment;
 import com.neptuo.vocabularyapp.ui.tasks.LoadFromDbAsyncTask;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ServiceProvider.initialize(getApplicationContext());
-
-        new LoadFromDbAsyncTask(this, new DbContext(getApplicationContext())).execute();
+        if(ServiceProvider.tryInitialize(getApplicationContext())) {
+            new LoadFromDbAsyncTask(this, new DbContext(getApplicationContext())).execute();
+        }
 
         final MainActivity self = this;
 
@@ -46,16 +50,36 @@ public class MainActivity extends AppCompatActivity {
         translateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(self, TranslateActivity.class);
-                startActivity(intent);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                SelectDetailDialogFragment fragment = new SelectDetailDialogFragment();
+                fragment.setOkListener(new SelectDetailDialogFragment.OnClickOkListener() {
+                    @Override
+                    public void onClick(int detailIndex, boolean isReverse) {
+                        Intent intent = new Intent(self, TranslateActivity.class);
+                        intent.putExtra(TranslateActivity.PARAMETER_DETAIL_INDEX, detailIndex);
+                        intent.putExtra(TranslateActivity.PARAMETER_IS_REVERSE, isReverse);
+                        startActivity(intent);
+                    }
+                });
+                fragment.show(transaction, "dialog");
             }
         });
 
         browseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(self, BrowseActivity.class);
-                startActivity(intent);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                SelectDetailDialogFragment fragment = new SelectDetailDialogFragment();
+                fragment.setOkListener(new SelectDetailDialogFragment.OnClickOkListener() {
+                    @Override
+                    public void onClick(int detailIndex, boolean isReverse) {
+                        Intent intent = new Intent(self, BrowseActivity.class);
+                        intent.putExtra(BrowseActivity.PARAMETER_DETAIL_INDEX, detailIndex);
+                        intent.putExtra(BrowseActivity.PARAMETER_IS_REVERSE, isReverse);
+                        startActivity(intent);
+                    }
+                });
+                fragment.show(transaction, "dialog");
             }
         });
 
