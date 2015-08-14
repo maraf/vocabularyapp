@@ -42,7 +42,7 @@ public class DownloadItemListAdapter extends ArrayAdapter<DownloadModel> {
 
         DownloadModel item = items.get(position);
 
-        checkBox.setText(item.getSourceLanguage().getName() + " -> " + item.getTargetLanguage().getName());
+        checkBox.setText(item.getSourceLanguage().getName() + " <-> " + item.getTargetLanguage().getName());
         checkBox.setTag(item);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
