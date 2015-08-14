@@ -63,11 +63,11 @@
       <file leaf-file-name="Session.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/services/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.688027">
-              <caret line="116" column="44" selection-start-line="116" selection-start-column="44" selection-end-line="116" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.618887">
+              <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
               <folding>
-                <element signature="e#3393#3394#0" expanded="true" />
-                <element signature="e#3432#3433#0" expanded="true" />
+                <element signature="e#3468#3469#0" expanded="true" />
+                <element signature="e#3507#3508#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1579,8 +1579,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/fragments/BrowseItemDialogFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/adapters/DownloadItemListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/TranslateActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/services/Session.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/services/ServiceProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/services/Session.java" />
       </list>
     </option>
   </component>
@@ -2534,11 +2534,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/services/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.688027">
-          <caret line="116" column="44" selection-start-line="116" selection-start-column="44" selection-end-line="116" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.618887">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding>
-            <element signature="e#3393#3394#0" expanded="true" />
-            <element signature="e#3432#3433#0" expanded="true" />
+            <element signature="e#3468#3469#0" expanded="true" />
+            <element signature="e#3507#3508#0" expanded="true" />
           </folding>
         </state>
       </provider>

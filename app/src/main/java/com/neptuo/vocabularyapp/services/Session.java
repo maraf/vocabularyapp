@@ -61,7 +61,8 @@ public class Session {
 
     public void update(UserDetailItemModel itemModel) {
         GroupModel group = getGroup(itemModel);
-        if (!group.getAllItems().contains(itemModel)) {
+        if (group == newGroup || !group.getAllItems().contains(itemModel)) {
+            newGroup.getAllItems().remove(itemModel);
             hardGroup.getAllItems().remove(itemModel);
             mediumGroup.getAllItems().remove(itemModel);
             softGroup.getAllItems().remove(itemModel);
