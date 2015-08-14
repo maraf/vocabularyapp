@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Slovíčka</string>
-    <string name="action_settings">Slovíčka</string>
+    <string name="action_configuration">Nastavení</string>
 
     <string name="translateButton">Překládat slovíčka</string>
     <string name="browseButton">Procházet všechna slovíčka</string>
@@ -28,4 +28,7 @@
     <string name="download_itemcount">"Staženo celkem položek: "</string>
     <string name="db_saved">Ukládání do interního uložiště dokončeno.</string>
     <string name="db_loaded">Načítání z interního uložiště dokončeno.</string>
+    <string name="title_activity_configuration">ConfigurationActivity</string>
+    <string name="title_activity_browse">Celý slovníček</string>
+    <string name="title_activity_translate">Překlad slovíček</string>
 </resources>

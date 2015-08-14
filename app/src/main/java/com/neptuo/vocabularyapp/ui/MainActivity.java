@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button translateButton;
     private Button browseButton;
     private Button downloadButton;
+    private Button configurationButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         translateButton =  (Button) findViewById(R.id.translateButton);
         browseButton = (Button) findViewById(R.id.browseButton);
         downloadButton = (Button) findViewById(R.id.downloadButton);
+        configurationButton = (Button) findViewById(R.id.configurationButton);
 
         translateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(self, DownloadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        configurationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(self, ConfigurationActivity.class);
                 startActivity(intent);
             }
         });
