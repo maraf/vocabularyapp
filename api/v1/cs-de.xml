@@ -28,4 +28,16 @@
        <source text="Klobouk" description="Pokrývka hlavy." />
        <target text="Hut" description="" />
     </item>
+    <item>
+       <source text="Deštník" description="Clonítko proti vodě." />
+       <target text="Regenschirm" description="" />
+    </item>
+    <item>
+       <source text="Tužka" description="Uhlíkové pisadlo." />
+       <target text="Bleistift" description="" />
+    </item>
+    <item>
+       <source text="Hrnek" description="Nádoba na vodu." />
+       <target text="Tasse" description="" />
+    </item>
 </vocabulary>
