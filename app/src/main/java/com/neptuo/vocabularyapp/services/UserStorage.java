@@ -34,4 +34,9 @@ public class UserStorage {
         storage.put(key, result);
         return result;
     }
+
+    public void truncate() {
+        storage.clear();
+        repository.truncate();
+    }
 }

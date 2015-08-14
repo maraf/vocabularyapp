@@ -34,4 +34,32 @@
         android:id="@+id/saveButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promazat stažené slovníky"
+        android:id="@+id/dropDetailsCheckBox"
+        android:layout_below="@+id/localStorageLabel"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promazat všechny statistiky úspěšnosti"
+        android:id="@+id/dropUserGuessCheckBox"
+        android:checked="false"
+        android:layout_below="@+id/dropDetailsCheckBox"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Lokální uložiště"
+        android:id="@+id/localStorageLabel"
+        android:layout_below="@+id/dataUrlText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
 </RelativeLayout>

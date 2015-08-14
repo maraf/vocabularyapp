@@ -22,6 +22,7 @@ public class Session {
     private GroupModel hardGroup;
     private GroupModel mediumGroup;
     private GroupModel softGroup;
+    private UserDetailItemModel lastItem;
 
     private Random random;
 
@@ -71,23 +72,28 @@ public class Session {
     }
 
     public UserDetailItemModel nextRandom() {
-        int newCount = newGroup.getAllItems().size() > 0 ? 3 : 0;
-        int hardCount = hardGroup.getAllItems().size() > 0 ? 5 : 0;
-        int mediumCount = mediumGroup.getAllItems().size() > 0 ? 4 : 0;
-        int softCount = softGroup.getAllItems().size() > 0 ? 2 : 0;
+        int newCount = Math.min(10, newGroup.getAllItems().size() * 2);
+        int hardCount = Math.min(12, hardGroup.getAllItems().size());
+        int mediumCount = Math.min(8, mediumGroup.getAllItems().size());
+        int softCount = Math.min(4, softGroup.getAllItems().size());
 
         int totalCount = newCount + hardCount + mediumCount + softCount;
 
-        int index = random.nextInt(totalCount);
-        if (index < newCount) {
-            return newGroup.nextRandom();
-        } else if (index < newCount + hardCount) {
-            return hardGroup.nextRandom();
-        } else if (index < newCount + hardCount + mediumCount) {
-            return mediumGroup.nextRandom();
-        } else {
-            return softGroup.nextRandom();
-        }
+        UserDetailItemModel newItem;
+        do {
+            int index = random.nextInt(totalCount);
+            if (index < newCount) {
+                newItem = newGroup.nextRandom();
+            } else if (index < newCount + hardCount) {
+                newItem = hardGroup.nextRandom();
+            } else if (index < newCount + hardCount + mediumCount) {
+                newItem = mediumGroup.nextRandom();
+            } else {
+                newItem = softGroup.nextRandom();
+            }
+        } while (newItem == lastItem);
+
+        return newItem;
     }
 
 
@@ -108,7 +114,7 @@ public class Session {
         }
 
         public UserDetailItemModel nextRandom() {
-            if(usedItems.size() == allItems.size()) {
+            if(usedItems.size() >= allItems.size()) {
                 usedItems.clear();
             }
 
