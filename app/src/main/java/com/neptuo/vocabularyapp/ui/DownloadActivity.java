@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
+import com.neptuo.vocabularyapp.services.ConfigurationStorage;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
-import com.neptuo.vocabularyapp.services.VocabularyService;
 import com.neptuo.vocabularyapp.ui.adapters.DownloadItemListAdapter;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTaskResult;
@@ -24,13 +24,13 @@ import java.util.List;
 
 public class DownloadActivity extends AppCompatActivity {
 
-    private VocabularyService service;
     private List<DownloadModel> definitions;
 
     private Button downloadButton;
     private Button downloadItemButton;
     private ListView listView;
     private ProgressDialog progress;
+    private ConfigurationStorage configurationStorage;
     private int downloadCount = 0;
 
     @Override
@@ -40,8 +40,8 @@ public class DownloadActivity extends AppCompatActivity {
 
         final DownloadActivity self = this;
 
-        service = ServiceProvider.getVocabulary();
         definitions = ServiceProvider.getDefinitions();
+        configurationStorage = ServiceProvider.getConfigurationStorage();
 
         downloadButton = (Button) findViewById(R.id.downloadButton);
         listView = (ListView) findViewById(R.id.listView);
@@ -53,16 +53,18 @@ public class DownloadActivity extends AppCompatActivity {
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progress.setTitle(getString(R.string.download_list));
                 progress.show();
 
                 DownloadListAsyncTask task = new DownloadListAsyncTask(self);
-                task.execute("http://vocabulary.neptuo.com/api/v1/list.xml");
+                task.execute(configurationStorage.getDataUrl());
             }
         });
 
         downloadItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progress.setTitle(getString(R.string.download_details));
                 progress.show();
                 ServiceProvider.getDetails().clear();
 
@@ -83,7 +85,7 @@ public class DownloadActivity extends AppCompatActivity {
         progress.hide();
 
         if (result == null) {
-            Toast.makeText(this, "Chyba při pokusu o stažení dat a jejich zpracování.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.neterror_general, Toast.LENGTH_SHORT).show();
         } else if (result.isSuccessfull()) {
             if (result.getContent().size() > 0) {
                 definitions.clear();
@@ -105,7 +107,7 @@ public class DownloadActivity extends AppCompatActivity {
                 listView.setAdapter(adapter);
                 downloadItemButton.setEnabled(false);
             } else {
-                Toast.makeText(this, "Na serveru nejsou žádné slovníky.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.download_nodata, Toast.LENGTH_SHORT).show();
             }
 
         } else {
@@ -116,10 +118,8 @@ public class DownloadActivity extends AppCompatActivity {
     public void downloadingCompleted(DownloadDetailAsyncTaskResult result) {
         downloadCount--;
 
-        boolean isSuccess = false;
         if(result == null) {
-            Toast.makeText(this, "Chyba při pokusu o stažení dat a jejich zpracování.", Toast.LENGTH_SHORT).show();
-            isSuccess = false;
+            Toast.makeText(this, R.string.neterror_general, Toast.LENGTH_SHORT).show();
         } else {
             if(result.isSuccessfull()) {
 
@@ -129,22 +129,19 @@ public class DownloadActivity extends AppCompatActivity {
                 else
                     ServiceProvider.getDetails().add(result.getContent());
 
-                Toast.makeText(this, "Staženo celkem položek: " + result.getContent().getItems().size(), Toast.LENGTH_SHORT).show();
-                isSuccess = true;
-
-                if(downloadCount == 0)
-                    new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute(ServiceProvider.getDetails());
-
+                Toast.makeText(this, getString(R.string.download_itemcount) + result.getContent().getItems().size(), Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();
             }
         }
 
-        if(downloadCount == 0 && isSuccess)
+        if(downloadCount == 0) {
             progress.hide();
+            new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute(ServiceProvider.getDetails());
+        }
     }
 
     public void storeCompleted() {
-        progress.hide();
+        Toast.makeText(this, R.string.db_saved, Toast.LENGTH_SHORT).show();
     }
 }

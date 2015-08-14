@@ -21,4 +21,11 @@
     <string name="translate.success">Správně</string>
     <string name="translate.fail">Špatně, zkuste znovu</string>
     <string name="not_yet_tested">Ještě nezkoušeno</string>
+    <string name="download_details">Stahuji vybrané slovníky</string>
+    <string name="download_list">Stahuji seznam slovníků</string>
+    <string name="neterror_general">Chyba při pokusu o stažení dat a jejich zpracování.</string>
+    <string name="download_nodata">Na serveru nejsou žádné slovníky.</string>
+    <string name="download_itemcount">"Staženo celkem položek: "</string>
+    <string name="db_saved">Ukládání do interního uložiště dokončeno.</string>
+    <string name="db_loaded">Načítání z interního uložiště dokončeno.</string>
 </resources>

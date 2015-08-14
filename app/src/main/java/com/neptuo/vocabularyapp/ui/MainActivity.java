@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
@@ -28,18 +29,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new LoadFromDbAsyncTask(this, new DbContext(getApplicationContext())).execute();
+        ServiceProvider.initialize(getApplicationContext());
 
-        try {
-            DbContext dbContext = new DbContext(getApplicationContext());
-            SQLiteDatabase db = dbContext.getWritableDatabase();
-            ContentValues values = new ContentValues();
-            values.put(Sql.Language._NAME, "Česky");
-            values.put(Sql.Language._CODE, "cs-CZ");
-            long rowId = db.insert(Sql.Language.TABLE, null, values);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        new LoadFromDbAsyncTask(this, new DbContext(getApplicationContext())).execute();
 
         final MainActivity self = this;
 
@@ -87,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void dbLoadCompleted(List<DetailModel> models) {
+        Toast.makeText(this, R.string.db_loaded, Toast.LENGTH_SHORT).show();
         ServiceProvider.getDetails().clear();
         ServiceProvider.getDetails().addAll(models);
         checkTranslateActivityAvailability();

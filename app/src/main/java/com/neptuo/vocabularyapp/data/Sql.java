@@ -76,4 +76,20 @@ public final class Sql {
 
         public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE;
     }
+
+    public final class UserGuess {
+        public static final String TABLE = "userGuess";
+        public static final String _KEY = "key";
+        public static final String _CORRECT_COUNT = "correctCount";
+        public static final String _WRONG_COUNT = "wrongCount";
+
+        public static final String TABLE_CREATE =
+            "CREATE TABLE " + TABLE + "(" +
+                _KEY + " TEXT PRIMARY KEY, " +
+                _CORRECT_COUNT + " INTEGER, " +
+                _WRONG_COUNT + " INTEGER" +
+            ")";
+
+        public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE;
+    }
 }

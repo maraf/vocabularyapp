@@ -23,17 +23,21 @@ public class XmlDownloadModelParser {
             if(parser.getEventType() == XmlPullParser.START_TAG) {
                 String name = parser.getName();
                 if (name.equals("vocabulary")) {
-                    String sourceLanguage = null;
-                    String targetLanguage = null;
+                    LanguageModel source = null;
+                    LanguageModel target = null;
                     List<String> urls = new ArrayList<String>();
 
                     while (parser.next() != XmlPullParser.END_TAG) {
                         if (parser.getEventType() == XmlPullParser.START_TAG) {
                             String subName = parser.getName();
                             if(subName.equals("source")) {
-                                sourceLanguage = parser.getAttributeValue(null, "name");
+                                String langName = parser.getAttributeValue(null, "name");
+                                String langCode = parser.getAttributeValue(null, "code");
+                                source = new LanguageModel(langName, langCode);
                             } else if(subName.equals("target")) {
-                                targetLanguage = parser.getAttributeValue(null, "name");
+                                String langName = parser.getAttributeValue(null, "name");
+                                String langCode = parser.getAttributeValue(null, "code");
+                                target = new LanguageModel(langName, langCode);
                             } else if(subName.equals("content")) {
                                 urls.add(parser.getAttributeValue(null, "url"));
                             }
@@ -41,7 +45,7 @@ public class XmlDownloadModelParser {
                         }
                     }
 
-                    DownloadModel model = new DownloadModel(new LanguageModel(sourceLanguage, null), new LanguageModel(targetLanguage, null));
+                    DownloadModel model = new DownloadModel(source, target);
                     model.getUrls().addAll(urls);
                     result.add(model);
 
