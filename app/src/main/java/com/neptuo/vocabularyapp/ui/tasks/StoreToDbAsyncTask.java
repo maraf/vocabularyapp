@@ -30,22 +30,26 @@ public class StoreToDbAsyncTask extends AsyncTask<List<DetailModel>, Void, Void>
     @Override
     protected Void doInBackground(List<DetailModel>... params) {
 
-        SQLiteDatabase db = dbContext.getWritableDatabase();
-        DetailItemRepository detailItems = new DetailItemRepository(db);
-        DownloadRepository downloads = new DownloadRepository(db);
+        try {
+            SQLiteDatabase db = dbContext.getWritableDatabase();
+            DetailItemRepository detailItems = new DetailItemRepository(db);
+            DownloadRepository downloads = new DownloadRepository(db);
 
-        // Drop content of db.
-        downloads.truncate();
-        detailItems.truncate();
+            // Drop content of db.
+            downloads.truncate();
+            detailItems.truncate();
 
-        // Store new items.
-        for(DetailModel model : params[0]) {
-            DownloadModel download = model.getDownload();
-            int downloadId = downloads.save(download);
+            // Store new items.
+            for (DetailModel model : params[0]) {
+                DownloadModel download = model.getDownload();
+                int downloadId = downloads.save(download);
 
-            for(DetailItemModel detailItem : model.getItems()) {
-                detailItems.save(downloadId, detailItem);
+                for (DetailItemModel detailItem : model.getItems()) {
+                    detailItems.save(downloadId, detailItem);
+                }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return null;

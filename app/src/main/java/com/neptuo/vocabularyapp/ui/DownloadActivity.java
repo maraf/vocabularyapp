@@ -133,7 +133,7 @@ public class DownloadActivity extends AppCompatActivity {
                 isSuccess = true;
 
                 if(downloadCount == 0)
-                    new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute();
+                    new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute(ServiceProvider.getDetails());
 
             } else {
                 Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();

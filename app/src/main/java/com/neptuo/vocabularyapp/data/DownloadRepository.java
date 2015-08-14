@@ -7,7 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Windows10 on 8/12/2015.
@@ -19,7 +21,7 @@ public class DownloadRepository {
         this.db = db;
     }
 
-    public List<DownloadModel> getList() {
+    public Map<Integer, DownloadModel> getList() {
         String[] projection = {
             Sql.Download._ID,
             Sql.Download._SOURCE_LANGUAGE_ID,
@@ -37,19 +39,20 @@ public class DownloadRepository {
         );
 
         LanguageRepository languages = new LanguageRepository(db);
-        List<DownloadModel> result = new ArrayList<DownloadModel>();
+        Map<Integer, DownloadModel> result = new HashMap<Integer, DownloadModel>();
 
-        cursor.moveToFirst();
-        do {
-            int id = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._ID));
-            int sourceLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._SOURCE_LANGUAGE_ID));
-            int targetLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._TARGET_LANGUAGE_ID));
+        if(cursor.moveToFirst()) {
+            do {
+                int id = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._ID));
+                int sourceLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._SOURCE_LANGUAGE_ID));
+                int targetLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._TARGET_LANGUAGE_ID));
 
-            DownloadModel model = new DownloadModel(languages.get(sourceLanguageId), languages.get(targetLanguageId));
-            model.getUrls().addAll(getUrls(id));
-            result.add(model);
+                DownloadModel model = new DownloadModel(languages.get(sourceLanguageId), languages.get(targetLanguageId));
+                model.getUrls().addAll(getUrls(id));
+                result.put(id, model);
 
-        } while (cursor.moveToNext());
+            } while (cursor.moveToNext());
+        }
 
         return result;
     }
@@ -74,13 +77,14 @@ public class DownloadRepository {
 
         List<String> result = new ArrayList<String>();
 
-        cursor.moveToFirst();
-        do {
+        if(cursor.moveToFirst()) {
+            do {
 
-            String value = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._VALUE));
-            result.add(value);
+                String value = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._VALUE));
+                result.add(value);
 
-        } while (cursor.moveToNext());
+            } while (cursor.moveToNext());
+        }
 
         return result;
     }
@@ -101,7 +105,7 @@ public class DownloadRepository {
             urlValues.put(Sql.Url._DOWNLOAD_ID, downloadId);
             urlValues.put(Sql.Url._VALUE, url);
 
-            db.insert(Sql.Url.TABLE, null, values);
+            db.insert(Sql.Url.TABLE, null, urlValues);
         }
 
         return downloadId;

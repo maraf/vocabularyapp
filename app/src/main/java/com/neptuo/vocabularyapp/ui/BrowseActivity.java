@@ -48,7 +48,7 @@ public class BrowseActivity extends AppCompatActivity {
         percentageSortButton = (Button) findViewById(R.id.percentageSortButton);
         defaultSortButton = (Button) findViewById(R.id.defaultSortButton);
 
-        alphabetOriginalSortButton.setText(detail.getDownload().getSourceLanguage());
+        alphabetOriginalSortButton.setText(detail.getDownload().getSourceLanguage().getName());
         alphabetOriginalSortButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +57,7 @@ public class BrowseActivity extends AppCompatActivity {
             }
         });
 
-        alphabetTranslatedSortButton.setText(detail.getDownload().getTargetLanguage());
+        alphabetTranslatedSortButton.setText(detail.getDownload().getTargetLanguage().getName());
         alphabetTranslatedSortButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

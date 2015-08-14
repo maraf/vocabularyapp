@@ -24,7 +24,10 @@
             android:label="Celý slovníček" />
         <activity
             android:name=".ui.DownloadActivity"
-            android:label="@string/title_activity_download" >
+            android:label="@string/title_activity_download">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.neptuo.vocabularyapp.ui.MainActivity" />
         </activity>
     </application>
 

@@ -43,17 +43,18 @@ public class DetailItemRepository {
 
         List<DetailItemModel> result = new ArrayList<DetailItemModel>();
 
-        cursor.moveToFirst();
-        do {
+        if(cursor.moveToFirst()) {
+            do {
 
-            String sourceText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_TEXT));
-            String sourceDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_DESCRIPTION));
-            String targetText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_TEXT));
-            String targetDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_DESCRIPTION));
+                String sourceText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_TEXT));
+                String sourceDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_DESCRIPTION));
+                String targetText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_TEXT));
+                String targetDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_DESCRIPTION));
 
-            result.add(new DetailItemModel(sourceText, targetText, sourceDescription, targetDescription));
+                result.add(new DetailItemModel(sourceText, targetText, sourceDescription, targetDescription));
 
-        } while (cursor.moveToNext());
+            } while (cursor.moveToNext());
+        }
 
         return result;
     }

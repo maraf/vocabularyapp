@@ -12,6 +12,10 @@ import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
 import com.neptuo.vocabularyapp.data.Sql;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.ui.tasks.LoadFromDbAsyncTask;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        new LoadFromDbAsyncTask(this, new DbContext(getApplicationContext())).execute();
 
         try {
             DbContext dbContext = new DbContext(getApplicationContext());
@@ -78,5 +84,11 @@ public class MainActivity extends AppCompatActivity {
         boolean hasVocabularyItems = ServiceProvider.getDetails().size() > 0;
         translateButton.setEnabled(hasVocabularyItems);
         browseButton.setEnabled(hasVocabularyItems);
+    }
+
+    public void dbLoadCompleted(List<DetailModel> models) {
+        ServiceProvider.getDetails().clear();
+        ServiceProvider.getDetails().addAll(models);
+        checkTranslateActivityAvailability();
     }
 }

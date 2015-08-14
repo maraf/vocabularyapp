@@ -58,8 +58,8 @@ public class TranslateActivity extends AppCompatActivity {
         descriptionButton = (Button) findViewById(R.id.descriptionButton);
         nextButton = (Button) findViewById(R.id.nextButton);
 
-        originalLabel.setText(detail.getDownload().getSourceLanguage());
-        translatedLabel.setText(detail.getDownload().getTargetLanguage());
+        originalLabel.setText(detail.getDownload().getSourceLanguage().getName());
+        translatedLabel.setText(detail.getDownload().getTargetLanguage().getName());
 
         translatedText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

@@ -50,7 +50,7 @@ public class LanguageRepository {
         values.put(Sql.Language._NAME, model.getName());
         values.put(Sql.Language._CODE, model.getCode());
 
-        return (int) db.insert(Sql.Download.TABLE, null, values);
+        return (int) db.insert(Sql.Language.TABLE, null, values);
     }
 
     public void truncate() {

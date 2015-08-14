@@ -21,7 +21,7 @@ public final class Sql {
                 "FOREIGN KEY(" + _TARGET_LANGUAGE_ID + ") REFERENCES " + Language.TABLE + "(" + Language._ID + ")" +
             ")";
 
-        public static final String TABLE_DROP = "DROP TABLE IF EXISTS" + TABLE;
+        public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE;
     }
 
     public final class Language implements BaseColumns {
@@ -36,7 +36,7 @@ public final class Sql {
                 _CODE + " TEXT" +
             ")";
 
-        public static final String TABLE_DROP = "DROP TABLE IF EXISTS" + TABLE;
+        public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE;
     }
 
     public final class Url implements BaseColumns {
@@ -52,7 +52,7 @@ public final class Sql {
                 "FOREIGN KEY(" + _DOWNLOAD_ID + ") REFERENCES " + Download.TABLE + "(" + Download._ID + ")" +
             ")";
 
-        public static final String TABLE_DROP = "DROP TABLE IF EXISTS" + TABLE;
+        public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE;
     }
 
     public final class DetailItem implements BaseColumns {
@@ -66,7 +66,7 @@ public final class Sql {
         public static final String TABLE_CREATE =
             "CREATE TABLE " + TABLE + "(" +
                 _ID + " INTEGER PRIMARY KEY, " +
-                _DOWNLOAD_ID + " INTEGER" +
+                _DOWNLOAD_ID + " INTEGER, " +
                 _SOURCE_TEXT + " TEXT, " +
                 _SOURCE_DESCRIPTION + " TEXT, " +
                 _TARGET_TEXT + " TEXT, " +
