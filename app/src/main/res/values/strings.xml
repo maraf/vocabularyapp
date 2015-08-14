@@ -2,8 +2,8 @@
     <string name="app_name">Slovíčka</string>
     <string name="action_configuration">Nastavení</string>
 
-    <string name="translateButton">Překládat slovíčka</string>
-    <string name="browseButton">Procházet všechna slovíčka</string>
+    <string name="translateButton">Překládat</string>
+    <string name="browseButton">Procházet</string>
 
     <string name="tryButton.try">Zkusit</string>
     <string name="tryButton.nextTry">Znovu</string>
@@ -31,4 +31,5 @@
     <string name="title_activity_configuration">ConfigurationActivity</string>
     <string name="title_activity_browse">Celý slovníček</string>
     <string name="title_activity_translate">Překlad slovíček</string>
+    <string name="configuration_saved">Nastavení uloženo</string>
 </resources>

@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ConfigurationStorage;
@@ -32,7 +33,9 @@ public class ConfigurationActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), R.string.configuration_saved, Toast.LENGTH_SHORT).show();
                 saveConfiguration();
+                onBackPressed();
             }
         });
 
