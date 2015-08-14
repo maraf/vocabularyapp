@@ -147,6 +147,7 @@ public class TranslateActivity extends DetailActivityBase {
             } else {
                 itemViewModel.getUserModel().incrementWrongCount();
             }
+            session.update(itemViewModel.getUserModel());
         }
 
         isGivenUp = false;
