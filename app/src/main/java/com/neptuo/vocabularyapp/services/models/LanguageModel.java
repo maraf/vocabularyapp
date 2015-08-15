@@ -1,5 +1,7 @@
 package com.neptuo.vocabularyapp.services.models;
 
+import com.neptuo.vocabularyapp.data.Sql;
+
 import java.util.Locale;
 
 /**
@@ -32,5 +34,10 @@ public class LanguageModel {
         } else {
             return Locale.US;
         }
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode() ^ name.hashCode() ^ code.hashCode();
     }
 }

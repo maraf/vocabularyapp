@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TableLayout;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
 import com.neptuo.vocabularyapp.services.ConfigurationStorage;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
 import com.neptuo.vocabularyapp.ui.adapters.DownloadItemListAdapter;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTask;
@@ -28,10 +30,12 @@ public class DownloadActivity extends AppCompatActivity {
 
     private Button downloadButton;
     private Button downloadItemButton;
-    private ListView listView;
+    private DownloadItemListAdapter tableLayoutAdapter;
+    private TableLayout tableLayout;
     private ProgressDialog progress;
     private ConfigurationStorage configurationStorage;
     private int downloadCount = 0;
+    private int totalItemCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +48,7 @@ public class DownloadActivity extends AppCompatActivity {
         configurationStorage = ServiceProvider.getConfigurationStorage();
 
         downloadButton = (Button) findViewById(R.id.downloadButton);
-        listView = (ListView) findViewById(R.id.listView);
+        tableLayout = (TableLayout) findViewById(R.id.tableLayout);
         downloadItemButton = (Button) findViewById(R.id.downloadItemButton);
         progress = new ProgressDialog(self);
 
@@ -67,12 +71,13 @@ public class DownloadActivity extends AppCompatActivity {
                 progress.setMessage(getString(R.string.download_details));
                 progress.show();
                 ServiceProvider.getDetails().clear();
+                totalItemCount = 0;
 
+                definitions.clear();
+                definitions.addAll(tableLayoutAdapter.getModelsToDownload());
                 for (DownloadModel model : definitions) {
-                    if (model.isSelected()) {
-                        new DownloadDetailAsyncTask(self).execute(model);
-                        downloadCount++;
-                    }
+                    new DownloadDetailAsyncTask(self).execute(model);
+                    downloadCount++;
                 }
 
                 if (downloadCount == 0)
@@ -90,10 +95,10 @@ public class DownloadActivity extends AppCompatActivity {
                 definitions.clear();
                 definitions.addAll(result.getContent());
 
-                DownloadItemListAdapter adapter = new DownloadItemListAdapter(this, result.getContent());
-                adapter.setItemSelectedListener(new DownloadItemListAdapter.OnItemSelectedListener() {
+                tableLayoutAdapter = new DownloadItemListAdapter(this, result.getContent());
+                tableLayoutAdapter.setItemSelectedListener(new DownloadItemListAdapter.OnItemSelectedListener() {
                     @Override
-                    public void onItemSelected(DownloadModel model, boolean isChecked) {
+                    public void onItemSelected() {
                         downloadItemButton.setEnabled(true);
                     }
 
@@ -103,7 +108,12 @@ public class DownloadActivity extends AppCompatActivity {
                     }
                 });
 
-                listView.setAdapter(adapter);
+                tableLayout.removeAllViews();
+                for (int i = 0; i < tableLayoutAdapter.getCount(); i++) {
+                    View view = tableLayoutAdapter.getView(i, null, tableLayout);
+                    tableLayout.addView(view);
+                }
+
                 downloadItemButton.setEnabled(false);
             } else {
                 Toast.makeText(this, R.string.download_nodata, Toast.LENGTH_SHORT).show();
@@ -123,14 +133,21 @@ public class DownloadActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.neterror_general, Toast.LENGTH_SHORT).show();
         } else {
             if(result.isSuccessfull()) {
+                totalItemCount += result.getContent().getItems().size();
 
-                int index = ServiceProvider.getDetails().indexOf(result.getContent());
-                if(index >= 0)
-                    ServiceProvider.getDetails().get(index).getItems().addAll(result.getContent().getItems());
-                else
+                boolean isAdded = false;
+                for (DetailModel detail : ServiceProvider.getDetails()) {
+                    if(detail.getDownload().hashCode() == result.getContent().getDownload().hashCode()) {
+                        detail.getItems().addAll(result.getContent().getItems());
+                        isAdded = true;
+                        break;
+                    }
+                }
+
+                if(!isAdded) {
                     ServiceProvider.getDetails().add(result.getContent());
+                }
 
-                Toast.makeText(this, getString(R.string.download_itemcount) + result.getContent().getItems().size(), Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();
             }
@@ -138,6 +155,7 @@ public class DownloadActivity extends AppCompatActivity {
 
         if(downloadCount == 0) {
             progress.hide();
+            Toast.makeText(this, getString(R.string.download_itemcount) + totalItemCount, Toast.LENGTH_SHORT).show();
             new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute(ServiceProvider.getDetails());
         }
     }

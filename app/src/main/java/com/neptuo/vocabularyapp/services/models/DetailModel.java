@@ -33,4 +33,9 @@ public class DetailModel {
 
         return reverse;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode() ^ download.hashCode();
+    }
 }

@@ -45,4 +45,9 @@ public class DownloadModel {
     public void setTargetLanguage(LanguageModel targetLanguage) {
         this.targetLanguage = targetLanguage;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode() ^ sourceLanguage.hashCode() ^ targetLanguage.hashCode() ^ urls.hashCode();
+    }
 }
