@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -20,15 +18,15 @@ import java.util.List;
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class DownloadItemListAdapter extends ArrayAdapter<DownloadModel> {
+public class DownloadListAdapter extends ArrayAdapter<DownloadModel> {
     private final Context context;
-    private final List<DownloadViewModel> viewItems;
+    private final List<DownloadViewModel> viewModels;
     private OnItemSelectedListener itemSelectedListener;
 
-    public DownloadItemListAdapter(Context context, List<DownloadModel> items) {
+    public DownloadListAdapter(Context context, List<DownloadModel> items) {
         super(context, -1, items);
         this.context = context;
-        this.viewItems = new ArrayList<DownloadViewModel>();
+        this.viewModels = new ArrayList<DownloadViewModel>();
     }
 
     public void setItemSelectedListener(OnItemSelectedListener itemSelectedListener) {
@@ -37,7 +35,7 @@ public class DownloadItemListAdapter extends ArrayAdapter<DownloadModel> {
 
     public List<DownloadModel> getModelsToDownload() {
         List<DownloadModel> result = new ArrayList<DownloadModel>();
-        for (DownloadViewModel viewModel : viewItems) {
+        for (DownloadViewModel viewModel : viewModels) {
             if(viewModel.isSelected())
                 result.add(viewModel.createSelectedModel());
         }
@@ -69,7 +67,7 @@ public class DownloadItemListAdapter extends ArrayAdapter<DownloadModel> {
             @Override
             public void onNothingSelected() {
                 if (itemSelectedListener != null) {
-                    for (DownloadViewModel viewModel : viewItems) {
+                    for (DownloadViewModel viewModel : viewModels) {
                         if(viewModel.isSelected())
                             return;
                     }
@@ -81,7 +79,7 @@ public class DownloadItemListAdapter extends ArrayAdapter<DownloadModel> {
         });
         listView.setAdapter(adapter);
 
-        viewItems.add(new DownloadViewModel(item, adapter));
+        viewModels.add(new DownloadViewModel(item, adapter));
         return rowView;
     }
 

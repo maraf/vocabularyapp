@@ -16,11 +16,6 @@ import java.util.List;
 public class ServiceProvider {
 
     private static boolean isInitialized;
-    private static List<DownloadModel> definitions = new ArrayList<DownloadModel>();
-
-    public static List<DownloadModel> getDefinitions() {
-        return definitions;
-    }
 
     private static UserStorage userStorage;
     private static ConfigurationStorage configurationStorage;

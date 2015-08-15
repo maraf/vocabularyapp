@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
@@ -15,22 +14,18 @@ import com.neptuo.vocabularyapp.services.ConfigurationStorage;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
-import com.neptuo.vocabularyapp.ui.adapters.DownloadItemListAdapter;
+import com.neptuo.vocabularyapp.ui.adapters.DownloadListAdapter;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTaskResult;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTaskResult;
 import com.neptuo.vocabularyapp.ui.tasks.StoreToDbAsyncTask;
 
-import java.util.List;
-
 public class DownloadActivity extends AppCompatActivity {
-
-    private List<DownloadModel> definitions;
 
     private Button downloadButton;
     private Button downloadItemButton;
-    private DownloadItemListAdapter tableLayoutAdapter;
+    private DownloadListAdapter tableLayoutAdapter;
     private TableLayout tableLayout;
     private ProgressDialog progress;
     private ConfigurationStorage configurationStorage;
@@ -44,7 +39,6 @@ public class DownloadActivity extends AppCompatActivity {
 
         final DownloadActivity self = this;
 
-        definitions = ServiceProvider.getDefinitions();
         configurationStorage = ServiceProvider.getConfigurationStorage();
 
         downloadButton = (Button) findViewById(R.id.downloadButton);
@@ -73,9 +67,7 @@ public class DownloadActivity extends AppCompatActivity {
                 ServiceProvider.getDetails().clear();
                 totalItemCount = 0;
 
-                definitions.clear();
-                definitions.addAll(tableLayoutAdapter.getModelsToDownload());
-                for (DownloadModel model : definitions) {
+                for (DownloadModel model : tableLayoutAdapter.getModelsToDownload()) {
                     new DownloadDetailAsyncTask(self).execute(model);
                     downloadCount++;
                 }
@@ -92,11 +84,9 @@ public class DownloadActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.neterror_general, Toast.LENGTH_SHORT).show();
         } else if (result.isSuccessfull()) {
             if (result.getContent().size() > 0) {
-                definitions.clear();
-                definitions.addAll(result.getContent());
 
-                tableLayoutAdapter = new DownloadItemListAdapter(this, result.getContent());
-                tableLayoutAdapter.setItemSelectedListener(new DownloadItemListAdapter.OnItemSelectedListener() {
+                tableLayoutAdapter = new DownloadListAdapter(this, result.getContent());
+                tableLayoutAdapter.setItemSelectedListener(new DownloadListAdapter.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected() {
                         downloadItemButton.setEnabled(true);

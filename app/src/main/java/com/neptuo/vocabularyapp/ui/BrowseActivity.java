@@ -1,6 +1,5 @@
 package com.neptuo.vocabularyapp.ui;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,21 +11,16 @@ import android.view.SubMenu;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.UserStorage;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
-import com.neptuo.vocabularyapp.ui.adapters.BrowseItemListAdapter;
+import com.neptuo.vocabularyapp.ui.adapters.BrowseListAdapter;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailConverter;
@@ -136,12 +130,10 @@ public class BrowseActivity extends DetailActivityBase {
         userItems = UserDetailConverter.map(userStorage, detail.getItems());
         searchedItems = new ArrayList<UserDetailItemModel>(userItems);
 
-        setTitle(getTitle() + ": " + detail.getDownload().getSourceLanguage().getName() + " -> " + detail.getDownload().getTargetLanguage().getName());
-
         searchText = (EditText) findViewById(R.id.searchText);
 
         listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(new BrowseItemListAdapter(this, userItems));
+        listView.setAdapter(new BrowseListAdapter(this, userItems));
 
         searchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -183,7 +175,7 @@ public class BrowseActivity extends DetailActivityBase {
     }
 
     private void updateListViewAdapter() {
-        BrowseItemListAdapter adapter = new BrowseItemListAdapter(this, searchedItems);
+        BrowseListAdapter adapter = new BrowseListAdapter(this, searchedItems);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }

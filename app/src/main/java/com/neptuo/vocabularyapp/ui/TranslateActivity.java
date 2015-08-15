@@ -48,8 +48,6 @@ public class TranslateActivity extends DetailActivityBase {
         DetailModel detail = prepareDetailModel();
         session = new Session(detail, ServiceProvider.getUserStorage());
 
-        setTitle(getTitle() + ": " + detail.getDownload().getSourceLanguage().getName() + " -> " + detail.getDownload().getTargetLanguage().getName());
-
         originalLabel = (TextView) findViewById(R.id.originalLabel);
         originalText = (TextView) findViewById(R.id.originalText);
         translatedLabel = (TextView) findViewById(R.id.translatedLabel);

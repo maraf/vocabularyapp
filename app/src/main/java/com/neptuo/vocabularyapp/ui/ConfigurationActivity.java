@@ -61,7 +61,6 @@ public class ConfigurationActivity extends AppCompatActivity {
 
         if(dropDetailsCheckBox.isChecked()) {
             ServiceProvider.getDetails().clear();
-            ServiceProvider.getDefinitions().clear();
 
             SQLiteDatabase db = new DbContext(getApplicationContext()).getWritableDatabase();
             DetailItemRepository detailItems = new DetailItemRepository(db);

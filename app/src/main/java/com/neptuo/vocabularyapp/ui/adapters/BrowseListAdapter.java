@@ -2,7 +2,6 @@ package com.neptuo.vocabularyapp.ui.adapters;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
@@ -14,8 +13,7 @@ import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
-import com.neptuo.vocabularyapp.ui.BrowseItemActivity;
-import com.neptuo.vocabularyapp.ui.fragments.BrowseItemDialogFragment;
+import com.neptuo.vocabularyapp.ui.fragments.BrowseDialogFragment;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
@@ -24,11 +22,11 @@ import java.util.List;
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class BrowseItemListAdapter extends ArrayAdapter<UserDetailItemModel> {
+public class BrowseListAdapter extends ArrayAdapter<UserDetailItemModel> {
     private final Context context;
     private final List<UserDetailItemModel> items;
 
-    public BrowseItemListAdapter(Context context, List<UserDetailItemModel> items) {
+    public BrowseListAdapter(Context context, List<UserDetailItemModel> items) {
         super(context, -1, items);
         this.context = context;
         this.items = items;
@@ -62,7 +60,7 @@ public class BrowseItemListAdapter extends ArrayAdapter<UserDetailItemModel> {
                 //context.startActivity(intent);
 
                 FragmentTransaction transaction = ((FragmentActivity)context).getFragmentManager().beginTransaction();
-                BrowseItemDialogFragment fragment = new BrowseItemDialogFragment();
+                BrowseDialogFragment fragment = new BrowseDialogFragment();
                 fragment.setItemModel(item.getModel());
                 fragment.show(transaction, "dialog");
 

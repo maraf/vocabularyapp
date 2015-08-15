@@ -10,6 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.UrlModel;
 
 import java.util.ArrayList;
@@ -67,6 +69,14 @@ public class DownloadUrlListAdapter extends ArrayAdapter<UrlModel> {
                 }
             }
         });
+
+        for (DetailModel detail : ServiceProvider.getDetails()) {
+            for (UrlModel url : detail.getDownload().getUrls()) {
+                if(url.getValue().equals(item.getValue())) {
+                    checkBox.setChecked(true);
+                }
+            }
+        }
 
         return rowView;
     }

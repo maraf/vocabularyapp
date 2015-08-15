@@ -15,7 +15,7 @@ import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 /**
  * Created by Windows10 on 8/14/2015.
  */
-public class BrowseItemDialogFragment extends DialogFragment {
+public class BrowseDialogFragment extends DialogFragment {
     private DetailItemModel itemModel;
 
     public void setItemModel(DetailItemModel itemModel) {
