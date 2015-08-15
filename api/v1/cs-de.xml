@@ -2,42 +2,42 @@
 <vocabulary>
     <item>
        <source text="Televize" description="Kouzelná bednička." />
-       <target text="Fernseher" description="" />
+       <target text="der Fernseher" description="" />
     </item>
     <item>
        <source text="Přechod pro chodce" description="Přechod pro chodce je místo, kde mohou chodci bezpečně přecházet." />
-       <target text="Fußgängerübergang" description="" />
+       <target text="der Fußgängerübergang" description="" />
     </item>
     <item>
        <source text="Kočka" description="Milý malý chlupatý tvor." />
-       <target text="Katze" description="" />
+       <target text="die Katze" description="" />
     </item>
     <item>
        <source text="Slepé střevo" description="Nepotřebný kus lidského těla." />
-       <target text="Anhang" description="" />
+       <target text="der Blinddarm" description="" />
     </item>
     <item>
        <source text="Kachna" description="Chutný vodní pták." />
-       <target text="Ente" description="" />
+       <target text="die Ente" description="" />
     </item>
     <item>
        <source text="Čepice" description="Pokrývka hlavy." />
-       <target text="Mütze" description="" />
+       <target text="die Mütze" description="" />
     </item>
     <item>
        <source text="Klobouk" description="Pokrývka hlavy." />
-       <target text="Hut" description="" />
+       <target text="der Hut" description="" />
     </item>
     <item>
        <source text="Deštník" description="Clonítko proti vodě." />
-       <target text="Regenschirm" description="" />
+       <target text="der Regenschirm" description="" />
     </item>
     <item>
        <source text="Tužka" description="Uhlíkové pisadlo." />
-       <target text="Bleistift" description="" />
+       <target text="der Bleistift" description="" />
     </item>
     <item>
-       <source text="Hrnek" description="Nádoba na vodu." />
-       <target text="Tasse" description="" />
+       <source text="Klobása" description="Nádoba na vodu." />
+       <target text="die Wurst" description="" />
     </item>
 </vocabulary>
