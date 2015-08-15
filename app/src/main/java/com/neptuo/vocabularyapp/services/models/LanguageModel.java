@@ -1,5 +1,7 @@
 package com.neptuo.vocabularyapp.services.models;
 
+import java.util.Locale;
+
 /**
  * Created by Windows10 on 8/12/2015.
  */
@@ -18,5 +20,17 @@ public class LanguageModel {
 
     public String getCode() {
         return code;
+    }
+
+    public Locale getLocale() {
+        if(code.length() == 2)
+            return new Locale(code);
+        else if(code.length() == 5) {
+            String language = code.substring(0, 2);
+            String country = code.substring(3, 5);
+            return new Locale(language, country);
+        } else {
+            return Locale.US;
+        }
     }
 }

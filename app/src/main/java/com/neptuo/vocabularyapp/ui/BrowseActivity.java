@@ -1,20 +1,17 @@
 package com.neptuo.vocabularyapp.ui;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.UserStorage;
-import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
 import com.neptuo.vocabularyapp.ui.adapters.BrowseItemListAdapter;
@@ -24,11 +21,14 @@ import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.comparators.AlphabetUserDetailItemModelComparator;
 import com.neptuo.vocabularyapp.ui.viewmodels.comparators.PercentageUserDetailItemModelComparator;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class BrowseActivity extends DetailActivityBase {
 
+    private EditText searchText;
+    private ImageButton searchButton;
     private ListView listView;
     private Button alphabetOriginalSortButton;
     private Button alphabetTranslatedSortButton;
@@ -38,6 +38,9 @@ public class BrowseActivity extends DetailActivityBase {
     private DetailModel detail;
     private UserStorage userStorage;
     private List<UserDetailItemModel> userItems;
+    private List<UserDetailItemModel> searchedItems;
+
+    private String lastSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,10 @@ public class BrowseActivity extends DetailActivityBase {
         userStorage = ServiceProvider.getUserStorage();
         detail = prepareDetailModel();
         userItems = UserDetailConverter.map(userStorage, detail.getItems());
+        searchedItems = new ArrayList<UserDetailItemModel>(userItems);
+
+        searchText = (EditText) findViewById(R.id.searchText);
+        searchButton = (ImageButton) findViewById(R.id.searchButton);
 
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(new BrowseItemListAdapter(this, userItems));
@@ -60,7 +67,8 @@ public class BrowseActivity extends DetailActivityBase {
         alphabetOriginalSortButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(true));
+                Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(detail, true));
+                updateSearchedItems();
                 updateListViewAdapter();
             }
         });
@@ -69,7 +77,8 @@ public class BrowseActivity extends DetailActivityBase {
         alphabetTranslatedSortButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(false));
+                Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(detail, false));
+                updateSearchedItems();
                 updateListViewAdapter();
             }
         });
@@ -78,6 +87,7 @@ public class BrowseActivity extends DetailActivityBase {
             @Override
             public void onClick(View v) {
                 Collections.sort(userItems, new PercentageUserDetailItemModelComparator(true));
+                updateSearchedItems();
                 updateListViewAdapter();
             }
         });
@@ -86,11 +96,35 @@ public class BrowseActivity extends DetailActivityBase {
             @Override
             public void onClick(View v) {
                 userItems = UserDetailConverter.map(userStorage, detail.getItems());
+                updateSearchedItems();
                 updateListViewAdapter();
             }
         });
 
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String search = searchText.getText().toString();
+                if (search != lastSearch) {
+                    lastSearch = search;
+                    updateSearchedItems();
+                    updateListViewAdapter();
+                    updateSuccessBar();
+                }
+            }
+        });
+
         updateSuccessBar();
+    }
+
+    private void updateSearchedItems() {
+        searchedItems.clear();
+
+        lastSearch = lastSearch == null ? null : lastSearch.toLowerCase();
+        for (UserDetailItemModel itemModel : userItems) {
+            if(lastSearch == null || itemModel.getModel().getOriginalText().toLowerCase().contains(lastSearch))
+                searchedItems.add(itemModel);
+        }
     }
 
     private String getEllapsedText(String text) {
@@ -101,7 +135,7 @@ public class BrowseActivity extends DetailActivityBase {
     }
 
     private void updateListViewAdapter() {
-        BrowseItemListAdapter adapter = new BrowseItemListAdapter(this, userItems);
+        BrowseItemListAdapter adapter = new BrowseItemListAdapter(this, searchedItems);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
@@ -113,7 +147,7 @@ public class BrowseActivity extends DetailActivityBase {
         int totalCount = 0;
         int correctCount = 0;
         int wrongCount = 0;
-        for (UserDetailItemModel userItem : userItems) {
+        for (UserDetailItemModel userItem : searchedItems) {
             totalCount += userItem.getTotalCount();
             correctCount += userItem.getCorrectCount();
             wrongCount += userItem.getWrongCount();

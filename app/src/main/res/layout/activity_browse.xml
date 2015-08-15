@@ -18,12 +18,31 @@
             android:layout_gravity="right|center_vertical" />
     </FrameLayout>
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchText"
+        android:layout_below="@+id/backgroundLayout"
+        android:layout_alignParentStart="true"
+        android:hint="Hledat..."
+        android:layout_toStartOf="@+id/searchButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchButton"
+        android:layout_alignTop="@+id/searchText"
+        android:layout_alignParentEnd="true"
+        android:src="@android:drawable/ic_menu_search"
+        android:padding="6dp" />
+
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fillViewport="true"
         android:layout_above="@+id/linearLayout"
-        android:layout_below="@+id/backgroundLayout">
+        android:layout_below="@+id/searchText"
+        android:id="@+id/scrollView3">
 
         <ListView
             android:layout_width="wrap_content"

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.neptuo.vocabularyapp.ui.BrowseItemActivity">
+
+    <item android:id="@+id/action_sort_default" android:title="Výchozí"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_sort_ratio" android:title="Dle úspěšnosti"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_sort_source" android:title="Česky"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_sort_target" android:title="Německy"
+        app:showAsAction="never" />
+
+</menu>
