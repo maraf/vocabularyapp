@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlphabetUserDetailItemModelComparator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AlphabetUserDetailItemModelComparator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/viewmodels/comparators/AlphabetUserDetailItemModelComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45531198">
-              <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -123,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TranslateActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TranslateActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/TranslateActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="50" selection-end-column="151" />
+            <state vertical-scroll-proportion="0.44688028">
+              <caret line="133" column="82" selection-start-line="133" selection-start-column="82" selection-end-line="133" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1642,10 +1642,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_browse.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_browse.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/TranslateActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/BrowseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_translate.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/viewmodels/comparators/AlphabetUserDetailItemModelComparator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/TranslateActivity.java" />
       </list>
     </option>
   </component>
@@ -2659,16 +2659,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/TranslateActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="50" selection-end-column="151" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/BrowseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2684,9 +2674,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/viewmodels/comparators/AlphabetUserDetailItemModelComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45531198">
-          <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/neptuo/vocabularyapp/ui/TranslateActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44688028">
+          <caret line="133" column="82" selection-start-line="133" selection-start-column="82" selection-end-line="133" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

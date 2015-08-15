@@ -133,8 +133,8 @@ public class TranslateActivity extends DetailActivityBase {
             descriptionText.setVisibility(View.VISIBLE);
             descriptionButton.setText(getString(R.string.descriptionButton_hide));
         } else {
-            descriptionLabel.setVisibility(View.INVISIBLE);
-            descriptionText.setVisibility(View.INVISIBLE);
+            descriptionLabel.setVisibility(View.GONE);
+            descriptionText.setVisibility(View.GONE);
             descriptionButton.setText(getString(R.string.descriptionButton_show));
         }
     }
