@@ -1,13 +1,20 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.app.ActionBar;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
@@ -43,6 +50,63 @@ public class BrowseActivity extends DetailActivityBase {
     private String lastSearch;
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_browse, menu);
+
+        SubMenu subMenu = menu.getItem(0).getSubMenu();
+        if(subMenu != null) {
+            subMenu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    // Default sorting
+                    userItems = UserDetailConverter.map(userStorage, detail.getItems());
+                    updateSearchedItems();
+                    updateListViewAdapter();
+                    return true;
+                }
+            });
+
+            subMenu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    // Ratio sorting
+                    Collections.sort(userItems, new PercentageUserDetailItemModelComparator(true));
+                    updateSearchedItems();
+                    updateListViewAdapter();
+                    return true;
+                }
+            });
+
+            subMenu.getItem(2).setTitle(detail.getDownload().getSourceLanguage().getName());
+            subMenu.getItem(2).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    // Source text sorting
+                    Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(detail, true));
+                    updateSearchedItems();
+                    updateListViewAdapter();
+                    return true;
+                }
+            });
+
+            subMenu.getItem(3).setTitle(detail.getDownload().getTargetLanguage().getName());
+            subMenu.getItem(3).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    // Target text sorting
+                    Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(detail, false));
+                    updateSearchedItems();
+                    updateListViewAdapter();
+                    return true;
+                }
+            });
+        }
+
+        return true;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
@@ -62,44 +126,6 @@ public class BrowseActivity extends DetailActivityBase {
         alphabetTranslatedSortButton = (Button) findViewById(R.id.alphabetTranslatedSortButton);
         percentageSortButton = (Button) findViewById(R.id.percentageSortButton);
         defaultSortButton = (Button) findViewById(R.id.defaultSortButton);
-
-        alphabetOriginalSortButton.setText(getEllapsedText(detail.getDownload().getSourceLanguage().getName()));
-        alphabetOriginalSortButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(detail, true));
-                updateSearchedItems();
-                updateListViewAdapter();
-            }
-        });
-
-        alphabetTranslatedSortButton.setText(getEllapsedText(detail.getDownload().getTargetLanguage().getName()));
-        alphabetTranslatedSortButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Collections.sort(userItems, new AlphabetUserDetailItemModelComparator(detail, false));
-                updateSearchedItems();
-                updateListViewAdapter();
-            }
-        });
-
-        percentageSortButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Collections.sort(userItems, new PercentageUserDetailItemModelComparator(true));
-                updateSearchedItems();
-                updateListViewAdapter();
-            }
-        });
-
-        defaultSortButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                userItems = UserDetailConverter.map(userStorage, detail.getItems());
-                updateSearchedItems();
-                updateListViewAdapter();
-            }
-        });
 
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override

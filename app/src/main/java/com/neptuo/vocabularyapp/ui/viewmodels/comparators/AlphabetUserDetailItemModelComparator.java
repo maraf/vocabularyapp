@@ -34,7 +34,21 @@ public class AlphabetUserDetailItemModelComparator implements Comparator<UserDet
             locale = detail.getDownload().getTargetLanguage().getLocale();
         }
 
+        if(locale.getLanguage() == "de") {
+            lhsText = normalizeGerman(lhsText);
+            rhsText = normalizeGerman(rhsText);
+        }
+
         Collator comparator = Collator.getInstance(locale);
         return comparator.compare(lhsText, rhsText);
+    }
+
+    private String normalizeGerman(String text) {
+        String testText = text.toLowerCase();
+        if(testText.startsWith("der ") || testText.startsWith("die ") || testText.startsWith("dar ")) {
+            return text.substring(4);
+        }
+
+        return text;
     }
 }
