@@ -34,7 +34,7 @@ public class AlphabetUserDetailItemModelComparator implements Comparator<UserDet
             locale = detail.getDownload().getTargetLanguage().getLocale();
         }
 
-        if(locale.getLanguage() == "de") {
+        if(locale.getLanguage().equals("de")) {
             lhsText = normalizeGerman(lhsText);
             rhsText = normalizeGerman(rhsText);
         }

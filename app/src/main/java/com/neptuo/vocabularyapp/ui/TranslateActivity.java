@@ -1,11 +1,13 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -46,6 +48,8 @@ public class TranslateActivity extends DetailActivityBase {
         DetailModel detail = prepareDetailModel();
         session = new Session(detail, ServiceProvider.getUserStorage());
 
+        setTitle(getTitle() + ": " + detail.getDownload().getSourceLanguage().getName() + " -> " + detail.getDownload().getTargetLanguage().getName());
+
         originalLabel = (TextView) findViewById(R.id.originalLabel);
         originalText = (TextView) findViewById(R.id.originalText);
         translatedLabel = (TextView) findViewById(R.id.translatedLabel);
@@ -63,7 +67,7 @@ public class TranslateActivity extends DetailActivityBase {
         translatedText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if(actionId == R.integer.action_try) {
+                if(actionId == EditorInfo.IME_ACTION_NEXT) {
                     tryTranslation();
                     return true;
                 }

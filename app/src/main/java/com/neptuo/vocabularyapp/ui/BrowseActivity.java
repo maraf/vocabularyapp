@@ -1,13 +1,17 @@
 package com.neptuo.vocabularyapp.ui;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +20,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.UserStorage;
@@ -35,12 +40,7 @@ import java.util.List;
 public class BrowseActivity extends DetailActivityBase {
 
     private EditText searchText;
-    private ImageButton searchButton;
     private ListView listView;
-    private Button alphabetOriginalSortButton;
-    private Button alphabetTranslatedSortButton;
-    private Button percentageSortButton;
-    private Button defaultSortButton;
 
     private DetailModel detail;
     private UserStorage userStorage;
@@ -54,7 +54,27 @@ public class BrowseActivity extends DetailActivityBase {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_browse, menu);
 
-        SubMenu subMenu = menu.getItem(0).getSubMenu();
+        menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(searchText.getVisibility() == View.GONE) {
+                    searchText.setVisibility(View.VISIBLE);
+                    searchText.requestFocus();
+
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.showSoftInput(searchText, InputMethodManager.SHOW_IMPLICIT);
+                } else {
+                    searchText.setVisibility(View.GONE);
+
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(searchText.getWindowToken(), 0);
+                    searchText.clearFocus();
+                }
+                return true;
+            }
+        });
+
+        SubMenu subMenu = menu.getItem(1).getSubMenu();
         if(subMenu != null) {
             subMenu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
@@ -116,27 +136,29 @@ public class BrowseActivity extends DetailActivityBase {
         userItems = UserDetailConverter.map(userStorage, detail.getItems());
         searchedItems = new ArrayList<UserDetailItemModel>(userItems);
 
+        setTitle(getTitle() + ": " + detail.getDownload().getSourceLanguage().getName() + " -> " + detail.getDownload().getTargetLanguage().getName());
+
         searchText = (EditText) findViewById(R.id.searchText);
-        searchButton = (ImageButton) findViewById(R.id.searchButton);
 
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(new BrowseItemListAdapter(this, userItems));
 
-        alphabetOriginalSortButton = (Button) findViewById(R.id.alphabetOriginalSortButton);
-        alphabetTranslatedSortButton = (Button) findViewById(R.id.alphabetTranslatedSortButton);
-        percentageSortButton = (Button) findViewById(R.id.percentageSortButton);
-        defaultSortButton = (Button) findViewById(R.id.defaultSortButton);
-
-        searchButton.setOnClickListener(new View.OnClickListener() {
+        searchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public void onClick(View v) {
-                String search = searchText.getText().toString();
-                if (search != lastSearch) {
-                    lastSearch = search;
-                    updateSearchedItems();
-                    updateListViewAdapter();
-                    updateSuccessBar();
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    String search = searchText.getText().toString();
+                    if (search != lastSearch) {
+                        lastSearch = search;
+                        updateSearchedItems();
+                        updateListViewAdapter();
+                        updateSuccessBar();
+                    }
+
+                    return true;
                 }
+
+                return false;
             }
         });
 
