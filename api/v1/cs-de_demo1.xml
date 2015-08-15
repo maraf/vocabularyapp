@@ -20,24 +20,4 @@
        <source text="Kachna" description="Chutný vodní pták." />
        <target text="die Ente" description="" />
     </item>
-    <item>
-       <source text="Čepice" description="Pokrývka hlavy." />
-       <target text="die Mütze" description="" />
-    </item>
-    <item>
-       <source text="Klobouk" description="Pokrývka hlavy." />
-       <target text="der Hut" description="" />
-    </item>
-    <item>
-       <source text="Deštník" description="Clonítko proti vodě." />
-       <target text="der Regenschirm" description="" />
-    </item>
-    <item>
-       <source text="Tužka" description="Uhlíkové pisadlo." />
-       <target text="der Bleistift" description="" />
-    </item>
-    <item>
-       <source text="Klobása" description="Nádoba na vodu." />
-       <target text="die Wurst" description="" />
-    </item>
 </vocabulary>
