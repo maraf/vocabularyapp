@@ -3,6 +3,7 @@
     <vocabulary>
         <source name="Česky" code="cs-CZ" />
         <target name="Německy" code="de-DE" />
-        <content url="http://vocabulary.neptuo.com/api/v1/cs-de.xml" />
+        <content url="http://vocabulary.neptuo.com/api/v1/cs-de_demo1.xml" />
+        <content url="http://vocabulary.neptuo.com/api/v1/cs-de_demo2.xml" />
     </vocabulary>
 </vocabularies>
