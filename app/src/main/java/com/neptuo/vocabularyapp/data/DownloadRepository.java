@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
+import com.neptuo.vocabularyapp.services.models.UrlModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,8 +58,9 @@ public class DownloadRepository {
         return result;
     }
 
-    private List<String> getUrls(int downloadId) {
+    private List<UrlModel> getUrls(int downloadId) {
         String[] projection = {
+            Sql.Url._NAME,
             Sql.Url._VALUE
         };
 
@@ -75,13 +77,14 @@ public class DownloadRepository {
             null
         );
 
-        List<String> result = new ArrayList<String>();
+        List<UrlModel> result = new ArrayList<UrlModel>();
 
         if(cursor.moveToFirst()) {
             do {
 
+                String name = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._NAME));
                 String value = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._VALUE));
-                result.add(value);
+                result.add(new UrlModel(name, value));
 
             } while (cursor.moveToNext());
         }
@@ -100,10 +103,11 @@ public class DownloadRepository {
 
         int downloadId = (int) db.insert(Sql.Download.TABLE, null, values);
 
-        for(String url : model.getUrls()) {
+        for(UrlModel url : model.getUrls()) {
             ContentValues urlValues = new ContentValues();
             urlValues.put(Sql.Url._DOWNLOAD_ID, downloadId);
-            urlValues.put(Sql.Url._VALUE, url);
+            urlValues.put(Sql.Url._NAME, url.getName());
+            urlValues.put(Sql.Url._VALUE, url.getValue());
 
             db.insert(Sql.Url.TABLE, null, urlValues);
         }

@@ -2,6 +2,7 @@ package com.neptuo.vocabularyapp.services.parsers;
 
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
 import com.neptuo.vocabularyapp.services.models.LanguageModel;
+import com.neptuo.vocabularyapp.services.models.UrlModel;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -25,7 +26,7 @@ public class XmlDownloadModelParser {
                 if (name.equals("vocabulary")) {
                     LanguageModel source = null;
                     LanguageModel target = null;
-                    List<String> urls = new ArrayList<String>();
+                    List<UrlModel> urls = new ArrayList<UrlModel>();
 
                     while (parser.next() != XmlPullParser.END_TAG) {
                         if (parser.getEventType() == XmlPullParser.START_TAG) {
@@ -39,7 +40,7 @@ public class XmlDownloadModelParser {
                                 String langCode = parser.getAttributeValue(null, "code");
                                 target = new LanguageModel(langName, langCode);
                             } else if(subName.equals("content")) {
-                                urls.add(parser.getAttributeValue(null, "url"));
+                                urls.add(new UrlModel(parser.getAttributeValue(null, "name"), parser.getAttributeValue(null, "url")));
                             }
                             parser.next();
                         }

@@ -3,7 +3,9 @@ package com.neptuo.vocabularyapp.ui.tasks;
 import android.os.AsyncTask;
 import android.util.Xml;
 
+import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
+import com.neptuo.vocabularyapp.services.models.UrlModel;
 import com.neptuo.vocabularyapp.services.parsers.XmlDetailModelParser;
 import com.neptuo.vocabularyapp.ui.DownloadActivity;
 
@@ -36,9 +38,12 @@ public class DownloadDetailAsyncTask extends AsyncTask<DownloadModel, Void, List
 
         List<DownloadDetailAsyncTaskResult> result = new ArrayList<DownloadDetailAsyncTaskResult>();
         for (DownloadModel download : downloads) {
-            for (String url : download.getUrls()) {
+            boolean hasError = false;
+            DetailModel detail = new DetailModel(download);
 
-                HttpUriRequest request = new HttpGet(url);
+            for (UrlModel url : download.getUrls()) {
+
+                HttpUriRequest request = new HttpGet(url.getValue());
                 HttpResponse response = null;
 
                 try {
@@ -48,14 +53,21 @@ public class DownloadDetailAsyncTask extends AsyncTask<DownloadModel, Void, List
                     parser.setInput(response.getEntity().getContent(), "utf-8");
                     parser.nextTag();
 
-                    result.add(new DownloadDetailAsyncTaskResult(true, XmlDetailModelParser.parse(parser, download), null));
+                    detail.getItems().addAll(XmlDetailModelParser.parse(parser, download).getItems());
                 } catch (ClientProtocolException e) {
                     result.add(new DownloadDetailAsyncTaskResult(false, null, "Chyba komunikace."));
+                    hasError = true;
                 } catch (IOException e) {
                     result.add(new DownloadDetailAsyncTaskResult(false, null, "Nelze navázat spojení. Pravděpodobně adresa neexistuje."));
+                    hasError = true;
                 } catch (XmlPullParserException e) {
                     result.add(new DownloadDetailAsyncTaskResult(false, null, "Chyba formátování souboru staženého ze serveru."));
+                    hasError = true;
                 }
+            }
+
+            if (!hasError) {
+                result.add(new DownloadDetailAsyncTaskResult(true, detail, null));
             }
         }
 

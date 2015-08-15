@@ -10,6 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.services.models.UrlModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,24 +18,22 @@ import java.util.List;
 /**
  * Created by Windows10 on 8/8/2015.
  */
-public class DownloadUrlListAdapter extends ArrayAdapter<String> {
+public class DownloadUrlListAdapter extends ArrayAdapter<UrlModel> {
     private final Context context;
-    private final List<String> items;
     private OnItemSelectedListener itemSelectedListener;
-    private final List<String> selectedItems;
+    private final List<UrlModel> selectedItems;
 
-    public DownloadUrlListAdapter(Context context, List<String> items) {
+    public DownloadUrlListAdapter(Context context, List<UrlModel> items) {
         super(context, -1, items);
         this.context = context;
-        this.items = items;
-        this.selectedItems = new ArrayList<String>();
+        this.selectedItems = new ArrayList<UrlModel>();
     }
 
     public void setItemSelectedListener(OnItemSelectedListener itemSelectedListener) {
         this.itemSelectedListener = itemSelectedListener;
     }
 
-    public List<String> getSelectedItems() {
+    public List<UrlModel> getSelectedItems() {
         return selectedItems;
     }
 
@@ -45,14 +44,14 @@ public class DownloadUrlListAdapter extends ArrayAdapter<String> {
 
         CheckBox checkBox = (CheckBox) rowView.findViewById(R.id.checkBox);
 
-        String item = items.get(position);
+        UrlModel item = getItem(position);
 
-        checkBox.setText(item);
+        checkBox.setText(item.getName());
         checkBox.setTag(item);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String item = (String) ((CheckBox) buttonView).getTag();
+                UrlModel item = (UrlModel) ((CheckBox) buttonView).getTag();
                 if (isChecked) {
                     selectedItems.add(item);
                 } else {

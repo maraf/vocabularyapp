@@ -10,12 +10,12 @@ public class DownloadModel {
     private boolean isSelected;
     private LanguageModel sourceLanguage;
     private LanguageModel targetLanguage;
-    private List<String> urls;
+    private List<UrlModel> urls;
 
     public DownloadModel(LanguageModel sourceLanguage, LanguageModel targetLanguage) {
         this.sourceLanguage = sourceLanguage;
         this.targetLanguage = targetLanguage;
-        this.urls = new ArrayList<String>();
+        this.urls = new ArrayList<UrlModel>();
     }
 
     public boolean isSelected() {
@@ -26,7 +26,7 @@ public class DownloadModel {
         this.isSelected = isSelected;
     }
 
-    public List<String> getUrls() {
+    public List<UrlModel> getUrls() {
         return urls;
     }
 
