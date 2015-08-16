@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vocabulary>
+    <item>
+       <source text="Papoušek" description="Hodně peří na hromádce." />
+       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
+    </item>
+</vocabulary>
