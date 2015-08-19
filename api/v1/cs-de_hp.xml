@@ -68,4 +68,8 @@
        <source text="vtipný" description="" />
        <target text="lustig" description="Es macht dich lachen." />
     </item>
+     <item>
+       <source text="nádobí" description="" />
+       <target text="das Geschirr" description="das Loeffel, der Messer, der Teller ...; das Geschirr spülen." />
+    </item>
 </vocabulary>
