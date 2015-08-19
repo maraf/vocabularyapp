@@ -19,17 +19,53 @@
      <item>
        <source text="hodnota" description="" />
        <target text="der Wert" description="die Qualität, der Preis; Wert legen = klást důvod" />
-    </item
+    </item>
      <item>
        <source text="hodnotný" description="" />
        <target text="vollwertig" description="Es hat viel Wert, höche Qualität." />
-    </item
+    </item>
      <item>
        <source text="rozmanitost" description="" />
        <target text="die Abwechslung" description="Es verändert" />
-    </item
+    </item>
      <item>
-       <source text="Kamarád" description="" />
-       <target text="der Kumpel" description="Ein Freund von mir." />
-    </item
+       <source text="čistý" description="" />
+       <target text="sauber" description="= rein." />
+    </item>
+     <item>
+       <source text="užívat si" description="" />
+       <target text="geniessen" description="Die Fehrien geniessen." />
+    </item>
+     <item>
+       <source text="prádzniny" description="" />
+       <target text="die Fehrien" description="Die Schülern haben es im Juli und August." />
+    </item>
+     <item>
+       <source text="řádek" description="" />
+       <target text="die Zeile" description="Der Satz in der gleiche Linie." />
+    </item>
+     <item>
+       <source text="odstavec" description="" />
+       <target text="der Absatz" description="Einigen Sätze in einem Block." />
+    </item>
+     <item>
+       <source text="věta" description="" />
+       <target text="der Satz" description="Einigen Wörter mit der Bedeutung." />
+    </item>
+     <item>
+       <source text="několik" description="" />
+       <target text="einige" description="= ein paar." />
+    </item>
+     <item>
+       <source text="anketa" description="" />
+       <target text="die Umfrage" description="= der Interview." />
+    </item>
+     <item>
+       <source text="vtip" description="" />
+       <target text="der Witz" description="Eine lustige Situation." />
+    </item>
+     <item>
+       <source text="vtipný" description="" />
+       <target text="lustig" description="Es macht dich lachen." />
+    </item>
 </vocabulary>
