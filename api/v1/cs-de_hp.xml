@@ -17,12 +17,16 @@
        <target text="hinter" description="hinter von ..." />
     </item>
      <item>
-       <source text="Kamarád" description="" />
-       <target text="der Kumpel" description="Ein Freund von mir." />
+       <source text="hodnota" description="" />
+       <target text="der Wert" description="die Qualität, der Preis; Wert legen = klást důvod" />
     </item
      <item>
-       <source text="Kamarád" description="" />
-       <target text="der Kumpel" description="Ein Freund von mir." />
+       <source text="hodnotný" description="" />
+       <target text="vollwertig" description="Es hat viel Wert, höche Qualität." />
+    </item
+     <item>
+       <source text="rozmanitost" description="" />
+       <target text="die Abwechslung" description="Es verändert" />
     </item
      <item>
        <source text="Kamarád" description="" />
