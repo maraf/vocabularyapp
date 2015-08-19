@@ -125,4 +125,28 @@
        <source text="plakat" description="" />
        <target text="weinen" description="Kleine Kinder weinen oft." />
     </item>
+     <item>
+       <source text="stěžovat si" description="" />
+       <target text="sich beschweren" description="Sich beschweren bei ... ; du bist nicht zufrieden so du beschwerst sich." />
+    </item>
+     <item>
+       <source text="spokojený" description="" />
+       <target text="zufrieden" description="Alles ist gut, du bist glücklig." />
+    </item>
+     <item>
+       <source text="pravda" description="" />
+       <target text="die Wahrheit" description="Antonym von dem Lüge." />
+    </item>
+     <item>
+       <source text="lež" description="" />
+       <target text="der Lüge" description="Unwahrheit; antonym von der Wahrheit." />
+    </item>
+     <item>
+       <source text="lhát" description="" />
+       <target text="lügen" description="nicht Wahrheit sagen; ich lüge, du lügst ... ; log ; haben gelogen" />
+    </item>
+     <item>
+       <source text="pravděpodobně" description="" />
+       <target text="wahrscheinlich" description="" />
+    </item>
 </vocabulary>
