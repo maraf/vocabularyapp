@@ -72,4 +72,57 @@
        <source text="nádobí" description="" />
        <target text="das Geschirr" description="das Loeffel, der Messer, der Teller ...; das Geschirr spülen." />
     </item>
+     <item>
+       <source text="to záleží" description="" />
+       <target text="es kommt auf an" description="Es kommt auf das Wetter an; es kommt auf an wer Geld hat." />
+    </item>
+     <item>
+       <source text="sytý" description="" />
+       <target text="satt" description="kein Hunger mehr; Ich bin satt." />
+    </item>
+     <item>
+       <source text="omlouvat se" description="" />
+       <target text="sich entschuldigen" description="Er/sie/es entschuldigt sich/etwas." />
+    </item>
+     <item>
+       <source text="obsluha" description="" />
+       <target text="die Bedienung" description="Der Kellner im Restaurant." />
+    </item>
+     <item>
+       <source text="číšník" description="" />
+       <target text="der Kellner" description="Im Restaurant bestellst du bei ihm." />
+    </item>
+     <item>
+       <source text="plesnivý" description="" />
+       <target text="verschimmelt" description="Obst/Gemüse schon nicht gut für Essen." />
+    </item>
+     <item>
+       <source text="vyhodit" description="" />
+       <target text="wegwerfen" description="ich werfe ... weg, du wirfst ... weg, er/sie/es wirft ... weg." />
+    </item>
+     <item>
+       <source text="málo" description="" />
+       <target text="wenig" description="Nicht viel; Ich habe wenig Geld." />
+    </item>
+     <item>
+       <source text="sklep" description="" />
+       <target text="der Keller" description="der Raum für Zwiebeln/Wein." />
+    </item>
+     <item>
+       <source text="cibule" description="" />
+       <target text="der Zwiebel" description="Gemüse, es macht mann weinen" />
+    </item>
+     <item>
+       <source text="česnek" description="" />
+       <target text="der Knoblauch" description="Gemüse. es ist scharf" />
+    </item>
+     <item>
+       <source text="pálivý" description="" />
+       <target text="scharf" description="Der Pfeffer ist scharf, Curry ist scharf." />
+    </item>
+    
+     <item>
+       <source text="plakat" description="" />
+       <target text="weinen" description="Kleine Kinder weinen oft." />
+    </item>
 </vocabulary>
