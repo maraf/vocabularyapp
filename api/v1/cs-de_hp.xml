@@ -4,28 +4,28 @@
        <source text="Papoušek" description="Hodně peří na hromádce." />
        <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
     </item>
-        <item>
-       <source text="Papoušek" description="Hodně peří na hromádce." />
-       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
+    <item>
+       <source text="Kamarád" description="" />
+       <target text="der Kumpel" description="Ein Freund von mir." />
     </item>
-        <item>
-       <source text="Papoušek" description="Hodně peří na hromádce." />
-       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
+    <item>
+       <source text="bohužel" description="" />
+       <target text="leider" description="Ich bin nicht glücklig Ich muss es machen" />
+       </item>
+     <item>
+       <source text="za" description="" />
+       <target text="hinter" description="hinter von ..." />
     </item>
-        <item>
-       <source text="Papoušek" description="Hodně peří na hromádce." />
-       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
-    </item>
-        <item>
-       <source text="Papoušek" description="Hodně peří na hromádce." />
-       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
-    </item>
-        <item>
-       <source text="Papoušek" description="Hodně peří na hromádce." />
-       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
-    </item>
-        <item>
-       <source text="Papoušek" description="Hodně peří na hromádce." />
-       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
-    </item>
+     <item>
+       <source text="Kamarád" description="" />
+       <target text="der Kumpel" description="Ein Freund von mir." />
+    </item
+     <item>
+       <source text="Kamarád" description="" />
+       <target text="der Kumpel" description="Ein Freund von mir." />
+    </item
+     <item>
+       <source text="Kamarád" description="" />
+       <target text="der Kumpel" description="Ein Freund von mir." />
+    </item
 </vocabulary>
