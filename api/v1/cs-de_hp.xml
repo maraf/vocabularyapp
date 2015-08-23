@@ -149,4 +149,48 @@
        <source text="pravděpodobně" description="" />
        <target text="wahrscheinlich" description="" />
     </item>
+     <item>
+       <source text="červená řepa" description="" />
+       <target text="die Bete" description=" = die rote Rübe" />
+    </item>
+     <item>
+       <source text="dost" description="" />
+       <target text="genug" description="Ich habe genug Zeit; Der Shirm is gross genug, wir gehen beide darunter." />
+    </item>
+     <item>
+       <source text="obzvlášť" description="" />
+       <target text="besonders" description="es is besser als sehr gut; besonders gutes Essen" />
+    </item>
+     <item>
+       <source text="jehně" description="" />
+       <target text="das Lamm" description="kleines Schaf" />
+    </item>
+     <item>
+       <source text="ovce" description="" />
+       <target text="das Schaf" description="ein Tier mit weisser Wolle" />
+    </item>
+     <item>
+       <source text="vlna" description="" />
+       <target text="wahrscheinlich" description="" />
+    </item>
+     <item>
+       <source text="plavky" description="" />
+       <target text="die Badeanzug" description=" = die Badehose/die Bikini; die Kleidung für Baden" />
+    </item>
+     <item>
+       <source text="koupání" description="" />
+       <target text="das Baden" description="ins Wasser gehen" />
+    </item>
+     <item>
+       <source text="vyšetřit" description="" />
+       <target text="untersuchen" description="die Ärztin hat mir untersucht" />
+    </item>
+     <item>
+       <source text="vykat" description="" />
+       <target text="siezen" description="formal sein, Ihr und Sie sagen" />
+    </item>
+     <item>
+       <source text="tykat" description="" />
+       <target text="duzen" description=" informal sein, mit Freund" />
+    </item>
 </vocabulary>
