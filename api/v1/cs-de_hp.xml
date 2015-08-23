@@ -193,4 +193,52 @@
        <source text="tykat" description="" />
        <target text="duzen" description=" informal sein, mit Freund" />
     </item>
+     <item>
+       <source text="bednička" description="" />
+       <target text="die Kiste" description="quadraater Sache, man kann andere Sachen in es geben" />
+    </item>
+     <item>
+       <source text="kelímek" description="" />
+       <target text="der Becher" description="ein Becher Sahne / Joghurt" />
+    </item>
+     <item>
+       <source text="mouka" description="" />
+       <target text="das Mehl" description="Man macht Brot / Brötchen aus es." />
+    </item>
+     <item>
+       <source text="marmeláda" description="" />
+       <target text="die Marmelade" description=" = die Konfitüre (im Schweiz); die Paste aus dem Obst" />
+    </item>
+     <item>
+       <source text="totiž" description="" />
+       <target text="nämlich" description="" />
+    </item>
+     <item>
+       <source text="uhlí" description="" />
+       <target text="die Kohle" description="man macht Feuer mit es unter dem Grill" />
+    </item>
+     <item>
+       <source text="drůbež" description="" />
+       <target text="das Geflügel" description="verchiedenen Vögel (Hühn, Gans ...)" />
+    </item>
+     <item>
+       <source text="žárovka" description="" />
+       <target text="die Glühbirne" description="man macht Licht mit ihr" />
+    </item>
+     <item>
+       <source text="žhnout" description="" />
+       <target text="glühen" description="Es ist warm und es scheint" />
+    </item>
+     <item>
+       <source text="okurka" description="" />
+       <target text="die Gurke" description="Gemüse; es ist lang und grün; die Sauergurke" />
+    </item>
+     <item>
+       <source text="žízeň" description="" />
+       <target text="der Durst" description="Ich möchte trinken; Ich bin durstig" />
+    </item>
+     <item>
+       <source text="hlad" description="" />
+       <target text="der Hunger" description="Ich möchte essen; Ich bin hungrig" />
+    </item>
 </vocabulary>
