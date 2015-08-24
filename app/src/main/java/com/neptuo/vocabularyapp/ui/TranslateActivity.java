@@ -1,11 +1,16 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -18,6 +23,8 @@ import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.Session;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.ui.fragments.SelectDetailDialogFragment;
+import com.neptuo.vocabularyapp.ui.fragments.SelectTagDialogFragment;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
@@ -37,6 +44,26 @@ public class TranslateActivity extends DetailActivityBase {
     private Session session;
     private UserDetailItemViewModel itemViewModel;
     private boolean isGivenUp;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_translate, menu);
+
+        menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                SelectTagDialogFragment fragment = new SelectTagDialogFragment();
+
+                fragment.show(transaction, "dialog");
+
+                return true;
+            }
+        });
+
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

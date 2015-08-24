@@ -12,6 +12,7 @@ import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
 import com.neptuo.vocabularyapp.services.ConfigurationStorage;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
 import com.neptuo.vocabularyapp.ui.adapters.DownloadListAdapter;
@@ -65,6 +66,7 @@ public class DownloadActivity extends AppCompatActivity {
                 progress.setMessage(getString(R.string.download_details));
                 progress.show();
                 ServiceProvider.getDetails().clear();
+                ServiceProvider.getTags().clear();
                 totalItemCount = 0;
 
                 for (DownloadModel model : tableLayoutAdapter.getModelsToDownload()) {
@@ -128,7 +130,10 @@ public class DownloadActivity extends AppCompatActivity {
                 boolean isAdded = false;
                 for (DetailModel detail : ServiceProvider.getDetails()) {
                     if(detail.getDownload().hashCode() == result.getContent().getDownload().hashCode()) {
-                        detail.getItems().addAll(result.getContent().getItems());
+                        for (DetailItemModel itemModel : result.getContent().getItems()) {
+                            ServiceProvider.getTags().addAll(itemModel.getTags());
+                            detail.getItems().add(itemModel);
+                        }
                         isAdded = true;
                         break;
                     }

@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.ui.TranslateActivity;
@@ -45,14 +46,14 @@ public class SelectDetailDialogFragment extends DialogFragment {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder
-            .setTitle("Vyberte slovník")
+            .setTitle(R.string.select_vocabulary)
             .setSingleChoiceItems(detailsArray, selectedIndex.get(0), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     selectedIndex.add(which);
                 }
             })
-            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     if(okListener != null) {
@@ -63,7 +64,7 @@ public class SelectDetailDialogFragment extends DialogFragment {
                     }
                 }
             })
-            .setNegativeButton("Zpět", new DialogInterface.OnClickListener() {
+            .setNegativeButton(R.string.back, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
