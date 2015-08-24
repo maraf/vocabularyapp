@@ -3,21 +3,30 @@
     <item>
        <source text="Televize" description="Kouzelná bednička." />
        <target text="der Fernseher" description="" />
+       <tag>K překladu</tag>
+       <tag>Vybravení</tag>
     </item>
     <item>
        <source text="Přechod pro chodce" description="Přechod pro chodce je místo, kde mohou chodci bezpečně přecházet." />
        <target text="der Fußgängerübergang" description="" />
+       <tag>K překladu</tag>
     </item>
     <item>
        <source text="Kočka" description="Milý malý chlupatý tvor." />
        <target text="die Katze" description="" />
+       <tag>K překladu</tag>
+       <tag>Zvířata</tag>
     </item>
     <item>
        <source text="Slepé střevo" description="Nepotřebný kus lidského těla." />
        <target text="der Blinddarm" description="" />
+       <tag>K překladu</tag>
+       <tag>Lidské tělo</tag>
     </item>
     <item>
        <source text="Kachna" description="Chutný vodní pták." />
        <target text="die Ente" description="" />
+       <tag>K překladu</tag>
+       <tag>Zvířata</tag>
     </item>
 </vocabulary>
