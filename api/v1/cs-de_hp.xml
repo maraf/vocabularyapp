@@ -241,4 +241,40 @@
        <source text="hlad" description="" />
        <target text="der Hunger" description="Ich möchte essen; Ich bin hungrig" />
     </item>
+     <item>
+       <source text="potraviny" description="" />
+       <target text="das Lebensmittel" description="Alles wir essen kann." />
+    </item>
+     <item>
+       <source text="nákupní vozík" description="" />
+       <target text="der Einkaufswagen" description="Der Wagen für Einkaufen." />
+    </item>
+     <item>
+       <source text="nákupní košík" description="" />
+       <target text="der Einkaufskorb" description="Der Korb für Einkaufen." />
+    </item>
+     <item>
+       <source text="řeznictví" description="" />
+       <target text="die Metzgerei" description=" = die Fleischerei; das Geschäft mit Fleisch" />
+    </item>
+     <item>
+       <source text="cukrárna" description="" />
+       <target text="die Konditorei" description="Das Geschäft für süsses Lebensmittel." />
+    </item>
+     <item>
+       <source text="rybí prsty" description="" />
+       <target text="die Fischstäbchen" description="Ein Stück von Fischfleisch im Semmelmehl" />
+    </item>
+     <item>
+       <source text="strouhanka" description="" />
+       <target text="der Semmelmehl" description=" = der Paniermehl; der Pulver aus getrockene Brötchen / Brot" />
+    </item>
+     <item>
+       <source text="plakat" description="" />
+       <target text="weinen" description="traurig sein, die Kinder weinen oft" />
+    </item>
+     <item>
+       <source text="růst" description="" />
+       <target text="wachsen" description="Die Kinder wachsen in die Erwachsene ; Wenn es regnet, die Pilzen wachsen im Wald." />
+    </item>
 </vocabulary>
