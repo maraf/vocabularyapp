@@ -277,4 +277,52 @@
        <source text="růst" description="" />
        <target text="wachsen" description="Die Kinder wachsen in die Erwachsene ; Wenn es regnet, die Pilzen wachsen im Wald." />
     </item>
+     <item>
+       <source text="paže" description="" />
+       <target text="der Arm" description="der Körperteil; über der Hand" />
+    </item>
+     <item>
+       <source text="ruka" description="" />
+       <target text="die Hand" description="der Körperteil; am Ende des Armes" />
+    </item>
+     <item>
+       <source text="vousy" description="" />
+       <target text="der Bart" description="Männer haben es, Haar am Kinn" />
+    </item>
+     <item>
+       <source text="břicho" description="" />
+       <target text="der Bauch" description="Wann man sehr viel isst, er wachset." />
+    </item>
+     <item>
+       <source text="prst" description="" />
+       <target text="der Finger" description="Man hat fünf an jeder Hand" />
+    </item>
+     <item>
+       <source text="střevo" description="" />
+       <target text="der Darm" description="der Blinddarm, der Dickdarm, der Dünndarm ; der Teil des Verdauungstraktes" />
+    </item>
+     <item>
+       <source text="trávicí soustava" description="" />
+       <target text="der Verdauungstrakt" description="Die Organen für die Verarbeitung der Nährung" />
+    </item>
+     <item>
+       <source text="slepé střevo" description="" />
+       <target text="der Blinddarm" description=" = der Appendix" />
+    </item>
+     <item>
+       <source text="tlusté střevo" description="" />
+       <target text="der Dickdarm" description="Der letzte Teil des Verdauungstraktes." />
+    </item>
+     <item>
+       <source text="tenké střevo" description="" />
+       <target text="der Dünndarm" description="Längster Teil des Verdauungstraktes" />
+    </item>
+     <item>
+       <source text="krk" description="" />
+       <target text="der Hals" description="Zwischen dem Kopf und dem Körper" />
+    </item>
+     <item>
+       <source text="tělo" description="" />
+       <target text="der Körper" description="" />
+    </item>
 </vocabulary>
