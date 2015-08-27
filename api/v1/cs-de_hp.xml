@@ -351,7 +351,7 @@
     </item>
      <item>
        <source text="lýtko" description="" />
-       <target text="der Unterschenkel" description="Der untere Teil des Beines" />
+       <target text="der Unterschenkel" description="= die Wade; Der untere Teil des Beines" />
     </item>
      <item>
        <source text="hlava" description="" />
@@ -363,6 +363,46 @@
     </item>
      <item>
        <source text="pusa" description="" />
-       <target text="der Mund" description="Man küsst und isst mit ihm" />
+       <target text="der Mund" description="Man isst mit ihm" />
+    </item>
+     <item>
+       <source text="sval" description="" />
+       <target text="der Muskel" description="Man kann bewegen sich mit ihnen" />
+    </item>
+     <item>
+       <source text="pohybovat (se)" description="" />
+       <target text="bewegen sich" description="bewegen etwas (der Arm / der Stuhl) ; sich bewegen" />
+    </item>
+     <item>
+       <source text="nehet" description="" />
+       <target text="der Nagel" description="Hartes Plättchen am Ende des Fingers" />
+    </item>
+     <item>
+       <source text="zadek" description="" />
+       <target text="der Po" description="= der Assch (hanlivé); hinten unter dem Rücken" />
+    </item>
+     <item>
+       <source text="záda" description="" />
+       <target text="der Rücken" description="Die hintere Seite des Körpers" />
+    </item>
+     <item>
+       <source text="zub" description="" />
+       <target text="der Zahn" description="Das weisse Plättchen in dem Mund" />
+    </item>
+     <item>
+       <source text="oko" description="" />
+       <target text="das Auge" description="Man guckt mit es" />
+    </item>
+     <item>
+       <source text="noha" description="" />
+       <target text="das Bein" description="ein Körperteil; gut für gehen" />
+    </item>
+     <item>
+       <source text="krev" description="" />
+       <target text="das Blut" description="Es ist rot, Arzt nimmt es mit der Spritze" />
+    </item>
+     <item>
+       <source text="mozek" description="" />
+       <target text="das Gehirn" description="Ein Organ im Kopf, man denkt mit es" />
     </item>
 </vocabulary>
