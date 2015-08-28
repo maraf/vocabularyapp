@@ -405,4 +405,52 @@
        <source text="mozek" description="" />
        <target text="das Gehirn" description="Ein Organ im Kopf, man denkt mit es" />
     </item>
+     <item>
+       <source text="kloub" description="" />
+       <target text="das Gelenk" description="Zwischen zwei Knochen" />
+    </item>
+     <item>
+       <source text="obličej" description="" />
+       <target text="das Gesicht" description="" />
+    </item>
+     <item>
+       <source text="srdce" description="" />
+       <target text="das Herz" description="Ein Organ, es pumpt Blut" />
+    </item>
+     <item>
+       <source text="brada" description="" />
+       <target text="das Kinn" description="Der Bart wächst an dem Mannskinn" />
+    </item>
+     <item>
+       <source text="koleno" description="" />
+       <target text="das Knie" description="Das zweite Gelenk am Bein" />
+    </item>
+     <item>
+       <source text="ucho" description="" />
+       <target text="das Ohr" description="Man hört mit es" />
+    </item>
+     <item>
+       <source text="hruď" description="" />
+       <target text="die Brust" description="Weibliche Brust - die Frauen haben es" />
+    </item>
+     <item>
+       <source text="kůže" description="" />
+       <target text="die Haut" description="Es bedeckt den ganzen Körper" />
+    </item>
+     <item>
+       <source text="pokrývat" description="" />
+       <target text="bedecken" description="" />
+    </item>
+     <item>
+       <source text="játra" description="" />
+       <target text="die Leber" description="Ein Organ im Bauch, sie entgiftet das Blut" />
+    </item>
+     <item>
+       <source text="detoxikovat" description="" />
+       <target text="entgiften" description="Nehmen die Toxinen ab" />
+    </item>
+     <item>
+       <source text="jed" description="" />
+       <target text="das Gift" description="Die Substanz die schaded den Organismus" />
+    </item>
 </vocabulary>
