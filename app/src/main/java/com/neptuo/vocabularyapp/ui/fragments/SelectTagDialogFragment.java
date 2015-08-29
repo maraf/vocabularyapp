@@ -34,7 +34,7 @@ public class SelectTagDialogFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder
             .setTitle(R.string.select_tags)
-            .setMultiChoiceItems(tags, new boolean[0], new DialogInterface.OnMultiChoiceClickListener() {
+            .setMultiChoiceItems(tags, selectedTags, new DialogInterface.OnMultiChoiceClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which, boolean isChecked) {
                     selectedTags[which] = isChecked;

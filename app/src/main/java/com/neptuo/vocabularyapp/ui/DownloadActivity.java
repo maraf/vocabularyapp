@@ -131,7 +131,6 @@ public class DownloadActivity extends AppCompatActivity {
                 for (DetailModel detail : ServiceProvider.getDetails()) {
                     if(detail.getDownload().hashCode() == result.getContent().getDownload().hashCode()) {
                         for (DetailItemModel itemModel : result.getContent().getItems()) {
-                            ServiceProvider.getTags().addAll(itemModel.getTags());
                             detail.getItems().add(itemModel);
                         }
                         isAdded = true;
@@ -143,6 +142,9 @@ public class DownloadActivity extends AppCompatActivity {
                     ServiceProvider.getDetails().add(result.getContent());
                 }
 
+                for (DetailItemModel itemModel : result.getContent().getItems()) {
+                    ServiceProvider.getTags().addAll(itemModel.getTags());
+                }
             } else {
                 Toast.makeText(this, result.getErrorMessage(), Toast.LENGTH_SHORT).show();
             }
