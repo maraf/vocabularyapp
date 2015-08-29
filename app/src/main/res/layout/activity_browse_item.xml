@@ -56,4 +56,13 @@
         </RelativeLayout>
     </ScrollView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Podstatná jména"
+        android:id="@+id/tagsText"
+        android:layout_below="@+id/scrollView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
 </RelativeLayout>

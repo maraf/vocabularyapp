@@ -1,5 +1,7 @@
 package com.neptuo.vocabularyapp.services.models;
 
+import com.neptuo.vocabularyapp.data.Sql;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +30,9 @@ public class DetailModel {
         DetailModel reverse = new DetailModel(new DownloadModel(download.getTargetLanguage(), download.getSourceLanguage()));
         List<DetailItemModel> reverseItems = reverse.getItems();
         for (DetailItemModel item : items) {
-            reverseItems.add(new DetailItemModel(item.getTranslatedText(), item.getOriginalText(), item.getTranslatedDescription(), item.getOriginalDescription()));
+            DetailItemModel newItem = new DetailItemModel(item.getTranslatedText(), item.getOriginalText(), item.getTranslatedDescription(), item.getOriginalDescription());
+            newItem.getTags().addAll(item.getTags());
+            reverseItems.add(newItem);
         }
 
         return reverse;

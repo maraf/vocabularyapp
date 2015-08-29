@@ -32,12 +32,23 @@ public class BrowseDialogFragment extends DialogFragment {
         TextView sourceDescription = (TextView) view.findViewById(R.id.originalDescription);
         TextView targetText = (TextView) view.findViewById(R.id.translatedText);
         TextView targetDescription = (TextView) view.findViewById(R.id.translatedDescription);
+        TextView tagsText = (TextView) view.findViewById(R.id.tagsText);
 
         if(itemModel != null) {
             sourceText.setText(itemModel.getOriginalText());
             sourceDescription.setText(itemModel.getOriginalDescription());
             targetText.setText(itemModel.getTranslatedText());
             targetDescription.setText(itemModel.getTranslatedDescription());
+
+            StringBuilder tags = new StringBuilder();
+            for (String tag : itemModel.getTags()) {
+                if(tags.length() > 0) {
+                    tags.append(", ");
+                }
+
+                tags.append(tag);
+            }
+            tagsText.setText(tags.toString());
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

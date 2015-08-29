@@ -43,7 +43,9 @@ public class XmlDetailModelParser {
                                 targetDescription = parser.getAttributeValue(null, "description");
                                 nextUntilCloseTag(parser);
                             } else if(subName.equals("tag")) {
-                                tags.add(parser.getText());
+                                if(parser.next() == XmlPullParser.TEXT) {
+                                    tags.add(parser.getText());
+                                }
                                 nextUntilCloseTag(parser);
                             }
 
