@@ -32,19 +32,19 @@ public class XmlDetailModelParser {
                     List<String> tags = new ArrayList<String>();
 
                     while (parser.next() != XmlPullParser.END_TAG) {
+                        String subName = parser.getName();
                         if (parser.getEventType() == XmlPullParser.START_TAG) {
-                            String subName = parser.getName();
                             if (subName.equals("source")) {
                                 sourceText = parser.getAttributeValue(null, "text");
                                 sourceDescription = parser.getAttributeValue(null, "description");
-                                parser.next();
+                                nextUntilCloseTag(parser);
                             } else if (subName.equals("target")) {
                                 targetText = parser.getAttributeValue(null, "text");
                                 targetDescription = parser.getAttributeValue(null, "description");
-                                parser.next();
+                                nextUntilCloseTag(parser);
                             } else if(subName.equals("tag")) {
                                 tags.add(parser.getText());
-                                parser.next();
+                                nextUntilCloseTag(parser);
                             }
 
                             //if(sourceText != null && targetText != null)
@@ -55,8 +55,7 @@ public class XmlDetailModelParser {
                     DetailItemModel model = new DetailItemModel(sourceText, targetText, sourceDescription, targetDescription);
                     model.getTags().addAll(tags);
                     result.getItems().add(model);
-                    parser.next();
-                    parser.next();
+                    nextUntilCloseTag(parser);
                 }
             }
         }
@@ -64,4 +63,15 @@ public class XmlDetailModelParser {
         return result;
     }
 
+    private static void nextUntilCloseTag(XmlPullParser parser) throws IOException, XmlPullParserException {
+        int next = parser.getEventType();
+        String name = parser.getName();
+        while (next != XmlPullParser.END_TAG) {
+            if(next == XmlPullParser.END_DOCUMENT)
+                throw new XmlPullParserException("End tag expected.");
+
+            next = parser.next();
+            name = parser.getName();
+        }
+    }
 }
