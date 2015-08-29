@@ -1,12 +1,9 @@
 package com.neptuo.vocabularyapp.ui;
 
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,10 +20,11 @@ import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.Session;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
-import com.neptuo.vocabularyapp.ui.fragments.SelectDetailDialogFragment;
 import com.neptuo.vocabularyapp.ui.fragments.SelectTagDialogFragment;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
+
+import java.util.List;
 
 public class TranslateActivity extends DetailActivityBase {
 
@@ -55,6 +53,13 @@ public class TranslateActivity extends DetailActivityBase {
             public boolean onMenuItemClick(MenuItem item) {
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 SelectTagDialogFragment fragment = new SelectTagDialogFragment();
+                fragment.setOkListener(new SelectTagDialogFragment.OnClickOkListener() {
+                    @Override
+                    public void onClick(List<String> selectedTags) {
+                        session.filterTags(selectedTags);
+                        prepareNextItem();
+                    }
+                });
 
                 fragment.show(transaction, "dialog");
 
@@ -176,9 +181,13 @@ public class TranslateActivity extends DetailActivityBase {
             } else {
                 itemViewModel.getUserModel().incrementWrongCount();
             }
-            session.update(itemViewModel.getUserModel());
+            session.updateGroup(itemViewModel.getUserModel());
         }
 
+        prepareNextItem();
+    }
+
+    private void prepareNextItem() {
         isGivenUp = false;
         itemViewModel = new UserDetailItemViewModel(session.nextRandom());
         updateSuccessBar();

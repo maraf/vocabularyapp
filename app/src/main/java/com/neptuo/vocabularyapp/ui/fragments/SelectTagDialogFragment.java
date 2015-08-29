@@ -25,6 +25,12 @@ public class SelectTagDialogFragment extends DialogFragment {
         void onClick(List<String> selectedTags);
     }
 
+    private OnClickOkListener okListener;
+
+    public void setOkListener(OnClickOkListener okListener) {
+        this.okListener = okListener;
+    }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -43,7 +49,16 @@ public class SelectTagDialogFragment extends DialogFragment {
             .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    if(okListener != null) {
+                        List<String> selected = new ArrayList<String>();
+                        for (int i = 0; i < selectedTags.length; i++) {
+                            if(selectedTags[i]) {
+                                selected.add(tags[i]);
+                            }
+                        }
 
+                        okListener.onClick(selected);
+                    }
                 }
             })
             .setNegativeButton(R.string.back, new DialogInterface.OnClickListener() {

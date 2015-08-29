@@ -17,6 +17,7 @@ import java.util.Random;
 public class Session {
     private DetailModel model;
     private List<UserDetailItemModel> allItems;
+    private List<UserDetailItemModel> filteredItems;
 
     private GroupModel newGroup;
     private GroupModel hardGroup;
@@ -29,14 +30,19 @@ public class Session {
     public Session(DetailModel model, UserStorage userStorage) {
         this.model = model;
         this.allItems = UserDetailConverter.map(userStorage, model.getItems());
+        this.filteredItems = allItems;
         this.random = new Random();
+        buildGroups();
+    }
 
+    private void buildGroups() {
+        lastItem = null;
         newGroup = new GroupModel();
         hardGroup = new GroupModel();
         mediumGroup = new GroupModel();
         softGroup = new GroupModel();
 
-        for (UserDetailItemModel itemModel : allItems) {
+        for (UserDetailItemModel itemModel : filteredItems) {
             getGroup(itemModel).getAllItems().add(itemModel);
         }
     }
@@ -60,7 +66,7 @@ public class Session {
         }
     }
 
-    public void update(UserDetailItemModel itemModel) {
+    public void updateGroup(UserDetailItemModel itemModel) {
         lastItem = itemModel;
         GroupModel group = getGroup(itemModel);
         if (group == newGroup || !group.getAllItems().contains(itemModel)) {
@@ -70,6 +76,21 @@ public class Session {
             softGroup.getAllItems().remove(itemModel);
             group.getAllItems().add(itemModel);
         }
+    }
+
+    public void filterTags(List<String> tags) {
+        filteredItems = new ArrayList<UserDetailItemModel>();
+        for (UserDetailItemModel itemModel : allItems) {
+            boolean hasTag = false;
+
+            for (String tag : itemModel.getModel().getTags()) {
+                if(tags.contains(tag)) {
+                    filteredItems.add(itemModel);
+                    break;
+                }
+            }
+        }
+        buildGroups();
     }
 
     public UserDetailItemModel nextRandom() {
