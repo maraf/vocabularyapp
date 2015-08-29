@@ -453,4 +453,44 @@
        <source text="jed" description="" />
        <target text="das Gift" description="Die Substanz die schaded den Organismus" />
     </item>
+     <item>
+       <source text="ret" description="" />
+       <target text="die Lippe" description="Der rosige Teil des Mund" />
+    </item>
+     <item>
+       <source text="plíce" description="" />
+       <target text="die Lunge" description="Ein Organ, man kann atmen mit sie" />
+    </item>
+     <item>
+       <source text="dýchat" description="" />
+       <target text="atmen" description="Man muss es machen für Leben, man braucht den Sauerstoff" />
+    </item>
+     <item>
+       <source text="kyslík" description="" />
+       <target text="der Sauerstoff" description="Man braucht es für Leben" />
+    </item>
+     <item>
+       <source text="život" description="" />
+       <target text="das Leben" description=" =existieren in dieser Welt" />
+    </item>
+     <item>
+       <source text="svět" description="" />
+       <target text="die Welt" description="" />
+    </item>
+     <item>
+       <source text="nos" description="" />
+       <target text="die Nase" description="Die Pyramide am Gesicht" />
+    </item>
+     <item>
+       <source text="ledvina" description="" />
+       <target text="die Niere" description="Die paarige Organen die filtrieren das Blut" />
+    </item>
+     <item>
+       <source text="rameno" description="" />
+       <target text="die Schulter" description="Sie ist zwischen dem Körper und der Arm" />
+    </item>
+     <item>
+       <source text="čelo" description="" />
+       <target text="die Stirn" description="Der Obere Teil des Gesichts" />
+    </item>
 </vocabulary>
