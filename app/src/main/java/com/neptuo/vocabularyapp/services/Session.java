@@ -67,7 +67,12 @@ public class Session {
     }
 
     public void updateGroup(UserDetailItemModel itemModel) {
-        lastItem = itemModel;
+        if(filteredItems.size() == 1) {
+            lastItem = null;
+        } else {
+            lastItem =  itemModel;
+        }
+
         GroupModel group = getGroup(itemModel);
         if (group == newGroup || !group.getAllItems().contains(itemModel)) {
             newGroup.getAllItems().remove(itemModel);
