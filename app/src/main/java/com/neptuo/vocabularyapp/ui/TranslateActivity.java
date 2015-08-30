@@ -1,6 +1,7 @@
 package com.neptuo.vocabularyapp.ui;
 
 import android.app.FragmentTransaction;
+import android.app.Service;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import com.neptuo.vocabularyapp.ui.fragments.SelectTagDialogFragment;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TranslateActivity extends DetailActivityBase {
@@ -42,6 +44,7 @@ public class TranslateActivity extends DetailActivityBase {
     private Session session;
     private UserDetailItemViewModel itemViewModel;
     private boolean isGivenUp;
+    private List<String> lastSelectedTags;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,9 +56,13 @@ public class TranslateActivity extends DetailActivityBase {
             public boolean onMenuItemClick(MenuItem item) {
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 SelectTagDialogFragment fragment = new SelectTagDialogFragment();
+                fragment.setLastSelectedTags(lastSelectedTags);
                 fragment.setOkListener(new SelectTagDialogFragment.OnClickOkListener() {
                     @Override
                     public void onClick(List<String> selectedTags) {
+                        lastSelectedTags.clear();
+                        lastSelectedTags.addAll(selectedTags);
+
                         session.filterTags(selectedTags);
                         prepareNextItem();
                     }
@@ -76,6 +83,9 @@ public class TranslateActivity extends DetailActivityBase {
         setContentView(R.layout.activity_translate);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        lastSelectedTags = new ArrayList<String>();
+        lastSelectedTags.addAll(ServiceProvider.getTags());
 
         DetailModel detail = prepareDetailModel();
         session = new Session(detail, ServiceProvider.getUserStorage());

@@ -26,9 +26,14 @@ public class SelectTagDialogFragment extends DialogFragment {
     }
 
     private OnClickOkListener okListener;
+    private List<String> lastSelectedTags;
 
     public void setOkListener(OnClickOkListener okListener) {
         this.okListener = okListener;
+    }
+
+    public void setLastSelectedTags(List<String> lastSelectedTags) {
+        this.lastSelectedTags = lastSelectedTags;
     }
 
     @Override
@@ -36,6 +41,12 @@ public class SelectTagDialogFragment extends DialogFragment {
 
         final String[] tags = ServiceProvider.getTags().toArray(new String[ServiceProvider.getTags().size()]);
         final boolean[] selectedTags = new boolean[tags.length];
+
+        for (int i = 0; i < selectedTags.length; i ++) {
+            if(lastSelectedTags != null && lastSelectedTags.contains(tags[i])) {
+                selectedTags[i] = true;
+            }
+        }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder
