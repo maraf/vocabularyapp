@@ -153,6 +153,8 @@ public class BrowseActivity extends DetailActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
 
+        lastSelectedTags = new ArrayList<String>(ServiceProvider.getTags());
+
         userStorage = ServiceProvider.getUserStorage();
         detail = prepareDetailModel();
         allUserItems = UserDetailConverter.map(userStorage, detail.getItems());
