@@ -1,13 +1,14 @@
 package com.neptuo.vocabularyapp.ui.viewmodels.comparators;
 
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
+import com.neptuo.vocabularyapp.ui.viewmodels.BrowseViewModel;
 
 import java.util.Comparator;
 
 /**
  * Created by Windows10 on 8/10/2015.
  */
-public class PercentageUserDetailItemModelComparator implements Comparator<UserDetailItemModel> {
+public class PercentageUserDetailItemModelComparator implements Comparator<BrowseViewModel> {
     private boolean isAscending;
 
     public PercentageUserDetailItemModelComparator(boolean isAscending) {
@@ -15,19 +16,19 @@ public class PercentageUserDetailItemModelComparator implements Comparator<UserD
     }
 
     @Override
-    public int compare(UserDetailItemModel lhs, UserDetailItemModel rhs) {
-        if(lhs.getTotalCount() == 0) {
-            if(rhs.getTotalCount() == 0) {
+    public int compare(BrowseViewModel lhs, BrowseViewModel rhs) {
+        if(lhs.getModel().getTotalCount() == 0) {
+            if(rhs.getModel().getTotalCount() == 0) {
                 return 0;
             }
 
             return isAscending ? 1 : -1;
-        } else if(rhs.getTotalCount() == 0) {
+        } else if(rhs.getModel().getTotalCount() == 0) {
             return isAscending ? -1 : 1;
         }
 
-        double ratioLhs = ((double)lhs.getCorrectCount()) / lhs.getTotalCount();
-        double ratioRhs = ((double)rhs.getCorrectCount()) / rhs.getTotalCount();
+        double ratioLhs = ((double)lhs.getModel().getCorrectCount()) / lhs.getModel().getTotalCount();
+        double ratioRhs = ((double)rhs.getModel().getCorrectCount()) / rhs.getModel().getTotalCount();
 
         if(isAscending)
             return (int)((ratioRhs - ratioLhs) * 100);
