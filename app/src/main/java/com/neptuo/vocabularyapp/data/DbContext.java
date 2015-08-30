@@ -9,7 +9,7 @@ import android.provider.BaseColumns;
  * Created by Windows10 on 8/12/2015.
  */
 public class DbContext extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 8;
+    public static final int DATABASE_VERSION = 9;
     public static final String DATABASE_NAME = "Vocabulary.db";
 
     public DbContext(Context context) {
@@ -23,20 +23,27 @@ public class DbContext extends SQLiteOpenHelper {
         db.execSQL(Sql.Url.TABLE_CREATE);
         db.execSQL(Sql.DetailItem.TABLE_CREATE);
         db.execSQL(Sql.UserGuess.TABLE_CREATE);
+        db.execSQL(Sql.DetailItemTag.TABLE_CREATE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(Sql.Language.TABLE_DROP);
-        db.execSQL(Sql.Download.TABLE_DROP);
-        db.execSQL(Sql.Url.TABLE_DROP);
-        db.execSQL(Sql.DetailItem.TABLE_DROP);
-        db.execSQL(Sql.UserGuess.TABLE_DROP);
-        onCreate(db);
+        if(oldVersion < 8) {
+            db.execSQL(Sql.Language.TABLE_DROP);
+            db.execSQL(Sql.Download.TABLE_DROP);
+            db.execSQL(Sql.Url.TABLE_DROP);
+            db.execSQL(Sql.DetailItem.TABLE_DROP);
+            db.execSQL(Sql.UserGuess.TABLE_DROP);
+            onCreate(db);
+        }
+
+        if(oldVersion == 8) {
+            db.execSQL(Sql.DetailItemTag.TABLE_CREATE);
+        }
     }
 
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        onUpgrade(db, oldVersion, newVersion);
+        onUpgrade(db, 0, newVersion);
     }
 }

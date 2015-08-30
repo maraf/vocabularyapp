@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.ui.fragments.SelectDetailDialogFragment;
 import com.neptuo.vocabularyapp.ui.tasks.LoadFromDbAsyncTask;
@@ -118,6 +119,14 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.db_loaded, Toast.LENGTH_SHORT).show();
         ServiceProvider.getDetails().clear();
         ServiceProvider.getDetails().addAll(models);
+
+        ServiceProvider.getTags().clear();
+        for (DetailModel model : models) {
+            for (DetailItemModel itemModel : model.getItems()) {
+                ServiceProvider.getTags().addAll(itemModel.getTags());
+            }
+        }
+
         checkTranslateActivityAvailability();
     }
 }

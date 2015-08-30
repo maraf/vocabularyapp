@@ -2,6 +2,8 @@ package com.neptuo.vocabularyapp.data;
 
 import android.provider.BaseColumns;
 
+import java.sql.Struct;
+
 /**
  * Created by Windows10 on 8/12/2015.
  */
@@ -74,6 +76,22 @@ public final class Sql {
                 _TARGET_TEXT + " TEXT, " +
                 _TARGET_DESCRIPTION + " TEXT, " +
                 "FOREIGN KEY(" + _DOWNLOAD_ID + ") REFERENCES " + Download.TABLE + "(" + Download._ID + ")" +
+            ")";
+
+        public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE;
+    }
+
+    public final class DetailItemTag implements BaseColumns {
+        public static final String TABLE = "detailItemTag";
+        public static final String _DETAIL_ITEM_ID = "detailItemId";
+        public static final String _NAME = "name";
+
+        public static final String TABLE_CREATE =
+            "CREATE TABLE " + TABLE + "(" +
+                _ID + " INTEGER PRIMARY KEY, " +
+                _DETAIL_ITEM_ID + " INTEGER, " +
+                _NAME + " TEXT, " +
+                "FOREIGN KEY(" + _DETAIL_ITEM_ID + ") REFERENCES " + DetailItem.TABLE + "(" + DetailItem._ID + ")" +
             ")";
 
         public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE;
