@@ -1,7 +1,11 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.FragmentTransaction;
 import android.app.Service;
+import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -21,6 +25,7 @@ import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.Session;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.ui.fragments.BrowseDialogFragment;
 import com.neptuo.vocabularyapp.ui.fragments.SelectTagDialogFragment;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
@@ -107,7 +112,7 @@ public class TranslateActivity extends DetailActivityBase {
         translatedText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if(actionId == EditorInfo.IME_ACTION_NEXT) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
                     tryTranslation();
                     return true;
                 }
@@ -135,16 +140,24 @@ public class TranslateActivity extends DetailActivityBase {
             @Override
             public void onClick(View v) {
                 if(isGivenUp) {
-                    prepareNextItem(false);
+                    prepareNextItem();
                 } else {
                     isGivenUp = true;
+                    incrementGuess(false);
+                    updateSuccessBar();
 
-                    translatedText.setText(itemViewModel.getModel().getTranslatedText());
-                    translatedText.setEnabled(false);
-                    setDescriptionVisibility(true);
+                    //TODO: Show alert.
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    BrowseDialogFragment fragment = new BrowseDialogFragment();
+                    fragment.setItemModel(itemViewModel.getModel());
+                    fragment.show(transaction, "dialog");
 
-                    tryButton.setEnabled(false);
-                    descriptionButton.setEnabled(false);
+                    //translatedText.setText(itemViewModel.getModel().getTranslatedText());
+                    //translatedText.setEnabled(false);
+                    //setDescriptionVisibility(true);
+
+                    //tryButton.setEnabled(false);
+                    //descriptionButton.setEnabled(false);
                     nextButton.setText(getString(R.string.nextButton_next));
                 }
             }
@@ -184,13 +197,19 @@ public class TranslateActivity extends DetailActivityBase {
         translatedText.setImeActionLabel(text, KeyEvent.KEYCODE_ENTER);
     }
 
-    private void prepareNextItem(boolean isSuccess) {
+    private void incrementGuess(boolean isSuccess) {
         if(itemViewModel != null) {
             if(isSuccess) {
                 itemViewModel.getUserModel().incrementCorrectCount();
             } else {
                 itemViewModel.getUserModel().incrementWrongCount();
             }
+        }
+    }
+
+    private void prepareNextItem(boolean isSuccess) {
+        if(itemViewModel != null) {
+            incrementGuess(isSuccess);
             session.updateGroup(itemViewModel.getUserModel());
         }
 
