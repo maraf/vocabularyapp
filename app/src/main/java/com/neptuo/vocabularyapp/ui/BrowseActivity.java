@@ -1,5 +1,6 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
 import com.neptuo.vocabularyapp.ui.adapters.BrowseListAdapter;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
+import com.neptuo.vocabularyapp.ui.fragments.SelectTagDialogFragment;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.comparators.AlphabetUserDetailItemModelComparator;
@@ -39,9 +41,11 @@ public class BrowseActivity extends DetailActivityBase {
     private DetailModel detail;
     private UserStorage userStorage;
     private List<UserDetailItemModel> userItems;
+    private List<UserDetailItemModel> allUserItems;
     private List<UserDetailItemModel> searchedItems;
 
     private String lastSearch;
+    private List<String> lastSelectedTags;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,7 +55,7 @@ public class BrowseActivity extends DetailActivityBase {
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                if(searchText.getVisibility() == View.GONE) {
+                if (searchText.getVisibility() == View.GONE) {
                     searchText.setVisibility(View.VISIBLE);
                     searchText.requestFocus();
 
@@ -68,7 +72,31 @@ public class BrowseActivity extends DetailActivityBase {
             }
         });
 
-        SubMenu subMenu = menu.getItem(1).getSubMenu();
+
+        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                SelectTagDialogFragment fragment = new SelectTagDialogFragment();
+                fragment.setLastSelectedTags(lastSelectedTags);
+                fragment.setOkListener(new SelectTagDialogFragment.OnClickOkListener() {
+                    @Override
+                    public void onClick(List<String> selectedTags) {
+                        lastSelectedTags.clear();
+                        lastSelectedTags.addAll(selectedTags);
+
+                        // Update visible items.
+                    }
+                });
+
+                fragment.show(transaction, "dialog");
+
+                return true;
+            }
+        });
+
+
+        SubMenu subMenu = menu.getItem(2).getSubMenu();
         if(subMenu != null) {
             subMenu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
@@ -127,7 +155,8 @@ public class BrowseActivity extends DetailActivityBase {
 
         userStorage = ServiceProvider.getUserStorage();
         detail = prepareDetailModel();
-        userItems = UserDetailConverter.map(userStorage, detail.getItems());
+        allUserItems = UserDetailConverter.map(userStorage, detail.getItems());
+        userItems = new ArrayList<UserDetailItemModel>(allUserItems);
         searchedItems = new ArrayList<UserDetailItemModel>(userItems);
 
         searchText = (EditText) findViewById(R.id.searchText);
