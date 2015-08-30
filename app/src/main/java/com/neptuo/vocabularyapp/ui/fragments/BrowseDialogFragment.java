@@ -17,9 +17,29 @@ import com.neptuo.vocabularyapp.services.models.DetailItemModel;
  */
 public class BrowseDialogFragment extends DialogFragment {
     private DetailItemModel itemModel;
+    private String positiveButtonText = "OK";
+    private DialogInterface.OnClickListener positiveButton = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            dialog.dismiss();
+        }
+    };
+
+    private String negativeButtonText = null;
+    private DialogInterface.OnClickListener negativeButton = null;
 
     public void setItemModel(DetailItemModel itemModel) {
         this.itemModel = itemModel;
+    }
+
+    public void setPositiveButton(String positionButtonText, DialogInterface.OnClickListener positiveButton) {
+        this.positiveButtonText = positionButtonText;
+        this.positiveButton = positiveButton;
+    }
+
+    public void setNegativeButton(String negativeButtonText, DialogInterface.OnClickListener negativeButton) {
+        this.negativeButtonText = negativeButtonText;
+        this.negativeButton = negativeButton;
     }
 
     @Override
@@ -55,12 +75,12 @@ public class BrowseDialogFragment extends DialogFragment {
         builder
             //.setTitle("Detail")
             .setView(view)
-            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
+            .setPositiveButton(positiveButtonText, positiveButton);
+
+        if(negativeButton != null) {
+            builder
+                .setNegativeButton(negativeButtonText, negativeButton);
+        }
 
         return builder.create();
     }

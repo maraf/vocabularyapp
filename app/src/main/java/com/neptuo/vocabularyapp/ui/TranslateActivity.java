@@ -150,6 +150,19 @@ public class TranslateActivity extends DetailActivityBase {
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
                     BrowseDialogFragment fragment = new BrowseDialogFragment();
                     fragment.setItemModel(itemViewModel.getModel());
+                    fragment.setPositiveButton(getString(R.string.nextButton_next), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            prepareNextItem();
+                            dialog.dismiss();
+                        }
+                    });
+                    fragment.setNegativeButton("Zkusit zadat", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
                     fragment.show(transaction, "dialog");
 
                     //translatedText.setText(itemViewModel.getModel().getTranslatedText());
