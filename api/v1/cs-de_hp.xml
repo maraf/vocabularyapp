@@ -569,4 +569,8 @@
        <source text="stěží" description="" />
        <target text="kaum" description="fast gar nicht" />
     </item>
+     <item>
+       <source text="skoro" description="" />
+       <target text="fast" description="" />
+    </item>
 </vocabulary>
