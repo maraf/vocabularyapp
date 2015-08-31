@@ -493,4 +493,80 @@
        <source text="čelo" description="" />
        <target text="die Stirn" description="Der Obere Teil des Gesichts" />
     </item>
+     <item>
+       <source text="prst na noze" description="" />
+       <target text="die Zehe" description="Die Finger am Fuss" />
+    </item>
+     <item>
+       <source text="jazyk" description="" />
+       <target text="die Zunge" description="Ein Muskel in dem Mund" />
+    </item>
+     <item>
+       <source text="tvář" description="" />
+       <target text="die Wange" description="" />
+    </item>
+     <item>
+       <source text="doporučit" description="" />
+       <target text="empfehlen" description="jemanden raten was gut ist" />
+    </item>
+     <item>
+       <source text="vyloučit" description="" />
+       <target text="ausschliessen" description=" = eliminieren; fettes Lebensmittel ausschliessen; jemanden aus der Gruppe ausschliessen" />
+    </item>
+     <item>
+       <source text="výživa" description="" />
+       <target text="die Nährung" description="Alles was man isst." />
+    </item>
+     <item>
+       <source text="potřeba" description="" />
+       <target text="der Bedarf" description="alles was man braucht" />
+    </item>
+     <item>
+       <source text="zaměstnaný" description="" />
+       <target text="berufstätig" description="Eine Arbeit haben" />
+    </item>
+     <item>
+       <source text="nakrájený" description="" />
+       <target text="geschnitten" description="etwas jemand geschnitten hat" />
+    </item>
+     <item>
+       <source text="řezat" description="" />
+       <target text="schneiden" description="etwas in kleine Stücken machen ; Ich schneide - schnitt - geschnitten (haben)" />
+    </item>
+     <item>
+       <source text="obilí" description="" />
+       <target text="die Getreide" description="Man macht Mehl aus es" />
+    </item>
+     <item>
+       <source text="chytnout" description="" />
+       <target text="greifen" description="die Hand nach etwas/jemanden ; den Ball greifen" />
+    </item>
+     <item>
+       <source text="nenávist" description="" />
+       <target text="der Hass" description="starke negativ Emotion" />
+    </item>
+     <item>
+       <source text="luštěniny" description="" />
+       <target text="die Hülsenfrüchte" description="Bohne, Linse, Erbse" />
+    </item>
+     <item>
+       <source text="hrášek" description="" />
+       <target text="die Erbse" description="Es is grün und rund" />
+    </item>
+     <item>
+       <source text="fazole" description="" />
+       <target text="die Bohne" description="Es macht man viel furzen" />
+    </item>
+     <item>
+       <source text="prdět" description="" />
+       <target text="furzen" description="Die Gase lassen" />
+    </item>
+     <item>
+       <source text="čočka" description="" />
+       <target text="die Linse" description="" />
+    </item>
+     <item>
+       <source text="stěží" description="" />
+       <target text="kaum" description="fast gar nicht" />
+    </item>
 </vocabulary>
