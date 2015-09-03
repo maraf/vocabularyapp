@@ -573,4 +573,52 @@
        <source text="skoro" description="" />
        <target text="fast" description="" />
     </item>
+     <item>
+       <source text="jenom" description="" />
+       <target text="nur" description="" />
+    </item>
+     <item>
+       <source text="Domácí kuchyně" description="" />
+       <target text="die Hausmannskost" description="zu Hause bereitetes Essen" />
+    </item>
+     <item>
+       <source text="hubený" description="" />
+       <target text="mager" description="nicht fett" />
+    </item>
+     <item>
+       <source text="kukuřice" description="" />
+       <target text="der Mais" description="= der Kukurutz" />
+    </item>
+     <item>
+       <source text="omezení" description="" />
+       <target text="die Einschränkung" description="Es limitiert etwas" />
+    </item>
+     <item>
+       <source text="zranit se" description="" />
+       <target text="sich verletzen" description="Der Knochen brechen zum Beispiel; ich verletze mich; verletzte; haben verletzt" />
+    </item>
+     <item>
+       <source text="soutěž" description="" />
+       <target text="der Wettkampf" description="Die Leute möchten wissen, wer der beste ist." />
+    </item>
+     <item>
+       <source text="zúčastnit se" description="" />
+       <target text="teilnehmen" description="An einem Wettkampf teilnehmen = du bist dort ; I nehme teil ; nahm teil ; haben teilgenommen" />
+    </item>
+     <item>
+       <source text="člen" description="" />
+       <target text="das Mitglied" description="In einer specialisierte Gruppe sein" />
+    </item>
+     <item>
+       <source text="klub" description="" />
+       <target text="der Verein" description="Specialisierte Gruppe für etwas (Eine Sportart / wandern ...)" />
+    </item>
+     <item>
+       <source text="sportovní přenos" description="" />
+       <target text="die Sportübertragung" description="Sehen den Wttkampf in dem Fernseher" />
+    </item>
+     <item>
+       <source text="krasbruslení" description="" />
+       <target text="der Eiskunstlauf" description="Eine Sportart; schöne Bewegungen am Eis" />
+    </item>
 </vocabulary>
