@@ -25,6 +25,7 @@ public class DetailActivityBase extends ActivityBase {
             model = model.reverse();
         }
 
+        getSupportActionBar().setSubtitle(model.getDownload().getSourceLanguage().getName() + " -> " + model.getDownload().getTargetLanguage().getName());
         //setTitle(getTitle() + ": " + model.getDownload().getSourceLanguage().getName() + " -> " + model.getDownload().getTargetLanguage().getName());
         return model;
     }
