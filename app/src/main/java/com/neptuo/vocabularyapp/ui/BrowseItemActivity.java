@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.neptuo.vocabularyapp.R;
 
-public class BrowseItemActivity extends AppCompatActivity {
+public class BrowseItemActivity extends ActivityBase {
 
     public static final String PARAMETER_SOURCE_TEXT = "sourceText";
     public static final String PARAMETER_SOURCE_DESCRIPTION = "sourceDescription";

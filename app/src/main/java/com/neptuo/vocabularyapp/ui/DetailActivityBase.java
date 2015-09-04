@@ -9,7 +9,7 @@ import com.neptuo.vocabularyapp.services.models.DetailModel;
 /**
  * Created by Windows10 on 8/14/2015.
  */
-public class DetailActivityBase extends AppCompatActivity {
+public class DetailActivityBase extends ActivityBase {
 
     public static final String PARAMETER_DETAIL_INDEX = "detailIndex";
     public static final String PARAMETER_IS_REVERSE = "isReverse";

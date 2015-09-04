@@ -19,7 +19,7 @@ import com.neptuo.vocabularyapp.data.UserGuessRepository;
 import com.neptuo.vocabularyapp.services.ConfigurationStorage;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 
-public class ConfigurationActivity extends AppCompatActivity {
+public class ConfigurationActivity extends ActivityBase {
 
     private ConfigurationStorage storage;
 

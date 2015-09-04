@@ -23,7 +23,7 @@ import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTaskResult;
 import com.neptuo.vocabularyapp.ui.tasks.StoreToDbAsyncTask;
 
-public class DownloadActivity extends AppCompatActivity {
+public class DownloadActivity extends ActivityBase {
 
     private Button downloadButton;
     private Button downloadItemButton;

@@ -1,13 +1,17 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
@@ -20,17 +24,20 @@ import com.neptuo.vocabularyapp.ui.tasks.LoadFromDbAsyncTask;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ActivityBase {
 
     private Button translateButton;
     private Button browseButton;
     private Button downloadButton;
     private Button configurationButton;
+    private TextView versionText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
         browseButton = (Button) findViewById(R.id.browseButton);
         downloadButton = (Button) findViewById(R.id.downloadButton);
         configurationButton = (Button) findViewById(R.id.configurationButton);
+        versionText = (TextView) findViewById(R.id.versionText);
+
+        try {
+            PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            String versionName = "v" + packageInfo.versionName;
+            versionText.setText(versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            versionText.setVisibility(View.GONE);
+        }
 
         translateButton.setOnClickListener(new View.OnClickListener() {
             @Override
