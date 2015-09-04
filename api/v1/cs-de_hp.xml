@@ -621,4 +621,11 @@
        <source text="krasbruslení" description="" />
        <target text="der Eiskunstlauf" description="Eine Sportart; schöne Bewegungen am Eis" />
     </item>
-</vocabulary>
+     <item>
+       <source text="snít o" description="" />
+       <target text="träumen von" description="Ich träume von (3.p) ; träumte ; haben geträumt" />
+    </item>
+     <item>
+       <source text="zlobit se na" description="" />
+       <target text="sich ärgern über" description="Ich ärgere mich über (4.p); ärgerte ; haben geärgert" />
+    </item>
