@@ -50,6 +50,7 @@ public class TranslateActivity extends DetailActivityBase {
     private UserDetailItemViewModel itemViewModel;
     private boolean isGivenUp;
     private List<String> lastSelectedTags;
+    private boolean lastIsNoTagIncluded;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,14 +62,15 @@ public class TranslateActivity extends DetailActivityBase {
             public boolean onMenuItemClick(MenuItem item) {
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 SelectTagDialogFragment fragment = new SelectTagDialogFragment();
-                fragment.setLastSelectedTags(lastSelectedTags);
+                fragment.setLastSelectedTags(lastSelectedTags, lastIsNoTagIncluded);
                 fragment.setOkListener(new SelectTagDialogFragment.OnClickOkListener() {
                     @Override
-                    public void onClick(List<String> selectedTags) {
+                    public void onClick(List<String> selectedTags, boolean isNoTagIncluded) {
                         lastSelectedTags.clear();
                         lastSelectedTags.addAll(selectedTags);
+                        lastIsNoTagIncluded = isNoTagIncluded;
 
-                        session.filterTags(selectedTags);
+                        session.filterTags(selectedTags, lastIsNoTagIncluded);
                         prepareNextItem();
                     }
                 });
@@ -91,6 +93,7 @@ public class TranslateActivity extends DetailActivityBase {
 
         lastSelectedTags = new ArrayList<String>();
         lastSelectedTags.addAll(ServiceProvider.getTags());
+        lastIsNoTagIncluded = true;
 
         DetailModel detail = prepareDetailModel();
         session = new Session(detail, ServiceProvider.getUserStorage());

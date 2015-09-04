@@ -83,15 +83,17 @@ public class Session {
         }
     }
 
-    public void filterTags(List<String> tags) {
+    public void filterTags(List<String> tags, boolean isNotTagIncluded) {
         filteredItems = new ArrayList<UserDetailItemModel>();
         for (UserDetailItemModel itemModel : allItems) {
-            boolean hasTag = false;
-
-            for (String tag : itemModel.getModel().getTags()) {
-                if(tags.contains(tag)) {
-                    filteredItems.add(itemModel);
-                    break;
+            if (isNotTagIncluded && itemModel.getModel().getTags().isEmpty()) {
+                filteredItems.add(itemModel);
+            } else if(!tags.isEmpty()) {
+                for (String tag : itemModel.getModel().getTags()) {
+                    if (tags.contains(tag)) {
+                        filteredItems.add(itemModel);
+                        break;
+                    }
                 }
             }
         }

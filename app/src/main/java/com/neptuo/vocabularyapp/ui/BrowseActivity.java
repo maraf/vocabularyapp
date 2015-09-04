@@ -45,6 +45,7 @@ public class BrowseActivity extends DetailActivityBase {
 
     private String lastSearch;
     private List<String> lastSelectedTags;
+    private boolean lastIsNoTagIncluded;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,12 +78,13 @@ public class BrowseActivity extends DetailActivityBase {
             public boolean onMenuItemClick(MenuItem item) {
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 SelectTagDialogFragment fragment = new SelectTagDialogFragment();
-                fragment.setLastSelectedTags(lastSelectedTags);
+                fragment.setLastSelectedTags(lastSelectedTags, lastIsNoTagIncluded);
                 fragment.setOkListener(new SelectTagDialogFragment.OnClickOkListener() {
                     @Override
-                    public void onClick(List<String> selectedTags) {
+                    public void onClick(List<String> selectedTags, boolean isNoTagIncluded) {
                         lastSelectedTags.clear();
                         lastSelectedTags.addAll(selectedTags);
+                        lastIsNoTagIncluded = isNoTagIncluded;
 
                         // Update visible items.
                         updateSearchedItems();
@@ -160,6 +162,7 @@ public class BrowseActivity extends DetailActivityBase {
         setContentView(R.layout.activity_browse);
 
         lastSelectedTags = new ArrayList<String>(ServiceProvider.getTags());
+        lastIsNoTagIncluded = true;
 
         userStorage = ServiceProvider.getUserStorage();
         detail = prepareDetailModel();
@@ -201,9 +204,13 @@ public class BrowseActivity extends DetailActivityBase {
         for (BrowseViewModel itemModel : allItems) {
             boolean isVisible = false;
             if(lastSearch == null || itemModel.getModel().getModel().getOriginalText().toLowerCase().contains(lastSearch)) {
-                for (String tag : lastSelectedTags) {
-                    if(itemModel.getModel().getModel().getTags().contains(tag)) {
-                        isVisible = true;
+                if(lastIsNoTagIncluded && itemModel.getModel().getModel().getTags().isEmpty()) {
+                    isVisible = true;
+                } else {
+                    for (String tag : lastSelectedTags) {
+                        if (itemModel.getModel().getModel().getTags().contains(tag)) {
+                            isVisible = true;
+                        }
                     }
                 }
             }

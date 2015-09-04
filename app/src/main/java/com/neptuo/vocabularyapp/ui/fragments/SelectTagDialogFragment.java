@@ -22,31 +22,42 @@ import java.util.Set;
 public class SelectTagDialogFragment extends DialogFragment {
 
     public interface OnClickOkListener {
-        void onClick(List<String> selectedTags);
+        void onClick(List<String> selectedTags, boolean isNoTagIncluded);
     }
 
     private OnClickOkListener okListener;
     private List<String> lastSelectedTags;
+    private boolean isNoTagIncluded;
 
     public void setOkListener(OnClickOkListener okListener) {
         this.okListener = okListener;
     }
 
-    public void setLastSelectedTags(List<String> lastSelectedTags) {
+    public void setLastSelectedTags(List<String> lastSelectedTags, boolean isNoTagIncluded) {
         this.lastSelectedTags = lastSelectedTags;
+        this.isNoTagIncluded = isNoTagIncluded;
     }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-        final String[] tags = ServiceProvider.getTags().toArray(new String[ServiceProvider.getTags().size()]);
+        String[] sourceTags = ServiceProvider.getTags().toArray(new String[ServiceProvider.getTags().size()]);
+        final String[] tags = new String[sourceTags.length + 1];
+
+        for (int i = 0; i < tags.length - 1; i++) {
+            tags[i + 1] = sourceTags[i];
+        }
+        tags[0] = "(bez štítku)";
+
         final boolean[] selectedTags = new boolean[tags.length];
 
-        for (int i = 0; i < selectedTags.length; i ++) {
+        selectedTags[0] = isNoTagIncluded;
+        for (int i = 1; i < selectedTags.length; i ++) {
             if(lastSelectedTags != null && lastSelectedTags.contains(tags[i])) {
                 selectedTags[i] = true;
             }
         }
+        selectedTags[0] = isNoTagIncluded;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder
@@ -62,13 +73,13 @@ public class SelectTagDialogFragment extends DialogFragment {
                 public void onClick(DialogInterface dialog, int which) {
                     if(okListener != null) {
                         List<String> selected = new ArrayList<String>();
-                        for (int i = 0; i < selectedTags.length; i++) {
+                        for (int i = 1; i < selectedTags.length; i++) {
                             if(selectedTags[i]) {
                                 selected.add(tags[i]);
                             }
                         }
 
-                        okListener.onClick(selected);
+                        okListener.onClick(selected, selectedTags[0]);
                     }
                 }
             })
