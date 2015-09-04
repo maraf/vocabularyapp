@@ -649,4 +649,28 @@
        <source text="starat se o" description="" />
        <target text="sich kümmern um" description="Ich kümmere mich um (4.p) kleines Kind ; kümmerte ; haben gekümmert" />
     </item>
+     <item>
+       <source text="domluvit se s" description="" />
+       <target text="sich verabreden mit" description="Ich verabrede mich mit (3.p) meinen Freunden ; verabredete ; haben verabredet" />
+    </item>
+     <item>
+       <source text="potkat se s" description="" />
+       <target text="sich treffen mit" description="Ich treffe mich mit (3.p) meiner Freundin ; traf ; haben getroffen" />
+    </item>
+     <item>
+       <source text="mluvit s" description="" />
+       <target text="sprechen mit" description="Ich spreche mit (3.p) dir ; sprach ; haben gesprochen" />
+    </item>
+     <item>
+       <source text="pamatovat si na" description="" />
+       <target text="sich erinnern" description="Ich erinnere mich nicht so gut an (4.p) letztes Jahr ; erinnerte ; haben erinnert" />
+    </item>
+     <item>
+       <source text="zajímat se o" description="" />
+       <target text="sich interessieren für" description="Ich interessiere mich für (4.p) Politik ; interessierte ; haben interessiert" />
+    </item>
+     <item>
+       <source text="myslet na" description="" />
+       <target text="denken an" description="Ich denke oft an (4.p) die Zukunft ; dachte ; haben gedacht" />
+    </item>
 </vocabulary>
