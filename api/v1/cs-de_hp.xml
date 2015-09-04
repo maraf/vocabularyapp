@@ -131,7 +131,7 @@
     </item>
      <item>
        <source text="spokojený" description="" />
-       <target text="zufrieden" description="Alles ist gut, du bist glücklig." />
+       <target text="zufrieden" description="Alles ist gut, du bist glücklig. ; zufrieden sein mit (3.p)" />
     </item>
      <item>
        <source text="pravda" description="" />
@@ -672,5 +672,25 @@
      <item>
        <source text="myslet na" description="" />
        <target text="denken an" description="Ich denke oft an (4.p) die Zukunft ; dachte ; haben gedacht" />
+    </item>
+     <item>
+       <source text="poděkovat" description="" />
+       <target text="sich bedanken bei" description="Ich bedanke mich bei (3.p) meiner Mutter ; bedankte ; haben bedankt" />
+    </item>
+     <item>
+       <source text="být vinen" description="" />
+       <target text="schuld sein an" description="Ich bin schuld an (3.p) dem Unfal" />
+    </item>
+     <item>
+       <source text="smířit se s" description="" />
+       <target text="sich abfinden mit" description="Ich finde mich mit (3.p) dem Ergebnis ab ; fand ab ; haben abgefunden" />
+    </item>
+     <item>
+       <source text="jde o" description="" />
+       <target text="es geht um" description="Es geht um (4.p) unser Kind" />
+    </item>
+     <item>
+       <source text="spolehnout se na" description="" />
+       <target text="sich verlassen auf" description="Ich verlasse mich auf (4.p) dich" />
     </item>
 </vocabulary>
