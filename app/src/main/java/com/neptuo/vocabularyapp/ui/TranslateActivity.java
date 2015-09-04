@@ -146,7 +146,6 @@ public class TranslateActivity extends DetailActivityBase {
                     incrementGuess(false);
                     updateSuccessBar();
 
-                    //TODO: Show alert.
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
                     BrowseDialogFragment fragment = new BrowseDialogFragment();
                     fragment.setItemModel(itemViewModel.getModel());
@@ -165,12 +164,6 @@ public class TranslateActivity extends DetailActivityBase {
                     });
                     fragment.show(transaction, "dialog");
 
-                    //translatedText.setText(itemViewModel.getModel().getTranslatedText());
-                    //translatedText.setEnabled(false);
-                    //setDescriptionVisibility(true);
-
-                    //tryButton.setEnabled(false);
-                    //descriptionButton.setEnabled(false);
                     nextButton.setText(getString(R.string.nextButton_next));
                 }
             }

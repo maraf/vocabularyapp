@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
 import com.neptuo.vocabularyapp.services.ConfigurationStorage;
+import com.neptuo.vocabularyapp.services.DuplicityChecker;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
@@ -32,6 +33,7 @@ public class DownloadActivity extends AppCompatActivity {
     private ConfigurationStorage configurationStorage;
     private int downloadCount = 0;
     private int totalItemCount = 0;
+    private DuplicityChecker duplicityChecker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,7 @@ public class DownloadActivity extends AppCompatActivity {
                 ServiceProvider.getDetails().clear();
                 ServiceProvider.getTags().clear();
                 totalItemCount = 0;
+                duplicityChecker = new DuplicityChecker();
 
                 for (DownloadModel model : tableLayoutAdapter.getModelsToDownload()) {
                     new DownloadDetailAsyncTask(self).execute(model);
@@ -125,13 +128,14 @@ public class DownloadActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.neterror_general, Toast.LENGTH_SHORT).show();
         } else {
             if(result.isSuccessfull()) {
-                totalItemCount += result.getContent().getItems().size();
-
                 boolean isAdded = false;
                 for (DetailModel detail : ServiceProvider.getDetails()) {
                     if(detail.getDownload().hashCode() == result.getContent().getDownload().hashCode()) {
                         for (DetailItemModel itemModel : result.getContent().getItems()) {
-                            detail.getItems().add(itemModel);
+                            if(duplicityChecker.tryAdd(itemModel)) {
+                                detail.getItems().add(itemModel);
+                                totalItemCount++;
+                            }
                         }
                         isAdded = true;
                         break;
@@ -139,7 +143,15 @@ public class DownloadActivity extends AppCompatActivity {
                 }
 
                 if(!isAdded) {
-                    ServiceProvider.getDetails().add(result.getContent());
+                    DetailModel detail = new DetailModel(result.getContent().getDownload());
+                    for (DetailItemModel itemModel : result.getContent().getItems()) {
+                        if(duplicityChecker.tryAdd(itemModel)) {
+                            detail.getItems().add(itemModel);
+                            totalItemCount++;
+                        }
+                    }
+
+                    ServiceProvider.getDetails().add(detail);
                 }
 
                 for (DetailItemModel itemModel : result.getContent().getItems()) {
@@ -152,7 +164,14 @@ public class DownloadActivity extends AppCompatActivity {
 
         if(downloadCount == 0) {
             progress.hide();
-            Toast.makeText(this, getString(R.string.download_itemcount) + totalItemCount, Toast.LENGTH_SHORT).show();
+
+            String message = getString(R.string.download_itemcount1)
+                    + totalItemCount
+                    + getString(R.string.download_itemcount2)
+                    + duplicityChecker.getCount()
+                    + getString(R.string.download_itemcount3);
+
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
             new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute(ServiceProvider.getDetails());
         }
     }

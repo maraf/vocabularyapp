@@ -25,7 +25,7 @@
     <string name="download_list">Stahuji seznam slovníků</string>
     <string name="neterror_general">Chyba při pokusu o stažení dat a jejich zpracování.</string>
     <string name="download_nodata">Na serveru nejsou žádné slovníky.</string>
-    <string name="download_itemcount">"Staženo celkem položek: "</string>
+    <string name="download_itemcount1">"Staženo celkem "</string>
     <string name="db_saved">Ukládání do lokálního uložiště dokončeno.</string>
     <string name="db_loaded">Načítání z lokálního uložiště dokončeno.</string>
     <string name="title_activity_configuration">Nastavení</string>
@@ -38,4 +38,6 @@
     <string name="ok">OK</string>
     <string name="back">Zpět</string>
     <string name="select_tags">Vyberte štítky</string>
+    <string name="download_itemcount2">" položek, nalezeno "</string>
+    <string name="download_itemcount3">" duplicit."</string>
 </resources>
