@@ -25,7 +25,7 @@ public class DetailActivityBase extends AppCompatActivity {
             model = model.reverse();
         }
 
-        setTitle(getTitle() + ": " + model.getDownload().getSourceLanguage().getName() + " -> " + model.getDownload().getTargetLanguage().getName());
+        //setTitle(getTitle() + ": " + model.getDownload().getSourceLanguage().getName() + " -> " + model.getDownload().getTargetLanguage().getName());
         return model;
     }
 }
