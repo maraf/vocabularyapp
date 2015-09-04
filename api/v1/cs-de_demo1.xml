@@ -29,4 +29,8 @@
        <tag>K překladu</tag>
        <tag>Zvířata</tag>
     </item>
+    <item>
+       <source text="Kachna" description="Chutný vodní pták." />
+       <target text="die Ente" description="" />
+    </item>
 </vocabulary>
