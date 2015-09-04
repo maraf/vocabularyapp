@@ -34,11 +34,11 @@
     </item>
      <item>
        <source text="užívat si" description="" />
-       <target text="geniessen" description="Die Fehrien geniessen." />
+       <target text="geniessen" description="Die Ferien geniessen." />
     </item>
      <item>
        <source text="prádzniny" description="" />
-       <target text="die Fehrien" description="Die Schülern haben es im Juli und August." />
+       <target text="die Ferien" description="Die Schülern haben es im Juli und August." />
     </item>
      <item>
        <source text="řádek" description="" />
@@ -127,7 +127,7 @@
     </item>
      <item>
        <source text="stěžovat si" description="" />
-       <target text="sich beschweren" description="Sich beschweren bei ... ; du bist nicht zufrieden so du beschwerst sich." />
+       <target text="sich beschweren" description="Sich beschweren bei (3.p) dem Kellner über (4.p) das Essen ; du bist nicht zufrieden so du beschwerst dich." />
     </item>
      <item>
        <source text="spokojený" description="" />
@@ -623,9 +623,30 @@
     </item>
      <item>
        <source text="snít o" description="" />
-       <target text="träumen von" description="Ich träume von (3.p) ; träumte ; haben geträumt" />
+       <target text="träumen von" description="Ich träume von (3.p) grossem Haus ; träumte ; haben geträumt" />
     </item>
      <item>
        <source text="zlobit se na" description="" />
-       <target text="sich ärgern über" description="Ich ärgere mich über (4.p); ärgerte ; haben geärgert" />
+       <target text="sich ärgern über" description="Ich ärgere mich über (4.p) slechtes Wetter ; ärgerte ; haben geärgert" />
     </item>
+     <item>
+       <source text="mít chuť na" description="" />
+       <target text="Lust haben auf" description="Ich habe Lust auf (4.p) den Wein" />
+    </item>
+     <item>
+       <source text="čekat na" description="" />
+       <target text="warten auf" description="Ich warte auf (4.p) den Bus" />
+    </item>
+     <item>
+       <source text="výsledek" description="" />
+       <target text="das Ergebnis" description="Ergebnis der Prüfung / des Wettkampfs" />
+    </item>
+     <item>
+       <source text="těšit se na" description="" />
+       <target text="sich freuen auf" description="Ich freue mich auf (4.p) die Ferien ; freute ; haben gefraut" />
+    </item>
+     <item>
+       <source text="starat se o" description="" />
+       <target text="sich kümmern um" description="Ich kümmere mich um (4.p) kleines Kind ; kümmerte ; haben gekümmert" />
+    </item>
+</vocabulary>
