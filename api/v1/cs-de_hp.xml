@@ -761,4 +761,28 @@
        <source text="opravdu" description="" />
        <target text="wirklich" description="" />
     </item>
+     <item>
+       <source text="papírek" description="" />
+       <target text="der Zettel" description="Kleines Papier" />
+    </item>
+     <item>
+       <source text="tam" description="" />
+       <target text="dorthin" description="" />
+    </item>
+     <item>
+       <source text="sem" description="" />
+       <target text="hierher" description="Stell es hier bei mir" />
+    </item>
+     <item>
+       <source text="přesvědčený" description="" />
+       <target text="überzeugt" description="Ich glaube es sicher" />
+    </item>
+     <item>
+       <source text="vlažný" description="" />
+       <target text="lauwarm" description="Nicht warm genug" />
+    </item>
+     <item>
+       <source text="ihned" description="" />
+       <target text="sofort" description="Mache es jetzt am schnellsten" />
+    </item>
 </vocabulary>
