@@ -622,6 +622,46 @@
        <target text="der Eiskunstlauf" description="Eine Sportart; schöne Bewegungen am Eis" />
     </item>
      <item>
+       <source text="veslování" description="" />
+       <target text="Rudern" description="Eine Sportart; man macht es auf dem Boot mit den Paddel" />
+    </item>
+     <item>
+       <source text="plachtění" description="" />
+       <target text="Segeln" description="Eine Sportart; man macht es auf dem Boot mit dem Wind " />
+    </item>
+     <item>
+       <source text="hluboký" description="" />
+       <target text="tief" description="Es is weit im Wasser zum Beispiel - das Meer is tief ; opposit von seicht" />
+    </item>
+     <item>
+       <source text="mělký" description="" />
+       <target text="seicht" description="Der Lache ist seicht; opposit von tief" />
+    </item>
+     <item>
+       <source text="kaluž" description="" />
+       <target text="der Lache" description="Wenn es regnet, die Lachen von Wasser sind auf dem Gehweg" />
+    </item>
+     <item>
+       <source text="daleko" description="" />
+       <target text="weit" description="Es ist nicht in der Nähe ; Opposit von nah" />
+    </item>
+     <item>
+       <source text="blízký" description="" />
+       <target text="nah" description="Es ist nicht weit ; Opposit von weit" />
+    </item>
+     <item>
+       <source text="blízko" description="" />
+       <target text="in der Nähe" description="Es ist nicht weit" />
+    </item>
+     <item>
+       <source text="chodník" description="" />
+       <target text="der Gehweg" description="Man geht zu Fuss am Gehweg" />
+    </item>
+     <item>
+       <source text="potápění" description="" />
+       <target text="Tauchen" description="Eine Sportart; unter Wasser tief schwimmen" />
+    </item>
+     <item>
        <source text="snít o" description="" />
        <target text="träumen von" description="Ich träume von (3.p) grossem Haus ; träumte ; haben geträumt" />
     </item>
@@ -692,5 +732,33 @@
      <item>
        <source text="spolehnout se na" description="" />
        <target text="sich verlassen auf" description="Ich verlasse mich auf (4.p) dich" />
+    </item>
+     <item>
+       <source text="pravidelný" description="" />
+       <target text="regelmässig" description="Es ist jede Tag, jede Woche ..." />
+    </item>
+     <item>
+       <source text="nepravidelný" description="" />
+       <target text="unregelmässig" description="Opposit von regelmässig" />
+    </item>
+     <item>
+       <source text="čas od času" description="" />
+       <target text="ab und zu" description="Nicht so oft" />
+    </item>
+     <item>
+       <source text="zhubnout" description="" />
+       <target text="abnehmen" description="Das Gewicht reduzieren" />
+    </item>
+     <item>
+       <source text="váha" description="" />
+       <target text="das Gewicht" description="Wieviel Kilos hat es" />
+    </item>
+     <item>
+       <source text="přibrat" description="" />
+       <target text="zunehmen" description="Die Kilos plus nehmen" />
+    </item>
+     <item>
+       <source text="opravdu" description="" />
+       <target text="wirklich" description="" />
     </item>
 </vocabulary>
