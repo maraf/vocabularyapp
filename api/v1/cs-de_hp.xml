@@ -785,4 +785,40 @@
        <source text="ihned" description="" />
        <target text="sofort" description="Mache es jetzt am schnellsten" />
     </item>
+     <item>
+       <source text="najednou" description="" />
+       <target text="plötzlich" description="Es war nicht vorher, jetzt es plötzlich ist" />
+    </item>
+     <item>
+       <source text="vytvořit" description="" />
+       <target text="entstehen" description="Etwas neues machen; entstand ; sein entstanden" />
+    </item>
+     <item>
+       <source text="sufování" description="" />
+       <target text="Wellenreiten" description="Eine Sportart; man macht es am See wenn die Wellen sind gross" />
+    </item>
+     <item>
+       <source text="jako alternativa k" description="" />
+       <target text="als Alternative zu" description="Etwas anderes dass ziemlich ähnlich ist" />
+    </item>
+     <item>
+       <source text="podobný" description="" />
+       <target text="änlich" description="Mache es jetzt am schnellsten" />
+    </item>
+     <item>
+       <source text="vývoj" description="" />
+       <target text="die Weiterentwicklung" description="Es hat beandert (zum besser meistens)" />
+    </item>
+     <item>
+       <source text="bezpečný" description="" />
+       <target text="ungefährlich" description="Man kann selbst nicht verletzen; Opposit von gefährlich" />
+    </item>
+     <item>
+       <source text="nebezpečný" description="" />
+       <target text="gefährlich" description="Mann kann selbst verletzen dabei" />
+    </item>
+     <item>
+       <source text="nebezpečí" description="" />
+       <target text="die Gefahr" description="Die situation dabei man kann verletzen" />
+    </item>
 </vocabulary>
