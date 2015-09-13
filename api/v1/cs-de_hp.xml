@@ -5,15 +5,19 @@
        <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
     </item>
     <item>
+       <source text="pírko" description="" />
+       <target text="die Feder" description="Die Vögel haben es." />
+    </item>
+    <item>
        <source text="Kamarád" description="" />
-       <target text="der Kumpel" description="Ein Freund von mir." />
+       <target text="der Kumpel" description="= der Freund" />
     </item>
     <item>
        <source text="bohužel" description="" />
-       <target text="leider" description="Ich bin nicht glücklig Ich muss es machen" />
+       <target text="leider" description="Ich bin nicht glücklig dass Ich es machen muss" />
        </item>
      <item>
-       <source text="za (něčím)" description="" />
+       <source text="za" description="(něčím)" />
        <target text="hinter" description="hinter (3.p /4.p)..." />
     </item>
      <item>
@@ -53,6 +57,14 @@
        <target text="der Satz" description="Einigen Wörter mit der Bedeutung." />
     </item>
      <item>
+       <source text="význam" description="" />
+       <target text="die Bedeutung" description="Was es ist." />
+    </item>
+     <item>
+       <source text="znamenat" description="" />
+       <target text="bedeuten" description="Was bedeutet es? = Was ist das? (z.B. was bedeutet das Wort) ; bedeutete ; haben bedeutet" />
+    </item>
+     <item>
        <source text="několik" description="" />
        <target text="einige" description="= ein paar." />
     </item>
@@ -71,6 +83,30 @@
      <item>
        <source text="nádobí" description="" />
        <target text="das Geschirr" description="das Loeffel, der Messer, der Teller ...; das Geschirr spülen." />
+    </item>
+     <item>
+       <source text="lžíce" description="" />
+       <target text="das Loeffel" description="Man isst die Suppe damit" />
+    </item>
+     <item>
+       <source text="nůž" description="" />
+       <target text="der Messer" description="Man scheidet das Essen damit" />
+    </item>
+     <item>
+       <source text="vidlička" description="" />
+       <target text="die Gabel" description="Sie hat vier Stacheln; man isst damit" />
+    </item>
+     <item>
+       <source text="talíř" description="" />
+       <target text="der Teller" description="Er ist weiss und rund und man legt das Essen darauf." />
+    </item>
+     <item>
+       <source text="osten" description="" />
+       <target text="der Stachel" description="Der Igel hat viel Stacheln" />
+    </item>
+     <item>
+       <source text="ježek" description="" />
+       <target text="der Igel" description="Ein Tier; er hat Stacheln und er tragt die Äpfel" />
     </item>
      <item>
        <source text="to záleží" description="" />
@@ -98,7 +134,7 @@
     </item>
      <item>
        <source text="vyhodit" description="" />
-       <target text="wegwerfen" description="ich werfe ... weg, du wirfst ... weg, er/sie/es wirft ... weg." />
+       <target text="wegwerfen" description="ich werfe ... weg, du wirfst ... weg, er/sie/es wirft ... weg ; warf weg ; haen weggeworfen" />
     </item>
      <item>
        <source text="málo" description="" />
@@ -110,11 +146,11 @@
     </item>
      <item>
        <source text="cibule" description="" />
-       <target text="der Zwiebel" description="Gemüse, es macht mann weinen" />
+       <target text="der Zwiebel" description="ein Gemüse, es macht mann weinen" />
     </item>
      <item>
        <source text="česnek" description="" />
-       <target text="der Knoblauch" description="Gemüse. es ist scharf" />
+       <target text="der Knoblauch" description="ein Gemüse. es ist scharf" />
     </item>
      <item>
        <source text="pálivý" description="" />
@@ -123,11 +159,11 @@
     
      <item>
        <source text="plakat" description="" />
-       <target text="weinen" description="Kleine Kinder weinen oft." />
+       <target text="weinen" description="Kleine Kinder weinen oft. ; weinte ; haben geweint" />
     </item>
      <item>
        <source text="stěžovat si" description="" />
-       <target text="sich beschweren" description="Sich beschweren bei (3.p) dem Kellner über (4.p) das Essen ; du bist nicht zufrieden so du beschwerst dich." />
+       <target text="sich beschweren" description="Sich beschweren bei (3.p) dem Kellner über (4.p) das Essen ; du bist nicht zufrieden so du beschwerst dich. ; beschwerte ; haben beschwert" />
     </item>
      <item>
        <source text="spokojený" description="" />
@@ -135,11 +171,11 @@
     </item>
      <item>
        <source text="pravda" description="" />
-       <target text="die Wahrheit" description="Antonym von dem Lüge." />
+       <target text="die Wahrheit" description="Opposit von dem Lüge." />
     </item>
      <item>
        <source text="lež" description="" />
-       <target text="der Lüge" description="Unwahrheit; antonym von der Wahrheit." />
+       <target text="der Lüge" description="Unwahrheit; Opposit von der Wahrheit." />
     </item>
      <item>
        <source text="lhát" description="" />
@@ -155,7 +191,7 @@
     </item>
      <item>
        <source text="dost" description="" />
-       <target text="genug" description="Ich habe genug Zeit; Der Shirm is gross genug, wir gehen beide darunter." />
+       <target text="genug" description="Ich habe genug Zeit; Der Shirm ist gross genug, wir gehen beide darunter." />
     </item>
      <item>
        <source text="obzvlášť" description="" />
@@ -170,7 +206,7 @@
        <target text="das Schaf" description="ein Tier mit weisser Wolle" />
     </item>
      <item>
-       <source text="vlna" description="" />
+       <source text="ovčí vlna" description="" />
        <target text="die Wolle" description="Das weisse Material das kommt von den Schafe" />
     </item>
      <item>
@@ -183,7 +219,7 @@
     </item>
      <item>
        <source text="vyšetřit" description="" />
-       <target text="untersuchen" description="die Ärztin hat mir untersucht" />
+       <target text="untersuchen" description="die Ärztin hat mir untersucht; untersuchte ; haben untersucht" />
     </item>
      <item>
        <source text="vykat" description="" />
@@ -191,11 +227,11 @@
     </item>
      <item>
        <source text="tykat" description="" />
-       <target text="duzen" description=" informal sein, mit Freund" />
+       <target text="duzen" description="informal sein, mit Freund" />
     </item>
      <item>
        <source text="bednička" description="" />
-       <target text="die Kiste" description="quadraater Sache, man kann andere Sachen in es geben" />
+       <target text="die Kiste" description="quadraater Sache, man kann andere Sachen darin geben" />
     </item>
      <item>
        <source text="kelímek" description="" />
@@ -203,7 +239,7 @@
     </item>
      <item>
        <source text="mouka" description="" />
-       <target text="das Mehl" description="Man macht Brot / Brötchen aus es." />
+       <target text="das Mehl" description="Man macht Brot / Brötchen daraus." />
     </item>
      <item>
        <source text="marmeláda" description="" />
@@ -215,11 +251,15 @@
     </item>
      <item>
        <source text="uhlí" description="" />
-       <target text="die Kohle" description="man macht Feuer mit es unter dem Grill" />
+       <target text="die Kohle" description="man macht Feuer damit unter dem Grill" />
     </item>
      <item>
        <source text="drůbež" description="" />
        <target text="das Geflügel" description="verchiedenen Vögel (Hühn, Gans ...)" />
+    </item>
+     <item>
+       <source text="husa" description="" />
+       <target text="die Gans" description="Ein Vogel; sie ist weiss" />
     </item>
      <item>
        <source text="žárovka" description="" />
