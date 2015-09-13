@@ -31,4 +31,8 @@ public class DuplicityChecker {
     public int getCount() {
         return duplicities.size();
     }
+
+    public List<DetailItemModel> getItems() {
+        return duplicities;
+    }
 }

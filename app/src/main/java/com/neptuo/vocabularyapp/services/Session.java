@@ -125,7 +125,6 @@ public class Session {
         return newItem;
     }
 
-
     private class GroupModel {
         private List<UserDetailItemModel> allItems;
         private HashSet<Integer> usedItems;

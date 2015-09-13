@@ -1,5 +1,6 @@
 package com.neptuo.vocabularyapp.ui;
 
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.DownloadModel;
 import com.neptuo.vocabularyapp.ui.adapters.DownloadListAdapter;
+import com.neptuo.vocabularyapp.ui.fragments.DuplicityDialogFragment;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTask;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadListAsyncTaskResult;
 import com.neptuo.vocabularyapp.ui.tasks.DownloadDetailAsyncTask;
@@ -170,6 +172,13 @@ public class DownloadActivity extends ActivityBase {
                     + getString(R.string.download_itemcount2)
                     + duplicityChecker.getCount()
                     + getString(R.string.download_itemcount3);
+
+            if(duplicityChecker.getCount() > 0) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                DuplicityDialogFragment fragment = new DuplicityDialogFragment();
+                fragment.setDuplicityChecker(duplicityChecker);
+                fragment.show(transaction, "dialog");
+            }
 
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
             new StoreToDbAsyncTask(this, new DbContext(getApplicationContext())).execute(ServiceProvider.getDetails());
