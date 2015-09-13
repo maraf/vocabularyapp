@@ -15,9 +15,17 @@ import java.util.Random;
  * Created by Windows10 on 8/9/2015.
  */
 public class Session {
+    public enum Group {
+        New,
+        Hard,
+        Medium,
+        Soft
+    }
+
     private DetailModel model;
     private List<UserDetailItemModel> allItems;
     private List<UserDetailItemModel> filteredItems;
+    private List<Group> selectedGroups;
 
     private GroupModel newGroup;
     private GroupModel hardGroup;
@@ -32,6 +40,7 @@ public class Session {
         this.allItems = UserDetailConverter.map(userStorage, model.getItems());
         this.filteredItems = allItems;
         this.random = new Random();
+        this.selectedGroups = new ArrayList<Group>();
         buildGroups();
     }
 
@@ -100,13 +109,36 @@ public class Session {
         buildGroups();
     }
 
+    public void filterGroups(List<Group> groups) {
+        selectedGroups = groups;
+    }
+
     public UserDetailItemModel nextRandom() {
-        int newCount = Math.min(10, newGroup.getAllItems().size() * 2);
-        int hardCount = Math.min(12, hardGroup.getAllItems().size());
-        int mediumCount = Math.min(8, mediumGroup.getAllItems().size());
-        int softCount = Math.min(4, softGroup.getAllItems().size());
+        int newCount = 0;
+        int hardCount = 0;
+        int mediumCount = 0;
+        int softCount = 0;
+
+        if(selectedGroups.contains(Group.New)) {
+            newCount = Math.min(10, newGroup.getAllItems().size() * 2);
+        }
+
+        if(selectedGroups.contains(Group.Hard)) {
+            hardCount = Math.min(12, hardGroup.getAllItems().size());
+        }
+
+        if(selectedGroups.contains(Group.Medium)) {
+            mediumCount = Math.min(8, mediumGroup.getAllItems().size());
+        }
+
+        if(selectedGroups.contains(Group.Soft)) {
+            softCount = Math.min(4, softGroup.getAllItems().size());
+        }
 
         int totalCount = newCount + hardCount + mediumCount + softCount;
+        if(totalCount == 0) {
+            return null;
+        }
 
         UserDetailItemModel newItem;
         do {

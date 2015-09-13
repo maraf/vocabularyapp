@@ -22,10 +22,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
+import com.neptuo.vocabularyapp.data.Sql;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.Session;
+import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
+import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
 import com.neptuo.vocabularyapp.ui.fragments.BrowseDialogFragment;
+import com.neptuo.vocabularyapp.ui.fragments.SelectGroupDialogFragment;
 import com.neptuo.vocabularyapp.ui.fragments.SelectTagDialogFragment;
 import com.neptuo.vocabularyapp.ui.viewmodels.PercentageConverter;
 import com.neptuo.vocabularyapp.ui.viewmodels.UserDetailItemViewModel;
@@ -41,6 +45,7 @@ public class TranslateActivity extends DetailActivityBase {
     private EditText translatedText;
     private TextView descriptionLabel;
     private TextView descriptionText;
+    private TextView noItemText;
 
     private Button tryButton;
     private Button descriptionButton;
@@ -51,6 +56,7 @@ public class TranslateActivity extends DetailActivityBase {
     private boolean isGivenUp;
     private List<String> lastSelectedTags;
     private boolean lastIsNoTagIncluded;
+    private List<Session.Group> lastSelectedGroups;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -76,7 +82,28 @@ public class TranslateActivity extends DetailActivityBase {
                 });
 
                 fragment.show(transaction, "dialog");
+                return true;
+            }
+        });
 
+        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                SelectGroupDialogFragment fragment = new SelectGroupDialogFragment();
+                fragment.setLastSelectedGroups(lastSelectedGroups);
+                fragment.setOkListener(new SelectGroupDialogFragment.OnClickOkListener() {
+                    @Override
+                    public void onClick(List<Session.Group> selectedGroups) {
+                        lastSelectedGroups.clear();
+                        lastSelectedGroups.addAll(selectedGroups);
+
+                        session.filterGroups(selectedGroups);
+                        prepareNextItem();
+                    }
+                });
+
+                fragment.show(transaction, "dialog");
                 return true;
             }
         });
@@ -94,9 +121,15 @@ public class TranslateActivity extends DetailActivityBase {
         lastSelectedTags = new ArrayList<String>();
         lastSelectedTags.addAll(ServiceProvider.getTags());
         lastIsNoTagIncluded = true;
+        lastSelectedGroups = new ArrayList<Session.Group>();
+        lastSelectedGroups.add(Session.Group.New);
+        lastSelectedGroups.add(Session.Group.Hard);
+        lastSelectedGroups.add(Session.Group.Medium);
+        lastSelectedGroups.add(Session.Group.Soft);
 
         DetailModel detail = prepareDetailModel();
         session = new Session(detail, ServiceProvider.getUserStorage());
+        session.filterGroups(lastSelectedGroups);
 
         originalLabel = (TextView) findViewById(R.id.originalLabel);
         originalText = (TextView) findViewById(R.id.originalText);
@@ -104,6 +137,7 @@ public class TranslateActivity extends DetailActivityBase {
         translatedText = (EditText) findViewById(R.id.translatedText);
         descriptionLabel = (TextView) findViewById(R.id.descriptionLabel);
         descriptionText = (TextView) findViewById(R.id.descriptionText);
+        noItemText = (TextView) findViewById(R.id.noItemText);
 
         tryButton = (Button) findViewById(R.id.tryButton);
         descriptionButton = (Button) findViewById(R.id.descriptionButton);
@@ -227,20 +261,27 @@ public class TranslateActivity extends DetailActivityBase {
 
     private void prepareNextItem() {
         isGivenUp = false;
-        itemViewModel = new UserDetailItemViewModel(session.nextRandom());
-        updateSuccessBar();
 
-        originalText.setText(itemViewModel.getModel().getOriginalText());
-        translatedText.setText("");
-        translatedText.setEnabled(true);
+        UserDetailItemModel item = session.nextRandom();
+        if(item == null) {
+            noItemText.setVisibility(View.VISIBLE);
+        } else {
+            noItemText.setVisibility(View.GONE);
+            itemViewModel = new UserDetailItemViewModel(item);
+            updateSuccessBar();
 
-        descriptionText.setText(itemViewModel.getModel().getTranslatedDescription());
-        setDescriptionVisibility(false);
+            originalText.setText(itemViewModel.getModel().getOriginalText());
+            translatedText.setText("");
+            translatedText.setEnabled(true);
 
-        setTryButtonText(getString(R.string.tryButton_try));
-        tryButton.setEnabled(true);
-        descriptionButton.setEnabled(true);
-        nextButton.setText(getString(R.string.nextButton_giveUp));
+            descriptionText.setText(itemViewModel.getModel().getTranslatedDescription());
+            setDescriptionVisibility(false);
+
+            setTryButtonText(getString(R.string.tryButton_try));
+            tryButton.setEnabled(true);
+            descriptionButton.setEnabled(true);
+            nextButton.setText(getString(R.string.nextButton_giveUp));
+        }
     }
 
     private void updateSuccessBar() {

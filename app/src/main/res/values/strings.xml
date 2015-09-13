@@ -40,4 +40,9 @@
     <string name="select_tags">Vyberte štítky</string>
     <string name="download_itemcount2">" položek, nalezeno "</string>
     <string name="download_itemcount3">" duplicit."</string>
+    <string name="select_groups">Vyberte skupiny obtížnosti</string>
+    <string name="session_group_new">Nová</string>
+    <string name="session_group_hard">Těžká</string>
+    <string name="session_group_medium">Střední</string>
+    <string name="session_group_soft">Lehká</string>
 </resources>

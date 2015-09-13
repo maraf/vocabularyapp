@@ -145,4 +145,18 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seznam neobsahuje žádnou položku"
+        android:id="@+id/noItemText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:background="#fbfbfb"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:visibility="gone" />
+
 </RelativeLayout>
