@@ -138,6 +138,8 @@ public class Session {
         int totalCount = newCount + hardCount + mediumCount + softCount;
         if(totalCount == 0) {
             return null;
+        } else if(totalCount == 1) {
+            lastItem = null;
         }
 
         UserDetailItemModel newItem;

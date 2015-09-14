@@ -247,13 +247,13 @@ public class TranslateActivity extends DetailActivityBase {
             } else {
                 itemViewModel.getUserModel().incrementWrongCount();
             }
+            session.updateGroup(itemViewModel.getUserModel());
         }
     }
 
     private void prepareNextItem(boolean isSuccess) {
         if(itemViewModel != null) {
             incrementGuess(isSuccess);
-            session.updateGroup(itemViewModel.getUserModel());
         }
 
         prepareNextItem();
