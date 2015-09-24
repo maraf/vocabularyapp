@@ -903,6 +903,46 @@
     </item>
      <item>
        <source text="ohrozit" description="" />
-       <target text="gefährden" description="Etwas ins Gefähr stellen; gefährdete; haben gefährdet" />
+       <target text="gefährden" description="Etwas (4.p) ins Gefähr stellen; Rauchen gefährdet die Gesundheit; gefährdete; haben gefährdet" />
+    </item>
+     <item>
+       <source text="bohatý" description="" />
+       <target text="reich" description="viel Geld haben; Opposit von arm" />
+    </item>
+     <item>
+       <source text="chudý" description="" />
+       <target text="arm" description="wenig Geld haben" />
+    </item>
+     <item>
+       <source text="podvod" description="" />
+       <target text="der Betrug" description="" />
+    </item>
+     <item>
+       <source text="kýchat" description="" />
+       <target text="niesen" description="Man hat Schnupfel oder Allergie dammit er niest oft; nieste; haben geniest" />
+    </item>
+     <item>
+       <source text="zvracet" description="také dávit" />
+       <target text="kotzen" description="= sich übergeben; der Inhalt des Magen raus durch dem Mund" />
+    </item>
+     <item>
+       <source text="obsah" description="" />
+       <target text="der Inhalt" description="alles, dass darin ist" />
+    </item>
+     <item>
+       <source text="příznak" description="" />
+       <target text="der Merkmal" description="etwas typisches für etwas" />
+    </item>
+     <item>
+       <source text="narození" description="" />
+       <target text="die Geburt" description="Das Ende der Schwangerschaft - das Baby ist geboren" />
+    </item>
+     <item>
+       <source text="těhotenství" description="" />
+       <target text="die Schwangerschaft" description="= die Gravidität; das Baby erwarten" />
+    </item>
+     <item>
+       <source text="narodit se" description="" />
+       <target text="geboren sein" description="das Baby ist geboren" />
     </item>
 </vocabulary>
