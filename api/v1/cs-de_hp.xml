@@ -310,10 +310,6 @@
        <target text="der Semmelmehl" description=" = der Paniermehl; der Pulver aus getrockene Brötchen / Brot" />
     </item>
      <item>
-       <source text="plakat" description="" />
-       <target text="weinen" description="traurig sein, die Kinder weinen oft" />
-    </item>
-     <item>
        <source text="růst" description="" />
        <target text="wachsen" description="Die Kinder wachsen in die Erwachsene ; Wenn es regnet, die Pilzen wachsen im Wald." />
     </item>
@@ -395,7 +391,7 @@
     </item>
      <item>
        <source text="hlava" description="" />
-       <target text="der Kopf" description="Man tragt eine Mütze auf ihm" />
+       <target text="der Kopf" description="Man tragt eine Mütze darauf" />
     </item>
      <item>
        <source text="žaludek" description="" />
@@ -403,15 +399,15 @@
     </item>
      <item>
        <source text="pusa" description="" />
-       <target text="der Mund" description="Man isst mit ihm" />
+       <target text="der Mund" description="Man isst damit" />
     </item>
      <item>
        <source text="sval" description="" />
-       <target text="der Muskel" description="Man kann bewegen sich mit ihnen" />
+       <target text="der Muskel" description="Man kann bewegen sich damit" />
     </item>
      <item>
        <source text="pohybovat (se)" description="" />
-       <target text="bewegen sich" description="bewegen etwas (der Arm / der Stuhl) ; sich bewegen" />
+       <target text="sich bewegen" description="bewegen etwas (der Arm / der Stuhl) ; sich bewegen" />
     </item>
      <item>
        <source text="nehet" description="" />
@@ -431,7 +427,7 @@
     </item>
      <item>
        <source text="oko" description="" />
-       <target text="das Auge" description="Man guckt mit es" />
+       <target text="das Auge" description="Man guckt damit" />
     </item>
      <item>
        <source text="noha" description="" />
@@ -443,7 +439,7 @@
     </item>
      <item>
        <source text="mozek" description="" />
-       <target text="das Gehirn" description="Ein Organ im Kopf, man denkt mit es" />
+       <target text="das Gehirn" description="Ein Organ im Kopf, man denkt damit" />
     </item>
      <item>
        <source text="kloub" description="" />
@@ -467,7 +463,7 @@
     </item>
      <item>
        <source text="ucho" description="" />
-       <target text="das Ohr" description="Man hört mit es" />
+       <target text="das Ohr" description="Man hört damit" />
     </item>
      <item>
        <source text="hruď" description="" />
@@ -499,7 +495,7 @@
     </item>
      <item>
        <source text="plíce" description="" />
-       <target text="die Lunge" description="Ein Organ, man kann atmen mit sie" />
+       <target text="die Lunge" description="Ein Organ, man kann atmen damit" />
     </item>
      <item>
        <source text="dýchat" description="" />
@@ -511,7 +507,7 @@
     </item>
      <item>
        <source text="život" description="" />
-       <target text="das Leben" description=" =existieren in dieser Welt" />
+       <target text="das Leben" description=" = existieren in dieser Welt" />
     </item>
      <item>
        <source text="svět" description="" />
@@ -860,5 +856,53 @@
      <item>
        <source text="nebezpečí" description="" />
        <target text="die Gefahr" description="Die situation dabei man kann verletzen" />
+    </item>
+     <item>
+       <source text="zvědavý" description="" />
+       <target text="neugirig" description="Die Person, dass alles wissen will" />
+    </item>
+     <item>
+       <source text="vzácně" description="" />
+       <target text="selten" description="nicht oft" />
+    </item>
+     <item>
+       <source text="zapamatovat si" description="" />
+       <target text="sich merken" description="nicht vergessen" />
+    </item>
+     <item>
+       <source text="obtížný" description="" />
+       <target text="schwierig" description="Opposit von einfach" />
+    </item>
+     <item>
+       <source text="těžký" description="" />
+       <target text="schwer" description="Opposit von leicht" />
+    </item>
+     <item>
+       <source text="důvěřovat" description="" />
+       <target text="trauen" description="jemanden traunen" />
+    </item>
+     <item>
+       <source text="želva" description="" />
+       <target text="die Schildkröte" description="ein Tier, das Reptil mit dem Panzer" />
+    </item>
+     <item>
+       <source text="krunýř" description="" />
+       <target text="der Panzer" description="Die Schildkröten haben ihn" />
+    </item>
+     <item>
+       <source text="chřipka" description="" />
+       <target text="die Grippe" description="Ein Krankheit; die Temperatur ist hoch, oft das Fieber" />
+    </item>
+     <item>
+       <source text="horečka" description="" />
+       <target text="das Fieber" description="Temperatur des Persons über 38 C" />
+    </item>
+     <item>
+       <source text="nakažlivý" description="" />
+       <target text="ansteckend" description="Die Krankheit ist ansteckend = sie hop von Person auf andere sehr schnell" />
+    </item>
+     <item>
+       <source text="ohrozit" description="" />
+       <target text="gefährden" description="Etwas ins Gefähr stellen; gefährdete; haben gefährdet" />
     </item>
 </vocabulary>
