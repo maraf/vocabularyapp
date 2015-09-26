@@ -967,6 +967,46 @@
     </item>
      <item>
        <source text="brát se" description="oženit se / vdát se" />
-       <target text="heiraten" description="" />
+       <target text="heiraten" description="Deine Liebe ins Ehe nehmen; heiratete; haben geheiratet" />
+    </item>
+     <item>
+       <source text="rozvádět se" description="" />
+       <target text="scheiden" description="Die Ehe enden; schied ; haben geschieden" />
+    </item>
+     <item>
+       <source text="manželství" description="" />
+       <target text="die Ehe" description="Zwei Leute heiraten and kommen in die Ehe" />
+    </item>
+     <item>
+       <source text="volby" description="" />
+       <target text="die Wahlen" description="Die Erwachsene wahlen den Präsident/Kanzler/Abgeordnete" />
+    </item>
+     <item>
+       <source text="poslanec" description="" />
+       <target text="der Abgeordnete" description="Ein Beruf; Die Abgeordnete arbeiten in Parlament" />
+    </item>
+     <item>
+       <source text="vnouče" description="" />
+       <target text="das Enkelkind" description="Die Kinder deiner Kinder" />
+    </item>
+     <item>
+       <source text="hádat se" description="" />
+       <target text="streiten" description="Leute, die nicht gleichen Meinungen haben, streiten; stritt; haben gestritten" />
+    </item>
+     <item>
+       <source text="peklo" description="" />
+       <target text="die Hölle" description="Der Tefel wohnt in der Hölle" />
+    </item>
+     <item>
+       <source text="zlý" description="" />
+       <target text="blöd" description="Nicht schön; eine Kuh sein" />
+    </item>
+     <item>
+       <source text="nepodařit se" description="" />
+       <target text="misslingen" description="Etwas nicht schaffen; misslang; haben misslungen" />
+    </item>
+     <item>
+       <source text="vytvořit" description="udělat, zvládnout" />
+       <target text="schaffen" description="Etwas machen; schaf ; haben geschaffen" />
     </item>
 </vocabulary>
