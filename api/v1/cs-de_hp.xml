@@ -945,4 +945,28 @@
        <source text="narodit se" description="" />
        <target text="geboren sein" description="das Baby ist geboren" />
     </item>
+     <item>
+       <source text="strávit" description="" />
+       <target text="verbringen" description="Das Baby verbringt viel Zeit mit seinem Mutti; verbrachte ; haben verbracht" />
+    </item>
+     <item>
+       <source text="křičet" description="" />
+       <target text="schreien" description="Sehr laut sprechen, die Babys schreien oft; schrie; haben geschrien" />
+    </item>
+     <item>
+       <source text="brigáda" description="" />
+       <target text="die Sommerarbeit" description="= die Ferienjob; Die Jugend finden of eine kleine Arbeit für Ferien" />
+    </item>
+     <item>
+       <source text="svatba" description="" />
+       <target text="die Hochzeit" description="Die Erwachsenen haben Hochzeit" />
+    </item>
+     <item>
+       <source text="manželský pár" description="" />
+       <target text="das Ehepaar" description=" Der Ehemann und die Ehefrau, die die Hochzeit hatten" />
+    </item>
+     <item>
+       <source text="brát se" description="oženit se / vdát se" />
+       <target text="heiraten" description="" />
+    </item>
 </vocabulary>
