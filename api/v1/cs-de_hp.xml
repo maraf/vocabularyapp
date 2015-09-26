@@ -1009,4 +1009,24 @@
        <source text="vytvořit" description="udělat, zvládnout" />
        <target text="schaffen" description="Etwas machen; schaf ; haben geschaffen" />
     </item>
+     <item>
+       <source text="obchod" description="" />
+       <target text="das Geschäft" description="= der Laden; man kann etwas kaufen darin" />
+    </item>
+     <item>
+       <source text="staveniště" description="" />
+       <target text="die Baustelle" description="Der Platz darauf man baut" />
+    </item>
+     <item>
+       <source text="tvrdý" description="" />
+       <target text="hart" description="Der Diamant is das hartest Mineral" />
+    </item>
+     <item>
+       <source text="stáj" description="" />
+       <target text="das Stall" description="Das Haus für die Tiere" />
+    </item>
+     <item>
+       <source text="díra" description="" />
+       <target text="das Loch" description="leer Platz in dem Weg" />
+    </item>
 </vocabulary>
