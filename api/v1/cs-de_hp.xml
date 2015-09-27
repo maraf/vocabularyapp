@@ -1029,4 +1029,28 @@
        <source text="díra" description="" />
        <target text="das Loch" description="leer Platz in dem Weg" />
     </item>
+     <item>
+       <source text="navštívit" description="" />
+       <target text="besuchen" description="= besichtigen; jemanden besuchen" />
+    </item>
+     <item>
+       <source text="cihla" description="" />
+       <target text="der Ziegel" description="Man baut die Mauer darauf" />
+    </item>
+     <item>
+       <source text="zeď" description="" />
+       <target text="die Mauer" description="Berline Mauer trennte Berlin in zwei Teile" />
+    </item>
+     <item>
+       <source text="dělit" description="" />
+       <target text="teilen" description="In zwei Halben teilen; teilte; haben geteilt" />
+    </item>
+     <item>
+       <source text="pamětihodnost" description="" />
+       <target text="die Sehenswürdigkeit" description="Alte Kirche oder Dom kann eine Sehenswürdigkeit sein." />
+    </item>
+     <item>
+       <source text="zeměpis" description="" />
+       <target text="die Erdkunde" description="= die Landeskunde; Studenten lernen über Landen und Staaten" />
+    </item>
 </vocabulary>
