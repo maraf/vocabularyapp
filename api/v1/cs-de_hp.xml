@@ -919,7 +919,7 @@
     </item>
      <item>
        <source text="kýchat" description="" />
-       <target text="niesen" description="Man hat Schnupfel oder Allergie dammit er niest oft; nieste; haben geniest" />
+       <target text="niesen" description="Man hat Schnupfel oder Allergie dammit er niest oft; nieste - haben geniest" />
     </item>
      <item>
        <source text="zvracet" description="také dávit" />
@@ -947,11 +947,11 @@
     </item>
      <item>
        <source text="strávit" description="" />
-       <target text="verbringen" description="Das Baby verbringt viel Zeit mit seinem Mutti; verbrachte ; haben verbracht" />
+       <target text="verbringen" description="Das Baby verbringt viel Zeit mit seinem Mutti; verbrachte - haben verbracht" />
     </item>
      <item>
        <source text="křičet" description="" />
-       <target text="schreien" description="Sehr laut sprechen, die Babys schreien oft; schrie; haben geschrien" />
+       <target text="schreien" description="Sehr laut sprechen, die Babys schreien oft; schrie - haben geschrien" />
     </item>
      <item>
        <source text="brigáda" description="" />
@@ -967,11 +967,11 @@
     </item>
      <item>
        <source text="brát se" description="oženit se / vdát se" />
-       <target text="heiraten" description="Deine Liebe ins Ehe nehmen; heiratete; haben geheiratet" />
+       <target text="heiraten" description="Deine Liebe ins Ehe nehmen; heiratete - haben geheiratet" />
     </item>
      <item>
        <source text="rozvádět se" description="" />
-       <target text="scheiden" description="Die Ehe enden; schied ; haben geschieden" />
+       <target text="scheiden" description="Die Ehe enden; schied - haben geschieden" />
     </item>
      <item>
        <source text="manželství" description="" />
@@ -1043,7 +1043,7 @@
     </item>
      <item>
        <source text="dělit" description="" />
-       <target text="teilen" description="In zwei Halben teilen; teilte; haben geteilt" />
+       <target text="teilen" description="In zwei Halben teilen; teilte - haben geteilt" />
     </item>
      <item>
        <source text="pamětihodnost" description="" />
@@ -1052,5 +1052,61 @@
      <item>
        <source text="zeměpis" description="" />
        <target text="die Erdkunde" description="= die Landeskunde; Studenten lernen über Landen und Staaten" />
+    </item>
+     <item>
+       <source text="strach" description="" />
+       <target text="die Angst" description="Angst vor (3.p) etwas haben; = fürchten; etwas nicht magen (vor der Spinne Angst haben)" />
+    </item>
+     <item>
+       <source text="bát" description="/bát se" />
+       <target text="fürchten" description="= Angst haben; Ich fürchte du hast recht / sich im Dunkeln fürchten / sich fürchten für die Gesundheit; fürchtete - haben gefürchtet " />
+    </item>
+     <item>
+       <source text="hněv" description="" />
+       <target text="der Zorn" description="= der Ärger" />
+    </item>
+     <item>
+       <source text="spojení" description="" />
+       <target text="der Anschluss" description="= die Verbindung" />
+    </item>
+     <item>
+       <source text="pavouk" description="" />
+       <target text="die Spinne" description="= ein Tier, sie hat acht Beinen" />
+    </item>
+     <item>
+       <source text="navazující" description="" />
+       <target text="anschluss-" description="der Anschlussflug ~ navazující let" />
+    </item>
+     <item>
+       <source text="let" description="" />
+       <target text="der Flug" description="= der Weg mit dem Flugzeug" />
+    </item>
+     <item>
+       <source text="letadlo" description="" />
+       <target text="das Flugzeug" description="Es fliegt und die Leute überträgt" />
+    </item>
+     <item>
+       <source text="přenést" description="" />
+       <target text="übertragen" description="etwas anderswo legen" />
+    </item>
+     <item>
+       <source text="jinde" description="" />
+       <target text="anderswo" description="= nicht hier, sie ist anderswo" />
+    </item>
+     <item>
+       <source text="vhodný" description="" />
+       <target text="tauglich" description=" korrekt für die Situation" />
+    </item>
+     <item>
+       <source text="mravenec" description="" />
+       <target text="die Ameise" description="= ein Tier, sie lebt im Wald, sie hat secht Beinen" />
+    </item>
+     <item>
+       <source text="mokrý" description="" />
+       <target text="nass" description="mit Wasser bedëckt; Opposit von trocken" />
+    </item>
+     <item>
+       <source text="suchý" description="" />
+       <target text="trocken" description="Weil ich das Brot am Luft gelassen habe, es ist jetzt ganz trocken" />
     </item>
 </vocabulary>
