@@ -1109,4 +1109,44 @@
        <source text="suchý" description="" />
        <target text="trocken" description="Weil ich das Brot am Luft gelassen habe, es ist jetzt ganz trocken" />
     </item>
+     <item>
+       <source text="možná" description="" />
+       <target text="vielleicht" description="" />
+    </item>
+     <item>
+       <source text="přihlásit se" description="" />
+       <target text="sich melden" description="Jemandem sagen, dass du da bist; meldete - haben gemeldet" />
+    </item>
+     <item>
+       <source text="později" description="" />
+       <target text="nachträglich" description="Nicht jetzt, später" />
+    </item>
+     <item>
+       <source text="popelnice" description="" />
+       <target text="die Mühltonne" description="Nicht jetzt, später" />
+    </item>
+     <item>
+       <source text="vlastnost" description="" />
+       <target text="die Eigenschaft" description="Die Eigenschaften charakterisieren die Sache/die Person" />
+    </item>
+     <item>
+       <source text="líný" description="" />
+       <target text="faul" description="Er möchte nichts machen; Opposit von faul" />
+    </item>
+     <item>
+       <source text="pilný" description="" />
+       <target text="fleissig" description="Er arbeitet viel" />
+    </item>
+     <item>
+       <source text="těsto" description="" />
+       <target text="der Teig" description="Man macht Brötchen daraus" />
+    </item>
+     <item>
+       <source text="nadšený" description="" />
+       <target text="begeistert" description="Sehr glücklig über etwas" />
+    </item>
+     <item>
+       <source text="přehánět" description="" />
+       <target text="übertreiben" description="übertrieb - haben übertrieben" />
+    </item>
 </vocabulary>
