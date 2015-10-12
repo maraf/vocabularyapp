@@ -679,7 +679,7 @@
     </item>
      <item>
        <source text="daleko" description="" />
-       <target text="weit" description="Es ist nicht in der Nähe ; Opposit von nah" />
+       <target text="weit" description="= fern; Es ist nicht in der Nähe ; Opposit von nah" />
     </item>
      <item>
        <source text="blízký" description="" />
@@ -1148,5 +1148,13 @@
      <item>
        <source text="přehánět" description="" />
        <target text="übertreiben" description="übertrieb - haben übertrieben" />
+    </item>
+     <item>
+       <source text="utrácet" description="" />
+       <target text="verswenden" description="Er verschwendet alles Geld, jetzt hat er nichts." />
+    </item>
+     <item>
+       <source text="zachránit" description="" />
+       <target text="retten" description="Jemanden hilfen, das Leben retten; " />
     </item>
 </vocabulary>
