@@ -1151,10 +1151,30 @@
     </item>
      <item>
        <source text="utrácet" description="" />
-       <target text="verswenden" description="Er verschwendet alles Geld, jetzt hat er nichts." />
+       <target text="verswenden" description="Er verschwendet alles Geld, jetzt hat er nichts.; ich verschwende, du verswendest - verschwendete - haben verschwendet" />
     </item>
      <item>
        <source text="zachránit" description="" />
-       <target text="retten" description="Jemanden hilfen, das Leben retten; " />
+       <target text="retten" description="Jemanden hilfen, das Leben retten; Ich rette, du rettest - rettete - haben gerettet" />
+    </item>
+     <item>
+       <source text="pozdní" description="" />
+       <target text="verspätet" description="Es werde zu spät gemacht, es ist verspätet" />
+    </item>
+     <item>
+       <source text="začít" description="" />
+       <target text="anfangen" description="=beginnen; ich afange an, du fängst an - fing an - haben angefangen" />
+    </item>
+     <item>
+       <source text="předtím" description="" />
+       <target text="vorher" description="Ich habe es Monat vorher bestellt" />
+    </item>
+     <item>
+       <source text="prázdný" description="" />
+       <target text="leer" description="Es ist nichts da, dieses Zimmer ist leer; Opposit von voll" />
+    </item>
+     <item>
+       <source text="plný" description="" />
+       <target text="voll" description="" />
     </item>
 </vocabulary>
