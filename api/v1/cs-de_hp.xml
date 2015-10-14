@@ -1177,4 +1177,16 @@
        <source text="plný" description="" />
        <target text="voll" description="" />
     </item>
+     <item>
+       <source text="tichý" description="" />
+       <target text="leise" description="Wenn man leis spricht, er wispelt" />
+    </item>
+     <item>
+       <source text="hlasitý" description="" />
+       <target text="laut" description="Wenn man laut spricht, er schreit" />
+    </item>
+     <item>
+       <source text="šeptat" description="" />
+       <target text="wispern" description="Leise sprechen; ich wispere, du wisperst - wisperte - haben gewispert" />
+    </item>
 </vocabulary>
