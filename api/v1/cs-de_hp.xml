@@ -1189,4 +1189,32 @@
        <source text="šeptat" description="" />
        <target text="wispern" description="Leise sprechen; ich wispere, du wisperst - wisperte - haben gewispert" />
     </item>
+     <item>
+       <source text="dílna" description="" />
+       <target text="der Werkstatt" description="Der Tischler arbeitet darin" />
+    </item>
+     <item>
+       <source text="truhlář" description="" />
+       <target text="der Tischler" description="ein Beruf; er arbeitet mit Holz, er macht Möbel daraus" />
+    </item>
+     <item>
+       <source text="povolání" description="" />
+       <target text="der Beruf" description="= eine Arbeit was man macht" />
+    </item>
+     <item>
+       <source text="dřevo" description="" />
+       <target text="das Holz" description="Das Material, man macht Tische, Stühle, Regale daraus" />
+    </item>
+     <item>
+       <source text="nábytek" description="" />
+       <target text="das Möbel" description="Alles das in dem Zimmer ist - die Stühle, die Tische ..." />
+    </item>
+     <item>
+       <source text="nutný" description="" />
+       <target text="notwendig" description="Es muss sein" />
+    </item>
+     <item>
+       <source text="obyčejný" description="" />
+       <target text="gewöhnliche" description="Es ist nichts speziell" />
+    </item>
 </vocabulary>
