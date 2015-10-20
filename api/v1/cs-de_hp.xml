@@ -579,7 +579,7 @@
     </item>
      <item>
        <source text="nenávist" description="" />
-       <target text="der Hass" description="starke negativ Emotion" />
+       <target text="der Hass" description="starke negative Emotion" />
     </item>
      <item>
        <source text="luštěniny" description="" />
@@ -1216,5 +1216,25 @@
      <item>
        <source text="obyčejný" description="" />
        <target text="gewöhnliche" description="Es ist nichts speziell" />
+    </item>
+     <item>
+       <source text="slabý" description="" />
+       <target text="schwach" description="Er kann es nicht heben, weil er zu schwach ist; Oppposit von stark" />
+    </item>
+     <item>
+       <source text="silný" description="" />
+       <target text="stark" description="Er ist so stark den Elefant zu heben; Opposit von schwach" />
+    </item>
+     <item>
+       <source text="zvednout" description="" />
+       <target text="heben" description="Etwas nehmen hoch; Ich hebe, du hebst - hob - haben gehoben" />
+    </item>
+     <item>
+       <source text="pravidlo" description="" />
+       <target text="das Regel" description="Die Einwohner des Landes musen die Regeln des Landes folgen" />
+    </item>
+     <item>
+       <source text="následovat" description="" />
+       <target text="folgen" description="Nach jemanden oder etwas gehen; ich folge, du folgst; folgte; haben gefolgt" />
     </item>
 </vocabulary>
