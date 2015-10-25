@@ -1257,4 +1257,60 @@
        <source text="náskok" description="" />
        <target text="der Vorsprung" description="Du bist weiter als die anderen" />
     </item>
+     <item>
+       <source text="pocházet" description="" />
+       <target text="stammen" description="= kommen aus; Woher stammen sie? = Woher kommen sie?" />
+    </item>
+     <item>
+       <source text="povoláním" description="" />
+       <target text="beruflich" description="Was machen Sie beruflich? = Was für einen Beruf machen Sie aus?" />
+    </item>
+     <item>
+       <source text="nápomocen" description="" />
+       <target text="behilflich" description="Wie kann ich Ihnen behilflich sein? = Wie kann ich Ihnen hilfen?" />
+    </item>
+     <item>
+       <source text="opakovat" description="" />
+       <target text="wiederholen" description="Etwas noch einmal sagen/machen; ich wiederhole, du wiederholst - wiederholte - haben wiederholt" />
+    </item>
+     <item>
+       <source text="anamnéza" description="" />
+       <target text="die medizinische Vorgeschichte" description="= die Krankengeschichte; Es ist gepasst in der Vergangenheit; in Medizin Historie des Patientes" />
+    </item>
+     <item>
+       <source text="trápení" description="" />
+       <target text="das Leiden" description="Etwas ist nicht gut für dich, du bist traurig daraus" />
+    </item>
+     <item>
+       <source text="trápení" description="" />
+       <target text="das Leiden" description="Etwas ist nicht gut für dich, du bist traurig daraus" />
+    </item>
+     <item>
+       <source text="potíž" description="zdravotní" />
+       <target text="die Beschwerde" description="Es macht deines Leben schwerer" />
+    </item>
+     <item>
+       <source text="zhoršit se" description="" />
+       <target text="sich verschlechtern" description="Ich verschlechtere mich, du verschlechterst dich - verschlechterte - haben verschlechtert" />
+    </item>
+     <item>
+       <source text="další" description="" />
+       <target text="sonstig" description="= andere" />
+    </item>
+     <item>
+       <source text="okolí" description="" />
+       <target text="die Umgebung" description="Die Leute du triffst jeden Tag, deine Familie und Kolegen z.B." />
+    </item>
+     <item>
+       <source text="spozorovat" description="" />
+       <target text="bemerken" description="Merken etwas neues" />
+    </item>
+     <item>
+       <source text="podobný" description="" />
+       <target text="ähnlich" description="Etwas nicht zu unterschiendlich; Opposit von verschieden" />
+    </item>
+     <item>
+       <source text="rozdílný" description="" />
+       <target text="unterschiendlich" description="= verschieden; Zwei Sachen sind nicht ähnlich; Opposit von ähnlich" />
+    </item>
 </vocabulary>
