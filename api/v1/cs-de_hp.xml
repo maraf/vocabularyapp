@@ -336,30 +336,37 @@
      <item>
        <source text="střevo" description="" />
        <target text="der Darm" description="der Blinddarm, der Dickdarm, der Dünndarm ; der Teil des Verdauungstraktes" />
+        <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="trávicí soustava" description="" />
        <target text="der Verdauungstrakt" description="Die Organen für die Verarbeitung der Nährung" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="slepé střevo" description="" />
        <target text="der Blinddarm" description=" = der Appendix" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="tlusté střevo" description="" />
        <target text="der Dickdarm" description="Der letzte Teil des Verdauungstraktes." />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="tenké střevo" description="" />
        <target text="der Dünndarm" description="Längster Teil des Verdauungstraktes" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="krk" description="" />
        <target text="der Hals" description="Zwischen dem Kopf und dem Körper" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="tělo" description="" />
        <target text="der Körper" description="" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="jediný" description="" />
@@ -368,6 +375,7 @@
      <item>
        <source text="kost" description="" />
        <target text="der Knochen" description="Ein Körperteil; Es ist weiss und hart, man kann es brechen" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="zlomit" description="" />
@@ -376,6 +384,7 @@
      <item>
        <source text="kotník" description="" />
        <target text="der Knöchel" description="Ein Körperteil; zwischen dem Unterschenkel und dem Fuss " />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="mezi" description="" />
@@ -384,26 +393,32 @@
      <item>
        <source text="stehno" description="" />
        <target text="der Oberschenkel" description="Der obere Teil des Beines" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="lýtko" description="" />
        <target text="der Unterschenkel" description="= die Wade; Der untere Teil des Beines" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="hlava" description="" />
        <target text="der Kopf" description="Man tragt eine Mütze darauf" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="žaludek" description="" />
        <target text="der Magen" description="Ein Körperteil; ein Sack für Nährung in unserem Körper" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="pusa" description="" />
        <target text="der Mund" description="Man isst damit" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="sval" description="" />
        <target text="der Muskel" description="Man kann bewegen sich damit" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="pohybovat (se)" description="" />
@@ -412,66 +427,82 @@
      <item>
        <source text="nehet" description="" />
        <target text="der Nagel" description="Hartes Plättchen am Ende des Fingers" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="zadek" description="" />
        <target text="der Po" description="= der Assch (hanlivé); hinten unter dem Rücken" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="záda" description="" />
        <target text="der Rücken" description="Die hintere Seite des Körpers" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="zub" description="" />
        <target text="der Zahn" description="Das weisse Plättchen in dem Mund" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="oko" description="" />
        <target text="das Auge" description="Man guckt damit" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="noha" description="" />
        <target text="das Bein" description="ein Körperteil; gut für gehen" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="krev" description="" />
        <target text="das Blut" description="Es ist rot, Arzt nimmt es mit der Spritze" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="mozek" description="" />
        <target text="das Gehirn" description="Ein Organ im Kopf, man denkt damit" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="kloub" description="" />
        <target text="das Gelenk" description="Zwischen zwei Knochen" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="obličej" description="" />
        <target text="das Gesicht" description="" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="srdce" description="" />
        <target text="das Herz" description="Ein Organ, es pumpt Blut" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="brada" description="" />
        <target text="das Kinn" description="Der Bart wächst an dem Mannskinn" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="koleno" description="" />
        <target text="das Knie" description="Das zweite Gelenk am Bein" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="ucho" description="" />
        <target text="das Ohr" description="Man hört damit" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="hruď" description="" />
        <target text="die Brust" description="Weibliche Brust - die Frauen haben es" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="kůže" description="" />
        <target text="die Haut" description="Es bedeckt den ganzen Körper" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="pokrývat" description="" />
@@ -480,6 +511,7 @@
      <item>
        <source text="játra" description="" />
        <target text="die Leber" description="Ein Organ im Bauch, sie entgiftet das Blut" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="detoxikovat" description="" />
@@ -492,18 +524,22 @@
      <item>
        <source text="ret" description="" />
        <target text="die Lippe" description="Der rosige Teil des Mund" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="plíce" description="" />
        <target text="die Lunge" description="Ein Organ, man kann atmen damit" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="dýchat" description="" />
        <target text="atmen" description="Man muss es machen für Leben, man braucht den Sauerstoff" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="kyslík" description="" />
        <target text="der Sauerstoff" description="Man braucht es für Leben" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="život" description="" />
@@ -516,30 +552,37 @@
      <item>
        <source text="nos" description="" />
        <target text="die Nase" description="Die Pyramide am Gesicht" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="ledvina" description="" />
        <target text="die Niere" description="Die paarige Organen die filtrieren das Blut" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="rameno" description="" />
        <target text="die Schulter" description="Sie ist zwischen dem Körper und der Arm" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="čelo" description="" />
        <target text="die Stirn" description="Der Obere Teil des Gesichts" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="prst na noze" description="" />
        <target text="die Zehe" description="Die Finger am Fuss" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="jazyk" description="" />
        <target text="die Zunge" description="Ein Muskel in dem Mund" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="tvář" description="" />
        <target text="die Wange" description="" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="doporučit" description="" />
@@ -888,10 +931,12 @@
      <item>
        <source text="chřipka" description="" />
        <target text="die Grippe" description="Ein Krankheit; die Temperatur ist hoch, oft das Fieber" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="horečka" description="" />
        <target text="das Fieber" description="Temperatur des Persons über 38 C" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="nakažlivý" description="" />
@@ -932,14 +977,17 @@
      <item>
        <source text="narození" description="" />
        <target text="die Geburt" description="Das Ende der Schwangerschaft - das Baby ist geboren" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="těhotenství" description="" />
        <target text="die Schwangerschaft" description="= die Gravidität; das Baby erwarten" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="narodit se" description="" />
        <target text="geboren sein" description="das Baby ist geboren" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="strávit" description="" />
@@ -1275,11 +1323,8 @@
     </item>
      <item>
        <source text="anamnéza" description="" />
-       <target text="die medizinische Vorgeschichte" description="= die Krankengeschichte; Es ist gepasst in der Vergangenheit; in Medizin Historie des Patientes" />
-    </item>
-     <item>
-       <source text="trápení" description="" />
-       <target text="das Leiden" description="Etwas ist nicht gut für dich, du bist traurig daraus" />
+       <target text="die medizinische Vorgeschichte" description="= die Krankengeschichte, = die Anamnese; Es ist gepasst in der Vergangenheit; in Medizin Historie des Patientes" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="trápení" description="" />
@@ -1312,5 +1357,14 @@
      <item>
        <source text="rozdílný" description="" />
        <target text="unterschiendlich" description="= verschieden; Zwei Sachen sind nicht ähnlich; Opposit von ähnlich" />
+    </item>
+     <item>
+       <source text="pořadí" description="" />
+       <target text="die Reihenfolge" description="Wie Sachen gehen hinter einander" />
+    </item>
+     <item>
+       <source text="obtíž" description="" />
+       <target text="die Beschwerung" description="Etwas macht die Aktivität schwerer und du beschwerst dich darüber" />
+       <tag>Lékařská NJ</tag>
     </item>
 </vocabulary>
