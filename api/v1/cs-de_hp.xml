@@ -941,6 +941,7 @@
      <item>
        <source text="nakažlivý" description="" />
        <target text="ansteckend" description="Die Krankheit ist ansteckend = sie hop von Person auf andere sehr schnell" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="ohrozit" description="" />
@@ -961,10 +962,12 @@
      <item>
        <source text="kýchat" description="" />
        <target text="niesen" description="Man hat Schnupfel oder Allergie dammit er niest oft; nieste - haben geniest" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="zvracet" description="také dávit" />
-       <target text="kotzen" description="= sich übergeben; der Inhalt des Magen raus durch dem Mund" />
+       <target text="kotzen" description="= sich übergeben; = erbrechen; der Inhalt des Magen raus durch dem Mund" />
+       <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="obsah" description="" />
@@ -972,7 +975,7 @@
     </item>
      <item>
        <source text="příznak" description="" />
-       <target text="der Merkmal" description="etwas typisches für etwas" />
+       <target text="der Merkmal" description="= das Anzeichen; etwas typisches für etwas" />
     </item>
      <item>
        <source text="narození" description="" />
@@ -1365,6 +1368,51 @@
      <item>
        <source text="obtíž" description="" />
        <target text="die Beschwerung" description="Etwas macht die Aktivität schwerer und du beschwerst dich darüber" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="měřit" description="" />
+       <target text="messen" description="Das Fiber messen - wie hoch die Temperatur ist" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="průjem" description="" />
+       <target text="der Durchfall" description="Die Störung der Verdauung - der Stuhlgang ist schnell und flüssig" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zácpa" description="" />
+       <target text="die Verstopfung" description="Die Störung der Verdauung - der Stuhlgang ist hart and geht nicht leicht" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="močení" description="" />
+       <target text="das Wasserlassen" description="Der Urin lassen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pálit" description="" />
+       <target text="brennen" description="Beim Wasselassen brennen - der Schmerz beim Harnblaseentzündung" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zánět" description="" />
+       <target text="die Entzündung" description="Das Anzeichen einer Aktivierung des Immunsystems" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="močový měchýr" description="" />
+       <target text="die Harnblase" description="Ein Körperteil des Harntrakts, darin wird Urin gespeichert" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="stolice" description="" />
+       <target text="der Stuhlgang" description="= der Stuhl; das Ausscheiden des Verdauungtraktes" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nevolnost" description="" />
+       <target text="die Übelkeit" description="Man fühlt nicht gut von dem Magen und vielleicht kann davon erbrechen" />
        <tag>Lékařská NJ</tag>
     </item>
 </vocabulary>
