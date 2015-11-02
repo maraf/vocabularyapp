@@ -1412,7 +1412,37 @@
     </item>
      <item>
        <source text="nevolnost" description="" />
-       <target text="die Übelkeit" description="Man fühlt nicht gut von dem Magen und vielleicht kann davon erbrechen" />
+       <target text="die Übelkeit" description="Man fühlt sich nicht gut von dem Magen und vielleicht kann davon erbrechen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="noční pot" description="" />
+       <target text="der Nachtschweiss" description="Man fühlt sich heiss und die Haut lasst Wasser; es ist ein B-Symptom" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="váhový úbytek" description="" />
+       <target text="der Gewichtsverlust" description="Man nimmst ab" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="porucha" description="" />
+       <target text="die Störung" description="Es funktioniert schlecht - die Schlafstörung" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="selhání" description="" />
+       <target text="das Versagen" description="Es funktioniert nicht mehr - das Niereversagen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="trpět na" description="" />
+       <target text="leiden an" description=" = leiden unter; Leiden Sie unter einige Erkrankungen?" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nemoc" description="onemocnění" />
+       <target text="die Krankheit" description="= die Erkrankung; Die Grippe ist eine Krankheit" />
        <tag>Lékařská NJ</tag>
     </item>
 </vocabulary>
