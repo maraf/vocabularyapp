@@ -1496,7 +1496,62 @@
     </item>
      <item>
        <source text="štítná žláza" description="" />
-       <target text="die Schilddrüse" description="Die Drúse in dem Hals" />
+       <target text="die Schilddrüse" description="Die Drüse in dem Hals" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="slinné žlázy" description="" />
+       <target text="die Speicheldrüsen" description="Die Drüsen in dem Mund" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="slinivka" description="" />
+       <target text="die Bauchspeicheldrüse" description="= das Pankreas; Die Drüse in dem Bauch" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nadledviny" description="" />
+       <target text="die Nebennieren" description="Die Drüse über der Niere" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="varle" description="" />
+       <target text="der Hoden" description="= der Testikel; ein paariges männliches Organ, er produziert die Samenfäden" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pohlaví" description="" />
+       <target text="das Geschlest" description="Frau oder Mann" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pohlavní styk" description="" />
+       <target text="der Geschlestverkehr" description="= der Sex" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="jizva" description="" />
+       <target text="die Narbe" description="Die Operationen lassen die Narben" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="očkování" description="" />
+       <target text="die Impfung" description="Der Kinderarzt spritzt der Impfung gegen einige Erkrankungen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="prostředek" description="prášky na ..." />
+       <target text="das Mittel" description="= die Tabletten = das Medikament; Das Schmerzmittel = Mittel gegen Schmerzen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="slezina" description="" />
+       <target text="die Milz" description="Ein Organ, es sondert verälterter roter Blutkörperchen aus" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="červená krvinka" description="" />
+       <target text="das Blutkörperchen" description="= die Erythrozyt; es überträgt den Sauerstoff zu den Organe" />
        <tag>Lékařská NJ</tag>
     </item>
 </vocabulary>
