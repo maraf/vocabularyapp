@@ -1445,4 +1445,58 @@
        <target text="die Krankheit" description="= die Erkrankung; Die Grippe ist eine Krankheit" />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="závrať" description="" />
+       <target text="der Schwindel" description="Man fühlt sich nicht gut und oft fällt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="padat" description="" />
+       <target text="fallen" description="Nicht standen bleiben; fiel; gefallen sein" />
+       
+    </item>
+     <item>
+       <source text="vysoký tlak" description="" />
+       <target text="der Bluthochdruck" description="= die Hypertonie; RR über 130/90" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="cukrovka" description="" />
+       <target text="die Zuckerkrankheit" description="= der Zucker = der Diabetes; Erkrankung mit dem Nüchternblutzucker über 6,1 mmol/l" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nalačno" description="" />
+       <target text="nüchtern" description="Nichts essen / Kein Alkohol trinken" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="žaludeční vřed" description="" />
+       <target text="der Magengeschür" description="Krankheit der Magens, man kann bluten daraus" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="krvácet" description="" />
+       <target text="bluten" description="= der Magenulkus; Das Blut lassen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="dušnost" description="" />
+       <target text="die Atemnot" description="= die Luftnot; Subjektiv Gefühl um hart zu atmen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="žláza" description="" />
+       <target text="die Drüse" description="Das Organ, dass die Hormonen / das Sekret erzeugt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vyrábět" description="" />
+       <target text="erzeugen" description="= produzieren; Etwas machen; erzeugte; haben erzeugt" />
+    </item>
+     <item>
+       <source text="štítná žláza" description="" />
+       <target text="die Schilddrüse" description="Die Drúse in dem Hals" />
+       <tag>Lékařská NJ</tag>
+    </item>
 </vocabulary>
