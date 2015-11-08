@@ -966,7 +966,7 @@
     </item>
      <item>
        <source text="zvracet" description="také dávit" />
-       <target text="kotzen" description="= sich übergeben; = erbrechen; der Inhalt des Magen raus durch dem Mund" />
+       <target text="erbrechen" description="= sich übergeben; der Inhalt des Magen raus durch dem Mund" />
        <tag>Lékařská NJ</tag>
     </item>
      <item>
