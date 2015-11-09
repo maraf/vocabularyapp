@@ -1554,4 +1554,34 @@
        <target text="das Blutkörperchen" description="= die Erythrozyt; es überträgt den Sauerstoff zu den Organe" />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="mlčet" description="" />
+       <target text="schweigen" description="Nichts sagen; ich schweige, du schweigst - schwieg - haben geschwiegen" />
+
+    </item>
+     <item>
+       <source text="tajemství" description="" />
+       <target text="das Geheimnis" description="Du musst niemand sagen, es ist ein Geheimnis!" />
+
+    </item>
+     <item>
+       <source text="prozradit" description="" />
+       <target text="verraten" description="Nicht das Geheimnis jemandem sagen; ich verrate, du verrätst - verriet - haben verraten" />
+
+    </item>
+     <item>
+       <source text="zaváhání" description="" />
+       <target text="das Zögern" description="Ein paar Minuten denken und danach etwas machen" />
+
+    </item>
+     <item>
+       <source text="jednou" description="kdysi" />
+       <target text="einst" description="Einmal in der Vergangenheit" />
+
+    </item>
+     <item>
+       <source text="odpustit" description="" />
+       <target text="verzeihen" description="Der alte Greis verzieh seinen Kindern bis zu seinem Tode nicht; uch verzeihe, du verzeihst - verzieh - haben verzeihen" />
+
+    </item>
 </vocabulary>
