@@ -998,7 +998,7 @@
     </item>
      <item>
        <source text="křičet" description="" />
-       <target text="schreien" description="Sehr laut sprechen, die Babys schreien oft; schrie - haben geschrien" />
+       <target text="schreien" description="= kreischen; Sehr laut sprechen, die Babys schreien oft; schrie - haben geschrien" />
     </item>
      <item>
        <source text="brigáda" description="" />
@@ -1110,7 +1110,7 @@
     </item>
      <item>
        <source text="hněv" description="" />
-       <target text="der Zorn" description="= der Ärger" />
+       <target text="der Zorn" description="= der Ärger; = die Wut" />
     </item>
      <item>
        <source text="spojení" description="" />
@@ -1592,6 +1592,21 @@
      <item>
        <source text="plnit" description="naplnit" />
        <target text="erfüllen" description="Füllen so lange du erfüllst es, zum Beispiel; ich erfülle, du erfüllst - erfüllte - haben erfüllt" />
+
+    </item>
+     <item>
+       <source text="vrčet" description="" />
+       <target text="knurren" description="Die Tiere knurren wenn etwas ihnen nicht gefällt; ich knurre, du knurrst - knurrte - haben geknurrt" />
+
+    </item>
+     <item>
+       <source text="vyděsit" description="vyplašit" />
+       <target text="schrecken" description="So viel Angst haben, dass man weg läuft; ich schrecke, du schreckst - schreckte - haben geschreckt" />
+
+    </item>
+     <item>
+       <source text="chytit" description="lapit" />
+       <target text="fangen" description="Ein Wildtier fangen und in dem Käfig setzen; ein Feuer fangen; ich fange, du fängst - fing - haben gefangen" />
 
     </item>
 </vocabulary>
