@@ -1581,7 +1581,17 @@
     </item>
      <item>
        <source text="odpustit" description="" />
-       <target text="verzeihen" description="Der alte Greis verzieh seinen Kindern bis zu seinem Tode nicht; uch verzeihe, du verzeihst - verzieh - haben verzeihen" />
+       <target text="verzeihen" description="Der alte Greis verzieh seinen Kindern bis zu seinem Tode nicht; ich verzeihe, du verzeihst - verzieh - haben verzeihen" />
+
+    </item>
+     <item>
+       <source text="šotek" description="" />
+       <target text="der Wichtel" description="Eine Märchenfigur, die macht viel Unfug" />
+
+    </item>
+     <item>
+       <source text="plnit" description="naplnit" />
+       <target text="erfüllen" description="Füllen so lange du erfüllst es, zum Beispiel; ich erfülle, du erfüllst - erfüllte - haben erfüllt" />
 
     </item>
 </vocabulary>
