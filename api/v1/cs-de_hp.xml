@@ -1609,4 +1609,9 @@
        <target text="fangen" description="Ein Wildtier fangen und in dem Käfig setzen; ein Feuer fangen; ich fange, du fängst - fing - haben gefangen" />
 
     </item>
+     <item>
+       <source text="vybrat" description="(si)" />
+       <target text="wählen" description="(sich); für etwas entscheiden; ich wähle, du wählst - wählte - haben gewählt" />
+
+    </item>
 </vocabulary>
