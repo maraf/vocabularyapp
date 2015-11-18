@@ -1210,7 +1210,7 @@
     </item>
      <item>
        <source text="začít" description="" />
-       <target text="anfangen" description="=beginnen; ich afange an, du fängst an - fing an - haben angefangen" />
+       <target text="anfangen" description="=beginnen; = starten; einleiten; ich afange an, du fängst an - fing an - haben angefangen" />
     </item>
      <item>
        <source text="předtím" description="" />
@@ -1646,7 +1646,12 @@
     </item>
      <item>
        <source text="vyžadovat" description="vyzývat" />
-       <target text="fordern" description="Etwas möchten" />
+       <target text="fordern" description="Etwas möchten; ich fordere, du forderst - fordete - haben gefordert" />
    
+    </item>
+     <item>
+       <source text="slabost" description="" />
+       <target text="die Schwäche" description="Sich schwach fühlen" />
+       <tag>Lékařská NJ</tag>
     </item>
 </vocabulary>
