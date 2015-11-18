@@ -1614,4 +1614,39 @@
        <target text="wählen" description="(sich); für etwas entscheiden; ich wähle, du wählst - wählte - haben gewählt" />
 
     </item>
+     <item>
+       <source text="ultrazvuk" description="" />
+       <target text="der Ultraschall" description=" = Sonographie; spezielle Untersuchung mit dem Schall" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="rozloučení" description="" />
+       <target text="der Abschied" description="Jemand geht weg, du muss mit ihm Abschied unternehmen!" />
+
+    </item>
+     <item>
+       <source text="hnisavý" description="" />
+       <target text="eitrig" description="Es gibt eine Entzündung in der Narbe" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zánět" description="" />
+       <target text="die Entzündung" description="Aktivierung des Immunsystems gegen Infektionen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="mlčenlivost" description="" />
+       <target text="die Verschwiegenheit" description="= die Diskretion; = das Stillschweigen; Du sollst nicht die Privatsachen sagen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="povinnost mlčenlivosti" description="" />
+       <target text="die Schweigepflicht" description="Als Ärztin muss ich die Schweigepflicht einhalten" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vyžadovat" description="vyzývat" />
+       <target text="fordern" description="Etwas möchten" />
+   
+    </item>
 </vocabulary>
