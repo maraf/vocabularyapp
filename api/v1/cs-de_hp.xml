@@ -1679,4 +1679,54 @@
        <target text="die Harnsäure" description="Die Harnsäure ist das Endprodukt der Nukleotiden." />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="vyjádřit" description="vymačkat" />
+       <target text="ausdrücken" description="Über eine Idee besprechen, einen Verdacht auscdrücken; Ich drücke aus, du drückst aus - drückte aus - haben ausgedrückt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="příjem" description="" />
+       <target text="der Empfang" description="= die Aufnahme; Etwas (z.B. die Ware) aufnehmen." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zboží" description="" />
+       <target text="die Ware" description="Einige Sachen, z.B. Lebensmittel, die Elektronik .." />
+       
+    </item>
+     <item>
+       <source text="objednávka" description="přihlášení" />
+       <target text="die Anmeldung" description="Etwas bestellen, oder irgendwo die Applikation senden " />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="poloha" description="" />
+       <target text="die Lage" description="Die Lage sagt, woher sie sich finden, also Rechtlage oder Linkslage des Herzens" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="poznámka" description="" />
+       <target text="die Bemerkung" description="Alle Proteine zusammen bilden das Gesamteiweiss." />
+       
+    </item>
+     <item>
+       <source text="přibližně" description="" />
+       <target text="ungefähr" description="=etwa; Ich rauche ungefähr eine halbe Schachtel pro Tag" />
+      
+    </item>
+     <item>
+       <source text="zaměstnaný" description="činný" />
+       <target text="tätig" description="Ich bin auf dieser Station als Assistanzarzt tätig." />
+      
+    </item>
+     <item>
+       <source text="vlhký" description="" />
+       <target text="feucht" description="Es ist nich trocken, weil es im Wasser war." />
+       
+    </item>
+     <item>
+       <source text="obvaz" description="" />
+       <target text="das Wickeln" description="Das Gewebe das ist z. B. auf dem Knöchel eingerollt." />
+       <tag>Lékařská NJ</tag>
+    </item>
 </vocabulary>
