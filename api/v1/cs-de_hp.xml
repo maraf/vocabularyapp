@@ -1654,4 +1654,29 @@
        <target text="die Schwäche" description="Sich schwach fühlen" />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="hlen" description="" />
+       <target text="der Schleim" description="Das Produkt des Körpers, es schützt das Endothel" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="chránit" description="" />
+       <target text="schützen" description="Etwas in dem Sinn haben um es nicht zerstört sein. Ich schütze, du schützt - schützte - haben geschützt" />
+      
+    </item>
+     <item>
+       <source text="tolerovat" description="snášet" />
+       <target text="vertragen" description="Können Sie alle Speizen vertragen? Ich vertrage, du verträgst - vertrug - haben vertragen" />
+       
+    </item>
+     <item>
+       <source text="celková bílkovina" description="" />
+       <target text="das Gesamteiweiss" description="Alle Proteine zusammen bilden das Gesamteiweiss." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="močovina" description="" />
+       <target text="die Harnsäure" description="Die Harnsäure ist das Endprodukt der Nukleotiden." />
+       <tag>Lékařská NJ</tag>
+    </item>
 </vocabulary>
