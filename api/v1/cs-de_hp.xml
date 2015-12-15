@@ -1814,4 +1814,19 @@
        <target text="das Umfeld" description="= die Umwelt; = die Umgebung; Alles das ringsherum ist." />
        
     </item>
+     <item>
+       <source text="kymácet" description="" />
+       <target text="schwanken" description="Es verändert sich viel; ich schwanke, du schwankest - schwankte - haben/sein geschwankt" />
+       
+    </item>
+     <item>
+       <source text="vylučování" description="zhroucení" />
+       <target text="die Ausscheidung" description="Es ist wichtig bei den Patienten mit Herzinsuffizienz die Urinausscheidung zu messen." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vznik" description="původ" />
+       <target text="die Genese" description="Die Genese des Hypokaliämie ist unbekannt." />
+       <tag>Lékařská NJ</tag>
+    </item>
 </vocabulary>
