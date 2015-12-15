@@ -1729,4 +1729,89 @@
        <target text="das Wickeln" description="Das Gewebe das ist z. B. auf dem Knöchel eingerollt." />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="přehled" description="" />
+       <target text="die Übersicht" description="Eine kurze Liste der Sachen" />
+       
+    </item>
+     <item>
+       <source text="užitečný" description="" />
+       <target text="nützlich" description="Etwas gut" />
+       
+    </item>
+     <item>
+       <source text="výraz" description="" />
+       <target text="der Ausdruck" description="Der Name für etwas." />
+       
+    </item>
+     <item>
+       <source text="ústní" description="" />
+       <target text="mündlich" description="Etwas das wird gesagt" />
+       
+    </item>
+     <item>
+       <source text="použít" description="" />
+       <target text="verwenden" description="=benutzen; ich verwende, du verwendest - verwendete - haben verwendet" />
+       
+    </item>
+     <item>
+       <source text="smysluplný" description="užitečný" />
+       <target text="sinnvoll" description="Es ist nützlich und man kann es benutzen" />
+    
+    </item>
+     <item>
+       <source text="nejprve" description="nejdříve" />
+       <target text="zuerst" description="= zunächst; = zuerst; = als Erstes; = erstens" />
+    
+    </item>
+     <item>
+       <source text="zahájit" description="" />
+       <target text="einleiten" description="=anfangen; Der Direktor hat die Sitzung eingeleitet; ich leite ein, du leitest ein - leitete ein - haben eingeleitet" />
+       
+    </item>
+     <item>
+       <source text="nakonec" description="" />
+       <target text="schliesslich" description="= zum Schluss; Am Ende" />
+      
+    </item>
+     <item>
+       <source text="dále" description="ještě" />
+       <target text="ferner" description="=weiter" />
+     
+    </item>
+     <item>
+       <source text="domněnka" description="" />
+       <target text="die Vermutung" description="Etwas du denkst" />
+       
+    </item>
+     <item>
+       <source text="zřejmě" description="" />
+       <target text="vermutlich" description="Es ist wahrscheinlich so." />
+       
+    </item>
+     <item>
+       <source text="názor" description="mínění" />
+       <target text="die Ansicht" description="= die Meinung; Ich denke etwas darüber" />
+      
+    </item>
+     <item>
+       <source text="přesvědčit" description="" />
+       <target text="überzeugen" description="Ich denke es ist so, ich glaube es sicher; ich überzeuge, du überzeigst - überzeugte - haben überzeugt" />
+     
+    </item>
+     <item>
+       <source text="pád" description="zhroucení" />
+       <target text="der Sturz" description="= der Fall; Man hat den Schwindel und fällt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="kvůli" description="zdůvodu" />
+       <target text="aufgrund" description="= wegen etwas; Aufgrund ihrer Schmertzen hat sie 3 Tabletten angenommen" />
+       
+    </item>
+     <item>
+       <source text="okolí" description="" />
+       <target text="das Umfeld" description="= die Umwelt; = die Umgebung; Alles das ringsherum ist." />
+       
+    </item>
 </vocabulary>
