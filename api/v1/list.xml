@@ -6,5 +6,6 @@
         <content name="Demo1" url="http://vocabulary.neptuo.com/api/v1/cs-de_demo1.xml" />
         <content name="Demo2" url="http://vocabulary.neptuo.com/api/v1/cs-de_demo2.xml" />
         <content name="Základní slovíčka" url="http://vocabulary.neptuo.com/api/v1/cs-de_hp.xml" />
+        <content name="Lékařská NJ" url="http://vocabulary.neptuo.com/api/v1/cs-de_lekarska.xml" />
     </vocabulary>
 </vocabularies>
