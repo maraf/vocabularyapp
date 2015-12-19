@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vocabulary>
+     <item>
+       <source text="čelo" description="" />
+       <target text="die Stirn" description="Der Obere Teil des Gesichts" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="prst na noze" description="" />
+       <target text="die Zehe" description="Die Finger am Fuss" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="jazyk" description="" />
+       <target text="die Zunge" description="Ein Muskel in dem Mund" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="tvář" description="" />
+       <target text="die Wange" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="doporučit" description="" />
+       <target text="empfehlen" description="jemanden raten was gut ist" />
+    </item>
+     <item>
+       <source text="vyloučit" description="" />
+       <target text="ausschliessen" description=" = eliminieren; fettes Lebensmittel ausschliessen; jemanden aus der Gruppe ausschliessen" />
+    </item>
+     <item>
+       <source text="výživa" description="" />
+       <target text="die Nährung" description="Alles was man isst." />
+    </item>
+     <item>
+       <source text="potřeba" description="" />
+       <target text="der Bedarf" description="alles was man braucht" />
+    </item>
+     <item>
+       <source text="zaměstnaný" description="" />
+       <target text="berufstätig" description="Eine Arbeit haben" />
+    </item>
+     <item>
+       <source text="nakrájený" description="" />
+       <target text="geschnitten" description="etwas jemand geschnitten hat" />
+    </item>
+     <item>
+       <source text="řezat" description="" />
+       <target text="schneiden" description="etwas in kleine Stücken machen ; Ich schneide - schnitt - geschnitten (haben)" />
+    </item>
+     <item>
+       <source text="obilí" description="" />
+       <target text="die Getreide" description="Man macht Mehl aus es" />
+    </item>
+     <item>
+       <source text="chytnout" description="" />
+       <target text="greifen" description="die Hand nach etwas/jemanden ; den Ball greifen" />
+    </item>
+     <item>
+       <source text="nenávist" description="" />
+       <target text="der Hass" description="starke negative Emotion" />
+    </item>
+     <item>
+       <source text="luštěniny" description="" />
+       <target text="die Hülsenfrüchte" description="Bohne, Linse, Erbse" />
+    </item>
+     <item>
+       <source text="hrášek" description="" />
+       <target text="die Erbse" description="Es is grün und rund" />
+    </item>
+     <item>
+       <source text="fazole" description="" />
+       <target text="die Bohne" description="Es macht man viel furzen" />
+    </item>
+     <item>
+       <source text="prdět" description="" />
+       <target text="furzen" description="Die Gase lassen" />
+    </item>
+     <item>
+       <source text="čočka" description="" />
+       <target text="die Linse" description="" />
+    </item>
+     <item>
+       <source text="stěží" description="" />
+       <target text="kaum" description="fast gar nicht" />
+    </item>
+     <item>
+       <source text="skoro" description="" />
+       <target text="fast" description="" />
+    </item>
+     <item>
+       <source text="jenom" description="" />
+       <target text="nur" description="" />
+    </item>
+     <item>
+       <source text="Domácí kuchyně" description="" />
+       <target text="die Hausmannskost" description="zu Hause bereitetes Essen" />
+    </item>
+     <item>
+       <source text="hubený" description="" />
+       <target text="mager" description="nicht fett" />
+    </item>
+     <item>
+       <source text="kukuřice" description="" />
+       <target text="der Mais" description="= der Kukurutz" />
+    </item>
+     <item>
+       <source text="omezení" description="" />
+       <target text="die Einschränkung" description="Es limitiert etwas" />
+    </item>
+     <item>
+       <source text="zranit se" description="" />
+       <target text="sich verletzen" description="Der Knochen brechen zum Beispiel; ich verletze mich; verletzte; haben verletzt" />
+    </item>
+     <item>
+       <source text="soutěž" description="" />
+       <target text="der Wettkampf" description="Die Leute möchten wissen, wer der beste ist." />
+    </item>
+     <item>
+       <source text="zúčastnit se" description="" />
+       <target text="teilnehmen" description="An einem Wettkampf teilnehmen = du bist dort ; I nehme teil ; nahm teil ; haben teilgenommen" />
+    </item>
+     <item>
+       <source text="člen" description="" />
+       <target text="das Mitglied" description="In einer specialisierte Gruppe sein" />
+    </item>
+     <item>
+       <source text="klub" description="" />
+       <target text="der Verein" description="Specialisierte Gruppe für etwas (Eine Sportart / wandern ...)" />
+    </item>
+     <item>
+       <source text="sportovní přenos" description="" />
+       <target text="die Sportübertragung" description="Sehen den Wttkampf in dem Fernseher" />
+    </item>
+     <item>
+       <source text="krasbruslení" description="" />
+       <target text="der Eiskunstlauf" description="Eine Sportart; schöne Bewegungen am Eis" />
+    </item>
+     <item>
+       <source text="veslování" description="" />
+       <target text="Rudern" description="Eine Sportart; man macht es auf dem Boot mit den Paddel" />
+    </item>
+     <item>
+       <source text="plachtění" description="" />
+       <target text="Segeln" description="Eine Sportart; man macht es auf dem Boot mit dem Wind " />
+    </item>
+     <item>
+       <source text="hluboký" description="" />
+       <target text="tief" description="Es is weit im Wasser zum Beispiel - das Meer is tief ; opposit von seicht" />
+    </item>
+     <item>
+       <source text="mělký" description="" />
+       <target text="seicht" description="Der Lache ist seicht; opposit von tief" />
+    </item>
+     <item>
+       <source text="kaluž" description="" />
+       <target text="der Lache" description="Wenn es regnet, die Lachen von Wasser sind auf dem Gehweg" />
+    </item>
+     <item>
+       <source text="daleko" description="" />
+       <target text="weit" description="= fern; Es ist nicht in der Nähe ; Opposit von nah" />
+    </item>
+     <item>
+       <source text="blízký" description="" />
+       <target text="nah" description="Es ist nicht weit ; Opposit von weit" />
+    </item>
+     <item>
+       <source text="blízko" description="" />
+       <target text="in der Nähe" description="Es ist nicht weit" />
+    </item>
+     <item>
+       <source text="chodník" description="" />
+       <target text="der Gehweg" description="Man geht zu Fuss am Gehweg" />
+    </item>
+     <item>
+       <source text="potápění" description="" />
+       <target text="Tauchen" description="Eine Sportart; unter Wasser tief schwimmen" />
+    </item>
+     <item>
+       <source text="snít o" description="" />
+       <target text="träumen von" description="Ich träume von (3.p) grossem Haus ; träumte ; haben geträumt" />
+    </item>
+     <item>
+       <source text="zlobit se na" description="" />
+       <target text="sich ärgern über" description="Ich ärgere mich über (4.p) slechtes Wetter ; ärgerte ; haben geärgert" />
+    </item>
+     <item>
+       <source text="mít chuť na" description="" />
+       <target text="Lust haben auf" description="Ich habe Lust auf (4.p) den Wein" />
+    </item>
+     <item>
+       <source text="čekat na" description="" />
+       <target text="warten auf" description="Ich warte auf (4.p) den Bus" />
+    </item>
+     <item>
+       <source text="výsledek" description="" />
+       <target text="das Ergebnis" description="Ergebnis der Prüfung / des Wettkampfs" />
+    </item>
+     <item>
+       <source text="těšit se na" description="" />
+       <target text="sich freuen auf" description="Ich freue mich auf (4.p) die Ferien ; freute ; haben gefraut" />
+    </item>
+     <item>
+       <source text="starat se o" description="" />
+       <target text="sich kümmern um" description="Ich kümmere mich um (4.p) kleines Kind ; kümmerte ; haben gekümmert" />
+    </item>
+     <item>
+       <source text="domluvit se s" description="" />
+       <target text="sich verabreden mit" description="Ich verabrede mich mit (3.p) meinen Freunden ; verabredete ; haben verabredet" />
+    </item>
+     <item>
+       <source text="potkat se s" description="" />
+       <target text="sich treffen mit" description="Ich treffe mich mit (3.p) meiner Freundin ; traf ; haben getroffen" />
+    </item>
+     <item>
+       <source text="mluvit s" description="" />
+       <target text="sprechen mit" description="Ich spreche mit (3.p) dir ; sprach ; haben gesprochen" />
+    </item>
+     <item>
+       <source text="pamatovat si na" description="" />
+       <target text="sich erinnern" description="Ich erinnere mich nicht so gut an (4.p) letztes Jahr ; erinnerte ; haben erinnert" />
+    </item>
+     <item>
+       <source text="zajímat se o" description="" />
+       <target text="sich interessieren für" description="Ich interessiere mich für (4.p) Politik ; interessierte ; haben interessiert" />
+    </item>
+     <item>
+       <source text="myslet na" description="" />
+       <target text="denken an" description="Ich denke oft an (4.p) die Zukunft ; dachte ; haben gedacht" />
+    </item>
+     <item>
+       <source text="poděkovat" description="" />
+       <target text="sich bedanken bei" description="Ich bedanke mich bei (3.p) meiner Mutter ; bedankte ; haben bedankt" />
+    </item>
+     <item>
+       <source text="smířit se s" description="" />
+       <target text="sich abfinden mit" description="Ich finde mich mit (3.p) dem Ergebnis ab ; fand ab ; haben abgefunden" />
+    </item>
+     <item>
+       <source text="jde o" description="" />
+       <target text="es geht um" description="Es geht um (4.p) unser Kind" />
+    </item>
+     <item>
+       <source text="spolehnout se na" description="" />
+       <target text="sich verlassen auf" description="Ich verlasse mich auf (4.p) dich" />
+    </item>
+     <item>
+       <source text="pravidelný" description="" />
+       <target text="regelmässig" description="Es ist jede Tag, jede Woche ..." />
+    </item>
+     <item>
+       <source text="nepravidelný" description="" />
+       <target text="unregelmässig" description="Opposit von regelmässig" />
+    </item>
+     <item>
+       <source text="čas od času" description="" />
+       <target text="ab und zu" description="Nicht so oft" />
+    </item>
+     <item>
+       <source text="zhubnout" description="" />
+       <target text="abnehmen" description="Das Gewicht reduzieren" />
+    </item>
+     <item>
+       <source text="váha" description="" />
+       <target text="das Gewicht" description="Wieviel Kilos hat es" />
+    </item>
+     <item>
+       <source text="přibrat" description="" />
+       <target text="zunehmen" description="Die Kilos plus nehmen" />
+    </item>
+     <item>
+       <source text="opravdu" description="" />
+       <target text="wirklich" description="" />
+    </item>
+     <item>
+       <source text="papírek" description="" />
+       <target text="der Zettel" description="Kleines Papier" />
+    </item>
+     <item>
+       <source text="tam" description="" />
+       <target text="dorthin" description="" />
+    </item>
+     <item>
+       <source text="sem" description="" />
+       <target text="hierher" description="Stell es hier bei mir" />
+    </item>
+     <item>
+       <source text="přesvědčený" description="" />
+       <target text="überzeugt" description="Ich glaube es sicher" />
+    </item>
+     <item>
+       <source text="vlažný" description="" />
+       <target text="lauwarm" description="Nicht warm genug" />
+    </item>
+     <item>
+       <source text="ihned" description="" />
+       <target text="sofort" description="Mache es jetzt am schnellsten" />
+    </item>
+     <item>
+       <source text="najednou" description="" />
+       <target text="plötzlich" description="Es war nicht vorher, jetzt es plötzlich ist" />
+    </item>
+     <item>
+       <source text="vytvořit" description="" />
+       <target text="entstehen" description="Etwas neues machen; entstand ; sein entstanden" />
+    </item>
+     <item>
+       <source text="sufování" description="" />
+       <target text="Wellenreiten" description="Eine Sportart; man macht es am See wenn die Wellen sind gross" />
+    </item>
+     <item>
+       <source text="jako alternativa k" description="" />
+       <target text="als Alternative zu" description="Etwas anderes dass ziemlich ähnlich ist" />
+    </item>
+     <item>
+       <source text="podobný" description="" />
+       <target text="änlich" description="Mache es jetzt am schnellsten" />
+    </item>
+     <item>
+       <source text="vývoj" description="" />
+       <target text="die Weiterentwicklung" description="Es hat beandert (zum besser meistens)" />
+    </item>
+     <item>
+       <source text="bezpečný" description="" />
+       <target text="ungefährlich" description="Man kann selbst nicht verletzen; Opposit von gefährlich" />
+    </item>
+     <item>
+       <source text="nebezpečný" description="" />
+       <target text="gefährlich" description="Mann kann selbst verletzen dabei" />
+    </item>
+     <item>
+       <source text="nebezpečí" description="" />
+       <target text="die Gefahr" description="Die situation dabei man kann verletzen" />
+    </item>
+     <item>
+       <source text="zvědavý" description="" />
+       <target text="neugirig" description="Die Person, dass alles wissen will" />
+    </item>
+     <item>
+       <source text="vzácně" description="" />
+       <target text="selten" description="nicht oft" />
+    </item>
+     <item>
+       <source text="zapamatovat si" description="" />
+       <target text="sich merken" description="nicht vergessen" />
+    </item>
+     <item>
+       <source text="obtížný" description="" />
+       <target text="schwierig" description="Opposit von einfach" />
+    </item>
+     <item>
+       <source text="těžký" description="" />
+       <target text="schwer" description="Opposit von leicht" />
+    </item>
+     <item>
+       <source text="důvěřovat" description="" />
+       <target text="trauen" description="jemanden traunen" />
+    </item>
+     <item>
+       <source text="želva" description="" />
+       <target text="die Schildkröte" description="ein Tier, das Reptil mit dem Panzer" />
+    </item>
+     <item>
+       <source text="krunýř" description="" />
+       <target text="der Panzer" description="Die Schildkröten haben ihn" />
+    </item>
+     <item>
+       <source text="chřipka" description="" />
+       <target text="die Grippe" description="Ein Krankheit; die Temperatur ist hoch, oft das Fieber" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="horečka" description="" />
+       <target text="das Fieber" description="Temperatur des Persons über 38 C" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nakažlivý" description="" />
+       <target text="ansteckend" description="Die Krankheit ist ansteckend = sie hop von Person auf andere sehr schnell" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="ohrozit" description="" />
+       <target text="gefährden" description="Etwas (4.p) ins Gefähr stellen; Rauchen gefährdet die Gesundheit; gefährdete; haben gefährdet" />
+    </item>
+     <item>
+       <source text="bohatý" description="" />
+       <target text="reich" description="viel Geld haben; Opposit von arm" />
+    </item>
+     <item>
+       <source text="chudý" description="" />
+       <target text="arm" description="wenig Geld haben" />
+    </item>
+     <item>
+       <source text="podvod" description="" />
+       <target text="der Betrug" description="" />
+    </item>
+     <item>
+       <source text="kýchat" description="" />
+       <target text="niesen" description="Man hat Schnupfel oder Allergie dammit er niest oft; nieste - haben geniest" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zvracet" description="také dávit" />
+       <target text="erbrechen" description="= sich übergeben; der Inhalt des Magen raus durch dem Mund" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="obsah" description="" />
+       <target text="der Inhalt" description="alles, dass darin ist" />
+    </item>
+     <item>
+       <source text="příznak" description="" />
+       <target text="der Merkmal" description="= das Anzeichen; etwas typisches für etwas" />
+    </item>
+     <item>
+       <source text="narození" description="" />
+       <target text="die Geburt" description="Das Ende der Schwangerschaft - das Baby ist geboren" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="těhotenství" description="" />
+       <target text="die Schwangerschaft" description="= die Gravidität; das Baby erwarten" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="narodit se" description="" />
+       <target text="geboren sein" description="das Baby ist geboren" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="strávit" description="" />
+       <target text="verbringen" description="Das Baby verbringt viel Zeit mit seinem Mutti; verbrachte - haben verbracht" />
+    </item>
+     <item>
+       <source text="křičet" description="" />
+       <target text="schreien" description="= kreischen; Sehr laut sprechen, die Babys schreien oft; schrie - haben geschrien" />
+    </item>
+     <item>
+       <source text="brigáda" description="" />
+       <target text="die Sommerarbeit" description="= die Ferienjob; Die Jugend finden of eine kleine Arbeit für Ferien" />
+    </item>
+     <item>
+       <source text="svatba" description="" />
+       <target text="die Hochzeit" description="Die Erwachsenen haben Hochzeit" />
+    </item>
+     <item>
+       <source text="manželský pár" description="" />
+       <target text="das Ehepaar" description=" Der Ehemann und die Ehefrau, die die Hochzeit hatten" />
+    </item>
+     <item>
+       <source text="brát se" description="oženit se / vdát se" />
+       <target text="heiraten" description="Deine Liebe ins Ehe nehmen; heiratete - haben geheiratet" />
+    </item>
+     <item>
+       <source text="rozvádět se" description="" />
+       <target text="scheiden" description="Die Ehe enden; schied - haben geschieden" />
+    </item>
+     <item>
+       <source text="manželství" description="" />
+       <target text="die Ehe" description="Zwei Leute heiraten and kommen in die Ehe" />
+    </item>
+     <item>
+       <source text="volby" description="" />
+       <target text="die Wahlen" description="Die Erwachsene wahlen den Präsident/Kanzler/Abgeordnete" />
+    </item>
+     <item>
+       <source text="poslanec" description="" />
+       <target text="der Abgeordnete" description="Ein Beruf; Die Abgeordnete arbeiten in Parlament" />
+    </item>
+     <item>
+       <source text="vnouče" description="" />
+       <target text="das Enkelkind" description="Die Kinder deiner Kinder" />
+    </item>
+     <item>
+       <source text="hádat se" description="" />
+       <target text="streiten" description="Leute, die nicht gleichen Meinungen haben, streiten; stritt; haben gestritten" />
+    </item>
+     <item>
+       <source text="peklo" description="" />
+       <target text="die Hölle" description="Der Tefel wohnt in der Hölle" />
+    </item>
+     <item>
+       <source text="zlý" description="" />
+       <target text="blöd" description="Nicht schön; eine Kuh sein" />
+    </item>
+     <item>
+       <source text="nepodařit se" description="" />
+       <target text="misslingen" description="Etwas nicht schaffen; misslang; haben misslungen" />
+    </item>
+     <item>
+       <source text="vytvořit" description="udělat, zvládnout" />
+       <target text="schaffen" description="Etwas machen; schaf ; haben geschaffen" />
+    </item>
+</vocabulary>
