@@ -6,5 +6,8 @@
         <content name="Demo1" url="http://vocabulary.neptuo.com/api/v1/cs-de_demo1.xml" />
         <content name="Demo2" url="http://vocabulary.neptuo.com/api/v1/cs-de_demo2.xml" />
         <content name="Základní slovíčka" url="http://vocabulary.neptuo.com/api/v1/cs-de_hp.xml" />
+        <content name="Základní slovíčka (1)" url="http://vocabulary.neptuo.com/api/v1/cs-de_general1.xml" />
+        <content name="Základní slovíčka (2)" url="http://vocabulary.neptuo.com/api/v1/cs-de_general2.xml" />
+        <content name="Základní slovíčka (3)" url="http://vocabulary.neptuo.com/api/v1/cs-de_general3.xml" />
     </vocabulary>
 </vocabularies>
