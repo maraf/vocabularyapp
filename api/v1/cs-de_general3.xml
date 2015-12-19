@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vocabulary>
+    <item>
+       <source text="obchod" description="" />
+       <target text="das Geschäft" description="= der Laden; man kann etwas kaufen darin" />
+    </item>
+     <item>
+       <source text="staveniště" description="" />
+       <target text="die Baustelle" description="Der Platz darauf man baut" />
+    </item>
+     <item>
+       <source text="tvrdý" description="" />
+       <target text="hart" description="Der Diamant is das hartest Mineral" />
+    </item>
+     <item>
+       <source text="stáj" description="" />
+       <target text="das Stall" description="Das Haus für die Tiere" />
+    </item>
+     <item>
+       <source text="díra" description="" />
+       <target text="das Loch" description="leer Platz in dem Weg" />
+    </item>
+     <item>
+       <source text="navštívit" description="" />
+       <target text="besuchen" description="= besichtigen; jemanden besuchen" />
+    </item>
+     <item>
+       <source text="cihla" description="" />
+       <target text="der Ziegel" description="Man baut die Mauer darauf" />
+    </item>
+     <item>
+       <source text="zeď" description="" />
+       <target text="die Mauer" description="Berline Mauer trennte Berlin in zwei Teile" />
+    </item>
+     <item>
+       <source text="dělit" description="" />
+       <target text="teilen" description="In zwei Halben teilen; teilte - haben geteilt" />
+    </item>
+     <item>
+       <source text="pamětihodnost" description="" />
+       <target text="die Sehenswürdigkeit" description="Alte Kirche oder Dom kann eine Sehenswürdigkeit sein." />
+    </item>
+     <item>
+       <source text="zeměpis" description="" />
+       <target text="die Erdkunde" description="= die Landeskunde; Studenten lernen über Landen und Staaten" />
+    </item>
+     <item>
+       <source text="strach" description="" />
+       <target text="die Angst" description="Angst vor (3.p) etwas haben; = fürchten; etwas nicht magen (vor der Spinne Angst haben)" />
+    </item>
+     <item>
+       <source text="bát" description="/bát se" />
+       <target text="fürchten" description="= Angst haben; Ich fürchte du hast recht / sich im Dunkeln fürchten / sich fürchten für die Gesundheit; fürchtete - haben gefürchtet " />
+    </item>
+     <item>
+       <source text="hněv" description="" />
+       <target text="der Zorn" description="= der Ärger; = die Wut" />
+    </item>
+     <item>
+       <source text="spojení" description="" />
+       <target text="der Anschluss" description="= die Verbindung" />
+    </item>
+     <item>
+       <source text="pavouk" description="" />
+       <target text="die Spinne" description="= ein Tier, sie hat acht Beinen" />
+    </item>
+     <item>
+       <source text="navazující" description="" />
+       <target text="anschluss-" description="der Anschlussflug ~ navazující let" />
+    </item>
+     <item>
+       <source text="let" description="" />
+       <target text="der Flug" description="= der Weg mit dem Flugzeug" />
+    </item>
+     <item>
+       <source text="letadlo" description="" />
+       <target text="das Flugzeug" description="Es fliegt und die Leute überträgt" />
+    </item>
+     <item>
+       <source text="přenést" description="" />
+       <target text="übertragen" description="etwas anderswo legen" />
+    </item>
+     <item>
+       <source text="jinde" description="" />
+       <target text="anderswo" description="= nicht hier, sie ist anderswo" />
+    </item>
+     <item>
+       <source text="vhodný" description="" />
+       <target text="tauglich" description=" korrekt für die Situation" />
+    </item>
+     <item>
+       <source text="mravenec" description="" />
+       <target text="die Ameise" description="= ein Tier, sie lebt im Wald, sie hat secht Beinen" />
+    </item>
+     <item>
+       <source text="mokrý" description="" />
+       <target text="nass" description="mit Wasser bedëckt; Opposit von trocken" />
+    </item>
+     <item>
+       <source text="suchý" description="" />
+       <target text="trocken" description="Weil ich das Brot am Luft gelassen habe, es ist jetzt ganz trocken" />
+    </item>
+     <item>
+       <source text="možná" description="" />
+       <target text="vielleicht" description="" />
+    </item>
+     <item>
+       <source text="přihlásit se" description="" />
+       <target text="sich melden" description="Jemandem sagen, dass du da bist; meldete - haben gemeldet" />
+    </item>
+     <item>
+       <source text="později" description="" />
+       <target text="nachträglich" description="Nicht jetzt, später" />
+    </item>
+     <item>
+       <source text="popelnice" description="" />
+       <target text="die Mühltonne" description="Nicht jetzt, später" />
+    </item>
+     <item>
+       <source text="vlastnost" description="" />
+       <target text="die Eigenschaft" description="Die Eigenschaften charakterisieren die Sache/die Person" />
+    </item>
+     <item>
+       <source text="líný" description="" />
+       <target text="faul" description="Er möchte nichts machen; Opposit von faul" />
+    </item>
+     <item>
+       <source text="pilný" description="" />
+       <target text="fleissig" description="Er arbeitet viel" />
+    </item>
+     <item>
+       <source text="těsto" description="" />
+       <target text="der Teig" description="Man macht Brötchen daraus" />
+    </item>
+     <item>
+       <source text="nadšený" description="" />
+       <target text="begeistert" description="Sehr glücklig über etwas" />
+    </item>
+     <item>
+       <source text="přehánět" description="" />
+       <target text="übertreiben" description="übertrieb - haben übertrieben" />
+    </item>
+     <item>
+       <source text="utrácet" description="" />
+       <target text="verswenden" description="Er verschwendet alles Geld, jetzt hat er nichts.; ich verschwende, du verswendest - verschwendete - haben verschwendet" />
+    </item>
+     <item>
+       <source text="zachránit" description="" />
+       <target text="retten" description="Jemanden hilfen, das Leben retten; Ich rette, du rettest - rettete - haben gerettet" />
+    </item>
+     <item>
+       <source text="pozdní" description="" />
+       <target text="verspätet" description="Es werde zu spät gemacht, es ist verspätet" />
+    </item>
+     <item>
+       <source text="začít" description="" />
+       <target text="anfangen" description="=beginnen; = starten; einleiten; ich afange an, du fängst an - fing an - haben angefangen" />
+    </item>
+     <item>
+       <source text="předtím" description="" />
+       <target text="vorher" description="Ich habe es Monat vorher bestellt" />
+    </item>
+     <item>
+       <source text="prázdný" description="" />
+       <target text="leer" description="Es ist nichts da, dieses Zimmer ist leer; Opposit von voll" />
+    </item>
+     <item>
+       <source text="plný" description="" />
+       <target text="voll" description="" />
+    </item>
+     <item>
+       <source text="tichý" description="" />
+       <target text="leise" description="Wenn man leis spricht, er wispelt" />
+    </item>
+     <item>
+       <source text="hlasitý" description="" />
+       <target text="laut" description="Wenn man laut spricht, er schreit" />
+    </item>
+     <item>
+       <source text="šeptat" description="" />
+       <target text="wispern" description="Leise sprechen; ich wispere, du wisperst - wisperte - haben gewispert" />
+    </item>
+     <item>
+       <source text="dílna" description="" />
+       <target text="der Werkstatt" description="Der Tischler arbeitet darin" />
+    </item>
+     <item>
+       <source text="truhlář" description="" />
+       <target text="der Tischler" description="ein Beruf; er arbeitet mit Holz, er macht Möbel daraus" />
+    </item>
+     <item>
+       <source text="povolání" description="" />
+       <target text="der Beruf" description="= eine Arbeit was man macht" />
+    </item>
+     <item>
+       <source text="dřevo" description="" />
+       <target text="das Holz" description="Das Material, man macht Tische, Stühle, Regale daraus" />
+    </item>
+     <item>
+       <source text="nábytek" description="" />
+       <target text="das Möbel" description="Alles das in dem Zimmer ist - die Stühle, die Tische ..." />
+    </item>
+     <item>
+       <source text="nutný" description="" />
+       <target text="notwendig" description="Es muss sein" />
+    </item>
+     <item>
+       <source text="obyčejný" description="" />
+       <target text="gewöhnliche" description="Es ist nichts speziell" />
+    </item>
+     <item>
+       <source text="slabý" description="" />
+       <target text="schwach" description="Er kann es nicht heben, weil er zu schwach ist; Oppposit von stark" />
+    </item>
+     <item>
+       <source text="silný" description="" />
+       <target text="stark" description="Er ist so stark den Elefant zu heben; Opposit von schwach" />
+    </item>
+     <item>
+       <source text="zvednout" description="" />
+       <target text="heben" description="Etwas nehmen hoch; Ich hebe, du hebst - hob - haben gehoben" />
+    </item>
+     <item>
+       <source text="pravidlo" description="" />
+       <target text="das Regel" description="Die Einwohner des Landes musen die Regeln des Landes folgen" />
+    </item>
+     <item>
+       <source text="následovat" description="" />
+       <target text="folgen" description="Nach jemanden oder etwas gehen; ich folge, du folgst - folgte - haben gefolgt" />
+    </item>
+     <item>
+       <source text="domluvit se" description="" />
+       <target text="sich verabreden" description="Etwas entscheiden zusammen mit anderen Leute; ich verabrede mich - verabredete - haben verabredet" />
+    </item>
+     <item>
+       <source text="dopraví zácpa" description="" />
+       <target text="die Verkehrstau" description="Zu viel Autos in der Stadt verursachen sie" />
+    </item>
+     <item>
+       <source text="způsobit" description="" />
+       <target text="verursachen" description="der Grund für etwas sein; ich verursache, du verursachst - verursachte - haben verursacht" />
+    </item>
+     <item>
+       <source text="být vinnen" description="(něčím)" />
+       <target text="Schuld sein an" description=" = Wer hat es getan? Wer ist Schuld an das kaputt Fenster?" />
+    </item>
+     <item>
+       <source text="důkaz" description="" />
+       <target text="der Beweis" description="" />
+    </item>
+     <item>
+       <source text="náskok" description="" />
+       <target text="der Vorsprung" description="Du bist weiter als die anderen" />
+    </item>
+     <item>
+       <source text="pocházet" description="" />
+       <target text="stammen" description="= kommen aus; Woher stammen sie? = Woher kommen sie?" />
+    </item>
+     <item>
+       <source text="povoláním" description="" />
+       <target text="beruflich" description="Was machen Sie beruflich? = Was für einen Beruf machen Sie aus?" />
+    </item>
+     <item>
+       <source text="nápomocen" description="" />
+       <target text="behilflich" description="Wie kann ich Ihnen behilflich sein? = Wie kann ich Ihnen hilfen?" />
+    </item>
+     <item>
+       <source text="opakovat" description="" />
+       <target text="wiederholen" description="Etwas noch einmal sagen/machen; ich wiederhole, du wiederholst - wiederholte - haben wiederholt" />
+    </item>
+     <item>
+       <source text="anamnéza" description="" />
+       <target text="die medizinische Vorgeschichte" description="= die Krankengeschichte, = die Anamnese; Es ist gepasst in der Vergangenheit; in Medizin Historie des Patientes" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="trápení" description="" />
+       <target text="das Leiden" description="Etwas ist nicht gut für dich, du bist traurig daraus" />
+    </item>
+     <item>
+       <source text="potíž" description="zdravotní" />
+       <target text="die Beschwerde" description="Es macht deines Leben schwerer" />
+    </item>
+     <item>
+       <source text="zhoršit se" description="" />
+       <target text="sich verschlechtern" description="Ich verschlechtere mich, du verschlechterst dich - verschlechterte - haben verschlechtert" />
+    </item>
+     <item>
+       <source text="další" description="" />
+       <target text="sonstig" description="= andere" />
+    </item>
+     <item>
+       <source text="okolí" description="" />
+       <target text="die Umgebung" description="Die Leute du triffst jeden Tag, deine Familie und Kolegen z.B." />
+    </item>
+     <item>
+       <source text="spozorovat" description="" />
+       <target text="bemerken" description="Merken etwas neues" />
+    </item>
+     <item>
+       <source text="podobný" description="" />
+       <target text="ähnlich" description="Etwas nicht zu unterschiendlich; Opposit von verschieden" />
+    </item>
+     <item>
+       <source text="rozdílný" description="" />
+       <target text="unterschiendlich" description="= verschieden; Zwei Sachen sind nicht ähnlich; Opposit von ähnlich" />
+    </item>
+     <item>
+       <source text="pořadí" description="" />
+       <target text="die Reihenfolge" description="Wie Sachen gehen hinter einander" />
+    </item>
+     <item>
+       <source text="obtíž" description="" />
+       <target text="die Beschwerung" description="Etwas macht die Aktivität schwerer und du beschwerst dich darüber" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="měřit" description="" />
+       <target text="messen" description="Das Fiber messen - wie hoch die Temperatur ist" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="průjem" description="" />
+       <target text="der Durchfall" description="Die Störung der Verdauung - der Stuhlgang ist schnell und flüssig" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zácpa" description="" />
+       <target text="die Verstopfung" description="Die Störung der Verdauung - der Stuhlgang ist hart and geht nicht leicht" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="močení" description="" />
+       <target text="das Wasserlassen" description="Der Urin lassen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pálit" description="" />
+       <target text="brennen" description="Beim Wasselassen brennen - der Schmerz beim Harnblaseentzündung" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zánět" description="" />
+       <target text="die Entzündung" description="Das Anzeichen einer Aktivierung des Immunsystems" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="močový měchýr" description="" />
+       <target text="die Harnblase" description="Ein Körperteil des Harntrakts, darin wird Urin gespeichert" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="stolice" description="" />
+       <target text="der Stuhlgang" description="= der Stuhl; das Ausscheiden des Verdauungtraktes" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nevolnost" description="" />
+       <target text="die Übelkeit" description="Man fühlt sich nicht gut von dem Magen und vielleicht kann davon erbrechen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="noční pot" description="" />
+       <target text="der Nachtschweiss" description="Man fühlt sich heiss und die Haut lasst Wasser; es ist ein B-Symptom" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="váhový úbytek" description="" />
+       <target text="der Gewichtsverlust" description="Man nimmst ab" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="porucha" description="" />
+       <target text="die Störung" description="Es funktioniert schlecht - die Schlafstörung" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="selhání" description="" />
+       <target text="das Versagen" description="Es funktioniert nicht mehr - das Niereversagen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="trpět na" description="" />
+       <target text="leiden an" description=" = leiden unter; Leiden Sie unter einige Erkrankungen?" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nemoc" description="onemocnění" />
+       <target text="die Krankheit" description="= die Erkrankung; Die Grippe ist eine Krankheit" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="závrať" description="" />
+       <target text="der Schwindel" description="Man fühlt sich nicht gut und oft fällt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="padat" description="" />
+       <target text="fallen" description="Nicht standen bleiben; fiel; gefallen sein" />
+       
+    </item>
+     <item>
+       <source text="vysoký tlak" description="" />
+       <target text="der Bluthochdruck" description="= die Hypertonie; RR über 130/90" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="cukrovka" description="" />
+       <target text="die Zuckerkrankheit" description="= der Zucker = der Diabetes; Erkrankung mit dem Nüchternblutzucker über 6,1 mmol/l" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nalačno" description="" />
+       <target text="nüchtern" description="Nichts essen / Kein Alkohol trinken" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="žaludeční vřed" description="" />
+       <target text="der Magengeschür" description="Krankheit der Magens, man kann bluten daraus" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="krvácet" description="" />
+       <target text="bluten" description="= der Magenulkus; Das Blut lassen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="dušnost" description="" />
+       <target text="die Atemnot" description="= die Luftnot; Subjektiv Gefühl um hart zu atmen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="žláza" description="" />
+       <target text="die Drüse" description="Das Organ, dass die Hormonen / das Sekret erzeugt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vyrábět" description="" />
+       <target text="erzeugen" description="= produzieren; Etwas machen; erzeugte; haben erzeugt" />
+    </item>
+     <item>
+       <source text="štítná žláza" description="" />
+       <target text="die Schilddrüse" description="Die Drüse in dem Hals" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="slinné žlázy" description="" />
+       <target text="die Speicheldrüsen" description="Die Drüsen in dem Mund" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="slinivka" description="" />
+       <target text="die Bauchspeicheldrüse" description="= das Pankreas; Die Drüse in dem Bauch" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nadledviny" description="" />
+       <target text="die Nebennieren" description="Die Drüse über der Niere" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="varle" description="" />
+       <target text="der Hoden" description="= der Testikel; ein paariges männliches Organ, er produziert die Samenfäden" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pohlaví" description="" />
+       <target text="das Geschlest" description="Frau oder Mann" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pohlavní styk" description="" />
+       <target text="der Geschlestverkehr" description="= der Sex" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="jizva" description="" />
+       <target text="die Narbe" description="Die Operationen lassen die Narben" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="očkování" description="" />
+       <target text="die Impfung" description="Der Kinderarzt spritzt der Impfung gegen einige Erkrankungen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="prostředek" description="prášky na ..." />
+       <target text="das Mittel" description="= die Tabletten = das Medikament; Das Schmerzmittel = Mittel gegen Schmerzen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="slezina" description="" />
+       <target text="die Milz" description="Ein Organ, es sondert verälterter roter Blutkörperchen aus" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="červená krvinka" description="" />
+       <target text="das Blutkörperchen" description="= die Erythrozyt; es überträgt den Sauerstoff zu den Organe" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="mlčet" description="" />
+       <target text="schweigen" description="Nichts sagen; ich schweige, du schweigst - schwieg - haben geschwiegen" />
+
+    </item>
+     <item>
+       <source text="tajemství" description="" />
+       <target text="das Geheimnis" description="Du musst niemand sagen, es ist ein Geheimnis!" />
+
+    </item>
+     <item>
+       <source text="prozradit" description="" />
+       <target text="verraten" description="Nicht das Geheimnis jemandem sagen; ich verrate, du verrätst - verriet - haben verraten" />
+
+    </item>
+     <item>
+       <source text="zaváhání" description="" />
+       <target text="das Zögern" description="Ein paar Minuten denken und danach etwas machen" />
+
+    </item>
+     <item>
+       <source text="jednou" description="kdysi" />
+       <target text="einst" description="Einmal in der Vergangenheit" />
+
+    </item>
+     <item>
+       <source text="odpustit" description="" />
+       <target text="verzeihen" description="Der alte Greis verzieh seinen Kindern bis zu seinem Tode nicht; ich verzeihe, du verzeihst - verzieh - haben verzeihen" />
+
+    </item>
+     <item>
+       <source text="šotek" description="" />
+       <target text="der Wichtel" description="Eine Märchenfigur, die macht viel Unfug" />
+
+    </item>
+     <item>
+       <source text="plnit" description="naplnit" />
+       <target text="erfüllen" description="Füllen so lange du erfüllst es, zum Beispiel; ich erfülle, du erfüllst - erfüllte - haben erfüllt" />
+
+    </item>
+     <item>
+       <source text="vrčet" description="" />
+       <target text="knurren" description="Die Tiere knurren wenn etwas ihnen nicht gefällt; ich knurre, du knurrst - knurrte - haben geknurrt" />
+
+    </item>
+     <item>
+       <source text="vyděsit" description="vyplašit" />
+       <target text="schrecken" description="So viel Angst haben, dass man weg läuft; ich schrecke, du schreckst - schreckte - haben geschreckt" />
+
+    </item>
+     <item>
+       <source text="chytit" description="lapit" />
+       <target text="fangen" description="Ein Wildtier fangen und in dem Käfig setzen; ein Feuer fangen; ich fange, du fängst - fing - haben gefangen" />
+
+    </item>
+     <item>
+       <source text="vybrat" description="(si)" />
+       <target text="wählen" description="(sich); für etwas entscheiden; ich wähle, du wählst - wählte - haben gewählt" />
+
+    </item>
+     <item>
+       <source text="ultrazvuk" description="" />
+       <target text="der Ultraschall" description=" = Sonographie; spezielle Untersuchung mit dem Schall" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="rozloučení" description="" />
+       <target text="der Abschied" description="Jemand geht weg, du muss mit ihm Abschied unternehmen!" />
+
+    </item>
+     <item>
+       <source text="hnisavý" description="" />
+       <target text="eitrig" description="Es gibt eine Entzündung in der Narbe" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zánět" description="" />
+       <target text="die Entzündung" description="Aktivierung des Immunsystems gegen Infektionen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="mlčenlivost" description="" />
+       <target text="die Verschwiegenheit" description="= die Diskretion; = das Stillschweigen; Du sollst nicht die Privatsachen sagen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="povinnost mlčenlivosti" description="" />
+       <target text="die Schweigepflicht" description="Als Ärztin muss ich die Schweigepflicht einhalten" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vyžadovat" description="vyzývat" />
+       <target text="fordern" description="Etwas möchten; ich fordere, du forderst - fordete - haben gefordert" />
+   
+    </item>
+     <item>
+       <source text="slabost" description="" />
+       <target text="die Schwäche" description="Sich schwach fühlen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="hlen" description="" />
+       <target text="der Schleim" description="Das Produkt des Körpers, es schützt das Endothel" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="chránit" description="" />
+       <target text="schützen" description="Etwas in dem Sinn haben um es nicht zerstört sein. Ich schütze, du schützt - schützte - haben geschützt" />
+      
+    </item>
+     <item>
+       <source text="tolerovat" description="snášet" />
+       <target text="vertragen" description="Können Sie alle Speizen vertragen? Ich vertrage, du verträgst - vertrug - haben vertragen" />
+       
+    </item>
+     <item>
+       <source text="celková bílkovina" description="" />
+       <target text="das Gesamteiweiss" description="Alle Proteine zusammen bilden das Gesamteiweiss." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="močovina" description="" />
+       <target text="die Harnsäure" description="Die Harnsäure ist das Endprodukt der Nukleotiden." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vyjádřit" description="vymačkat" />
+       <target text="ausdrücken" description="Über eine Idee besprechen, einen Verdacht auscdrücken; Ich drücke aus, du drückst aus - drückte aus - haben ausgedrückt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="příjem" description="" />
+       <target text="der Empfang" description="= die Aufnahme; Etwas (z.B. die Ware) aufnehmen." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zboží" description="" />
+       <target text="die Ware" description="Einige Sachen, z.B. Lebensmittel, die Elektronik .." />
+       
+    </item>
+     <item>
+       <source text="objednávka" description="přihlášení" />
+       <target text="die Anmeldung" description="Etwas bestellen, oder irgendwo die Applikation senden " />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="poloha" description="" />
+       <target text="die Lage" description="Die Lage sagt, woher sie sich finden, also Rechtlage oder Linkslage des Herzens" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="poznámka" description="" />
+       <target text="die Bemerkung" description="Alle Proteine zusammen bilden das Gesamteiweiss." />
+       
+    </item>
+     <item>
+       <source text="přibližně" description="" />
+       <target text="ungefähr" description="=etwa; Ich rauche ungefähr eine halbe Schachtel pro Tag" />
+      
+    </item>
+     <item>
+       <source text="zaměstnaný" description="činný" />
+       <target text="tätig" description="Ich bin auf dieser Station als Assistanzarzt tätig." />
+      
+    </item>
+     <item>
+       <source text="vlhký" description="" />
+       <target text="feucht" description="Es ist nich trocken, weil es im Wasser war." />
+       
+    </item>
+     <item>
+       <source text="obvaz" description="" />
+       <target text="das Wickeln" description="Das Gewebe das ist z. B. auf dem Knöchel eingerollt." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přehled" description="" />
+       <target text="die Übersicht" description="Eine kurze Liste der Sachen" />
+       
+    </item>
+     <item>
+       <source text="užitečný" description="" />
+       <target text="nützlich" description="Etwas gut" />
+       
+    </item>
+     <item>
+       <source text="výraz" description="" />
+       <target text="der Ausdruck" description="Der Name für etwas." />
+       
+    </item>
+     <item>
+       <source text="ústní" description="" />
+       <target text="mündlich" description="Etwas das wird gesagt" />
+       
+    </item>
+     <item>
+       <source text="použít" description="" />
+       <target text="verwenden" description="=benutzen; ich verwende, du verwendest - verwendete - haben verwendet" />
+       
+    </item>
+     <item>
+       <source text="smysluplný" description="užitečný" />
+       <target text="sinnvoll" description="Es ist nützlich und man kann es benutzen" />
+    
+    </item>
+     <item>
+       <source text="nejprve" description="nejdříve" />
+       <target text="zuerst" description="= zunächst; = zuerst; = als Erstes; = erstens" />
+    
+    </item>
+     <item>
+       <source text="zahájit" description="" />
+       <target text="einleiten" description="=anfangen; Der Direktor hat die Sitzung eingeleitet; ich leite ein, du leitest ein - leitete ein - haben eingeleitet" />
+       
+    </item>
+     <item>
+       <source text="nakonec" description="" />
+       <target text="schliesslich" description="= zum Schluss; Am Ende" />
+      
+    </item>
+     <item>
+       <source text="dále" description="ještě" />
+       <target text="ferner" description="=weiter" />
+     
+    </item>
+     <item>
+       <source text="domněnka" description="" />
+       <target text="die Vermutung" description="Etwas du denkst" />
+       
+    </item>
+     <item>
+       <source text="zřejmě" description="" />
+       <target text="vermutlich" description="Es ist wahrscheinlich so." />
+       
+    </item>
+     <item>
+       <source text="názor" description="mínění" />
+       <target text="die Ansicht" description="= die Meinung; Ich denke etwas darüber" />
+      
+    </item>
+     <item>
+       <source text="přesvědčit" description="" />
+       <target text="überzeugen" description="Ich denke es ist so, ich glaube es sicher; ich überzeuge, du überzeigst - überzeugte - haben überzeugt" />
+     
+    </item>
+     <item>
+       <source text="pád" description="zhroucení" />
+       <target text="der Sturz" description="= der Fall; Man hat den Schwindel und fällt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="kvůli" description="zdůvodu" />
+       <target text="aufgrund" description="= wegen etwas; Aufgrund ihrer Schmertzen hat sie 3 Tabletten angenommen" />
+       
+    </item>
+     <item>
+       <source text="okolí" description="" />
+       <target text="das Umfeld" description="= die Umwelt; = die Umgebung; Alles das ringsherum ist." />
+       
+    </item>
+     <item>
+       <source text="kymácet" description="" />
+       <target text="schwanken" description="Es verändert sich viel; ich schwanke, du schwankest - schwankte - haben/sein geschwankt" />
+       
+    </item>
+     <item>
+       <source text="vylučování" description="zhroucení" />
+       <target text="die Ausscheidung" description="Es ist wichtig bei den Patienten mit Herzinsuffizienz die Urinausscheidung zu messen." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vznik" description="původ" />
+       <target text="die Genese" description="Die Genese des Hypokaliämie ist unbekannt." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nedostatečný" description="chybný, vadný" />
+       <target text="mangelhaft" description="Ich habe mangelhafte Ausbildung für diese Arbeit." />
+       <tag>Lékařská NJ</tag>
+    </item>
+</vocabulary>
