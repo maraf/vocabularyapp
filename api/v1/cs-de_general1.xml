@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vocabulary>
+    <item>
+       <source text="Papoušek" description="Hodně peří na hromádce." />
+       <target text="der Papagei" description="Ein Tier mit den bunten Federn." />
+    </item>
+    <item>
+       <source text="pírko" description="" />
+       <target text="die Feder" description="Die Vögel haben es." />
+    </item>
+    <item>
+       <source text="Kamarád" description="" />
+       <target text="der Kumpel" description="= der Freund" />
+    </item>
+    <item>
+       <source text="bohužel" description="" />
+       <target text="leider" description="Ich bin nicht glücklig dass Ich es machen muss" />
+       </item>
+     <item>
+       <source text="za" description="(něčím)" />
+       <target text="hinter" description="hinter (3.p /4.p)..." />
+    </item>
+     <item>
+       <source text="hodnota" description="" />
+       <target text="der Wert" description="die Qualität, der Preis; Wert legen = klást důvod" />
+    </item>
+     <item>
+       <source text="hodnotný" description="" />
+       <target text="vollwertig" description="Es hat viel Wert, höche Qualität." />
+    </item>
+     <item>
+       <source text="rozmanitost" description="" />
+       <target text="die Abwechslung" description="Es verändert" />
+    </item>
+     <item>
+       <source text="čistý" description="" />
+       <target text="sauber" description="= rein." />
+    </item>
+     <item>
+       <source text="užívat si" description="" />
+       <target text="geniessen" description="Die Ferien geniessen." />
+    </item>
+     <item>
+       <source text="prádzniny" description="" />
+       <target text="die Ferien" description="Die Schülern haben es im Juli und August." />
+    </item>
+     <item>
+       <source text="řádek" description="" />
+       <target text="die Zeile" description="Der Satz in der gleiche Linie." />
+    </item>
+     <item>
+       <source text="odstavec" description="" />
+       <target text="der Absatz" description="Einigen Sätze in einem Block." />
+    </item>
+     <item>
+       <source text="věta" description="" />
+       <target text="der Satz" description="Einigen Wörter mit der Bedeutung." />
+    </item>
+     <item>
+       <source text="význam" description="" />
+       <target text="die Bedeutung" description="Was es ist." />
+    </item>
+     <item>
+       <source text="znamenat" description="" />
+       <target text="bedeuten" description="Was bedeutet es? = Was ist das? (z.B. was bedeutet das Wort) ; bedeutete ; haben bedeutet" />
+    </item>
+     <item>
+       <source text="několik" description="" />
+       <target text="einige" description="= ein paar." />
+    </item>
+     <item>
+       <source text="anketa" description="" />
+       <target text="die Umfrage" description="= der Interview." />
+    </item>
+     <item>
+       <source text="vtip" description="" />
+       <target text="der Witz" description="Eine lustige Situation." />
+    </item>
+     <item>
+       <source text="vtipný" description="" />
+       <target text="lustig" description="Es macht dich lachen." />
+    </item>
+     <item>
+       <source text="nádobí" description="" />
+       <target text="das Geschirr" description="das Loeffel, der Messer, der Teller ...; das Geschirr spülen." />
+    </item>
+     <item>
+       <source text="lžíce" description="" />
+       <target text="das Loeffel" description="Man isst die Suppe damit" />
+    </item>
+     <item>
+       <source text="nůž" description="" />
+       <target text="der Messer" description="Man scheidet das Essen damit" />
+    </item>
+     <item>
+       <source text="vidlička" description="" />
+       <target text="die Gabel" description="Sie hat vier Stacheln; man isst damit" />
+    </item>
+     <item>
+       <source text="talíř" description="" />
+       <target text="der Teller" description="Er ist weiss und rund und man legt das Essen darauf." />
+    </item>
+     <item>
+       <source text="osten" description="" />
+       <target text="der Stachel" description="Der Igel hat viel Stacheln" />
+    </item>
+     <item>
+       <source text="ježek" description="" />
+       <target text="der Igel" description="Ein Tier; er hat Stacheln und er tragt die Äpfel" />
+    </item>
+     <item>
+       <source text="to záleží" description="" />
+       <target text="es kommt auf an" description="Es kommt auf das Wetter an; es kommt auf an wer Geld hat." />
+    </item>
+     <item>
+       <source text="sytý" description="" />
+       <target text="satt" description="kein Hunger mehr; Ich bin satt." />
+    </item>
+     <item>
+       <source text="omlouvat se" description="" />
+       <target text="sich entschuldigen" description="Er/sie/es entschuldigt sich/etwas." />
+    </item>
+     <item>
+       <source text="obsluha" description="" />
+       <target text="die Bedienung" description="Der Kellner im Restaurant." />
+    </item>
+     <item>
+       <source text="číšník" description="" />
+       <target text="der Kellner" description="Im Restaurant bestellst du bei ihm." />
+    </item>
+     <item>
+       <source text="plesnivý" description="" />
+       <target text="verschimmelt" description="Obst/Gemüse schon nicht gut für Essen." />
+    </item>
+     <item>
+       <source text="vyhodit" description="" />
+       <target text="wegwerfen" description="ich werfe ... weg, du wirfst ... weg, er/sie/es wirft ... weg ; warf weg ; haen weggeworfen" />
+    </item>
+     <item>
+       <source text="málo" description="" />
+       <target text="wenig" description="Nicht viel; Ich habe wenig Geld." />
+    </item>
+     <item>
+       <source text="sklep" description="" />
+       <target text="der Keller" description="der Raum für Zwiebeln/Wein." />
+    </item>
+     <item>
+       <source text="cibule" description="" />
+       <target text="der Zwiebel" description="ein Gemüse, es macht mann weinen" />
+    </item>
+     <item>
+       <source text="česnek" description="" />
+       <target text="der Knoblauch" description="ein Gemüse. es ist scharf" />
+    </item>
+     <item>
+       <source text="pálivý" description="" />
+       <target text="scharf" description="Der Pfeffer ist scharf, Curry ist scharf." />
+    </item>
+    
+     <item>
+       <source text="plakat" description="" />
+       <target text="weinen" description="Kleine Kinder weinen oft. ; weinte ; haben geweint" />
+    </item>
+     <item>
+       <source text="stěžovat si" description="" />
+       <target text="sich beschweren" description="Sich beschweren bei (3.p) dem Kellner über (4.p) das Essen ; du bist nicht zufrieden so du beschwerst dich. ; beschwerte ; haben beschwert" />
+    </item>
+     <item>
+       <source text="spokojený" description="" />
+       <target text="zufrieden" description="Alles ist gut, du bist glücklig. ; zufrieden sein mit (3.p)" />
+    </item>
+     <item>
+       <source text="pravda" description="" />
+       <target text="die Wahrheit" description="Opposit von dem Lüge." />
+    </item>
+     <item>
+       <source text="lež" description="" />
+       <target text="der Lüge" description="Unwahrheit; Opposit von der Wahrheit." />
+    </item>
+     <item>
+       <source text="lhát" description="" />
+       <target text="lügen" description="nicht Wahrheit sagen; ich lüge, du lügst ... ; log ; haben gelogen" />
+    </item>
+     <item>
+       <source text="pravděpodobně" description="" />
+       <target text="wahrscheinlich" description="" />
+    </item>
+     <item>
+       <source text="červená řepa" description="" />
+       <target text="die Bete" description=" = die rote Rübe" />
+    </item>
+     <item>
+       <source text="dost" description="" />
+       <target text="genug" description="Ich habe genug Zeit; Der Shirm ist gross genug, wir gehen beide darunter." />
+    </item>
+     <item>
+       <source text="obzvlášť" description="" />
+       <target text="besonders" description="es is besser als sehr gut; besonders gutes Essen" />
+    </item>
+     <item>
+       <source text="jehně" description="" />
+       <target text="das Lamm" description="kleines Schaf" />
+    </item>
+     <item>
+       <source text="ovce" description="" />
+       <target text="das Schaf" description="ein Tier mit weisser Wolle" />
+    </item>
+     <item>
+       <source text="ovčí vlna" description="" />
+       <target text="die Wolle" description="Das weisse Material das kommt von den Schafe" />
+    </item>
+     <item>
+       <source text="plavky" description="" />
+       <target text="die Badeanzug" description=" = die Badehose/die Bikini; die Kleidung für Baden" />
+    </item>
+     <item>
+       <source text="koupání" description="" />
+       <target text="das Baden" description="ins Wasser gehen" />
+    </item>
+     <item>
+       <source text="vyšetřit" description="" />
+       <target text="untersuchen" description="die Ärztin hat mir untersucht; untersuchte ; haben untersucht" />
+    </item>
+     <item>
+       <source text="vykat" description="" />
+       <target text="siezen" description="formal sein, Ihr und Sie sagen" />
+    </item>
+     <item>
+       <source text="tykat" description="" />
+       <target text="duzen" description="informal sein, mit Freund" />
+    </item>
+     <item>
+       <source text="bednička" description="" />
+       <target text="die Kiste" description="quadraater Sache, man kann andere Sachen darin geben" />
+    </item>
+     <item>
+       <source text="kelímek" description="" />
+       <target text="der Becher" description="ein Becher Sahne / Joghurt" />
+    </item>
+     <item>
+       <source text="mouka" description="" />
+       <target text="das Mehl" description="Man macht Brot / Brötchen daraus." />
+    </item>
+     <item>
+       <source text="marmeláda" description="" />
+       <target text="die Marmelade" description=" = die Konfitüre (im Schweiz); die Paste aus dem Obst" />
+    </item>
+     <item>
+       <source text="totiž" description="" />
+       <target text="nämlich" description="" />
+    </item>
+     <item>
+       <source text="uhlí" description="" />
+       <target text="die Kohle" description="man macht Feuer damit unter dem Grill" />
+    </item>
+     <item>
+       <source text="drůbež" description="" />
+       <target text="das Geflügel" description="verchiedenen Vögel (Hühn, Gans ...)" />
+    </item>
+     <item>
+       <source text="husa" description="" />
+       <target text="die Gans" description="Ein Vogel; sie ist weiss" />
+    </item>
+     <item>
+       <source text="žárovka" description="" />
+       <target text="die Glühbirne" description="man macht Licht mit ihr" />
+    </item>
+     <item>
+       <source text="žhnout" description="" />
+       <target text="glühen" description="Es ist warm und es scheint" />
+    </item>
+     <item>
+       <source text="okurka" description="" />
+       <target text="die Gurke" description="Gemüse; es ist lang und grün; die Sauergurke" />
+    </item>
+     <item>
+       <source text="žízeň" description="" />
+       <target text="der Durst" description="Ich möchte trinken; Ich bin durstig" />
+    </item>
+     <item>
+       <source text="hlad" description="" />
+       <target text="der Hunger" description="Ich möchte essen; Ich bin hungrig" />
+    </item>
+     <item>
+       <source text="potraviny" description="" />
+       <target text="das Lebensmittel" description="Alles wir essen kann." />
+    </item>
+     <item>
+       <source text="nákupní vozík" description="" />
+       <target text="der Einkaufswagen" description="Der Wagen für Einkaufen." />
+    </item>
+     <item>
+       <source text="nákupní košík" description="" />
+       <target text="der Einkaufskorb" description="Der Korb für Einkaufen." />
+    </item>
+     <item>
+       <source text="řeznictví" description="" />
+       <target text="die Metzgerei" description=" = die Fleischerei; das Geschäft mit Fleisch" />
+    </item>
+     <item>
+       <source text="cukrárna" description="" />
+       <target text="die Konditorei" description="Das Geschäft für süsses Lebensmittel." />
+    </item>
+     <item>
+       <source text="rybí prsty" description="" />
+       <target text="die Fischstäbchen" description="Ein Stück von Fischfleisch im Semmelmehl" />
+    </item>
+     <item>
+       <source text="strouhanka" description="" />
+       <target text="der Semmelmehl" description=" = der Paniermehl; der Pulver aus getrockene Brötchen / Brot" />
+    </item>
+     <item>
+       <source text="růst" description="" />
+       <target text="wachsen" description="Die Kinder wachsen in die Erwachsene ; Wenn es regnet, die Pilzen wachsen im Wald." />
+    </item>
+     <item>
+       <source text="paže" description="" />
+       <target text="der Arm" description="der Körperteil; über der Hand" />
+    </item>
+     <item>
+       <source text="ruka" description="" />
+       <target text="die Hand" description="der Körperteil; am Ende des Armes" />
+    </item>
+     <item>
+       <source text="vousy" description="" />
+       <target text="der Bart" description="Männer haben es, Haar am Kinn" />
+    </item>
+     <item>
+       <source text="břicho" description="" />
+       <target text="der Bauch" description="Wann man sehr viel isst, er wachset." />
+    </item>
+     <item>
+       <source text="prst" description="" />
+       <target text="der Finger" description="Man hat fünf an jeder Hand" />
+    </item>
+     <item>
+       <source text="střevo" description="" />
+       <target text="der Darm" description="der Blinddarm, der Dickdarm, der Dünndarm ; der Teil des Verdauungstraktes" />
+        <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="trávicí soustava" description="" />
+       <target text="der Verdauungstrakt" description="Die Organen für die Verarbeitung der Nährung" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="slepé střevo" description="" />
+       <target text="der Blinddarm" description=" = der Appendix" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="tlusté střevo" description="" />
+       <target text="der Dickdarm" description="Der letzte Teil des Verdauungstraktes." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="tenké střevo" description="" />
+       <target text="der Dünndarm" description="Längster Teil des Verdauungstraktes" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="krk" description="" />
+       <target text="der Hals" description="Zwischen dem Kopf und dem Körper" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="tělo" description="" />
+       <target text="der Körper" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="jediný" description="" />
+       <target text="einzig" description="" />
+    </item>
+     <item>
+       <source text="kost" description="" />
+       <target text="der Knochen" description="Ein Körperteil; Es ist weiss und hart, man kann es brechen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zlomit" description="" />
+       <target text="brechen" description="Sich einen Knochen brechen" />
+    </item>
+     <item>
+       <source text="kotník" description="" />
+       <target text="der Knöchel" description="Ein Körperteil; zwischen dem Unterschenkel und dem Fuss " />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="mezi" description="" />
+       <target text="zwischen" description="" />
+    </item>
+     <item>
+       <source text="stehno" description="" />
+       <target text="der Oberschenkel" description="Der obere Teil des Beines" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="lýtko" description="" />
+       <target text="der Unterschenkel" description="= die Wade; Der untere Teil des Beines" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="hlava" description="" />
+       <target text="der Kopf" description="Man tragt eine Mütze darauf" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="žaludek" description="" />
+       <target text="der Magen" description="Ein Körperteil; ein Sack für Nährung in unserem Körper" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pusa" description="" />
+       <target text="der Mund" description="Man isst damit" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="sval" description="" />
+       <target text="der Muskel" description="Man kann bewegen sich damit" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pohybovat (se)" description="" />
+       <target text="sich bewegen" description="bewegen etwas (der Arm / der Stuhl) ; sich bewegen" />
+    </item>
+     <item>
+       <source text="nehet" description="" />
+       <target text="der Nagel" description="Hartes Plättchen am Ende des Fingers" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zadek" description="" />
+       <target text="der Po" description="= der Assch (hanlivé); hinten unter dem Rücken" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="záda" description="" />
+       <target text="der Rücken" description="Die hintere Seite des Körpers" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zub" description="" />
+       <target text="der Zahn" description="Das weisse Plättchen in dem Mund" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="oko" description="" />
+       <target text="das Auge" description="Man guckt damit" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="noha" description="" />
+       <target text="das Bein" description="ein Körperteil; gut für gehen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="krev" description="" />
+       <target text="das Blut" description="Es ist rot, Arzt nimmt es mit der Spritze" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="mozek" description="" />
+       <target text="das Gehirn" description="Ein Organ im Kopf, man denkt damit" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="kloub" description="" />
+       <target text="das Gelenk" description="Zwischen zwei Knochen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="obličej" description="" />
+       <target text="das Gesicht" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="srdce" description="" />
+       <target text="das Herz" description="Ein Organ, es pumpt Blut" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="brada" description="" />
+       <target text="das Kinn" description="Der Bart wächst an dem Mannskinn" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="koleno" description="" />
+       <target text="das Knie" description="Das zweite Gelenk am Bein" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="ucho" description="" />
+       <target text="das Ohr" description="Man hört damit" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="hruď" description="" />
+       <target text="die Brust" description="Weibliche Brust - die Frauen haben es" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="kůže" description="" />
+       <target text="die Haut" description="Es bedeckt den ganzen Körper" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pokrývat" description="" />
+       <target text="bedecken" description="" />
+    </item>
+     <item>
+       <source text="játra" description="" />
+       <target text="die Leber" description="Ein Organ im Bauch, sie entgiftet das Blut" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="detoxikovat" description="" />
+       <target text="entgiften" description="Nehmen die Toxinen ab" />
+    </item>
+     <item>
+       <source text="jed" description="" />
+       <target text="das Gift" description="Die Substanz die schaded den Organismus" />
+    </item>
+     <item>
+       <source text="ret" description="" />
+       <target text="die Lippe" description="Der rosige Teil des Mund" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="plíce" description="" />
+       <target text="die Lunge" description="Ein Organ, man kann atmen damit" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="dýchat" description="" />
+       <target text="atmen" description="Man muss es machen für Leben, man braucht den Sauerstoff" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="kyslík" description="" />
+       <target text="der Sauerstoff" description="Man braucht es für Leben" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="život" description="" />
+       <target text="das Leben" description=" = existieren in dieser Welt" />
+    </item>
+     <item>
+       <source text="svět" description="" />
+       <target text="die Welt" description="" />
+    </item>
+     <item>
+       <source text="nos" description="" />
+       <target text="die Nase" description="Die Pyramide am Gesicht" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="ledvina" description="" />
+       <target text="die Niere" description="Die paarige Organen die filtrieren das Blut" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="rameno" description="" />
+       <target text="die Schulter" description="Sie ist zwischen dem Körper und der Arm" />
+       <tag>Lékařská NJ</tag>
+    </item>
+</vocabulary>
