@@ -354,4 +354,9 @@
        <target text="mangelhaft" description="Ich habe mangelhafte Ausbildung für diese Arbeit." />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="nedostatečný" description="chybný, vadný" />
+       <target text="mangelhaft" description="Ich habe mangelhafte Ausbildung für diese Arbeit." />
+       <tag>Lékařská NJ</tag>
+    </item>
 </vocabulary>
