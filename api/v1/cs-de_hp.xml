@@ -1834,4 +1834,54 @@
        <target text="mangelhaft" description="Ich habe mangelhafte Ausbildung für diese Arbeit." />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="množství" description="" />
+       <target text="die Menge" description="= die Quantität, = die Anzahl; Wie viel Sachen gibt es" />
+       
+    </item>
+     <item>
+       <source text="výzva" description="" />
+       <target text="die Herausforderung" description="Etwas schwer man muss meistern, z. B. ein Test" />
+       
+    </item>
+     <item>
+       <source text="požadavek" description="" />
+       <target text="die Forderung" description="Etwas man wollt" />
+       
+    </item>
+     <item>
+       <source text="zdánlivý" description="" />
+       <target text="scheinbar" description="Etwas scheint zwar so zu sein, ist aber nicht so" />
+       
+    </item>
+     <item>
+       <source text="obdržet" description="" />
+       <target text="erhalten" description=" = bekommen; Der schüler erhielt schlechte Bewertung; ich erhalte, du erhältst - erhielt - haben erhalten" />
+       
+    </item>
+     <item>
+       <source text="přihrádka" description="obor" />
+       <target text="das Fach" description="Das Fach in dem Schrank; Die Gruppe des ähnlichen Sachen" />
+       
+    </item>
+     <item>
+       <source text="dávka" description="" />
+       <target text="die Ration" description="Der Zeil der Menge, z.B. Essenration" />
+       
+    </item>
+     <item>
+       <source text="šroubovat" description="" />
+       <target text="schrauben" description="Befestigen mit Schrauben" />
+       
+    </item>
+     <item>
+       <source text="připevnit" description="" />
+       <target text="befestigen" description="Etwas zusammen verbinden" />
+       
+    </item>
+     <item>
+       <source text="vášeň" description="" />
+       <target text="die Leidenschaft" description="Ich habe Leidenschaft für Lesen, das liebe ich sehr." />
+       
+    </item>
 </vocabulary>
