@@ -1154,7 +1154,7 @@
     </item>
      <item>
        <source text="suchý" description="" />
-       <target text="trocken" description="Weil ich das Brot am Luft gelassen habe, es ist jetzt ganz trocken" />
+       <target text="trocken" description="= dürr; Weil ich das Brot am Luft gelassen habe, es ist jetzt ganz trocken" />
     </item>
      <item>
        <source text="možná" description="" />
@@ -1393,11 +1393,6 @@
      <item>
        <source text="pálit" description="" />
        <target text="brennen" description="Beim Wasselassen brennen - der Schmerz beim Harnblaseentzündung" />
-       <tag>Lékařská NJ</tag>
-    </item>
-     <item>
-       <source text="zánět" description="" />
-       <target text="die Entzündung" description="Das Anzeichen einer Aktivierung des Immunsystems" />
        <tag>Lékařská NJ</tag>
     </item>
      <item>
@@ -1882,6 +1877,41 @@
      <item>
        <source text="vášeň" description="" />
        <target text="die Leidenschaft" description="Ich habe Leidenschaft für Lesen, das liebe ich sehr." />
+       
+    </item>
+     <item>
+       <source text="řemen" description="pásek" />
+       <target text="der Riemen" description="Man benutzt es mit Hosen, es ist gewöhnlich aus Leder" />
+       
+    </item>
+     <item>
+       <source text="houpat se" description="" />
+       <target text="baumeln" description="" />
+       
+    </item>
+     <item>
+       <source text="oblast" description="krajina" />
+       <target text="die Gegend" description="= das Region; Sahara ist eine Gegend in Afrika. Ein Druck im Lebergegend." />
+       
+    </item>
+     <item>
+       <source text="dohlížet" description="hlídat, pást" />
+       <target text="hüten" description="Passen auf etwas, meist die Tieren; An einem Ort bleiben" />
+       
+    </item>
+     <item>
+       <source text="obrátit" description="nasměrovat" />
+       <target text="wenden" description="Die Richtung des Bewegungs ändern; ich wende, du wendest - wandte/wendete - haben gewendt." />
+       
+    </item>
+     <item>
+       <source text="dychtivý" description="" />
+       <target text="gierig" description="Jemand wollt etwas sehr viel - er ist gierig" />
+       
+    </item>
+     <item>
+       <source text="planina" description="" />
+       <target text="die Ebene" description="= das Flachland; Die flache Region" />
        
     </item>
 </vocabulary>
