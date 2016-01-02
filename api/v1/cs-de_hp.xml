@@ -1229,8 +1229,8 @@
        <target text="leise" description="Wenn man leis spricht, er wispelt" />
     </item>
      <item>
-       <source text="hlasitý" description="" />
-       <target text="laut" description="Wenn man laut spricht, er schreit" />
+       <source text="hlasitý" description="podle" />
+       <target text="laut" description="Wenn man laut spricht, er schreit; Laut Türkischen Medienberichten sagte der Präsident .." />
     </item>
      <item>
        <source text="šeptat" description="" />
@@ -1912,6 +1912,132 @@
      <item>
        <source text="planina" description="" />
        <target text="die Ebene" description="= das Flachland; Das flach Region" />
+       
+    </item>
+     <item>
+       <source text="chválit" description="" />
+       <target text="loben" description="Sagen das, dass etwas sehr gut ist; ich lobe, du lobst - lobte - haben gelobt" />
+       
+    </item>
+     <item>
+       <source text="vláda" description="" />
+       <target text="die Herrschaft" description="= die Regierung" />
+       
+    </item>
+     <item>
+       <source text="souvislost" description="" />
+       <target text="der Zusammenhang" description="Zwei Sachen kann in dem Zusammenhang stehen - sie sind verbinden" />
+       
+    </item>
+     <item>
+       <source text="vytrhnout" description="" />
+       <target text="reissen" description="Ein Teil aus etwas trennen; ich reisse, du reisst - riss - haben gerissen" />
+       
+    </item>
+    
+     <item>
+       <source text="moc" description="" />
+       <target text="die Macht" description="= die Gewalt" />
+       
+    </item>
+     <item>
+       <source text="zařídit (si)" description="" />
+       <target text="einrichten (sich)" description="Wir müssen uns unsere neue Wohnung mit Möbel einrichten" />
+       
+    </item>
+     <item>
+       <source text="přiměřený" description="" />
+       <target text="angemessen" description="= entsprechend; Die Leute sollen regelmässige Belastung machen, angemessen für ihres Alter." />
+       
+    </item>
+     <item>
+       <source text="zřejmý" description="" />
+       <target text="offenkundig" description="= evident; Der Grund des Versagens ist offenkundig" />
+       
+    </item>
+     <item>
+       <source text="hanebný" description="ničemný" />
+       <target text="schändlich" description="Etwas sehr schlecht" />
+       
+    </item>
+     <item>
+       <source text="zástupce" description="" />
+       <target text="der Vertreter" description="Man der repräsentiert anderen (z.B. die Gesellschaft" />
+       
+    </item>
+     <item>
+       <source text="snažit se" description="starat se" />
+       <target text="bemühen sich" description="bemühen sich um (4.p); Das Büro bemühte sich um eine Richtigstellung; ich bemühe, du bemühst - bemühte - haben bemüht " />
+       
+    </item>
+     <item>
+       <source text="opak" description="" />
+       <target text="das Gegenteil" description="= der Gegensatz; Opposit von etwas" />
+       
+    </item>
+     <item>
+       <source text="neodvratný" description="" />
+       <target text="zwangsläufig" description="unmöglich zu vermieden" />
+       
+    </item>
+     <item>
+       <source text="vyhnout" description="" />
+       <target text="vermieden" description="machen es so etwas möglich nicht passiert; ich vermiede, du vermiedest - vermied - haben vermieden" />
+       
+    </item>
+     <item>
+       <source text="nabídnout" description="" />
+       <target text="bieten" description="Etwas vorschlagen; ich biete. du bietest - bot - haben geboten" />
+       
+    </item>
+     <item>
+       <source text="dojem" description="" />
+       <target text="der Eindruck" description="Es scheint so" />
+       
+    </item>
+     <item>
+       <source text="už" description="" />
+       <target text="bereits" description="Es gibts bereits Beispiele in der Welt" />
+       
+    </item>
+     <item>
+       <source text="mezitím" description="" />
+       <target text="mittlerweile" description="" />
+       
+    </item>
+     <item>
+       <source text="rozšířit" description="" />
+       <target text="ausweiten" description="etwas weiter machen" />
+       
+    </item>
+     <item>
+       <source text="snažit se" description="směřovat" />
+       <target text="streben" description="Der neu Präsident strebt Änderung der Verfassung" />
+       
+    </item>
+     <item>
+       <source text="ústava" description="" />
+       <target text="die Verfassung" description="Grundlegender Gesetzestext, auf dem das Rechtssystem eines Staates aufbaut" />
+       
+    </item>
+     <item>
+       <source text="podstatný" description="základní" />
+       <target text="grundlegend" description="Der Grund" />
+       
+    </item>
+     <item>
+       <source text="většina" description="" />
+       <target text="die Mehrheit" description="Mehrere Leute als in dem anderen Teil" />
+       
+    </item>
+     <item>
+       <source text="záměr" description="" />
+       <target text="das Vorhaben" description="= die Absicht; Wille, etwas zu realisieren" />
+       
+    </item>
+     <item>
+       <source text="odkázaný" description="" />
+       <target text="angewiesen" description="Ich bin an deine Hilfe angewiesen" />
        
     </item>
 </vocabulary>
