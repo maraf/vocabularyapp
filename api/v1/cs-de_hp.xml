@@ -2040,4 +2040,9 @@
        <target text="angewiesen" description="Ich bin an deine Hilfe angewiesen" />
        
     </item>
+     <item>
+       <source text="podráždění" description="půvab" />
+       <target text="deer Reiz" description="= die Reizung; Ein elektrischer Reiz bewegt auch einen toten Muskel." />
+       
+    </item>
 </vocabulary>
