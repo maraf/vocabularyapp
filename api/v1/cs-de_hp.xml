@@ -1891,7 +1891,7 @@
     </item>
      <item>
        <source text="oblast" description="krajina" />
-       <target text="die Gegend" description="= das Region; Sahara ist eine Gegend in Afrika. Ein Druck im Lebergegend." />
+       <target text="der Bereich" description="= das Region; = die Gegend; Die Patientin kam aufgrund Schwäche im Vereich der linken OE und UE." />
        
     </item>
      <item>
@@ -2042,7 +2042,52 @@
     </item>
      <item>
        <source text="podráždění" description="půvab" />
-       <target text="deer Reiz" description="= die Reizung; Ein elektrischer Reiz bewegt auch einen toten Muskel." />
+       <target text="der Reiz" description="= die Reizung; Ein elektrischer Reiz bewegt auch einen toten Muskel." />
        
+    </item>
+     <item>
+       <source text="účel" description="smysl" />
+       <target text="der Zweck" description="=die Beweggrund; Das Ziel du möchtest erreichen" />
+       
+    </item>
+     <item>
+       <source text="posudek" description="" />
+       <target text="die Begutsachtung" description="Du meinst etwas aufgrund was du wisst" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="síla" description="" />
+       <target text="die Kraft" description="Die Kraft in beiden OE war unauffällig" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="oboustranně stejný" description="" />
+       <target text="seitengleich" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="upozornění" description="důkaz, informace" />
+       <target text="der Hinweis" description="CT kann den Hinweis auf (4.p) einen intrazerebrale Blutung geben" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přiměřený" description="" />
+       <target text="mässig" description="Der Befund am Herz war mässig" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="lebka" description="" />
+       <target text="der Schädel" description="Der Knochen darin befindet sich das Gehirn" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="událost" description="příhoda" />
+       <target text="das Geschehen" description="Etwas dass passiert ist. Er gibt kein ischämisches Geschehen am CT." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="prokazatelný" description="" />
+       <target text="nachweisbar" description="Wir haben viele Beweise, dass es passiert ist - es ist nachweisbar" />
+       <tag>Lékařská NJ</tag>
     </item>
 </vocabulary>
