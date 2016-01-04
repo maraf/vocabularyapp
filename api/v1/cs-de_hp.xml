@@ -2135,4 +2135,9 @@
        <target text="bestimmt" description="Es ist sicher" />
        
     </item>
+     <item>
+       <source text="zřetelný" description="" />
+       <target text="deutlich" description="Wir können es deutlich sehen" />
+       
+    </item>
 </vocabulary>
