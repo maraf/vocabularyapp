@@ -2090,4 +2090,49 @@
        <target text="nachweisbar" description="Wir haben viele Beweise, dass es passiert ist - es ist nachweisbar" />
        <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="objasnit" description="vysvětlit" />
+       <target text="erläutern" description="= abklären, erklären; Der CT-Befund erläutert die Diagnose; ich erläute, du erläutest - erläuterte - haben erläutert" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="potvrdit" description="" />
+       <target text="bestätigen" description=" = verifizieren; Die Verdachtsdiagnose wird bestätigt; ich bestätige, du bestätigst - bestätigte - haben bestätigt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="ošetřit" description="" />
+       <target text="behandeln" description="Die Entzündung wird mit Antibiose behandelt; ich behandle, du behandelst - behandlte - haben behandelt" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nařídit" description="" />
+       <target text="anordnen" description=" = veranlassen; Röntgenaufnahmen ist wichtug zu anordnen; ich ordne an, du ordnest an - ordnete an - haben angeordnet" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="získat" description="" />
+       <target text="erheben" description="Du solltest die Röntgenaufnahmen von Radiodiagnostikabteilung erheben!" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zahájit" description="zavést" />
+       <target text="einleiten" description="Wir haben die Anthihypertensive therapie eingeleitet; ich leite ei, du leitest ein - leitete an - haben eingeleitet" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přerušit" description="" />
+       <target text="abbrechen" description="Aufgrund schwere Blutdruckminderung sollten wir die Antihypertensive Therapie abbrechen." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="opatření" description="" />
+       <target text="die Massnahme" description="Aufgrund psychiatrischen Patienten in der Abteilung muss das Personal bestimmte Massnahmen einleiten" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="určitý" description="jistý" />
+       <target text="bestimmt" description="Es ist sicher" />
+       
+    </item>
 </vocabulary>
