@@ -27,23 +27,30 @@ public class UserGuessRepository {
         String selection = Sql.UserGuess._KEY + " LIKE ?";
         String[] selectionArgs = { key };
 
-        Cursor cursor = db.query(
-            Sql.UserGuess.TABLE,
-            projection,
-            selection,
-            selectionArgs,
-            null,
-            null,
-            null
-        );
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                Sql.UserGuess.TABLE,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+            );
 
-        if(cursor.moveToFirst()) {
-            int correctCount = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.UserGuess._CORRECT_COUNT));
-            int wrongCount = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.UserGuess._WRONG_COUNT));
-            return new UserGuessModel(this, key, correctCount, wrongCount);
+            if(cursor.moveToFirst()) {
+                int correctCount = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.UserGuess._CORRECT_COUNT));
+                int wrongCount = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.UserGuess._WRONG_COUNT));
+                return new UserGuessModel(this, key, correctCount, wrongCount);
+            }
+
+            return null;
+
+        } finally {
+            if(cursor != null)
+                cursor.close();
         }
-
-        return null;
     }
 
     private ContentValues getContentValues(UserGuessModel model) {

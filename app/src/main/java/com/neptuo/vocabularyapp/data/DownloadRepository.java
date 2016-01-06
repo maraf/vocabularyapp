@@ -29,33 +29,40 @@ public class DownloadRepository {
             Sql.Download._TARGET_LANGUAGE_ID
         };
 
-        Cursor cursor = db.query(
-            Sql.Download.TABLE,
-            projection,
-            null,
-            null,
-            null,
-            null,
-            null
-        );
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                Sql.Download.TABLE,
+                projection,
+                null,
+                null,
+                null,
+                null,
+                null
+            );
 
-        LanguageRepository languages = new LanguageRepository(db);
-        Map<Integer, DownloadModel> result = new HashMap<Integer, DownloadModel>();
+            LanguageRepository languages = new LanguageRepository(db);
+            Map<Integer, DownloadModel> result = new HashMap<Integer, DownloadModel>();
 
-        if(cursor.moveToFirst()) {
-            do {
-                int id = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._ID));
-                int sourceLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._SOURCE_LANGUAGE_ID));
-                int targetLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._TARGET_LANGUAGE_ID));
+            if(cursor.moveToFirst()) {
+                do {
+                    int id = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._ID));
+                    int sourceLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._SOURCE_LANGUAGE_ID));
+                    int targetLanguageId = cursor.getInt(cursor.getColumnIndexOrThrow(Sql.Download._TARGET_LANGUAGE_ID));
 
-                DownloadModel model = new DownloadModel(languages.get(sourceLanguageId), languages.get(targetLanguageId));
-                model.getUrls().addAll(getUrls(id));
-                result.put(id, model);
+                    DownloadModel model = new DownloadModel(languages.get(sourceLanguageId), languages.get(targetLanguageId));
+                    model.getUrls().addAll(getUrls(id));
+                    result.put(id, model);
 
-            } while (cursor.moveToNext());
+                } while (cursor.moveToNext());
+            }
+
+            return result;
+
+        } finally {
+            if(cursor != null)
+                cursor.close();
         }
-
-        return result;
     }
 
     private List<UrlModel> getUrls(int downloadId) {
@@ -67,29 +74,36 @@ public class DownloadRepository {
         String selection = Sql.Url._DOWNLOAD_ID + " LIKE ?";
         String[] selectionArgs = { String.valueOf(downloadId) };
 
-        Cursor cursor = db.query(
-            Sql.Url.TABLE,
-            projection,
-            selection,
-            selectionArgs,
-            null,
-            null,
-            null
-        );
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                Sql.Url.TABLE,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+            );
 
-        List<UrlModel> result = new ArrayList<UrlModel>();
+            List<UrlModel> result = new ArrayList<UrlModel>();
 
-        if(cursor.moveToFirst()) {
-            do {
+            if(cursor.moveToFirst()) {
+                do {
 
-                String name = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._NAME));
-                String value = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._VALUE));
-                result.add(new UrlModel(name, value));
+                    String name = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._NAME));
+                    String value = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Url._VALUE));
+                    result.add(new UrlModel(name, value));
 
-            } while (cursor.moveToNext());
+                } while (cursor.moveToNext());
+            }
+
+            return result;
+
+        } finally {
+            if(cursor != null)
+                cursor.close();
         }
-
-        return result;
     }
 
     public int save(DownloadModel model) {

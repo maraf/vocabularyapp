@@ -45,4 +45,5 @@
     <string name="session_group_hard">Těžká</string>
     <string name="session_group_medium">Střední</string>
     <string name="session_group_soft">Lehká</string>
+    <string name="preparing_phrases">Připravuji slovíčka</string>
 </resources>

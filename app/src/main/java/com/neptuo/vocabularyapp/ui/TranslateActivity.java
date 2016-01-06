@@ -1,10 +1,7 @@
 package com.neptuo.vocabularyapp.ui;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.FragmentTransaction;
-import android.app.Service;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -22,10 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.neptuo.vocabularyapp.R;
-import com.neptuo.vocabularyapp.data.Sql;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
 import com.neptuo.vocabularyapp.services.Session;
-import com.neptuo.vocabularyapp.services.models.DetailItemModel;
 import com.neptuo.vocabularyapp.services.models.DetailModel;
 import com.neptuo.vocabularyapp.services.models.UserDetailItemModel;
 import com.neptuo.vocabularyapp.ui.fragments.BrowseDialogFragment;
@@ -46,6 +41,8 @@ public class TranslateActivity extends DetailActivityBase {
     private TextView descriptionLabel;
     private TextView descriptionText;
     private TextView noItemText;
+
+    private ProgressDialog progress;
 
     private Button tryButton;
     private Button descriptionButton;
@@ -127,10 +124,6 @@ public class TranslateActivity extends DetailActivityBase {
         lastSelectedGroups.add(Session.Group.Medium);
         lastSelectedGroups.add(Session.Group.Soft);
 
-        DetailModel detail = prepareDetailModel();
-        session = new Session(detail, ServiceProvider.getUserStorage());
-        session.filterGroups(lastSelectedGroups);
-
         originalLabel = (TextView) findViewById(R.id.originalLabel);
         originalText = (TextView) findViewById(R.id.originalText);
         translatedLabel = (TextView) findViewById(R.id.translatedLabel);
@@ -142,6 +135,8 @@ public class TranslateActivity extends DetailActivityBase {
         tryButton = (Button) findViewById(R.id.tryButton);
         descriptionButton = (Button) findViewById(R.id.descriptionButton);
         nextButton = (Button) findViewById(R.id.nextButton);
+
+        DetailModel detail = prepareDetailModel();
 
         originalLabel.setText(detail.getDownload().getSourceLanguage().getName());
         translatedLabel.setText(detail.getDownload().getTargetLanguage().getName());
@@ -176,7 +171,7 @@ public class TranslateActivity extends DetailActivityBase {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isGivenUp) {
+                if (isGivenUp) {
                     prepareNextItem();
                 } else {
                     isGivenUp = true;
@@ -206,6 +201,8 @@ public class TranslateActivity extends DetailActivityBase {
             }
         });
 
+        session = new Session(detail, ServiceProvider.getUserStorage());
+        session.filterGroups(lastSelectedGroups);
         prepareNextItem(true);
     }
 

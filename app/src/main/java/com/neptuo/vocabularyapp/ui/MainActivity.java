@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.neptuo.vocabularyapp.MyApplication;
 import com.neptuo.vocabularyapp.R;
 import com.neptuo.vocabularyapp.data.DbContext;
 import com.neptuo.vocabularyapp.services.ServiceProvider;
@@ -49,6 +50,8 @@ public class MainActivity extends ActivityBase {
         }
 
         final MainActivity self = this;
+
+        MyApplication app = (MyApplication)getApplication();
 
         translateButton =  (Button) findViewById(R.id.translateButton);
         browseButton = (Button) findViewById(R.id.browseButton);

@@ -28,21 +28,28 @@ public class LanguageRepository {
         String selection = Sql.Language._ID + " LIKE ?";
         String[] selectionArgs = { String.valueOf(languageId) };
 
-        Cursor cursor = db.query(
-            Sql.Language.TABLE,
-            projection,
-            selection,
-            selectionArgs,
-            null,
-            null,
-            null
-        );
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                Sql.Language.TABLE,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+            );
 
-        cursor.moveToFirst();
-        String name = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Language._NAME));
-        String code = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Language._CODE));
+            cursor.moveToFirst();
+            String name = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Language._NAME));
+            String code = cursor.getString(cursor.getColumnIndexOrThrow(Sql.Language._CODE));
 
-        return new LanguageModel(name, code);
+            return new LanguageModel(name, code);
+
+        } finally {
+            if(cursor != null)
+                cursor.close();
+        }
     }
 
     public int save(LanguageModel model) {

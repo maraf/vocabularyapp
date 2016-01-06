@@ -32,36 +32,43 @@ public class DetailItemRepository {
         String selection = Sql.DetailItem._DOWNLOAD_ID + " LIKE ?";
         String[] selectionArgs = {String.valueOf(downloadId)};
 
-        Cursor cursor = db.query(
-            Sql.DetailItem.TABLE,
-            projection,
-            selection,
-            selectionArgs,
-            null,
-            null,
-            null
-        );
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                Sql.DetailItem.TABLE,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+            );
 
-        List<DetailItemModel> result = new ArrayList<DetailItemModel>();
+            List<DetailItemModel> result = new ArrayList<DetailItemModel>();
 
-        if(cursor.moveToFirst()) {
-            do {
+            if (cursor.moveToFirst()) {
+                do {
 
-                int id = (int) cursor.getInt(cursor.getColumnIndexOrThrow(Sql.DetailItem._ID));
-                String sourceText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_TEXT));
-                String sourceDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_DESCRIPTION));
-                String targetText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_TEXT));
-                String targetDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_DESCRIPTION));
+                    int id = (int) cursor.getInt(cursor.getColumnIndexOrThrow(Sql.DetailItem._ID));
+                    String sourceText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_TEXT));
+                    String sourceDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._SOURCE_DESCRIPTION));
+                    String targetText = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_TEXT));
+                    String targetDescription = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItem._TARGET_DESCRIPTION));
 
-                DetailItemModel itemModel = new DetailItemModel(sourceText, targetText, sourceDescription, targetDescription);
+                    DetailItemModel itemModel = new DetailItemModel(sourceText, targetText, sourceDescription, targetDescription);
 
-                itemModel.getTags().addAll(getTags(id));
-                result.add(itemModel);
+                    itemModel.getTags().addAll(getTags(id));
+                    result.add(itemModel);
 
-            } while (cursor.moveToNext());
+                } while (cursor.moveToNext());
+            }
+
+            return result;
+
+        } finally {
+            if(cursor != null)
+                cursor.close();
         }
-
-        return result;
     }
 
     private List<String> getTags(int detailItemId) {
@@ -72,27 +79,34 @@ public class DetailItemRepository {
         String selection = Sql.DetailItemTag._DETAIL_ITEM_ID + " LIKE ?";
         String[] selectionArgs = {String.valueOf(detailItemId)};
 
-        Cursor cursor = db.query(
-            Sql.DetailItemTag.TABLE,
-            projection,
-            selection,
-            selectionArgs,
-            null,
-            null,
-            null
-        );
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                Sql.DetailItemTag.TABLE,
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+            );
 
-        List<String> result = new ArrayList<String>();
-        if(cursor.moveToFirst()) {
-            do {
+            List<String> result = new ArrayList<String>();
+            if(cursor.moveToFirst()) {
+                do {
 
-                String name = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItemTag._NAME));
-                result.add(name);
+                    String name = cursor.getString(cursor.getColumnIndexOrThrow(Sql.DetailItemTag._NAME));
+                    result.add(name);
 
-            } while (cursor.moveToNext());
+                } while (cursor.moveToNext());
+            }
+
+            return result;
+
+        } finally {
+            if(cursor != null)
+                cursor.close();
         }
-
-        return result;
     }
 
     public int save(int downloadId, DetailItemModel model) {
