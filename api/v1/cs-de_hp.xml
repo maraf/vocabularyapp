@@ -2140,4 +2140,44 @@
        <target text="deutlich" description="Wir können es deutlich sehen" />
        
     </item>
+     <item>
+       <source text="zhoršovat se" description="" />
+       <target text="verschlimmern sich" description="Er agt die Schmerzen verschlimmern sich beim Liegen; ich verschlimmere, su vwerschlimmerst - verschlimmerte - haben verschlimmert" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="utrpět" description="" />
+       <target text="erleiden" description="Er erlitt in 2004 einen Herzinfarkt; ich erleide, du erleidest - erlitt - haben erlitten" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="podrobit se" description="podstoupit" />
+       <target text="unterziehen sich" description="= absolvieren; Wegen Herzinfarkts musste sich Herr Müller einer Bypass-OP unterziehen. ich unterziehe, du unterziehst - unterzog - haben unterzogen" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="odpovídat" description="shodovat se s" />
+       <target text="entsprechen" description="= das heisst; Der Patient raucht etwa 20 Zigaretten pro Tag, was 10 packyear entspricht" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="jednotka" description="jednota" />
+       <target text="die Einheit" description="Grössen benutzt für messen - 20 Einheten Insulin." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="hryzavý" description="" />
+       <target text="nagend" description="Es fühlt als etwas beissen würde." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přijít v úvahu" description="" />
+       <target text="kommt in Betracht" description="Als Verdachtdiagnose kommt in Betracht eine akute Pankreatitis." />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="poskytovat" description="" />
+       <target text="liefern" description="= hervorbringen; Laborsuchung kann weitere wichtige Hinweise liefern." />
+       <tag>Lékařská NJ</tag>
+    </item>
 </vocabulary>
