@@ -2177,7 +2177,22 @@
     </item>
      <item>
        <source text="poskytovat" description="" />
-       <target text="liefern" description="= hervorbringen; Laborsuchung kann weitere wichtige Hinweise liefern." />
+       <target text="liefern" description="= hervorbringen; Laborsuchung kann weitere wichtige Hinweise liefern.; ich liefere, du lieferst - lieferte - haben geliefert" />
        <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="osvědčit se" description="" />
+       <target text="bewähren sich" description="Dieses  Verfahren hat sich in der Therapie des Herzinfarkts bewährt; " />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přijímat" description="=akceptovat" />
+       <target text="anerkennen" description="= akzeptieren; " />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přestože" description="" />
+       <target text="wenngleich" description="= obwohl" />
+      
     </item>
 </vocabulary>
