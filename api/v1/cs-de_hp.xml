@@ -2097,7 +2097,7 @@
     </item>
      <item>
        <source text="potvrdit" description="" />
-       <target text="bestätigen" description=" = verifizieren; Die Verdachtsdiagnose wird bestätigt; ich bestätige, du bestätigst - bestätigte - haben bestätigt" />
+       <target text="bestätigen" description=" = verifizieren; =erhärten; Die Verdachtsdiagnose wird bestätigt; ich bestätige, du bestätigst - bestätigte - haben bestätigt" />
        <tag>Lékařská NJ</tag>
     </item>
      <item>
@@ -2174,6 +2174,7 @@
        <source text="přijít v úvahu" description="" />
        <target text="kommt in Betracht" description="Als Verdachtdiagnose kommt in Betracht eine akute Pankreatitis." />
        <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
     </item>
      <item>
        <source text="poskytovat" description="" />
@@ -2194,5 +2195,62 @@
        <source text="přestože" description="" />
        <target text="wenngleich" description="= obwohl" />
       
+    </item>
+     <item>
+       <source text="jednoznačný" description="" />
+       <target text="eindeutig" description="Es ist klar, man kann es deutlig sehen" />
+      
+    </item>
+     <item>
+       <source text="příjmová ambulance" description="" />
+       <target text="das Notaufnahmesprechzimmer" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="dostat" description="" />
+       <target text="kriegen" description="= bekommen; auch im Krieg teilnehmen; Der Patient hat Angst gekriegt wegen des schwarzen Stuhl.; ich kriege, du kriegst; kriegte; haben gekriegt " />
+       
+    </item>
+     <item>
+       <source text="v průběhu" description="" />
+       <target text="im Laufe" description="Im Laufe der Nacht haben die Beschwerden deutlich verschlimmert." />
+       <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="interpretovat" description="" />
+       <target text="deuten" description="= interpretieren; = verstehen; deuten auf (4.p); Der klinische Befund deutet auf eine Phlebotrombose.; ich deute, du deutest - deutete - haben gedeutet" />
+       
+    </item>
+     <item>
+       <source text="ukázat" description="svědčit pro" />
+       <target text="weisen" description="= zeigen; weisen für (4.p);  ich weise, du weist - wies - haben gewiesen" />
+       
+    </item>
+     <item>
+       <source text="skutečnost" description="" />
+       <target text="die Tatsache" description="Etwas wirklich das existiert; Eine weitere Tatsache kommt dazu" />
+       
+    </item>
+     <item>
+       <source text="Pro další objasnění, rád bych podnikl ..." description="" />
+       <target text="Zur weiteren Abklärung würde ich gerne ... durchführen" description="." />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="jakož i" description="a také" />
+       <target text="sowie" description="Im Gepäck waren Zelte, Schlafsäcke sowie Proviant" />
+      </item>
+     <item>
+       <source text="srážení" description="" />
+       <target text="die Gerinnung" description="Die Blutgerinnung" />
+       <tag>Lékařská NJ</tag>
+       
+    </item>
+     <item>
+       <source text="Potvrdí-li se podezření na .." description="" />
+       <target text="Sollte sich der Verdacht auf ... erhätrten" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
     </item>
 </vocabulary>
