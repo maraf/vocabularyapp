@@ -2253,4 +2253,63 @@
        <tag>Lékařská NJ</tag>
         <tag>Fráze</tag>
     </item>
+     <item>
+       <source text="Na základě známé ..." description="" />
+       <target text="Aufgrund der bekannten ..." description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="Bylo podáno ..." description="" />
+       <target text="Es wurde ... verabreicht" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="podat" description="" />
+       <target text="verabreichen" description="Der Patient wurde wegen Lungenergusses Diuretika verabreicht; ich verabreiche, du verabreichst - verabreichte - haben verabreicht" />
+       <tag>Lékařská NJ</tag>
+       
+    </item>
+     <item>
+       <source text="posouzení" description="" />
+       <target text="die Beurteilung" description="Meine Beurteilung kann falsch sein." />
+       <tag>Lékařská NJ</tag>
+       
+    </item>
+     <item>
+       <source text="Přijetí do nemocnice se uskutečnilo z důvodu ..." description="" />
+       <target text="Die stationäre Aufnahme erfolgte wegen ..." description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="Celý průběh hospitalizace se odvíjel dle pravidel a bez komplikací" description="" />
+       <target text="Der gesamte stationäre Verlauf gestaltete sich regelrecht und komplikationslos." description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="Žádáme o další kontrolu pacienta v ..." description="" />
+       <target text="Wir bitten um eine Wiedervorstellung des Patienten in ..." description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="potřebný" description="nezbytný" />
+       <target text="erfordelich" description="=notwendig; = nötig; Dür den Eintritt sind die Ticketten erfordelich." />
+     
+       
+    </item>
+     <item>
+       <source text="přinutit" description="donutit" />
+       <target text="zwingen" description="Jemand muss es machen, so er wird mit Druck oder Gewalt gezwungent; ich zwinge, du zwingst - zwang - haben gezwungen" />
+      
+    </item>
+     <item>
+       <source text="Zpravujeme Vás následovně o našem společném pacientovi XY, narozen XY, bydlištěm XY, který se nacházel v době od X do Y v naší péči." description="" />
+       <target text="Wir berichten nachfolgend über undere gemeinsame Patientin/Patient, Frau/Herr XY, geboren am XY, wohnhaft XY, die/der sich vom X bis Y in unserer stationären Behandlung befand." description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
 </vocabulary>
