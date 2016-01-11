@@ -2312,4 +2312,9 @@
        <tag>Lékařská NJ</tag>
         <tag>Fráze</tag>
     </item>
+     <item>
+       <source text="nedostavit se" description="" />
+       <target text="ausbleiben" description="Die Besserung hat sich nicht ausgeblieben; ich bleibe aus, du leibst aus - blieb aus -ist ausgeblieben" />
+      
+    </item>
 </vocabulary>
