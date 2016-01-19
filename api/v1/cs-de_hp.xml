@@ -2314,7 +2314,53 @@
     </item>
      <item>
        <source text="nedostavit se" description="" />
-       <target text="ausbleiben" description="Die Besserung hat sich nicht ausgeblieben; ich bleibe aus, du leibst aus - blieb aus -ist ausgeblieben" />
+       <target text="ausbleiben sich" description="Die Besserung hat sich nicht ausgeblieben; ich bleibe aus, du leibst aus - blieb aus -ist ausgeblieben" />
       
+    </item>
+     <item>
+       <source text="Jsem na této stanici činný jako Assistenzarzt" description="" />
+       <target text="Ich bin auf dieser Station als Assistenzarzt tätig" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="Rád bych s Vámi pohovořil" description="" />
+       <target text="Ich würde gern mit Ihnen das Gespräch führen" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="Co pro Vás mohu udělat?" description="" />
+       <target text="Was kann Ich für Sie tun?" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="Noha otekla" description="" />
+       <target text="Das Bein is auch dicker geworden" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="Je něco, co ty bolesti snižuje nebo zhoršuje?" description="" />
+       <target text="Gibt es irgendetwas, das die Schmerzen lindert oder verstärkt?" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="dále" description="" />
+       <target text="abwärts" description="Vom Knie abwärts" />
+    
+    </item>
+     <item>
+       <source text="srovnatelný" description="" />
+       <target text="vergleichbar" description="Sind die Schmerzen vergleichbar mit einem Brennen, einem Stechen oder einem Drücken?" />
+    
+    </item>
+     <item>
+       <source text="Nic to nepřineslo" description="" />
+       <target text="Es hat nichts gebracht" description="" />
+     
+        <tag>Fráze</tag>
     </item>
 </vocabulary>
