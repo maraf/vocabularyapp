@@ -2363,4 +2363,67 @@
      
         <tag>Fráze</tag>
     </item>
+     <item>
+       <source text="Nejprve něco málo k ..." description="" />
+       <target text="Als Erstes nur kurz zu ..." description="" />
+     
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="tenký" description="slabý, hubený" />
+       <target text="dünn" description="Das Mädchen ist so dünn, vielleicht leidet sie an Anorexie?" />
+        </item>
+     <item>
+       <source text="průhledný" description="" />
+       <target text="durchsichtig" description="Das Glas ist durchsichtig" />
+      </item>
+     <item>
+       <source text="otřes mozku" description="" />
+       <target text="die Hirnerschütterung" description="Wann man has einen Unfall und das Hirn verletzt wurde, müssen wir an das Hirnerschütterung denken." />
+       <tag>Lékařská NJ</tag>
+  
+    </item>
+     <item>
+       <source text="přednáška" description="" />
+       <target text="der Vortrag" description="Jemand erzäht dem Publikum darüber" />
+      
+    </item>
+     <item>
+       <source text="použití" description="zavedení" />
+       <target text="der Einsatz" description="Der Grund des Einsatzes des ZVK ist bei parenterale Ernährung." />
+       <tag>Lékařská NJ</tag>
+    
+    </item>
+     <item>
+       <source text="odrazovat od" description="" />
+       <target text="abraten von" description="Raten jemanden etwas nicht tun; Er räts von ZVK zu legen ab; ich rate ab, du räts ab - riet ab - haben angeraten" />
+    
+    </item>
+     <item>
+       <source text="porucha srážlivosti" description="" />
+       <target text="die Gerinungsstörung" description="= koagulopathie; Wann man Herinnungverstörung hat, er blutet mehr und länger." />
+       <tag>Lékařská NJ</tag>
+     
+    </item>
+     <item>
+       <source text="podobně" description="rovněž" />
+       <target text="ebenfalls" description="Die andere Halsseite muss ebenfalls desinfiziert werden" />
+    
+    </item>
+     <item>
+       <source text="značný" description="nezbytný" />
+       <target text="wesentlich" description="= wichtig; Die Lagerung des Patienten hat einen wesentlichen Einfluss auf der Erfolg" />
+
+    </item>
+     <item>
+       <source text="nestojí o" description="nemyslí si nic dobrého o" />
+       <target text="halten nichts von" description="Herr Müller hälts nichts von Leuten mit Tattoos." />
+     
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="nedostatek" description="" />
+       <target text="der Mangel" description="Faktorsmangel ist typisch für Hämophilie" />
+       
+    </item>
 </vocabulary>
