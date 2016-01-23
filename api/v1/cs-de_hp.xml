@@ -2437,4 +2437,49 @@
        <tag>Lékařská NJ</tag>
      
     </item>
+     <item>
+       <source text="pospíšit si" description="" />
+       <target text="beeilen sich" description="Beeilen sich bitte, damit wir nicht zu spät kommen." />
+   
+    </item>
+     <item>
+       <source text="aby" description="" />
+       <target text="damit" description="Beeil sich bitte, samit wir nicht zu spät kommen." />
+   
+    </item>
+     <item>
+       <source text="pospíšit si" description="" />
+       <target text="beeilen sich" description="Beeilen sich bitte, damit wir nicht zu spät kommen." />
+   
+    </item>
+     <item>
+       <source text="proč" description="" />
+       <target text="weshalb" description="= warum; Weshalb machen Sie einen Sprachkurs?" />
+   
+    </item>
+     <item>
+       <source text="způsob myšlení" description="" />
+       <target text="die Denkweise" description="" />
+   
+    </item>
+     <item>
+       <source text="nýbrž" description="ale také" />
+       <target text="sondern" description=" bez změny slovosledu! - Martin fährt nicht nur gut Ski, sondern er kann auch gut schwimmen." />
+        <tag>Spojky</tag>
+    </item>
+     <item>
+       <source text="ani - ani" description="" />
+       <target text="weder - noch" description=" bez změny slovosledu! - Otto fährt weder gut Ski, noch kann er gut schwimmen." />
+        <tag>Spojky</tag>
+    </item>
+     <item>
+       <source text="naproti tomu" description="" />
+       <target text="dagegen" description=" bez změny slovosledu! - Gustav kann nicht gut kochen, dagegen kocht Alena ausgezeichnet." />
+        <tag>Spojky</tag>
+    </item>
+     <item>
+       <source text="na jednu stranu - na druhou stranu" description="" />
+       <target text="Einerseits - andererseits" description=" bez změny slovosledu! - Einerseits mag ich das Meer, andererseits verbringe ich meinen Urlaub gerne in den Bergen." />
+        <tag>Spojky</tag>
+    </item>
 </vocabulary>
