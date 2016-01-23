@@ -2426,4 +2426,15 @@
        <target text="der Mangel" description="Faktorsmangel ist typisch für Hämophilie" />
        
     </item>
+     <item>
+       <source text="určit" description="stanovit" />
+       <target text="feslegen" description="" />
+     
+    </item>
+     <item>
+       <source text="otylý" description="" />
+       <target text="fettleibig" description="" />
+       <tag>Lékařská NJ</tag>
+     
+    </item>
 </vocabulary>
