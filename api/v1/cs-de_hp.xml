@@ -2482,4 +2482,14 @@
        <target text="Einerseits - andererseits" description=" bez změny slovosledu! - Einerseits mag ich das Meer, andererseits verbringe ich meinen Urlaub gerne in den Bergen." />
         <tag>Spojky</tag>
     </item>
+     <item>
+       <source text="zatímco" description="během" />
+       <target text="während" description="= wohingegen; = wogegen; změna slovosledu! (vedlejší věta) - Die erste Gruppe fuhr einen kleinen Hügel hinunter, währed die zweite Gruppe ... übte ; předložka s 2.p - während des Krieges" />
+        <tag>Spojky</tag>
+    </item>
+     <item>
+       <source text="buď - nebo" description="" />
+       <target text="entweder - oder" description=" bez změny slovosledu! Entweder geht er schwimmen oder er bleibt zu Hause." />
+        <tag>Spojky</tag>
+    </item>
 </vocabulary>
