@@ -2492,4 +2492,49 @@
        <target text="entweder - oder" description=" bez změny slovosledu! Entweder geht er schwimmen oder er bleibt zu Hause." />
         <tag>Spojky</tag>
     </item>
+     <item>
+       <source text="sázet na" description="spoléhat se na" />
+       <target text="setzen auf" description="= wetten um (4.p) etwas; Alles auf einen Wurf setzen" />
+      
+    </item>
+     <item>
+       <source text="radit se" description="" />
+       <target text="beraten sich" description="= vorschlagen, empfehlen; Jemandem einen Hinweis geben; über etwas sprechen; ich berate, du berätst - beriet - haben beraten" />
+    </item>
+     <item>
+       <source text="dohoda" description="" />
+       <target text="die Vereinbarung" description="= die Pakt; der Vertrag; An etwas übereinstimmen" />
+    </item>
+     <item>
+       <source text="rozloučit se" description="přijmout (zákon)" />
+       <target text="verabschieden" description="Der Bundestag hat einen Gesetz verabschiedet" />
+    </item>
+     <item>
+       <source text="oplátka" description="protitah" />
+       <target text="der Gegenzug" description="Ein Zug als Reaktion auf einen Zug des Spielpartners; Im Gegenzug gibt die EU drei Milliarden zur Türkei" />
+    </item>
+     <item>
+       <source text="požadovat" description="" />
+       <target text="verlangen" description="= fordern; = um etwas bitten; Von (3.p) jemandem eine Erklärung verlangen" />
+    </item>
+     <item>
+       <source text="oznámit" description="" />
+       <target text="ankündigen" description="= erkennen lassen, informieren; Es wurde angekündigt, dass der Zug ein paar Minuten Verspätung habe." />
+    </item>
+     <item>
+       <source text="netečný" description="" />
+       <target text="unbeeindruckt" description="Der Kanzler ist unbeeindruckt von der Kritik." />
+    </item>
+     <item>
+       <source text="spravedlivý" description="" />
+       <target text="fair" description="= gerecht; ein faires Spiel" />
+    </item>
+     <item>
+       <source text="oznámit" description="" />
+       <target text="ankündigen" description="= erkennen lassen, informieren; Es wurde angekündigt, dass der Zug ein paar Minuten Verspätung habe." />
+    </item>
+     <item>
+       <source text="postup" description="metoda" />
+       <target text="das Verfahren" description="= die Methode; Die Art und Weise der Durchführung von etwas; Man kann die Rechnung mit mehreren Verfahren durchführen." />
+    </item>
 </vocabulary>
