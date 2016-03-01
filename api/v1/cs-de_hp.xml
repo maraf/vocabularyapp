@@ -2713,4 +2713,38 @@
        <target text="der Rundherd" description="" />
      <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="vinutý" description="křivolaký" />
+       <target text="geschlängelte" description="" />
+     <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="obejít se bez" description="" />
+       <target text="verzichten sich auf" description="" />
+     <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="dříve" description="" />
+       <target text="eher" description="" />
+    </item>
+     <item>
+       <source text="zanedbatelný" description="" />
+       <target text="vernachlässig" description="" />
+    </item>
+     <item>
+       <source text="využít" description="" />
+       <target text="ausschöpfen" description="" />
+     </item>
+     <item>
+       <source text="dříve" description="" />
+       <target text="eher" description="" />
+    </item>
+     <item>
+       <source text="příznivý" description="" />
+       <target text="günstig" description="Die Prognose ist günstig" />
+    </item>
+     <item>
+       <source text="hodnotit" description="" />
+       <target text="beurteilen" description="" />
+    </item>
 </vocabulary>
