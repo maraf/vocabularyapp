@@ -2650,5 +2650,67 @@
        <source text="značný" description="podstatný" />
        <target text="wesentlich" description="Es gab keine wesentliche Besserung nach Nitraten." />
     </item>
-    
+     <item>
+       <source text="dosud" description="" />
+       <target text="bisher" description="" />
+    </item>
+     <item>
+       <source text="jakož i" description="rovněž" />
+       <target text="sowie" description="" />
+    </item>
+     <item>
+       <source text="příležitostně" description="" />
+       <target text="gelegentlich" description="" />
+    </item>
+     <item>
+       <source text="důchod" description="" />
+       <target text="die Pension" description="= der Ruhestand; = die Rente" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="bdělý" description="" />
+       <target text="wach" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="sliznice" description="" />
+       <target text="die Schleimhaut" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="proudění" description="" />
+       <target text="die Strömung" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="obrana" description="" />
+       <target text="der Abwehr" description="" />
+    </item>
+     <item>
+       <source text="zbylé" description="" />
+       <target text="übrig" description="" />
+    </item>
+     <item>
+       <source text="bránice" description="" />
+       <target text="das Zwerchfell" description="= das Diaphragma" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="úhel" description="" />
+       <target text="der Winkel" description="" />
+    </item>
+     <item>
+       <source text="městnání" description="" />
+       <target text="die Stauung" description="" />
+       <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="patrný" description="" />
+       <target text="erkennbar" description="" />
+    </item>
+     <item>
+       <source text="ložisko" description="(kulaté)" />
+       <target text="der Rundherd" description="" />
+     <tag>Lékařská NJ</tag>
+    </item>
 </vocabulary>
