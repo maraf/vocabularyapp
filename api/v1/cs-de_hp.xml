@@ -2536,5 +2536,119 @@
      <item>
        <source text="postup" description="metoda" />
        <target text="das Verfahren" description="= die Methode; Die Art und Weise der Durchführung von etwas; Man kann die Rechnung mit mehreren Verfahren durchführen." />
+     <tag>Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="rovněž" description="" />
+       <target text="ebenfalls" description="" />
+    </item>
+     <item>
+       <source text="natržení" description="" />
+       <target text="der Riss" description="" />
+    </item>
+     <item>
+       <source text="vrávorání" description="" />
+       <target text="schwanken" description="" />
+    </item>
+     <item>
+       <source text="chrapot" description="" />
+       <target text="die Heiserkeit" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="meléna" description="" />
+       <target text="der Teerstuhl" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přiznat důchod" description="" />
+       <target text="berenten" description="Er ist zu 50% Invalidenversicherung berentet" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="nynější" description="" />
+       <target text="jetztig" description="Jetztiges Leiden" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="tupý" description="tlumený" />
+       <target text="dumpf" description="Er berichtet über dumpfe Schmerzen" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="vyčerpání" description="" />
+       <target text="die Abgeschlagenheit" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="klidný" description="" />
+       <target text="reizlos" description="Die Narbe ist reizlos" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="navenek" description="na pohled" />
+       <target text="äusserlich" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="palpovatelný" description="" />
+       <target text="tastbar" description="Fusspulse beideseits tastbar" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="propagace" description="" />
+       <target text="die Fortleitung" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="stagnující" description="" />
+       <target text="gestaut" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="měkký" description="" />
+       <target text="weich" description="Die Bauchdecke weich" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="čití" description="" />
+       <target text="die Berührung" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="hraniční" description="" />
+       <target text="grenzwertig" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="omezení" description="zkrácení" />
+       <target text="die Einschränkung" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="tříslo" description="" />
+       <target text="der Leiste" description="" />
+    <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="za účelem" description="" />
+       <target text="zwecks" description="" />
+    </item>
+     <item>
+       <source text="názornost" description="" />
+       <target text="die Anschaulichkeit" description="" />
+    </item>
+     <item>
+       <source text="přestat" description="" />
+       <target text="anhalten" description="" />
+    </item>
+     <item>
+       <source text="vícenásobný" description="" />
+       <target text="mehrfach" description="" />
+    </item>
+     <item>
+       <source text="značný" description="podstatný" />
+       <target text="wesentlich" description="Es gab keine wesentliche Besserung nach Nitraten." />
+    </item>
+    
 </vocabulary>
