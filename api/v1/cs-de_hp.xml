@@ -2742,9 +2742,23 @@
      <item>
        <source text="příznivý" description="" />
        <target text="günstig" description="Die Prognose ist günstig" />
+        <tag>Lékařská NJ</tag>
     </item>
      <item>
        <source text="hodnotit" description="" />
        <target text="beurteilen" description="" />
+        <tag>Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="hodnotit" description="" />
+       <target text="beurteilen" description="" />
+    </item>
+     <item>
+       <source text="střetnutí" description="" />
+       <target text="die Begegnung" description="" />
+    </item>
+     <item>
+       <source text="odporovat" description="" />
+       <target text="widersprechen" description="" />
     </item>
 </vocabulary>
