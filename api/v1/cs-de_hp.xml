@@ -2724,8 +2724,8 @@
      <tag>Lékařská NJ</tag>
     </item>
      <item>
-       <source text="dříve" description="" />
-       <target text="eher" description="" />
+       <source text="hltan" description="" />
+       <target text="der Rachen" description="= der Pharynx" />
     </item>
      <item>
        <source text="zanedbatelný" description="" />
@@ -2760,5 +2760,60 @@
      <item>
        <source text="odporovat" description="" />
        <target text="widersprechen" description="" />
+    </item>
+     <item>
+       <source text="viditelný" description="" />
+       <target text="sichtbar" description="" />
+    </item>
+     <item>
+       <source text="věku odpovídající" description="" />
+       <target text="altersentsprechend" description="" />
+       <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="sluch" description="" />
+       <target text="das Gehör" description="" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zastínení" description="" />
+       <target text="die Verschattung" description=" Röntgenologisch gibt es 2 cm grosse homogene Verschattung" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="Předchozí terapie ... nezlepšila stav" description="" />
+       <target text="Vorbehandlung mit ... hat keine Besserung ergeben" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="rámec" description="" />
+       <target text="der Rahmen" description="Im Rahmen der Diagnostik" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="Stav se stabilizoval" description="" />
+       <target text="Der Zustand hat sich stabilisiert" description="" />
+       <tag>Lékařská NJ</tag>
+        <tag>Fráze</tag>
+    </item>
+     <item>
+       <source text="trvalý" description="neustálý" />
+       <target text="ständig" description="" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pobyt" description="" />
+       <target text="der Aufenthalt" description="Die Symptomatik stabilisierte sich während des stationären Aufenthaltes." />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="ustávat" description="odročit" />
+       <target text="sistieren" description="=nachlassen" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="rychle" description="" />
+       <target text="rasch" description="= schnell" />
     </item>
 </vocabulary>
