@@ -1432,7 +1432,7 @@
     </item>
      <item>
        <source text="trpět na" description="" />
-       <target text="leiden an" description=" = leiden unter; Leiden Sie unter einige Erkrankungen?" />
+       <target text="leiden an" description=" = leiden unter; Leiden Sie unter einige Erkrankungen?; Ich leide, du leidest - litt - haben gelitten" />
        <tag>Lékařská NJ</tag>
     </item>
      <item>
@@ -2137,7 +2137,7 @@
     </item>
      <item>
        <source text="zřetelný" description="" />
-       <target text="deutlich" description="Wir können es deutlich sehen" />
+       <target text="deutlich" description="= ausgeprägtWir können es deutlich sehen" />
        
     </item>
      <item>
@@ -2815,5 +2815,42 @@
      <item>
        <source text="rychle" description="" />
        <target text="rasch" description="= schnell" />
+    </item>
+     <item>
+       <source text="výroba" description="produkce" />
+       <target text="die Herstellung" description="" />
+    </item>
+     <item>
+       <source text="neustálý" description="" />
+       <target text="ständig" description="" />
+    </item>
+     <item>
+       <source text="příjemný" description="" />
+       <target text="angenehm" description="Aber das ist unangenehm" />
+    </item>
+     <item>
+       <source text="především" description="" />
+       <target text="vornehmlich" description="Der stärksten Schmerz  hat er im Bein, vornehmlich in dem Knöchel." />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="doprovázený" description="" />
+       <target text="begleitend" description="Der Schmerz wat begleitend bei Ptosis." />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zprvu" description="" />
+       <target text="anfänglich" description="Ängfanglich war die körpeliche Untersuchung nicht möglich" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="přiložený" description="" />
+       <target text="beigefügten" description="Die beigefügten Laborwerten sind unauffällig" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="pečlivě" description="" />
+       <target text="ausführlich" description="Der Patient wurde über die Erkrankung ausführlich aufgeklärt." />
+         <tag> Lékařská NJ</tag>
     </item>
 </vocabulary>
