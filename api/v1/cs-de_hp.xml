@@ -2853,4 +2853,24 @@
        <target text="ausführlich" description="Der Patient wurde über die Erkrankung ausführlich aufgeklärt." />
          <tag> Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="pouze" description="" />
+       <target text="lediglich" description="= nur" />
+        
+    </item>
+     <item>
+       <source text="křečovitý" description="" />
+       <target text="krampfartig" description="Der Patient gibt an er schon mehrere krampfartige Attacken gehabt habe" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="melden" description="" />
+       <target text="hlásit" description="" />
+       
+    </item>
+     <item>
+       <source text="únava" description="" />
+       <target text="die Übermüdung" description="" />
+         <tag> Lékařská NJ</tag>
+    </item>
 </vocabulary>
