@@ -2873,4 +2873,14 @@
        <target text="die Übermüdung" description="" />
          <tag> Lékařská NJ</tag>
     </item>
+     <item>
+       <source text="přibližně" description="" />
+       <target text="annähernd" description="= ungefahr, = etwa" />
+         <tag> Lékařská NJ</tag>
+    </item>
+     <item>
+       <source text="zaměstnávat" description="" />
+       <target text="beschäftigen" description="" />
+         <tag> Lékařská NJ</tag>
+    </item>
 </vocabulary>
